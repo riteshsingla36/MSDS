@@ -40,15 +40,6 @@ main{
     position: absolute;
 }
 
-.animation-div{
-    z-index: 5000000000;
-    position: absolute;
-    padding: 100%;
-    background-color: black;
-    animation: main-animation 1000ms ease-out; 
-    animation-fill-mode: forwards;
-}
-
 .main-txt{
     text-decoration: none;
     color: white;
@@ -120,7 +111,6 @@ nav ul li a:hover:after{
         transform: translateX(-100%);
     }
 }
-
 @keyframes main-text {
     0%{
         transform: translateX(100%);
