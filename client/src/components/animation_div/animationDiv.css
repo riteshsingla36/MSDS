@@ -1,0 +1,17 @@
+.animation-div{
+    z-index: 5000000000;
+    position: absolute;
+    padding: 100%;
+    background-color: black;
+    animation: main-animation 1000ms ease-out; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes main-animation{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}

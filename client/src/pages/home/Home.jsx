@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import {Link} from "react-router-dom";
+import AnimationDiv from '../../components/animation_div/AnimationDiv';
 import Navbar from '../../components/navbar/Navbar';
-import "./home.css"
+import "./home.css";
+
 const Home = () => {
   let [a, setA] = useState(1);
   const changeImage = (id) => {
@@ -9,8 +11,7 @@ const Home = () => {
   }
   return (
     <div>
-      <div className='animation-div'>
-      </div>
+      <AnimationDiv/>
       <Navbar/>
       <div className='main-img-container'>
         <div className='home-img-container'>
