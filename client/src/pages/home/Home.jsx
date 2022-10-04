@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import {Link} from "react-router-dom";
 import "./home.css"
 const Home = () => {
   let [a, setA] = useState(1);
@@ -11,10 +12,10 @@ const Home = () => {
       </div>
       <nav>
         <ul>
-          <li><a href="#">WORK</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">CONTACT</a></li>
-          <li><a href="#">JOBS</a></li>
+          <li><Link to="/projects">WORK</Link></li>
+          <li><Link to="/about">ABOUT</Link></li>
+          <li><Link to="/contact">CONTACT</Link></li>
+          <li><Link to="/jobs">JOBS</Link></li>
         </ul>
       </nav>
       <div className='main-img-container'>
@@ -29,9 +30,9 @@ const Home = () => {
           <div id="home-img home-8" onMouseOver={(e) => changeImage(e.target.id)}></div>
           <div id="home-img home-9" onMouseOver={(e) => changeImage(e.target.id)}></div>
         </div>
-        <img src={require(`../images/${a}.jpeg`)} alt="#" width={"100%"} height={"100%"} className="banner-img"/>
+        <img src={require(`../../images/${a}.jpeg`)} alt="#" width={"100%"} height={"100%"} className="banner-img"/>
         <span className='main-txt'>Numbered</span>
-        <a href="#">Amsterdam & New-york</a>
+        <Link to="#">Amsterdam & New-york</Link>
       </div>
     </div>
   )
