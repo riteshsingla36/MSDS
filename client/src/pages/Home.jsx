@@ -30,6 +30,8 @@ const Home = () => {
           <div id="home-img home-9" onMouseOver={(e) => changeImage(e.target.id)}></div>
         </div>
         <img src={require(`../images/${a}.jpeg`)} alt="#" width={"100%"} height={"100%"} className="banner-img"/>
+        <span className='main-txt'>Numbered</span>
+        <a href="#">Amsterdam & New-york</a>
       </div>
     </div>
   )

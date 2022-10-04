@@ -8,24 +8,31 @@ body{
 }
 
 nav{
-    position: absolute;
     color: white;
-    height: 9px;
     width: 100%;
     position: fixed;
+    z-index: 1000;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
 }
 
 nav ul{
+    width: 30px;
     display: flex;
     justify-content: center;
+    text-align: center;
+    margin: 0 auto;
 }
 
 nav li{
     list-style: none;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 8px;
     transform: translateY(-100%);
-    position: relative;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 nav li:first-child{
@@ -52,33 +59,12 @@ nav li:last-child{
     animation-fill-mode: forwards;
 }
 
-nav li:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: 8px;
-    left: 0px;
-    background-color: white;
-    transform-origin: bottom left;
-    transition: transform 0.25s linear;
-  }
-
-nav li:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-
 nav a{
+    text-align: center;
     color: inherit;
     text-decoration: none;
     font-weight: 600;
-}
-
-nav a:hover{
-    transition-timing-function: cubic-bezier(.16,1.08,.38,.98);
+    display: block;
 }
 
 main{
@@ -103,20 +89,66 @@ main{
 .main-img-container{
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 #home-img{
     padding: 100%;
     height: 100%;
-    border: 1px solid white;
+    display: none;
+    z-index: 1000;
+    position: absolute;
 }
 
 .animation-div{
+    z-index: 5000000000;
     position: absolute;
     padding: 100%;
     background-color: black;
-    animation: main-animation 1000ms linear; 
+    animation: main-animation 1000ms ease-out; 
     animation-fill-mode: forwards;
+}
+
+.main-txt{
+    font-size: 250px;
+    position: absolute;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    margin-top: 55px;
+    text-align: center;
+    margin-right: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    animation: main-text 900ms ease-out; 
+    animation-fill-mode: forwards;
+}
+
+.main-img-container a{
+    position: absolute;
+    left: 42%;
+    bottom: 8%;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+}
+
+nav ul li a:after{
+    content: '';
+    width: 90%;
+    position: absolute;
+    background-color: #fff;
+    height: 2px;
+    bottom: 3px;
+    transform: scaleX(0);
+    left: 5px;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 @keyframes main-animation{
@@ -134,5 +166,14 @@ main{
     }
     100%{
         transform: translateY(0);
+    }
+}
+
+@keyframes main-text {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
     }
 }
