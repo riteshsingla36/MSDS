@@ -50,6 +50,8 @@ main{
 }
 
 .main-txt{
+    text-decoration: none;
+    color: white;
     font-size: 250px;
     position: absolute;
     margin-left: auto;
@@ -63,7 +65,7 @@ main{
     animation-fill-mode: forwards;
 }
 
-.main-img-container a{
+.main-img-container .bottom-txt{
     position: absolute;
     left: 42%;
     bottom: 8%;
@@ -91,9 +93,23 @@ nav ul li a:hover:after{
     transform-origin: bottom left;
 }
 
-.main-img-container a{
+.main-img-container .bottom-txt{
     animation: main-text 900ms ease-out; 
     animation-fill-mode: forwards;
+}
+
+.prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+.second-container{
+    border: 2px solid red;
+}
+
+.second-container p{
+    height: 100vh;
 }
 
 @keyframes main-animation{
