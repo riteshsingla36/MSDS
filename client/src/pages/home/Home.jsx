@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Link} from "react-router-dom";
+import Navbar from '../../components/navbar/Navbar';
 import "./home.css"
 const Home = () => {
   let [a, setA] = useState(1);
@@ -10,14 +11,7 @@ const Home = () => {
     <div>
       <div className='animation-div'>
       </div>
-      <nav>
-        <ul>
-          <li><Link to="/projects">WORK</Link></li>
-          <li><Link to="/about">ABOUT</Link></li>
-          <li><Link to="/contact">CONTACT</Link></li>
-          <li><Link to="/jobs">JOBS</Link></li>
-        </ul>
-      </nav>
+      <Navbar/>
       <div className='main-img-container'>
         <div className='home-img-container'>
           <div id="home-img home-1" onMouseOver={(e) => changeImage(e.target.id)}></div>
