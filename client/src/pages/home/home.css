@@ -151,6 +151,11 @@ nav ul li a:hover:after{
     transform-origin: bottom left;
 }
 
+.main-img-container a{
+    animation: main-text 900ms ease-out; 
+    animation-fill-mode: forwards;
+}
+
 @keyframes main-animation{
     0%{
         transform: translateX(0);
