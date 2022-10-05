@@ -5,7 +5,7 @@ import baseUrl from '../../baseUrl';
 import axios from 'axios';
 
 const EditJob = () => {
-    const {jobId} = useParams();
+    const { jobId } = useParams();
     const [job, setJob] = useState({});
     const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ const EditJob = () => {
 
     const getJob = (jobId) => {
         axios.get(`${baseUrl}/careers/${jobId}`).then(res => {
-            if(res.data.status) {
+            if (res.data.status) {
                 setJob(res.data.data);
             }
             else {
@@ -35,7 +35,7 @@ const EditJob = () => {
         const salary = e.target.salary.value;
 
         axios.patch(`${baseUrl}/careers/update/${jobId}`, { postName, location, description, salary, startDate }).then(res => {
-            if(res.data.status) {
+            if (res.data.status) {
                 alert("job updated successfully");
                 navigate("/admin/alljobs")
             }
@@ -46,8 +46,8 @@ const EditJob = () => {
             alert(err.message);
         })
     }
-  return (
-    <div className="test">
+    return (
+        <div className="test">
             <form onSubmit={editJob}>
 
                 <div className="segment">
@@ -78,7 +78,7 @@ const EditJob = () => {
 
             </form>
         </div>
-  )
+    )
 }
 
 export default EditJob

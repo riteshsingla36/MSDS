@@ -71,7 +71,7 @@ const AddProjectType = () => {
                 </div>
 
                 <label>
-                    <input type="text" placeholder="Name" id='name' className='name' />
+                    <input type="text" placeholder="Name" id='name' className='name' required />
                 </label>
 
                 <button className="red" type="submit"> Create Project Type</button>
