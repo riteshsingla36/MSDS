@@ -8,6 +8,8 @@ import Contact from './pages/contact/Contact';
 import AddProjectType from "./adminPages/addProjectType/AddProjectType.jsx";
 import AddProject from './adminPages/addProject/AddProject';
 import AddJob from './adminPages/addJobs/AddJob';
+import AllJobs from './adminPages/allJobs/AllJobs';
+import EditJob from './adminPages/editJob/EditJob';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path="/admin/addprojecttype" element={<AddProjectType />} />
         <Route path="/admin/addproject" element={<AddProject />} />
         <Route path="/admin/addjob" element={<AddJob />} />
+        <Route path="/admin/alljobs" element={<AllJobs />} />
+        <Route path="/admin/editjob/:jobId" element={<EditJob />} />
       </Routes>
     </div>
   );

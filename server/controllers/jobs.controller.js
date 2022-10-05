@@ -10,7 +10,8 @@ const getAllJobs = async (req, res) => {
 }
 
 const getJobById = async (req, res) => {
-    const id = req.paramsid;
+    const id = req.params.id;
+    
     if (!id) {
         res.json({ status: false, message: 'please provide id' });
     }
@@ -34,7 +35,7 @@ const createJob = async (req, res) => {
     }
 
     try {
-        const job = Job.create({ postName: postName, description: description, startDate: startDate, location: location, salary: salary });
+        const job = await Job.create({ postName: postName, description: description, startDate: startDate, location: location, salary: salary });
         res.json({status: true, data: job});
     } catch (err) {
         res.json({status: false, message: err.message});
@@ -44,6 +45,9 @@ const createJob = async (req, res) => {
 const updateJob = async (req, res) => {
     const id = req.params.id;
 
+    if (!id) {
+        res.json({ status: false, message: 'please provide id' });
+    }
     try {
         const job = await Job.findByIdAndUpdate(id, req.body, {runValidators: true , new: true});
         res.json({status: true, data: job});
@@ -55,8 +59,11 @@ const updateJob = async (req, res) => {
 const deleteJobById = async (req, res) => {
     const id = req.params.id;
 
+    if (!id) {
+        res.json({ status: false, message: 'please provide id' });
+    }
     try {
-        const job = Job.findByIdAndDelete(id);
+        const job = await Job.findByIdAndDelete(id);
         res.json({status: true, data: "Job deleted successfully"});
     } catch (err) {
         res.json({status: false, message: err.message});
