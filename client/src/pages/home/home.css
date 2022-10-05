@@ -96,11 +96,44 @@ nav ul li a:hover:after{
   }
 
 .second-container{
-    border: 2px solid red;
+    height: 100vh;
 }
 
 .second-container p{
+    font-size: 79px;
+    width: 77%;
+    letter-spacing: 1px;
+    line-height: 94%;
+    padding-top: 95px;
+    padding-left: 121px;
+}
+
+.second-container a{
+    display: block;
+    padding-left: 121px;
+    margin-top: 60px;
+    text-decoration: none;
+    color: white;
+}
+
+.third-container{
     height: 100vh;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.third-container-one{
+    padding-left: 121px;
+    padding-right: 121px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.third-container-one span p {
+    font-size: 60px;
 }
 
 @keyframes main-animation{

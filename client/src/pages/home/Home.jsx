@@ -33,6 +33,13 @@ const Home = () => {
           <p>
             We’re a full service creative agency, working globally with brands and businesses at all stages of their journey.
           </p>
+          <Link to="/about">ABOUT US</Link>
+      </div>
+      <div className='third-container'>
+        <div className='third-container-one'>
+          <span><p>CASES <br></br>STUDIES</p></span>
+          <span><Link>VIEW ALL</Link></span>
+        </div>
       </div>
     </div>
   )
