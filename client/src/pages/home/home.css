@@ -33,6 +33,8 @@ body{
 }
 
 .main-txt{
+    text-decoration: none;
+    color: white;
     font-size: 250px;
     position: absolute;
     margin-left: auto;
@@ -46,7 +48,7 @@ body{
     animation-fill-mode: forwards;
 }
 
-.main-img-container a{
+.main-img-container .bottom-txt{
     position: absolute;
     left: 42%;
     bottom: 8%;
@@ -54,6 +56,58 @@ body{
     text-decoration: none;
     color: white;
     font-size: 23px;
+}
+
+.main-img-container .bottom-txt{
+    animation: main-text 900ms ease-out; 
+    animation-fill-mode: forwards;
+}
+
+.prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.second-container{
+    height: 100vh;
+}
+
+.second-container p{
+    font-size: 79px;
+    width: 77%;
+    letter-spacing: 1px;
+    line-height: 94%;
+    padding-top: 95px;
+    padding-left: 121px;
+}
+
+.second-container a{
+    display: block;
+    padding-left: 121px;
+    margin-top: 60px;
+    text-decoration: none;
+    color: white;
+}
+
+.third-container{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.third-container-one{
+    padding-left: 121px;
+    padding-right: 121px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.third-container-one span p {
+    font-size: 60px;
 }
 
 @keyframes main-text {
