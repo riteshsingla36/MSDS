@@ -13,6 +13,7 @@ import EditJob from './adminPages/editJob/EditJob';
 import AllProjectTypes from './adminPages/allProjectTypes/AllProjectTypes';
 import EditProjectType from './adminPages/editProjectType/EditProjectType';
 import PrivateComponent from './components/adminComponents/privateComponent/PrivateComponent';
+import AdminHome from './adminPages/home/AdminHome';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
 
         <Route element={<PrivateComponent />}>
+          <Route path="/admin" element={<AdminHome />} />
           <Route path="/admin/addprojecttype" element={<AddProjectType />} />
           <Route path="/admin/addproject" element={<AddProject />} />
           <Route path="/admin/addjob" element={<AddJob />} />
