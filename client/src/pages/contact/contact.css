@@ -1,0 +1,65 @@
+.main-tt{
+    position: relative;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-right: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    animation: main-text 900ms ease-out; 
+    padding-top: 55px;
+    animation-fill-mode: forwards;
+}
+
+.upper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 0 5rem;
+    margin-bottom: 10rem;
+    margin-top: 3rem;
+}
+.upper p:first-child {
+    width: 50%;
+    text-align: left !important;
+    font-size: xx-large;
+}
+
+.upper p:last-child {
+    width: 30%;
+    text-align: left !important;
+}
+
+
+.img-container {
+    position: relative;
+}
+
+.img-container:hover {
+    cursor: pointer;
+}
+
+.img-container img {
+    width: 100vw;
+    height: 100vh;
+}
+
+.img-container > span {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-container > span > h3 {
+    font-size: 70px;
+}
+
+@keyframes main-text {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Link} from "react-router-dom";
 import AnimationDiv from '../../components/animation_div/AnimationDiv';
+import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/navbar/Navbar';
 import "./home.css";
 
@@ -29,6 +30,7 @@ const Home = () => {
         <span className='main-txt'>Numbered</span>
         <Link to="#">Amsterdam & New-york</Link>
       </div>
+      <Footer/>
     </div>
   )
 }
