@@ -44,8 +44,14 @@ nav li:nth-child(3){
     animation-fill-mode: forwards;
 }
 
-nav li:last-child{
+nav li:nth-child(4){
     animation: nav-animation 600ms linear;
+    animation-delay: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+nav li:last-child{
+    animation: nav-animation 700ms linear;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
 }
