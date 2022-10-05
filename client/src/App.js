@@ -10,6 +10,8 @@ import AddProject from './adminPages/addProject/AddProject';
 import AddJob from './adminPages/addJobs/AddJob';
 import AllJobs from './adminPages/allJobs/AllJobs';
 import EditJob from './adminPages/editJob/EditJob';
+import AllProjectTypes from './adminPages/allProjectTypes/AllProjectTypes';
+import EditProjectType from './adminPages/editProjectType/EditProjectType';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="/admin/addjob" element={<AddJob />} />
         <Route path="/admin/alljobs" element={<AllJobs />} />
         <Route path="/admin/editjob/:jobId" element={<EditJob />} />
+        <Route path="/admin/allprojecttypes" element={<AllProjectTypes />} />
+        <Route path="/admin/editprojecttype/:projectTypeId" element={<EditProjectType />} />
       </Routes>
     </div>
   );
