@@ -58,24 +58,6 @@ body{
     font-size: 23px;
 }
 
-nav ul li a:after{
-    content: '';
-    width: 90%;
-    position: absolute;
-    background-color: #fff;
-    height: 2px;
-    bottom: 3px;
-    transform: scaleX(0);
-    left: 5px;
-    transform-origin: bottom left;
-    transition: transform 0.25s ease-out;
-}
-
-nav ul li a:hover:after{
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
 .main-img-container .bottom-txt{
     animation: main-text 900ms ease-out; 
     animation-fill-mode: forwards;
@@ -85,7 +67,7 @@ nav ul li a:hover:after{
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
 
 .second-container{
     height: 100vh;
@@ -128,14 +110,6 @@ nav ul li a:hover:after{
     font-size: 60px;
 }
 
-@keyframes main-animation{
-    0%{
-        transform: translateX(0);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
-}
 @keyframes main-text {
     0%{
         transform: translateX(100%);
