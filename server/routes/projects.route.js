@@ -6,7 +6,7 @@ router.get("/", ProjectController.getAllProjects);
 
 router.get("/:id", ProjectController.getProjectById);
 
-router.post("/create", upload.array('image', 10),ProjectController.createProject);
+router.post("/create", ProjectController.createProject);
 
 router.patch("/update/:id", ProjectController.updateProject);
 
