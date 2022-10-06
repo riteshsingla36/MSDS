@@ -37,7 +37,7 @@ const createProject = async (req, res) => {
 
         for (let i = 0; i < images.length; i++) {
             const result = await cloudinary.uploader.upload(images[i], {
-                folder: "banners",
+                folder: "projects",
             });
             imagesBuffer.push(result.secure_url)
         }
