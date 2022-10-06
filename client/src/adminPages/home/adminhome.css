@@ -1,0 +1,58 @@
+.admin-home-container {
+    padding: 0 5rem;
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    column-gap: 40px;
+}
+
+.admin-home-container div {
+    padding: 30%;
+    text-align: center;
+    border-radius: 30px;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 16px*20;
+    background-color: #dedede;
+    text-shadow: 1px 1px 0 #FFF;
+    color: #61677C;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #a4a8b4;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.admin-home-container div:hover {
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #a4a8b4;
+}
+
+.admin-home-container div:nth-child(1) {
+    background-color: chocolate;
+}
+
+.admin-home-container div:nth-child(2) {
+    background-color: aquamarine;
+}
+
+.admin-home-container div:nth-child(3) {
+    background-color: springgreen;
+}
+
+.admin-home-container div:nth-child(4) {
+    background-color: silver;
+}
+
+.admin-home-container div:nth-child(5) {
+    background-color: darkviolet;
+}
+
+.admin-home-container div:nth-child(6) {
+    background-color: gold;
+}
+
+.admin-home-container div:nth-child(7) {
+    background-color: deeppink;
+}

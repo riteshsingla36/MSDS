@@ -8,6 +8,9 @@ const AdminNavbar = () => {
                 {/* <li><Link to="/admin/allprojects">All Projects</Link></li> */}
                 <li><Link to="/admin/allprojecttypes">All Project Types</Link></li>
                 <li><Link to="/admin/alljobs">All Jobs</Link></li>
+                <li><Link to='/admin/addprojecttype'>Add Type</Link></li>
+                <li><Link to='/admin/addproject'>Add Project</Link></li>
+                <li><Link to='/admin/addjob'>Add Job</Link></li>
             </ul>
         </nav>
     )
