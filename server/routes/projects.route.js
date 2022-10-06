@@ -1,6 +1,6 @@
 const ProjectController = require("../controllers/projects.controller");
-
 const router = require("express").Router();
+const upload = require("../middleware/cloudinary");
 
 router.get("/", ProjectController.getAllProjects);
 

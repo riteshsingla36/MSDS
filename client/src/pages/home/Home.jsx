@@ -27,8 +27,20 @@ const Home = () => {
           <div id="home-img home-9" onMouseOver={(e) => changeImage(e.target.id)}></div>
         </div>
         <img src={require(`../../images/${a}.jpeg`)} alt="#" width={"100%"} height={"100%"} className="banner-img"/>
-        <span className='main-txt'>Numbered</span>
-        <Link to="#">Amsterdam & New-york</Link>
+        <Link className='main-txt prevent-select' to="/">Numbered</Link>
+        <Link to="/client/src/pages/about" className='bottom-txt prevent-select'>Amsterdam & New-york</Link>
+      </div>
+      <div className='second-container'>
+          <p>
+            We’re a full service creative agency, working globally with brands and businesses at all stages of their journey.
+          </p>
+          <Link to="/about">ABOUT US</Link>
+      </div>
+      <div className='third-container'>
+        <div className='third-container-one'>
+          <span><p>CASES <br></br>STUDIES</p></span>
+          <span><Link>VIEW ALL</Link></span>
+        </div>
       </div>
       <Footer/>
     </div>

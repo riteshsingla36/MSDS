@@ -170,14 +170,15 @@
 
 $ruler: 16px;
 $color-red: #AE1100;
-$color-bg: #EBECF0;
-$color-shadow: #BABECC;
+$color-bg: #dedede;
+$color-shadow: #a4a8b4;
 $color-white: #FFF;
 
 .test {
   background-color:$color-bg;
   min-height: 100vh;
   height: fit-content;
+  padding-top: 30px;
 }
 
 .test, p, input, select, textarea, button {
