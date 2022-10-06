@@ -26,7 +26,7 @@ const Home = () => {
           <div id="home-img home-8" onMouseOver={(e) => changeImage(e.target.id)}></div>
           <div id="home-img home-9" onMouseOver={(e) => changeImage(e.target.id)}></div>
         </div>
-        <img src={require(`../../images/${a}.jpeg`)} alt="#" width={"100%"} height={"100%"} className="banner-img"/>
+        <img src={require(`../../images/${a}.jpg`)} alt="#" width={"100%"} height={"100%"} className="banner-img"/>
         <Link className='main-txt prevent-select' to="/">Numbered</Link>
         <Link to="/client/src/pages/about" className='bottom-txt prevent-select'>Amsterdam & New-york</Link>
       </div>
@@ -39,7 +39,16 @@ const Home = () => {
       <div className='third-container'>
         <div className='third-container-one'>
           <span><p>CASES <br></br>STUDIES</p></span>
-          <span><Link>VIEW ALL</Link></span>
+          <span className='view'><Link>VIEW ALL</Link></span>
+        </div>
+        <div className='img-div-main'>
+          <div className='img-div-one'>
+            <img src={require(`../../images/9.jpg`)} alt="#" width="100%" height="100%"/>
+          </div>
+          <div className='img-div-two'>
+            <img src={require(`../../images/5.jpg`)} alt="#" width="100%" max-height="50%"/>
+            <img src={require(`../../images/2.jpg`)} alt="#" width="100%" height="50%"/>
+          </div>
         </div>
       </div>
       <Footer/>
