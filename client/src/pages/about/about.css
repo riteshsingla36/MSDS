@@ -1,0 +1,253 @@
+body{
+    background-color: black;
+    color: #fff;
+}
+
+.text{
+    font-size: 250px;
+    position: absolute;
+    margin-left: auto;
+    text-decoration: none;
+    color: #fff;
+    left: 0;
+    right: 0;
+    margin-top: 55px;
+    text-align: center;
+    margin-right: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    animation: main-text 900ms ease-out; 
+    animation-fill-mode: forwards;
+}
+.text2{
+    font-size: 54px;
+    position: absolute;
+    line-height: 1.1;
+    padding: 0 6rem;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    margin-top: 400px;
+    text-align: left;
+    margin-right: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    animation: main-text 900ms ease-out; 
+    animation-fill-mode: forwards;
+}
+.text3{
+    font-size: 54px;
+    position: absolute;
+    line-height: 1.1;
+    padding: 0 6rem;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    margin-top: 200px;
+    text-align: left;
+    margin-right: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    animation: main-text 900ms ease-out; 
+    animation-fill-mode: forwards;
+}
+.pic1{
+    position: absolute; 
+    overflow: hidden;
+    margin-left: 5rem;
+    margin-top: 48rem;
+    transform: rotate(-9deg);
+}
+.pic2{
+    position: relative; 
+    overflow: hidden;
+    margin-left: 30rem;
+    margin-top: 42rem;
+}
+.about-margin{
+    margin-left: 6rem;
+    margin-right: 7rem;
+}
+hr{
+    margin-top: 42rem;
+    margin-bottom: 5rem;
+}
+.Listtitle_1{
+    font-size: 4rem;
+}
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.line{
+    content: '';
+    width: 100%;
+    height: 2px;
+    color: #fff;
+}
+.header{
+    margin: 0 0 6rem;
+}
+
+.service_section {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 6rem;
+}
+dt {
+    margin-bottom: 1em;
+    font-size: 2rem;
+}
+dd {
+    opacity: .5;
+    font-size: 1rem;
+    line-height: 2;
+}
+.sec_logos{
+    width: 100%;
+    color: #0e0e0e;
+    background: #fff;
+    padding-bottom: 6rem;
+}
+.sec_logos li{
+    width: 100%;
+    text-align: center;
+    list-style: none;
+}
+.sec_logos ul {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+}
+.thankyou_quote{
+    width: fit-content;
+    color: #0e0e0e;
+    padding: 4rem;
+    padding-bottom: 6rem;
+    border: 1px solid gray;
+    border-radius: 444rem;
+}
+.QuoteSlice_quote__1H6VJ.QuoteSlice_isWhite__2CGiu {
+    width: 100%;
+    background: #fff;
+    color: rgb(14, 14, 14);
+    text-transform: uppercase;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 6rem;
+    }
+.QuoteSlice_quote__1H6VJ.QuoteSlice_isWhite__2CGiu blockquote p{
+    font-size: 6rem;
+    text-align: center;
+}
+.QuoteSlice_quote__1H6VJ{
+    position: relative;
+    text-align: center;
+    line-height: 1;
+}
+.QuoteSlice_quote__1H6VJ span{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    display: inline-block;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+.pic3{
+    position: absolute; 
+    overflow: hidden;
+    transform: rotate(-6deg);
+    right: 56%;
+    margin-top: 10rem;
+}
+.pic4{
+    position: relative; 
+    overflow: hidden;
+    margin-left: 31rem;
+    transform: rotate(6deg);
+}
+.pic5{
+    position: absolute; 
+    overflow: hidden;
+    left: 58%;
+    margin-top: 15rem;
+    transform: rotate(6deg);
+
+
+}
+.three_pictures{
+    background: #fff;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+.AwardsSlice_list__1KXRd li{
+    color: rgb(14, 14, 14);
+    text-transform: uppercase;
+
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgba(0, 0, 0, 0.1);
+
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    list-style: none;
+    margin-left: 7rem;
+}
+.AwardsSlice_list__1KXRd li{
+    color: rgb(14, 14, 14);
+    text-transform: uppercase;
+
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgba(0, 0, 0, 0.1);
+
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    list-style: none;
+    margin-left: 7rem;
+    font-size: 1.7rem;
+}
+.AwardsSlice_list__1KXRd {
+    margin-top: 15rem;
+}
+.pic6{
+    left: 0px; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+    opacity: 1; 
+    transition: none 0s ease 0s;
+}
+.figure_caption{
+    color: #fff;
+    top: 400rem;
+    left: 34rem;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 2;
+    -webkit-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+    transform: translateY(-60%);
+}
+.figure_caption h3{
+    font-size: 6rem;
+    padding-bottom: 2rem;
+    width: 18rem;
+}
+.figure_caption span{
+    font-size: 1rem;
+}
+
+
+
+
