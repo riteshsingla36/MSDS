@@ -122,15 +122,19 @@ const AddProject = () => {
     }, [])
 
     const updateImages = (e) => {
-        const images = e.target.files;
-        for (let image of images) {
-            if (image.size > 1000000) {
+        const files = Array.from(e.target.files);
+        files.forEach(file => {
+            if (file.size > 1000000) {
                 e.target.value = "";
-                alert("image size can not be greater than 1000000");
+                alert("image size can not be greater than 1MB");
                 return;
             }
-        }
-        setProjectImages(images);
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onloadend = () => {
+                setProjectImages(oldArray => [...oldArray, reader.result])
+            }
+        })
     }
 
     const createProject = (e) => {
@@ -140,20 +144,14 @@ const AddProject = () => {
         const description = e.target.description.value;
         const role_service = e.target.role_service.value;
         const awards_recognition = e.target.awards_recognition.value;
-        const image = projectImages;
-        const formData = new FormData();
+        const images = projectImages;
 
         if (type === "") {
             alert("please provide name");
             return;
         }
-        formData.append("name", name);
-        formData.append("type", type);
-        formData.append("description", description);
-        formData.append("role_service", role_service);
-        formData.append("awards_recognition", awards_recognition);
-        formData.append("image", image);
-        axios.post(`${baseUrl}/projects/create`, formData)
+
+        axios.post(`${baseUrl}/projects/create`, { name: name, description: description, type: type, role_service: role_service, awards_recognition: awards_recognition, images: images })
             .then(res => {
                 if (res.data.status) {
                     alert("project created successfully");
@@ -171,9 +169,10 @@ const AddProject = () => {
                 alert(err.message);
             })
     }
+
     return (
         <div className="test">
-            <form onSubmit={createProject}>
+            <form method="post" encType="multipart/form-data" onSubmit={createProject}>
 
                 <div className="segment">
                     <h1>Add Project</h1>
