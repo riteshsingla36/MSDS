@@ -7,7 +7,7 @@ import Footer from '../../components/footer/Footer';
 
 const Jobs = () => {
   return (
-    <div class="main_div">
+    <div>
       <Navbar/>
       <AnimationDiv/>
       <div class="jobs-margin">

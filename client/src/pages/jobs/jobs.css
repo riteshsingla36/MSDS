@@ -2,9 +2,6 @@
     margin-left: 6rem;
     margin-right: 7rem;
 }
-.main_div{
-    transform: translate3d(0px, -0.01px, 0px);
-}
 .jobs_text{
     font-size: 250px;
     position: absolute;
