@@ -9,27 +9,45 @@ const Footer = () => {
                 <div>
                     <span>LET'S WORK TOGETHER</span>
                     <br />
-                    <Link to="/">CONTACT@NUMBERED.COM</Link>
+                    <div className='footer-two'>
+                        <Link to="/">CONTACT@NUMBERED.COM</Link>
+                    </div>
                 </div>
-                <div>
-                    <p>
-                        <p>WORK</p>
-                        <p>ABOUT</p>
-                        <p>CONTACT</p>
-                        <p>JOBS</p>
-                    </p>
-                    <p>
-                        <p>TWITTER</p>
-                        <p>INSTAGRAM</p>
-                        <p>BEHANCE</p>
-                        <p>LINKEDIN</p>
-                    </p>
-                    <p>
+                <div className='footer-four'>
+                    <div>
+                        <div>
+                            <Link>WORK</Link>
+                        </div>
+                        <div>
+                            <Link>ABOUT</Link>
+                        </div>
+                        <div>
+                            <Link>CONTACT</Link>
+                        </div>
+                        <div>
+                            <Link>JOBS</Link>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <Link>TWITTER</Link>
+                        </div>
+                        <div>
+                            <Link>INSTAGRAM</Link>
+                        </div>
+                        <div>
+                            <Link>BEHANCE</Link>
+                        </div>
+                        <div>
+                            <Link>LINKEDIN</Link>
+                        </div>
+                    </div>
+                    <div>
                         <p>NUMBERED STUDIO</p>
                         <p>HERENGRACHT 342</p>
                         <p>1016 CG,AMSTERDAM</p>
                         <p>THE SUNNY NETHERLANDS</p>
-                    </p>
+                    </div>
                 </div>
             </div>
 
