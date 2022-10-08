@@ -6,10 +6,9 @@ import AdminNavbar from '../navbar/AdminNavbar'
 const PrivateComponent = () => {
 
     const auth = document.cookie?.split('; ')?.find((row) => row.startsWith('email'))?.split('=')[1];
-    console.log(auth);
 
     return (
-        <div>
+        <>
             {auth ? (
                 <>
                 <AdminNavbar />
@@ -18,12 +17,8 @@ const PrivateComponent = () => {
             ) : (
                 <Navigate to="/admin/login" />
             )}
-        </div>
+        </>
 
-        // <>
-        //     <AdminNavbar />
-        //     <Outlet />
-        // </>
     )
 }
 
