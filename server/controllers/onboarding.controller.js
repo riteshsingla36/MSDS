@@ -9,7 +9,11 @@ const LoginHandler = async (req, res) => {
     }
     try{
         const user = await User.findOne({email: email});
-        req.session.user = user;
+        req.session.auth = true;
+        req.session.email = user.email;
+        res.cookie("email", user.email, { maxAge: 300000 });
+        res.cookie("id", user.id, { maxAge: 300000 });
+        req.session.save();
         return res.json({status: true, message: "Login Successfully"});
     }catch(err){
         res.json({ status: false, message: err.message });

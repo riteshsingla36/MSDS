@@ -35,8 +35,8 @@ function App() {
           <Route path="/admin/editjob/:jobId" element={<EditJob />} />
           <Route path="/admin/allprojecttypes" element={<AllProjectTypes />} />
           <Route path="/admin/editprojecttype/:projectTypeId" element={<EditProjectType />} />
-          <Route path="/admin/login" element={<Login/>} />
         </Route>
+          <Route path="/admin/login" element={<Login/>} />
       </Routes>
     </div>
   );
