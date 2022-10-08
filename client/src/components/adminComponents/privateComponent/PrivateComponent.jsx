@@ -19,6 +19,7 @@ const PrivateComponent = () => {
                 <Navigate to="/admin/login" />
             )}
         </>
+        
     )
 }
 
