@@ -1,5 +1,6 @@
 const express = require('express');
 const User = require('../models/user.model');
+const cookie = require("cookie-parser");
 
 const LoginHandler = async (req, res) => {
     const {email,password} = req.body;
@@ -12,10 +13,10 @@ const LoginHandler = async (req, res) => {
             return res.json({status: false, message: "Email not Register Please Signup First"});
         }
         if(email === user.email && password === user.password){
-            res.setHeader('Content-Type', 'text/html');
-            res.json({status: true, message: "Login Successfully"});
-            alert('Login Successfully');
-            nav('/client/src/pages/home/Home.jsx');
+            req.session.isAuth = true;
+            req.session.email = user.email;
+            res.cookie.email("email", email);
+            return res.json({status: true, message: "Login Successfully"});
         }else{
             return res.json({status: false, message: "Email or Password is incorrect"});
         }
@@ -35,23 +36,20 @@ const signUpHandler = async (req, res) => {
     //const profileImage = req.file.path;
 
     if(password.length < 8){
-        res.json({status: false, message: "Password too short"});
-        return ;
+        return res.json({status: false, message: "Password too short"});
     }
     if(password !== confirmPassword){
-        res.json({status: false, message: 'Passwords & Confirmed Password do not match'});
-        return;
+        return res.json({status: false, message: 'Passwords & Confirmed Password do not match'});
     }
     if(phoneNo.length <10) {
-        res.json({status: false, message: 'Phone number must be 10 characters long'});
-        return;
+        return res.json({status: false, message: 'Phone number must be 10 characters long'});
     }
     try {
         const user = await User.create({name, email, userName, password, gender, phoneNo});
-        res.json({status: true, data: user});
+        return res.json({status: true, data: user});
     }
     catch(e) {
-        res.json({status: false, message: e.message});
+        return res.json({status: false, message: e.message});
     }
 }
 
