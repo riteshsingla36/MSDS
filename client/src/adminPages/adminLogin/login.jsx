@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import baseUrl from '../../baseUrl';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
+    useEffect(() => {
+        const auth = document.cookie?.split('; ')?.find((row) => row.startsWith('email'))?.split('=')[1];
+        if(auth){
+            navigate('/admin');
+        }
+    }, []);
+
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -16,7 +24,7 @@ const Login = () => {
           }
           else {
             alert("successfully logged in");
-            navigate("/");
+            navigate("/admin");
           }
         })
     }
