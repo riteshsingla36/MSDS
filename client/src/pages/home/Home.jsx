@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import {Link} from "react-router-dom";
+import axios from 'axios';
 import AnimationDiv from '../../components/animation_div/AnimationDiv';
 import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/navbar/Navbar';
 import "./home.css";
 
 const Home = () => {
+  axios.defaults.withCredentials = true;
   let [a, setA] = useState(1);
   const changeImage = (id) => {
     setA(Number(id.split(" ")[1].split("-")[1]));
