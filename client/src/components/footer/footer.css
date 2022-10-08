@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .footer {
     box-sizing: border-box;
     padding-top: 5rem;
@@ -11,20 +13,14 @@
     width: 100%;
 }
 
-.footer-upper div:first-child a {
+.footer-upper > div:first-child a {
     text-decoration: none;
-    text-decoration: underline;
     color: #fff;
 }
 
-.footer-upper div:nth-child(2) {
+.footer-upper > div:nth-child(2){
     display: flex;
     gap: 100px;
-}
-
-.footer-upper div:nth-child(2) > p >p {
-    text-decoration: underline;
-
 }
 
 .footer-bottom {
@@ -58,4 +54,51 @@
     font-family:Georgia, 'Times New Roman', Times, serif;
     animation: main-text 900ms ease-out; 
     animation-fill-mode: forwards;
+}
+
+.footer-four div div{
+    line-height: 30px;
+    position: relative;
+    width: fit-content;
+}
+
+.footer-four > div div::before{
+    cursor: pointer;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #FFF;
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) {
+    .footer-four > div div:hover::before{
+        cursor: pointer;
+        left: auto;
+        width: 0%;
+    }
+  }
+  .footer-four > div div{
+    cursor: pointer;
+  }
+
+.footer-four div div a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-two > a::before {
+    text-decoration: underline;
+}
+
+@media (hover: hover) {
+    .footer-two > a::after{
+        cursor: pointer;
+        left: auto;
+        width: 0%;
+    }
 }

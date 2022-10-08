@@ -132,6 +132,10 @@ body{
     background-color: #fff;
 }
 
+.img-div-one > img{
+    object-fit: cover;
+}
+
 .img-div-two{
     display:flex;
     flex-direction: column;
@@ -140,6 +144,56 @@ body{
 
 .img-div-two > img:first-child{
     z-index: 2;
+}
+
+.forth-container{
+    display: flex;
+    height: 100vh;
+}
+
+.forth-container p{
+    margin-top: 11%;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    width: 55%;
+    font-weight: 400;
+}
+.inside-four{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.five-container{
+    display: flex;
+    height: 130vh;
+}
+
+.five-container > img{
+    object-fit: cover;
+}
+
+.six-container {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    height: 85vh;
+}
+
+.six-container > p{
+    font-size: 50px;
+    width: 50%;
+    font-weight: 400;
+}
+
+.seven-container{
+    width: 100%;
+    height: 100vh;
+}
+.seven-container > img{
+    object-fit: cover;
 }
 
 @keyframes main-text {

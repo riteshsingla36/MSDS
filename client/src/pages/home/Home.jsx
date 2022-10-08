@@ -47,9 +47,24 @@ const Home = () => {
           </div>
           <div className='img-div-two'>
             <img src={require(`../../images/5.jpg`)} alt="#" width="100%" max-height="50%"/>
-            <img src={require(`../../images/2.jpg`)} alt="#" width="100%" height="50%"/>
+            <img src={require(`../../images/8.jpg`)} alt="#" width="100%" height="50%"/>
           </div>
         </div>
+      </div>
+      <div className="forth-container">
+        <div className="inside-four">
+          <p>Collaborating with international brands, founders, start-ups, venture capitals, and more – producing, results-driven, unique products and experiences from conception to delivery.</p>
+        </div>
+      </div>
+      <div className='five-container'>
+        <img src={require("../../images/10.jpg")} alt="#" width="50%"/>
+        <img src={require("../../images/8.jpg")} alt="#" width="50%" />
+      </div>
+      <div className="six-container">
+        <p>With more than 10 years of experience in working with fashion and beauty brands, start-ups, and technology companies, we help brands succeed.</p>
+      </div>
+      <div className='seven-container'>
+        <img src={require("../../images/11.jpg")} alt="#" width="100%"/>
       </div>
       <Footer/>
     </div>
