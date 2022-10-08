@@ -9,17 +9,8 @@ const LoginHandler = async (req, res) => {
     }
     try{
         const user = await User.findOne({email: email});
-        if(!user){
-            return res.json({status: false, message: "Email not Register Please Signup First"});
-        }
-        if(email === user.email && password === user.password){
-            req.session.isAuth = true;
-            req.session.email = user.email;
-            res.cookie.email("email", email);
-            return res.json({status: true, message: "Login Successfully"});
-        }else{
-            return res.json({status: false, message: "Email or Password is incorrect"});
-        }
+        req.session.user = user;
+        return res.json({status: true, message: "Login Successfully"});
     }catch(err){
         res.json({ status: false, message: err.message });
     }

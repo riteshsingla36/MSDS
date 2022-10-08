@@ -10,7 +10,7 @@ const Login = () => {
     
     const loginHandler = (e) => {
         e.preventDefault();
-        axios.post(`${baseUrl}/onboarding/login`, {email: email, password: password}).then(res => {
+        axios.post(`${baseUrl}/onboarding/login`, {email: email, password: password}, {withCredentials: true}).then(res => {
           if(!res.data.status) {
             alert(res.data.message);
           }
