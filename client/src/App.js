@@ -14,6 +14,7 @@ import AllProjectTypes from './adminPages/allProjectTypes/AllProjectTypes';
 import EditProjectType from './adminPages/editProjectType/EditProjectType';
 import PrivateComponent from './components/adminComponents/privateComponent/PrivateComponent';
 import AdminHome from './adminPages/home/AdminHome';
+import Login from './adminPages/adminLogin/login';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/admin/editjob/:jobId" element={<EditJob />} />
           <Route path="/admin/allprojecttypes" element={<AllProjectTypes />} />
           <Route path="/admin/editprojecttype/:projectTypeId" element={<EditProjectType />} />
+          <Route path="/admin/login" element={<Login/>} />
         </Route>
       </Routes>
     </div>

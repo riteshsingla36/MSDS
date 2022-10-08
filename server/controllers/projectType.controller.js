@@ -25,6 +25,7 @@ const getProjectTypeById = async (req, res) => {
 }
 
 const createProjectType = async (req, res) => {
+    console.log(req);
     const name = req.body.name;
     if (!name) {
         res.json({ status: false, message: "Please enter a name" });
