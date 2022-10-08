@@ -9,7 +9,7 @@ const PrivateComponent = () => {
     console.log(auth);
 
     return (
-        <div>
+        <>
             {auth ? (
                 <>
                 <AdminNavbar />
@@ -18,12 +18,7 @@ const PrivateComponent = () => {
             ) : (
                 <Navigate to="/admin/login" />
             )}
-        </div>
-
-        // <>
-        //     <AdminNavbar />
-        //     <Outlet />
-        // </>
+        </>
     )
 }
 
