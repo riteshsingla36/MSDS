@@ -15,7 +15,6 @@ const onBoarding = require('./routes/onBoarding.route');
 const oneWeek = 1000 * 60 * 60 * 24 * 7;
 const MongoDBStore = require("connect-mongodb-session")(session);
 const cookieParser = require('cookie-parser');
-const cookieSecret = 'george cat & dog';
 
 
 // app.use(bodyParser.json({limit: "50mb"}));
@@ -50,6 +49,7 @@ app.use(
 
 app.use(
   session({
+    key: 'user',
     secret: "secret",
     resave: true,
     rolling: true,

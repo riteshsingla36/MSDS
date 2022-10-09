@@ -1,6 +1,8 @@
 const express = require('express');
 const User = require('../models/user.model');
 const cookie = require("cookie-parser");
+const { application } = require('express');
+const router = require('../routes/jobs.route');
 
 const LoginHandler = async (req, res) => {
     const {email,password} = req.body;
@@ -43,5 +45,10 @@ const signUpHandler = async (req, res) => {
     }
 }
 
+const logout = (req, res) => {
+    res.cookie('connect.sid', '', {expires: new Date(1), path: '/'});
+    res.clearCookie('connect.sid', {path: '/'});
+    res.redirect('/');
+}
 
-module.exports = {LoginHandler, signUpHandler};
+module.exports = {LoginHandler, signUpHandler, logout};

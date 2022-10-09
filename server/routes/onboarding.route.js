@@ -5,4 +5,6 @@ router.post('/login', OnBoarding.LoginHandler);
 
 router.post('/register', OnBoarding.signUpHandler);
 
+router.get('/logout', OnBoarding.logout);
+
 module.exports = router;
