@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import baseUrl from '../../baseUrl';
+import { TailSpin } from 'react-loader-spinner';
 
 const AddJob = () => {
+    const [processing, setProcessing] = useState(false);
+
     const createJob = (e) => {
+        setProcessing(true);
         e.preventDefault();
         const postName = e.target.postName.value;
         const location = e.target.location.value;
@@ -24,13 +28,24 @@ const AddJob = () => {
                 else {
                     alert(res.data.message);
                 }
+                setProcessing(false);
             }).catch(err => {
                 alert(err.message);
+                setProcessing(false);
             })
     }
 
     return (
         <div className="test">
+            {processing ? <TailSpin
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="tail-spin-loading"
+                radius="1"
+                wrapperStyle={{}}
+                wrapperClass="loader"
+            />: <></>}
             <form onSubmit={createJob}>
 
                 <div className="segment">

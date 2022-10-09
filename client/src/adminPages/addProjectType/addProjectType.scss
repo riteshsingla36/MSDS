@@ -178,9 +178,18 @@ $color-white: #FFF;
   background-color:$color-bg;
   min-height: 100vh;
   height: fit-content;
-  padding-top: 30px;
 }
 
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+  opacity: 50%;
+}
 .test, p, input, select, textarea, button {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.2px;
