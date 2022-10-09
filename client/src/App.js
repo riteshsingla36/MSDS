@@ -15,6 +15,7 @@ import EditProjectType from './adminPages/editProjectType/EditProjectType';
 import PrivateComponent from './components/adminComponents/privateComponent/PrivateComponent';
 import AdminHome from './adminPages/home/AdminHome';
 import Login from './adminPages/adminLogin/login';
+import Register from './adminPages/adminRegister/Register';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/admin/editprojecttype/:projectTypeId" element={<EditProjectType />} />
         </Route>
           <Route path="/admin/login" element={<Login/>} />
+          <Route path="/admin/register" element={<Register />} />
       </Routes>
     </div>
   );

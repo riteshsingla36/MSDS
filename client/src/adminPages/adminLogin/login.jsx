@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import baseUrl from '../../baseUrl';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -46,7 +46,9 @@ const Login = () => {
                 </label>
 
                 <button className="red" type="submit"> LOGIN</button>
-
+                <div className='not-reg'>
+                    <span >Not Registerd Yet! &nbsp;&nbsp;&nbsp;</span> <Link to='/admin/register'>Register Here</Link>
+                </div>
             </form>
         </div>
     )

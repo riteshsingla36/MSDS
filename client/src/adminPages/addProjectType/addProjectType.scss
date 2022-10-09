@@ -213,6 +213,10 @@ $color-white: #FFF;
   background-color:$color-bg;
   text-shadow: 1px 1px 0 $color-white;
 }
+.test .not-reg{
+  margin-top: 2rem;
+  text-align: center;
+}
 
 .test textarea {
   border-radius: $ruler*2;
