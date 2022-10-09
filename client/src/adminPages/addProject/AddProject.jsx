@@ -103,12 +103,15 @@
 import React, { useEffect, useState } from 'react'
 import baseUrl from '../../baseUrl'
 import axios from 'axios'
+import { TailSpin } from 'react-loader-spinner';
 
 const AddProject = () => {
     const [types, setTypes] = useState([]);
     const [projectImages, setProjectImages] = useState([]);
+    const [processing, setProcessing] = useState(false);
 
     useEffect(() => {
+        setProcessing(true);
         axios.get(`${baseUrl}/projecttype`).then(res => {
             if (res.data.status) {
                 setTypes(res.data.data);
@@ -116,12 +119,15 @@ const AddProject = () => {
             else {
                 alert(res.data.message);
             }
+            setProcessing(false);
         }).catch(err => {
             alert(err.message);
+            setProcessing(false);
         });
     }, [])
 
     const updateImages = (e) => {
+        setProcessing(true);
         const files = Array.from(e.target.files);
         files.forEach(file => {
             if (file.size > 1000000) {
@@ -135,9 +141,11 @@ const AddProject = () => {
                 setProjectImages(oldArray => [...oldArray, reader.result])
             }
         })
+        setProcessing(false);
     }
 
     const createProject = (e) => {
+        setProcessing(true);
         e.preventDefault();
         const name = e.target.name.value;
         const type = e.target.type.value;
@@ -165,13 +173,24 @@ const AddProject = () => {
                 else {
                     alert(res.data.message);
                 }
+                setProcessing(false);
             }).catch(err => {
                 alert(err.message);
+                setProcessing(false);
             })
     }
 
     return (
         <div className="test">
+            {processing ? <TailSpin
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="tail-spin-loading"
+                radius="1"
+                wrapperStyle={{}}
+                wrapperClass="loader"
+            />: <></>}
             <form method="post" encType="multipart/form-data" onSubmit={createProject}>
 
                 <div className="segment">

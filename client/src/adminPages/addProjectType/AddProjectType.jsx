@@ -42,14 +42,18 @@
 
 // export default AddProjectType
 
-import React from 'react'
+import React, { useState } from 'react'
 import "./addProjectType.scss"
 
 import axios from "axios";
 import baseUrl from "../../baseUrl"
+import { TailSpin } from 'react-loader-spinner';
 
 const AddProjectType = () => {
+    const [processing, setProcessing] = useState(false);
+
     const createProjectType = (e) => {
+        setProcessing(true);
         e.preventDefault();
         axios.post(`${baseUrl}/projecttype/create`, { name: e.target.name.value }).then((res) => {
             if (res.data.status) {
@@ -58,12 +62,24 @@ const AddProjectType = () => {
             else {
                 alert(res.data.message);
             }
+            setProcessing(false);
         }).catch((err) => {
             alert(err.message);
+            setProcessing(false);
         })
     }
+
     return (
         <div className="test">
+            {processing ? <TailSpin
+                height="80"
+                width="80"
+                color="#4fa94d"
+                ariaLabel="tail-spin-loading"
+                radius="1"
+                wrapperStyle={{}}
+                wrapperClass="loader"
+            />: <></>}
             <form onSubmit={createProjectType}>
 
                 <div className="segment">
