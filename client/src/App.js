@@ -16,6 +16,7 @@ import PrivateComponent from './components/adminComponents/privateComponent/Priv
 import AdminHome from './adminPages/home/AdminHome';
 import Login from './adminPages/adminLogin/login';
 import Register from './adminPages/adminRegister/Register';
+import JobDetails from './pages/job_detail/JobDetails';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
         <Route path="/jobs" element={<Jobs />} />
+        <Route path="/job/:id" element={<JobDetails />} />
         <Route path="/contact" element={<Contact />} />
 
         <Route element={<PrivateComponent />}>
