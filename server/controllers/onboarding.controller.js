@@ -26,21 +26,16 @@ const signUpHandler = async (req, res) => {
     const userName = req.body.userName;
     const password = req.body.password;
     const confirmPassword = req.body.confirmPassword;
-    const gender = req.body.gender;
     const phoneNo = req.body.phoneNo;
-    //const profileImage = req.file.path;
 
-    if(password.length < 8){
-        return res.json({status: false, message: "Password too short"});
-    }
     if(password !== confirmPassword){
         return res.json({status: false, message: 'Passwords & Confirmed Password do not match'});
     }
-    if(phoneNo.length <10) {
+    if(phoneNo.length < 10) {
         return res.json({status: false, message: 'Phone number must be 10 characters long'});
     }
     try {
-        const user = await User.create({name, email, userName, password, gender, phoneNo});
+        const user = await User.create({name, email, userName, password, phoneNo});
         return res.json({status: true, data: user});
     }
     catch(e) {

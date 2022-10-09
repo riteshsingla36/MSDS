@@ -23,11 +23,6 @@ const userSchema = mongoose.Schema({
         trim: true,
         required: true
     },
-    gender: {
-        type: String,
-        enum: ['MALE', 'FEMALE', 'OTHER'],
-        required: true
-    },
     phoneNo : {
         type: Number,
         max: 9999999999,
@@ -35,14 +30,9 @@ const userSchema = mongoose.Schema({
         unique: true,
         required: true,
     },
-    profileImage: {
-        type: String,
-        trim: true,
-        default: 'https://svgsilh.com/svg/659651.svg'
-    },
     isAdmin: {
         type: Boolean,
-        default: false,
+        default: true,
     },
 
 },
