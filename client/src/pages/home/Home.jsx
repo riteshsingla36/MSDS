@@ -26,7 +26,9 @@ const Home = () => {
           <div id="home-img home-8" onMouseOver={(e) => changeImage(e.target.id)}></div>
           <div id="home-img home-9" onMouseOver={(e) => changeImage(e.target.id)}></div>
         </div>
+        
         <img src={require(`../../images/${a}.jpg`)} alt="#" width={"100%"} height={"100%"} className="banner-img"/>
+        
         <Link className='main-txt prevent-select' to="/">Numbered</Link>
         <Link to="/client/src/pages/about" className='bottom-txt prevent-select'>Amsterdam & New-york</Link>
       </div>
