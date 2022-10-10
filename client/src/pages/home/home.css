@@ -35,7 +35,7 @@ body{
 .main-txt{
     text-decoration: none;
     color: white;
-    font-size: 250px;
+    font-size: calc((97vw)/5);
     position: absolute;
     margin-left: auto;
     left: 0;
