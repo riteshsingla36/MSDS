@@ -1,8 +1,5 @@
 const express = require('express');
 const User = require('../models/user.model');
-const cookie = require("cookie-parser");
-const { application } = require('express');
-const router = require('../routes/jobs.route');
 
 const LoginHandler = async (req, res) => {
     const {email,password} = req.body;
@@ -11,12 +8,18 @@ const LoginHandler = async (req, res) => {
     }
     try{
         const user = await User.findOne({email: email});
-        req.session.auth = true;
-        req.session.email = user.email;
-        res.cookie("email", user.email, { maxAge: 300000 });
-        res.cookie("id", user.id, { maxAge: 300000 });
-        req.session.save();
-        return res.json({status: true, message: "Login Successfully"});
+        
+        if(!user){
+            return res.json({status: false, message: "Email not Register Please Signup First"});
+        }
+        if(email === user.email && password === user.password){
+            req.session.auth = true;
+            req.session.email = user.email;
+            res.cookie("email", user.email, { maxAge: 300000 });
+            res.cookie("id", user.id, { maxAge: 300000 });
+            req.session.save();
+            return res.json({status: true, message: "Login Successfully"});
+        }
     }catch(err){
         res.json({ status: false, message: err.message });
     }
