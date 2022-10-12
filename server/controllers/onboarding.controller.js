@@ -63,9 +63,7 @@ const signUpHandler = async (req, res) => {
             <p>Please click the following link to verify your account</p>
             <a href="${process.env.DOMAIN}/onboarding/verify/${user.verificationCode}">Verify Now</a>
         </div>`;
-
-        console.log(`${process.env.DOMAIN}/onboarding/verify/${user.verificationCode}`, 'verify link');
-
+        
         await sendMail(
             user.email,
             'Verify Account',
@@ -73,7 +71,7 @@ const signUpHandler = async (req, res) => {
             html
         );
 
-        return res.json({ status: true, data: user });
+        return res.json({ status: true, message: 'Mail Sent Successfully, Please Verify Your Account' });
     }
     catch (e) {
         return res.json({ status: false, message: e.message });
