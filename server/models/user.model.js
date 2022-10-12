@@ -34,6 +34,12 @@ const userSchema = mongoose.Schema({
         type: Boolean,
         default: true,
     },
+    verified: { type: Boolean, default: false },
+    verificationCode: { type: String, required: false },
+    resetPasswordToken: { type: String, required: false },
+    resetPasswordExpiresIn: { type: Date, required: false },
+    lastLogin: { type: Date, default: Date.now },
+    lastUpadteChecked: { type: Date, default: Date.now },
 
 },
     {
