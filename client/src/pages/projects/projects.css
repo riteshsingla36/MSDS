@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    color: #fff;
+}
+.Filters_filters__18hoF{
+    font-size: 20rem;
+    margin-top: 3rem;
+    margin-right: 0px;
+    margin-bottom: 3rem;
+    position: absolute;
+}
+.Filters_filters__18hoF ul {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-top: 0px;
+}
+.Filters_filters__18hoF a {
+    display: flex;
+    font-size: 1.2rem;
+}
+.Filters_filters__18hoF li a{
+    width: max-content;
+}
+.Filters_filters__18hoF span {
+    color: grey;
+}
