@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const crypto = require('crypto');
 
 const userSchema = mongoose.Schema({
     name: {
@@ -23,7 +24,7 @@ const userSchema = mongoose.Schema({
         trim: true,
         required: true
     },
-    phoneNo : {
+    phoneNo: {
         type: Number,
         max: 9999999999,
         trim: true,
@@ -34,6 +35,14 @@ const userSchema = mongoose.Schema({
         type: Boolean,
         default: true,
     },
+    resetPasswordToken: { 
+        type: String,
+        required: false
+    },
+    resetPasswordExpiresIn: { 
+        type: Date,
+        required: false
+    },
 
 },
     {
@@ -41,5 +50,10 @@ const userSchema = mongoose.Schema({
         timestamps: true,
     }
 )
+
+userSchema.methods.generatePasswordReset = function () {
+    this.resetPasswordExpiresIn = Date.now() + 36000000;
+    this.resetPasswordToken = crypto.randomBytes(20).toString('hex');
+};
 
 module.exports = mongoose.model('user', userSchema);
