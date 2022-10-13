@@ -1,22 +1,26 @@
 const User = require('../models/user.model');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
-const {sendMail} = require('../middleware/email-sender');
+const { sendMail } = require('../middleware/email-sender');
 
 const LoginHandler = async (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) {
         return res.json({ status: false, message: "Email Or Password is required" });
     }
+
     try {
         let user = await User.findOne({ email: email });
-        if (!user) {
-            return res.json({ status: false, message: "Email not Register Please Signup First" });
+
+        if (!user || !await bcrypt.compare(password, user.password)) {
+            return res.json({ status: false, message: "Email or Password is incorrect" });
         }
-        if(user.verified === false){
+
+        if (user.verified === false) {
             return res.json({ status: false, message: "Please Verified Your Account! or Create Another one" });
         }
-        if (email === user.email && bcrypt.compare(password , user.password)) {
+
+        if (email === user.email && await bcrypt.compare(password, user.password)) {
             req.session.auth = true;
             req.session.email = user.email;
             res.cookie("email", user.email, { maxAge: 300000 });
@@ -50,7 +54,7 @@ const signUpHandler = async (req, res) => {
 
     if (user) {
         return res.status(200).json({
-            success: false,
+            status: false,
             message:
                 'Email is already registered. Did you forget the password. Try resetting it.',
         });
@@ -65,9 +69,9 @@ const signUpHandler = async (req, res) => {
         <div>
             <h1>Hello, ${user.name}</h1>
             <p>Please click the following link to verify your account</p>
-            <a href="${process.env.DOMAIN}/onboarding/verify/${user.verificationCode}">Verify Now</a>
+            <a href="${process.env.DOMAIN}/verify/${user.verificationCode}">Verify Now</a>
         </div>`;
-        
+
         await sendMail(
             user.email,
             'Verify Account',
@@ -89,14 +93,15 @@ const resetPasswordHandler = async (req, res) => {
 
     if (!user) {
         return res.status(200).json({
-            success: false,
+            status: false,
             message: 'User with the email is not found.',
         });
     }
 
-    let resetPassword = user.generatePasswordReset();
+    user.resetPasswordToken = crypto.randomBytes(167).toString('hex');
+    user.resetPasswordExpiresIn = Date.now() + 36000000;
 
-    let result = await user.save();
+    await user.save();
 
     // Sent the password reset Link in the email.
     let html = `
@@ -104,35 +109,73 @@ const resetPasswordHandler = async (req, res) => {
               <h1>Hello, ${user.name}</h1>
               <p>Please click the following link to reset your password.</p>
               <p>If this password reset request is not created by your then you can inore this email.</p>
-              <a href="${"dsfds"}/reset-password?resetToken=${user.resetPasswordToken}">Reset Now</a>
+              <a href="${process.env.DOMAIN}/reset-password/${user.resetPasswordToken}">Reset Now</a>
           </div>`;
 
     console.log(
-        `${'sfsdfs'}/reset-password?resetToken=${user.resetPasswordToken}`,
+        `${process.env.DOMAIN}/reset-password?resetToken=${user.resetPasswordToken}`,
         'reset link'
     );
-
+    
     await sendMail(
-        "ritesh.singla36@gmail.com",
+        user.email,
         'Reset Password',
         'Please reset your password.',
         html
     );
 
     return res.status(200).json({
-        success: true,
+        status: true,
         message: 'Password reset link is sent your email.',
     });
 };
 
+const resetPasswordNow = async (req, res) => {
+    let { resetPasswordToken, password } = req.body;
+    let user = await User.findOne({
+        resetPasswordToken,
+        resetPasswordExpiresIn: { $gt: Date.now() },
+    });
+    if (!user) {
+        return res.status(401).json({
+            status: false,
+            message: 'Password reset token is invalid or has expired.',
+        });
+    }
+
+    user.password = await bcrypt.hash(password, 10);
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpiresIn = undefined;
+    await user.save();
+    // Send notification email about the password reset successfull process
+    let html = `
+          <div>
+              <h1>Hello, ${user.name}</h1>
+              <p>Your password is resetted successfully.</p>
+              <p>If this rest is not done by you then you can contact our team.</p>
+          </div>
+        `;
+    await sendMail(
+        user.email,
+        'Reset Password Successful',
+        'Your password is changed.',
+        html
+    );
+    return res.status(200).json({
+        status: true,
+        message:
+            'Your password reset request is complete and your password is reset successfully. Login into your account with your new password.',
+    });
+};
+
 const verifyUser = async (req, res) => {
-    let { verificationCode } = req.params;
+    let { verificationCode } = req.body;
     let user = await User.findOne({ verificationCode });
 
     if (!user) {
-        return res.status(401).json({
+        return res.json({
             message: 'Unauthorized access. Invalid verification code',
-            success: false,
+            status: false,
         });
     }
 
@@ -140,8 +183,8 @@ const verifyUser = async (req, res) => {
     user.verificationCode = undefined;
     await user.save();
 
-    return res.status(200).json({
-        success: true,
+    return res.json({
+        status: true,
         message: 'Hurray! your account is successfully verified.',
     });
 };
@@ -152,4 +195,4 @@ const logout = (req, res) => {
     res.redirect('/');
 }
 
-module.exports = { LoginHandler, signUpHandler, logout , verifyUser, resetPasswordHandler};
+module.exports = { LoginHandler, signUpHandler, logout, verifyUser, resetPasswordHandler, resetPasswordNow };
