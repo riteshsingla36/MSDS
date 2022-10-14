@@ -17,6 +17,8 @@ import AdminHome from './adminPages/home/AdminHome';
 import Login from './adminPages/adminLogin/login';
 import Register from './adminPages/adminRegister/Register';
 import JobDetails from './pages/job_detail/JobDetails';
+import VerifyAccount from './adminPages/verify_account/VerifyAccount';
+import ResetPassword from './adminPages/reset_password/ResetPassword';
 
 function App() {
   return (
@@ -39,8 +41,11 @@ function App() {
           <Route path="/admin/allprojecttypes" element={<AllProjectTypes />} />
           <Route path="/admin/editprojecttype/:projectTypeId" element={<EditProjectType />} />
         </Route>
-          <Route path="/admin/login" element={<Login/>} />
-          <Route path="/admin/register" element={<Register />} />
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin/register" element={<Register />} />
+        <Route path="/verify/:verifytoken" element={<VerifyAccount />} />
+        <Route path="/reset-password/:resetpasswordtoken" element={<ResetPassword />} />
+
       </Routes>
     </div>
   );

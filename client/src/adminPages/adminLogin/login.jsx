@@ -18,6 +18,28 @@ const Login = () => {
         }
     }, []);
 
+    const forgotPassword = () => {
+        setProcessing(true);
+        if(email === "") {
+            alert("Please enter your email");
+            setProcessing(false);
+            return;
+        }
+        axios.post(`${baseUrl}/onboarding/reset-password`, {email: email}).then((res) => {
+            if(!res.data.status) {
+                alert(res.data.message);
+            }
+            else {
+                alert(res.data.message);
+            }
+            setProcessing(false);
+        })
+        .catch(err => {
+            alert(err.message);
+            setProcessing(false);
+        })
+    } 
+
     const loginHandler = (e) => {
         e.preventDefault();
         setProcessing(true);
@@ -63,6 +85,9 @@ const Login = () => {
 
                 <button className="red" type="submit"> LOGIN</button>
                 <div className='not-reg'>
+                    <span style={{cursor: "pointer"}} onClick={forgotPassword}>Forgot password?</span>
+                    <br />
+                    <br />
                     <span >Not Registerd Yet! &nbsp;&nbsp;&nbsp;</span> <Link to='/admin/register'>Register Here</Link>
                 </div>
             </form>

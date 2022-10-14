@@ -16,7 +16,7 @@ const Register = () => {
     const navigate = useNavigate();
     const [processing, setProcessing] = useState(false);
 
-    const createProject = (e) => {
+    const registerAdmin = (e) => {
         setProcessing(true);
         e.preventDefault();
         const name = e.target.name.value;
@@ -28,11 +28,13 @@ const Register = () => {
 
         if (email === "") {
             alert("please provide email");
+            setProcessing(false);
             return;
         }
 
         if(password !== confirmPassword){
             alert("Confirm password is incorrect");
+            setProcessing(false);
             return;
         }  
         axios.post(`${baseUrl}/onboarding/register`, { name: name, email: email, userName: userName, phoneNo: phoneNo, password: password, confirmPassword: confirmPassword})
@@ -55,6 +57,7 @@ const Register = () => {
                 setProcessing(false);
             })
     }
+
     return (
         <div className="test">
             {processing ? <TailSpin
@@ -66,7 +69,7 @@ const Register = () => {
                 wrapperStyle={{}}
                 wrapperClass="loader"
             />: <></>}
-            <form method="post" encType="multipart/form-data" onSubmit={createProject}>
+            <form method="post" encType="multipart/form-data" onSubmit={registerAdmin}>
 
                 <div className="segment">
                     <h1>Register</h1>
