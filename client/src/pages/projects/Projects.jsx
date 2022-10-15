@@ -12,8 +12,8 @@ const Projects = () => {
     <div>
       <Navbar/>
       <AnimationDiv/>
-      <div class="job_details_margin">
-        <Link className='job_details_text' to="/">Numbered</Link> 
+      <div class="project_details_margin">
+        <Link className='project_details_text' to="/">Numbered</Link> 
       </div>
       <header class="header"></header>
       <nav class="Filters_filters__18hoF">
@@ -35,7 +35,7 @@ const Projects = () => {
           </li>
         </ul>
       </nav>
-      <header class="header"></header>
+      <header class="project_header"></header>
       <div>
         <Picture/>
       </div>
