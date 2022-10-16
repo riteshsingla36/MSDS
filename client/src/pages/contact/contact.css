@@ -10,16 +10,19 @@
     padding-top: 55px;
     animation-fill-mode: forwards;
 }
-
+.main-tt span{
+    font-size: calc((35vw)/2);
+}
 .upper {
     display: flex;
     justify-content: center;
     gap: 50px;
+    padding: 0 0;
     flex-wrap: wrap;
-    padding: 0 5rem;
     margin-bottom: 10rem;
     margin-top: 3rem;
 }
+
 .upper p:first-child {
     width: 50%;
     text-align: left !important;
@@ -51,9 +54,16 @@
     transform: translate(-50%, -50%);
 }
 
-.img-container > span > h3 {
-    font-size: 70px;
+.upper p{
+    font-size: 1rem;
 }
+.img-container h3{
+    font-size: 6rem;
+}
+.img-container span{
+    left: 45rem;
+}
+
 
 @keyframes main-text {
     0%{
@@ -61,5 +71,32 @@
     }
     100%{
         transform: translateX(0);
+    }
+    
+}
+@media screen and (max-width: 1024px) {
+    .upper{
+        padding: 0 0;
+    }
+    .upper p{
+        font-size: 1.5rem;
+    }
+    .img-container span{
+        left: calc((100vw)/2);
+    }
+}
+@media screen and (max-width: 414px){
+    .upper{
+        flex-direction: column;
+        margin-left: calc((20vw)/2);
+        width: 90%;
+        font-size: large;
+    }
+    .upper p:first-child{
+        width: 90%;
+        font-size: 3rem;
+    }
+    .upper p:last-child{
+        width: 90%;
     }
 }
