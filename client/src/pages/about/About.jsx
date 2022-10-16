@@ -19,7 +19,7 @@ const About = () => {
         <div class="services">
           <div className="line"><hr /></div>
         </div>
-        <header class="header"></header>
+        <header class="about_header"></header>
         <section>
           <section className='service_section'>
             <h2 class="Listtitle_1">Our services</h2>
@@ -68,97 +68,100 @@ const About = () => {
             <ul>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                </a>
+              </li>
+              <li class="selected_clients">
+                <h2>Selected clients</h2>
+              </li>
+              <li>
+                <a href="https://www.chanel.com" >
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
               <li>
                 <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
+                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
                 </a>
               </li>
             </ul>
