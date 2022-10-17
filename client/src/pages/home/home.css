@@ -35,7 +35,7 @@ body{
 .main-txt{
     text-decoration: none;
     color: white;
-    font-size: calc((97vw)/5);
+    font-size: calc((35vw)/2);
     position: absolute;
     margin-left: auto;
     left: 0;
@@ -202,5 +202,78 @@ body{
     }
     100%{
         transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .second-container p{
+        font-size: calc((15vw)/2);
+        width: 95%;
+        padding-top: 63px;
+        padding-left: 3rem;
+    }
+    .second-container{
+        height:53vh
+    }
+    .forth-container p{
+        width:78%;
+    }
+    .forth-container{
+        height: 60vh;
+    }
+    .seven-container{
+        height: 43vh;
+    }
+}
+@media screen and (max-width: 415px) {
+    .main-img-container .bottom-txt {
+        left: calc((50vw)/2);
+    }
+    .second-container p {
+        font-size: calc((15vw)/2);
+        width: 89%;
+        padding-top: 30px;
+        padding-left: 2rem;
+        }
+    .second-container{
+        height:calc((150vw)/2);
+    }
+    .second-container a{
+        font-size: 3rem;
+        padding-left: 60px;
+    }
+    .third-container-one{
+        padding-left: 60px;
+        flex-direction: column;
+    }
+    .view{
+        margin-top: 3rem;
+    }
+    .img-div-main{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .img-div-two{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .inside-four p{
+        font-size: 2rem;
+        width: 100%;
+    }
+    .five-container{
+        margin-top: 3rem;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        height: 30rem;
+    }
+    .five-container img{
+        width: 100%;
+        
+    }
+    .six-container p{
+        width: 100%;
+        font-size: 2rem;
     }
 }

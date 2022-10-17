@@ -20,6 +20,15 @@
     animation: main-text 900ms ease-out; 
     animation-fill-mode: forwards;
 }
+@media screen and (max-width: 480px) {
+    .job_details_text{
+        font-size: 5rem;
+        position: absolute;
+    }
+    
+}
+
+
 .job_details_careers{
     color: #fff;
     padding: 2rem;
