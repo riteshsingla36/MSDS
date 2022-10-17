@@ -13,12 +13,12 @@
     width: 100%;
 }
 
-.footer-upper > div:first-child a {
+.footer-upper>div:first-child a {
     text-decoration: none;
     color: #fff;
 }
 
-.footer-upper > div:nth-child(2){
+.footer-upper>div:nth-child(2) {
     display: flex;
     gap: 100px;
 }
@@ -44,25 +44,25 @@
 
 .main-xt {
     font-size: calc((82vw) / 5);
-    position:relative;
+    position: relative;
     margin-left: auto;
     left: 0;
     right: 0;
     margin-top: 55px;
     text-align: center;
     margin-right: auto;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    animation: main-text 900ms ease-out; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: main-text 900ms ease-out;
     animation-fill-mode: forwards;
 }
 
-.footer-four div div{
-    line-height: 30px;
+.footer-four div div {
+    line-height: 20px;
     position: relative;
     width: fit-content;
 }
 
-.footer-four > div div::before{
+.footer-four>div div::before {
     cursor: pointer;
     content: '';
     position: absolute;
@@ -76,29 +76,37 @@
 }
 
 @media (hover: hover) {
-    .footer-four > div div:hover::before{
+    .footer-four>div div:hover::before {
         cursor: pointer;
         left: auto;
         width: 0%;
     }
-  }
-  .footer-four > div div{
-    cursor: pointer;
-  }
-
-.footer-four div div a{
-    text-decoration: none;
-    color: #fff;
 }
 
-.footer-two > a::before {
+.footer-four>div div {
+    cursor: pointer;
+}
+
+.footer-four div div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: calc((6vw)/7);
+}
+
+.footer-two>a::before {
     text-decoration: underline;
 }
 
 @media (hover: hover) {
-    .footer-two > a::after{
+    .footer-two>a::after {
         cursor: pointer;
         left: auto;
         width: 0%;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .footer-four .footer-address {
+        display: none;
     }
 }

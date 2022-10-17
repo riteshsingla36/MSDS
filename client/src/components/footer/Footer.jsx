@@ -42,7 +42,7 @@ const Footer = () => {
                             <Link>LINKEDIN</Link>
                         </div>
                     </div>
-                    <div>
+                    <div className='footer-address'>
                         <p>NUMBERED STUDIO</p>
                         <p>HERENGRACHT 342</p>
                         <p>1016 CG,AMSTERDAM</p>
