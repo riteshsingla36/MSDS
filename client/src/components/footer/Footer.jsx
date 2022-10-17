@@ -54,10 +54,7 @@ const Footer = () => {
             <div className="main-xt">Numbered</div>
             <div className='footer-bottom'>
                 <div>
-                    All Rights Reserved &nbsp; &nbsp;&nbsp; <Link to="/legals">Legals</Link>
-                </div>
-                <div>
-                    SUBSCRIBE TO OUR NEWSTELLER
+                    <span>All Rights Reserved &nbsp; &nbsp;&nbsp;</span> <Link to="/legals">Legals</Link>
                 </div>
             </div>
         </div>
