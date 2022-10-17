@@ -12,7 +12,7 @@ const Contact = () => {
       <Navbar />
       <AnimationDiv />
       <div className='main-tt'>
-        <span onClick={() => navigate("/")} style={{ fontSize: "250px", cursor: "pointer" }}>Numbered</span>
+        <span onClick={() => navigate("/")}>Numbered</span>
         <div className='upper'>
           <p>We are an Amsterdam and New-york based studio with a strong french accent working all over the world.
             <br /> 
@@ -48,8 +48,7 @@ const Contact = () => {
           <img src={require("../../images/contact.jpg")} alt="not found" />
           <span>
             <h3>Our <br /> Works</h3>
-            <br />
-            <span>Watch Our Case Studies</span>
+            <p>Watch Our Case Studies</p>
           </span>
         </div>
       </div>
