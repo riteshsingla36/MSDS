@@ -4,4 +4,6 @@
 
 <p> Help Us create a great project.</p>
 
+<p> Ask for the env file as it is hidden due to some security issues </p>
+
 <h2> Thank You all</h2>
