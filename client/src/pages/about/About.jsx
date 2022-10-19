@@ -205,13 +205,14 @@ const About = () => {
         <Link to="/">
           <picture><img class="pic6" src="https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?auto=compress,format" alt="" /></picture>
         </Link>
-      </div>
-      <Link to="/">
+        <Link to="/">
         <figcaption class="figure_caption">
           <h3>OUR WORK</h3>
           <span>Watch our cases studies</span>
         </figcaption>
-      </Link>
+        </Link>
+      </div>
+      
       <Footer/>
     </div>
   )

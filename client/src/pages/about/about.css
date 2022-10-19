@@ -355,26 +355,31 @@ dd {
 }
 @media screen and (max-width: 766px ) and (min-width: 413px) { */
     .pic1{
-        width: 60%;
+        width: 50%;
     }
     .text2{
         font-size: calc((60vw)/7);
+        padding: 0 3rem;
         margin-top: calc((100vw)/2);
     }
     .text3{
         font-size: calc((60vw)/7);
+        padding: 0 3rem;
         margin-top: calc((40vw)/2);
     }
+    .text{
+        padding: 0 3rem;
+    }
     .pic1{
-        width: 60%;
-        margin-top: 60rem;
+        width: 50%;
+        margin-top: 47rem;
         margin-left: 1rem;
         transform: rotate(0deg);
     }
     .pic2{
-        width: 60%;
+        width: 50%;
         margin-left: 1rem;
-        margin-top: 82rem;
+        margin-top: 68rem;
     }
     .service_section{
         flex-direction: column;
@@ -407,7 +412,7 @@ dd {
         font-size: 2rem;
     }
     .figure_caption{
-        top: 510rem;
+        top: 470rem;
         left: 4rem;
     }
     .figure_caption h3{
@@ -430,34 +435,28 @@ dd {
 
     }
     .text2{
-        margin-left: -4rem;
-        margin-right: 1rem;
-        font-size: calc((70vw)/7);
-        width: 54%;
+        font-size: calc((62vw)/7);
+        padding: 0 2rem;
         margin-top: calc((100vw)/2);
     }
     .text{
         margin-left: -4rem;
     }
     .text3{
-        margin-left: -4rem;
-        margin-right: 1rem;
-        font-size: calc((70vw)/7);
-        width: 55%;
-        margin-top: calc((30vw)/2);
+        font-size: calc((60vw)/7);
+        padding: 0 2rem;
+        margin-top: calc((10vw)/2);
     }
     .pic1{
-        width: 60%;
-        margin-top: 55rem;
-        margin-left: 3rem;
+        width: 55%;
+        margin-top: 36rem;
         margin-left: -5rem;
         transform: rotate(0deg);
 
     }
     .pic2{
         width: 60%;
-        margin-top: 72rem;
-        margin-left: 3rem;
+        margin-top: 52rem;
         margin-left: -5rem;
     }
     .service_section{
@@ -488,14 +487,14 @@ dd {
         margin-left: -3rem;
     }
     .AwardsSlice_list__1KXRd {
-        margin-top: calc((190vw)/2);
+        margin-top: calc((209vw)/2);
     }
     .AwardsSlice_list__1KXRd li{
         margin-left: 2rem;
-        font-size: 3rem;
+        font-size: 1.8rem;
     }
     .figure_caption{
-        top: 653rem;
+        top: calc((1085rem)/2);
         width: 60%;
     }
     .figure_caption h3{
