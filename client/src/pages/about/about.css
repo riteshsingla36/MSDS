@@ -272,7 +272,7 @@ dd {
         left: 51%;
     }
 }
-@media screen and (max-width: 1025px) and (min-width: 767px){ */
+@media screen and (max-width: 1025px) and (min-width: 767px){ 
 
     .pic1{
         width: 20%;
@@ -353,7 +353,8 @@ dd {
     }
 
 }
-@media screen and (max-width: 766px ) and (min-width: 413px) { */
+@media screen and (max-width: 766px ) and (min-width: 413px) { 
+
     .pic1{
         width: 50%;
     }
