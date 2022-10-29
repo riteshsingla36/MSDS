@@ -190,11 +190,11 @@ $color-white: #FFF;
   background-color: white;
   opacity: 50%;
 }
-.test, p, input, select, textarea, button {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.2px;
-    font-size: $ruler;
-}
+// .test, p, input, select, textarea, button {
+//     font-family: 'Montserrat', sans-serif;
+//     letter-spacing: -0.2px;
+//     font-size: $ruler;
+// }
 
 .test div, .test p {
   color: $color-shadow;
