@@ -59,38 +59,38 @@ const Footer = () => {
         //     </div>
         // </div>
         <footer>
-            <nav class="Footer_nav__33YjX">
-                <div class="Footer_column__3d3oT">
+            <nav className="Footer_nav__33YjX">
+                <div className="Footer_column__3d3oT">
                     <h2>Let&#x27;s work together</h2>
                     <p><a href="mailto:contact@numbered.com" target="_blank" rel="noopener noreferrer"
-                        class="underlined inverted">contact@numbered.com</a></p>
+                        className="underlined inverted">contact@numbered.com</a></p>
                 </div>
-                <div class="Footer_column__3d3oT">
-                    <p><a class="underlined inverted" href="projects.html">Work</a></p>
-                    <p><a class="underlined inverted" href="about.html">About</a></p>
-                    <p><a class="underlined inverted" href="contact.html">Contact</a></p>
-                    <p><a class="underlined inverted" href="careers.html">Jobs</a></p>
+                <div className="Footer_column__3d3oT">
+                    <p><a className="underlined inverted" href="projects.html">Work</a></p>
+                    <p><a className="underlined inverted" href="about.html">About</a></p>
+                    <p><a className="underlined inverted" href="contact.html">Contact</a></p>
+                    <p><a className="underlined inverted" href="careers.html">Jobs</a></p>
                 </div>
-                <div class="Footer_column__3d3oT">
+                <div className="Footer_column__3d3oT">
                     <p><a href="../external.html?link=https://twitter.com/numbered_studio" target="_blank"
-                        rel="noopener noreferrer" class="underlined inverted">Twitter</a><br /><a
+                        rel="noopener noreferrer" className="underlined inverted">Twitter</a><br /><a
                             href="../external.html?link=https://www.instagram.com/numbered.studio"
                             target="_blank" rel="noopener noreferrer"
-                            class="underlined inverted">Instagram</a><br /><a
+                            className="underlined inverted">Instagram</a><br /><a
                                 href="../external.html?link=https://www.behance.net/numbered_studio"
                                 target="_blank" rel="noopener noreferrer"
-                                class="underlined inverted">Behance</a></p>
+                                className="underlined inverted">Behance</a></p>
                     <p><a href="../external.html?link=https://www.linkedin.com/company/numbered"
                         target="_blank" rel="noopener noreferrer"
-                        class="underlined inverted">Linkedin</a></p>
+                        className="underlined inverted">Linkedin</a></p>
                 </div>
-                <div class="Footer_column__3d3oT">
+                <div className="Footer_column__3d3oT">
                     <p>Numbered Studio </p>
                     <p>Herengracht 342</p>
                     <p>1016 CG, Amsterdam</p>
                     <p>The sunny Netherlands</p>
                 </div>
-            </nav><a aria-label="Back to home page" href="/"><svg class="Footer_logo__1lV8i"
+            </nav><a aria-label="Back to home page" href="/"><svg className="Footer_logo__1lV8i"
                 fill="none" viewBox="0 0 1189 202" xmlns="http://www.w3.org/2000/svg">
                 <g fill="#fff">
                     <path
@@ -98,11 +98,11 @@ const Footer = () => {
                     </path>
                 </g>
             </svg></a>
-            <div class="Footer_subfooter__HzC3Y"><span class="Footer_subfooterLeft__3DT1W"><span>All right
+            <div className="Footer_subfooter__HzC3Y"><span className="Footer_subfooterLeft__3DT1W"><span>All right
                 reserved
                 2022</span><a aria-label="Legals" href="legals.html">Legals</a></span><a
                     href="../external.html?link=https://amsterdam.us4.list-manage.com/subscribe?u=b8deeebc7d74d2d11b78e1608&amp;id=0dc3cc780f"
-                    target="_blank" rel="noreferrer noopener" class="underlined inverted">Subscribe to our
+                    target="_blank" rel="noreferrer noopener" className="underlined inverted">Subscribe to our
                     newsletter</a></div>
         </footer>
     )

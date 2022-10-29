@@ -20,213 +20,11 @@ const About = () => {
     <div>
       <Navbar />
       <AnimationDiv />
-      {/* <div class="about-margin">
-        <Link className='text' to="/">Numbered</Link>
-        <p className='text2'>Numbered is a full-service creative agency based in Amsterdam & New-york. We collaborate closely with our clients to tell their stories, engaging audiences by building unique experiences & products.</p>
-        <div><picture><img class="pic1" src="https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?auto=compress,format&rect=267,0,998,1313&w=456&h=600" alt="" /></picture></div>
-        <div ><picture><img class="pic2" src="https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?auto=compress,format&rect=0,18,2090,2750&w=456&h=600" alt="" /></picture></div>
-        <p className='text3' >We like to support our clients at all stages of their projects from strategy, design and technical development. Insight driven and user centric. We strongly believe every brand and project is unique and should be tailor-made from industry leaders to early stage companies. We don’t do one size fits all.</p>
-        <div class="services">
-          <div className="line"><hr /></div>
-        </div>
-        <header class="about_header"></header>
-        <section>
-          <section className='service_section'>
-            <h2 class="Listtitle_1">Our services</h2>
-            <dl class="ListSlice_2">
-              <dt>IDEAS & STRATEGY</dt>
-              <p></p>
-              <dd>CONSULTING</dd>
-              <dd>POSITIONING</dd>
-              <dd>E-COMMERCE STRATEGY</dd>
-              <dd>BRAND STRATEGY</dd>
-              <dd>BRAND CONTENT</dd>
-              <dd>COPYWRITING</dd>
-              <dd>TONE OF VOICE</dd>
-            </dl>
-            <dl class="ListSlice_2">
-              <dt>CREATION & DESIGN</dt>
-              <p></p>
-              <dd>ART DIRECTION</dd>
-              <dd>BRAND IDENTITY</dd>
-              <dd>USER EXPERIENCE (UX)</dd>
-              <dd>WIREFRAME & PROTOTYPING</dd>
-              <dd>PRINT & PACKAGING</dd>
-              <dd>CGI</dd>
-              <dd>SOCIAL MEDIA ASSETS</dd>
-              <dd>WEBSITE & E-COMMERCE</dd>
-              <dd>VIDEOS</dd>
-              <dd>MOBILE APP</dd>
-              <dd>PHOTOGRAPHY</dd>
-            </dl>
-            <dl className="ListSlice_2">
-              <dt>TECHNOLOGY</dt>
-              <p></p>
-              <dd>CREATIVE DEVELOPMENT</dd>
-              <dd>FRONT-END DEVELOPMENT</dd>
-              <dd>BACK-END DEVELOPMENT</dd>
-              <dd>SHOPIFY DEVELOPMENT</dd>
-              <dd>SHOPIFY PLUS</dd>
-              <dd>HEADLESS SHOPIFY</dd>
-              <dd>MOBILE & IOS WEB APP</dd>
-            </dl>
-          </section>
-        </section>
-      </div>
-      <div>
-          <section className='sec_logos'>
-            <ul>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li class="selected_clients">
-                <h2>Selected clients</h2>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.chanel.com" >
-                  <img class="sec_image" src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format" alt="Chanel" />
-                </a>
-              </li>
-            </ul>
 
-          </section>
-      </div>
-      <div class="QuoteSlice_quote__1H6VJ QuoteSlice_isWhite__2CGiu"> 
-        <section class="thankyou_quote">
-          <blockquote>
-            <p>
-              Thanks 
-              <br />
-              to you, we also 
-              <br />
-              won a bunch of 
-              <br />
-              awards!*
-            </p>
-          </blockquote>
-          <span>*We don't work only for awards, but they are the recognition of 
-            <br /> all the effort that we put into our work.</span>
-        </section>
-      </div>
-      <div class="three_pictures">
-        <picture><img class="pic4" src="https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?auto=compress,format&rect=0,37,400,527&w=460&h=606" alt="" /></picture>
-        <picture><img class="pic3" src="https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?auto=compress,format&rect=0,18,2090,2750&w=456&h=600" alt="" /></picture>
-        <picture><img class="pic5" src="https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?auto=compress,format&rect=413,0,1093,1440&w=460&h=606" alt="" /></picture>
-        <ul class="AwardsSlice_list__1KXRd">
-          <li>35 AWWWARDS</li>
-          <li>2 CANNES LIONS</li>
-          <li>35 AWWWARDS</li>
-          <li>2 CANNES LIONS</li>
-          <li>35 AWWWARDS</li>
-          <li>2 CANNES LIONS</li>
-          <li>35 AWWWARDS</li>
-          <li>2 CANNES LIONS</li>
-          <li>35 AWWWARDS</li>
-        </ul>
-      </div>
-      <div>
-        <Link to="/">
-          <picture><img class="pic6" src="https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?auto=compress,format" alt="" /></picture>
-        </Link>
-        <Link to="/">
-        <figcaption class="figure_caption">
-          <h3>OUR WORK</h3>
-          <span>Watch our cases studies</span>
-        </figcaption>
-        </Link>
-      </div> */}
-
-      <header class="Hero_header__1cZhA about_hero__2OoYY">
+      <header className="Hero_header__1cZhA about_hero__2OoYY">
         <h1>
           <a aria-label="Back to home page" href="/">
-            <span class="Hero_logo__1aZ0K">
+            <span className="Hero_logo__1aZ0K">
               <svg
                 fill="none"
                 viewBox="0 0 1189 202"
@@ -245,9 +43,9 @@ const About = () => {
           stories, engaging audiences by building unique experiences &amp;
           products.
         </p>
-        <div class="about_images__1646e">
+        <div className="about_images__1646e">
           <div
-            class="about_image1__3649O"
+            className="about_image1__3649O"
             style={{ position: "relative", overflow: "hidden" }}
           >
             <div
@@ -305,7 +103,7 @@ const About = () => {
             </noscript>
           </div>
           <div
-            class="about_image2__2vLxz"
+            className="about_image2__2vLxz"
             style={{ position: "relative", overflow: "hidden" }}
           >
             <div
@@ -373,9 +171,9 @@ const About = () => {
       </header>
 
       <section>
-        <section class="ListSlice_main__mKXcM">
-          <h2 class="ListSlice_title__3zHBd">Our services</h2>
-          <dl class="ListSlice_list__3B0uk">
+        <section className="ListSlice_main__mKXcM">
+          <h2 className="ListSlice_title__3zHBd">Our services</h2>
+          <dl className="ListSlice_list__3B0uk">
             <dt>Ideas &amp; Strategy</dt>
             <p></p>
             <dd>Consulting</dd>
@@ -386,7 +184,7 @@ const About = () => {
             <dd>Copywriting</dd>
             <dd>Tone of voice</dd>
           </dl>
-          <dl class="ListSlice_list__3B0uk">
+          <dl className="ListSlice_list__3B0uk">
             <dt>Creation &amp; Design</dt>
             <p></p>
             <dd>Art Direction</dd>
@@ -402,7 +200,7 @@ const About = () => {
             <dd>Mobile App</dd>
             <dd>Photography</dd>
           </dl>
-          <dl class="ListSlice_list__3B0uk">
+          <dl className="ListSlice_list__3B0uk">
             <dt>Technology</dt>
             <p></p>
             <dd>Creative Development</dd>
@@ -414,93 +212,67 @@ const About = () => {
             <dd>Mobile &amp; IOS web app</dd>
           </dl>
         </section>
-        <section class="ClientsSlice_main__1EeZO">
+        <section className="ClientsSlice_main__1EeZO">
           <ul>
             <li>
-              <a
-                href="https://www.chanel.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
+              <a href="https://www.chanel.com" target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format"
                   alt="Chanel"
-                />
-              </a>
+                /></a>
             </li>
             <li>
               <a
                 href="https://www.louisvuitton.com"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <img
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/f6392363-d9b1-4ff6-9b06-2f570d4950b2_louis-vuitton.svg?auto=compress,format"
                   alt="Louis Vuitton"
-                />
-              </a>
+                /></a>
             </li>
             <li>
-              <a
-                href="https://www.dyson.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
+              <a href="https://www.dyson.com" target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/6dfc7af7-757f-49d5-896a-57826af9a856_dyson.svg?auto=compress,format"
                   alt="Dyson"
-                />
-              </a>
+                /></a>
             </li>
             <li>
               <a
                 href="https://www.jeanpaulgaultier.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <img
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/1304a980-07dc-4a98-b6a5-7c408de0e7f7_jean-paul-gaultier.svg?auto=compress,format"
                   alt="Jean Paul Gautlier"
-                />
-              </a>
+                /></a>
             </li>
             <li>
-              <a
-                href="http://made.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
+              <a href="http://made.com/" target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/19a5a790-d2b6-490a-b0d6-f6e90c49b0b4_made.svg?auto=compress,format"
                   alt="Made.com"
-                />
-              </a>
+                /></a>
             </li>
             <li>
-              <a
-                href="https://www.google.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
+              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/ea7721a7-05e4-4f67-92c0-16e86ca60a6e_google.svg?auto=compress,format"
                   alt="google"
-                />
-              </a>
+                /></a>
             </li>
             <li>
               <a
                 href="https://www.printemps.com/fr/fr"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <img
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/cecc2502-16e1-4ed1-af69-dd6350b8243d_printemps.svg?auto=compress,format"
                   alt="Printemps"
-                />
-              </a>
+                /></a>
             </li>
-            <li class="ClientsSlice_title__2yFoa">
+            <li className="ClientsSlice_title__2yFoa">
               <h2>Selected clients</h2>
             </li>
             <li>
@@ -508,92 +280,74 @@ const About = () => {
                 href="https://edition.cnn.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <img
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/bcc808fb-451f-4558-aec9-5b442ed6dc92_cnn.svg?auto=compress,format"
                   alt="CNN"
-                />
-              </a>
+                /></a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer">
-                <img
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/3913867d-b7ca-43f4-9169-a549c22a11d2_typology.svg?auto=compress,format"
                   alt="Typology"
-                />
-              </a>
+                /></a>
             </li>
             <li>
-              <a
-                href="https://www.sezane.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
+              <a href="https://www.sezane.com" target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/0f78556f-13fb-4d39-912a-1e644270c601_sezane.svg?auto=compress,format"
                   alt="Sezane"
-                />
-              </a>
+                /></a>
             </li>
             <li>
-              <a
-                href="https://www.mollie.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
+              <a href="https://www.mollie.com" target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/53c29541-0962-450b-94f8-93c35a02f8a7_mollie.svg?auto=compress,format"
                   alt="Mollie"
-                />
-              </a>
+                /></a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer">
-                <img
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/02e90e59-9e1d-44dc-8ef4-5a4325a0b7af_superfluid.svg?auto=compress,format"
                   alt="Superfluid"
-                />
-              </a>
+                /></a>
             </li>
             <li>
               <a
                 href="https://www.ubisoft.com/en-us/"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
-                <img
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/d84b8c63-6c05-43b9-838d-bf219f889778_ubisoft.svg?auto=compress,format"
                   alt="Ubisoft"
-                />
-              </a>
+                /></a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer">
-                <img
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/0a602e76-15ab-44f1-924c-69776d42dffd_miista.svg?auto=compress,format"
                   alt="Miista"
-                />
-              </a>
+                /></a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer">
-                <img
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://images.prismic.io/autumn-amsterdam/4243cfd6-5f19-4bac-a310-0bd2b8a6701d_cann.svg?auto=compress,format"
                   alt="Drink Cann"
-                />
-              </a>
+                /></a>
             </li>
             <li>
-              <a target="_blank" rel="noopener noreferrer">
-                <img
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
                   src="https://autumn-amsterdam.cdn.prismic.io/autumn-amsterdam/43f5e75a-36ba-4f99-8880-c5c4896caf14_veloretti.svg"
                   alt="Veloretti"
-                />
-              </a>
+                /></a>
             </li>
           </ul>
         </section>
-        <section class="QuoteSlice_quote__1H6VJ QuoteSlice_isWhite__2CGiu">
+
+        <section className="QuoteSlice_quote__1H6VJ QuoteSlice_isWhite__2CGiu">
           <blockquote>
             <p>
               Thanks <br />
@@ -607,10 +361,10 @@ const About = () => {
             all the effort that we put into our work.
           </span>
         </section>
-        <section class="AwardsSlice_main__1aMoU">
-          <div class="AwardsSlice_images__3BK3b">
+        <section className="AwardsSlice_main__1aMoU">
+          <div className="AwardsSlice_images__3BK3b">
             <div
-              class="AwardsSlice_image__1L8sw AwardsSlice_image1__1DKmJ"
+              className="AwardsSlice_image__1L8sw AwardsSlice_image1__1DKmJ"
               style={{ position: "relative", overflow: "hidden" }}
             >
               <div
@@ -648,7 +402,7 @@ const About = () => {
               </noscript>
             </div>
             <div
-              class="AwardsSlice_image__1L8sw AwardsSlice_image2__2nQcP"
+              className="AwardsSlice_image__1L8sw AwardsSlice_image2__2nQcP"
               style={{ position: "relative", overflow: "hidden" }}
             >
               <div
@@ -686,7 +440,7 @@ const About = () => {
               </noscript>
             </div>
             <div
-              class="AwardsSlice_image__1L8sw AwardsSlice_image3__2EoCy"
+              className="AwardsSlice_image__1L8sw AwardsSlice_image3__2EoCy"
               style={{ position: "relative", overflow: "hidden" }}
             >
               <div
@@ -733,7 +487,7 @@ const About = () => {
               </noscript>
             </div>
           </div>
-          <ul class="AwardsSlice_list__1KXRd">
+          <ul className="AwardsSlice_list__1KXRd">
             <li>35 AWWWARDS</li>
             <li>2 Cannes Lions</li>
             <li>21 FWA</li>
@@ -745,8 +499,8 @@ const About = () => {
             <li>Nominee “studio of the year” 2020</li>
           </ul>
         </section>
-        <section class="SectionPushSlice_main__8CNrO">
-          <article class="SectionPushSlice_article__1Sltj">
+        <section className="SectionPushSlice_main__8CNrO">
+          <article className="SectionPushSlice_article__1Sltj">
             <a
               aria-label="Our
     work"
@@ -838,7 +592,7 @@ const About = () => {
                         }} /></picture
                     ></noscript>
                 </div>
-                <figcaption class="SectionPushSlice_caption__19ik9">
+                <figcaption className="SectionPushSlice_caption__19ik9">
                   <h3>Our work</h3>
                   <span>Watch our cases studies</span>
                 </figcaption>

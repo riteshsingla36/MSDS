@@ -52,9 +52,9 @@ const Contact = () => {
           </span>
         </div>
       </div> */}
-      <header class="Hero_header__1cZhA"><a aria-label="Back to home page" href="/">
+      <header className="Hero_header__1cZhA"><a aria-label="Back to home page" href="/">
         <span
-          class="Hero_logo__1aZ0K"><svg fill="none" viewBox="0 0 1189 202"
+          className="Hero_logo__1aZ0K"><svg fill="none" viewBox="0 0 1189 202"
             xmlns="http://www.w3.org/2000/svg">
             <g fill="#fff">
               <path
@@ -65,13 +65,13 @@ const Contact = () => {
         </span>
       </a>
       </header>
-      <section class="contact_main__3QAHV">
-        <div class="contact_description__dMHfw">
+      <section className="contact_main__3QAHV">
+        <div className="contact_description__dMHfw">
           <p>We are an Amsterdam and New-york based studio with a strong french accent working
             all over the world. <br />We like to support our clients at all stages of their
             projects, don&#x27;t hesitate to contact us!</p>
         </div>
-        <div class="contact_information__1lX9-">
+        <div className="contact_information__1lX9-">
           <p>For projects inquiries<br /><a
             href="mailto:contact@numbered.com">contact@numbered.com</a></p>
           <p></p>
@@ -87,8 +87,8 @@ const Contact = () => {
         </div>
       </section>
       <section>
-        <section class="SectionPushSlice_main__8CNrO">
-          <article class="SectionPushSlice_article__1Sltj">
+        <section className="SectionPushSlice_main__8CNrO">
+          <article className="SectionPushSlice_article__1Sltj">
             <a aria-label="Ourworks" href="projects.html">
               <figure>
                 <div style={{ position: 'relative', overflow: 'hidden' }}><div aria-hidden="true" style={{ width: "100%", paddingBottom: '60.8889%' }}>
@@ -106,7 +106,7 @@ const Contact = () => {
                     </picture>
                   </noscript>
                 </div>
-                <figcaption class="SectionPushSlice_caption__19ik9">
+                <figcaption className="SectionPushSlice_caption__19ik9">
                   <h3>Our
                     works</h3>
                   <span>Watch our case studies</span>
