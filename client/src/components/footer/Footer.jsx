@@ -90,7 +90,7 @@ const Footer = () => {
                     <p>1016 CG, Amsterdam</p>
                     <p>The sunny Netherlands</p>
                 </div>
-            </nav><a aria-label="Back to home page" href="index.html"><svg class="Footer_logo__1lV8i"
+            </nav><a aria-label="Back to home page" href="/"><svg class="Footer_logo__1lV8i"
                 fill="none" viewBox="0 0 1189 202" xmlns="http://www.w3.org/2000/svg">
                 <g fill="#fff">
                     <path
