@@ -4,14 +4,14 @@ import "./navbar.css"
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className='nav'>
         <ul>
           <li><Link to="/projects">WORK</Link></li>
           <li><Link to="/about">ABOUT</Link></li>
           <li><Link to="/contact">CONTACT</Link></li>
           <li><Link to="/jobs">JOBS</Link></li>
         </ul>
-      </nav>
+    </nav>
   )
 }
 
