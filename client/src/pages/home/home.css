@@ -1,4 +1,10 @@
+@font-face {
+    font-family: MSDSFont;
+    src: url('../../fonts/aktivgrotesk-regular-web.woff');
+}
+
 body{
+    font-family: MSDSFont !important;
     background-color: black;
     color: #fff;
 }
@@ -66,16 +72,20 @@ body{
 }
 
 .second-container{
+    font-family: MSDSFont !important;
     height: 100vh;
 }
 
 .second-container p{
-    font-size: 79px;
+    font-size: 75px;
+    font-weight: 500;
     width: 77%;
-    letter-spacing: 1px;
-    line-height: 94%;
+    letter-spacing: .3px;
+    line-height: 102%;
     padding-top: 95px;
     padding-left: 121px;
+    word-spacing: -.5px;
+    font-family: MSDSFont !important;
 }
 
 .second-container a{
@@ -105,8 +115,10 @@ body{
 
 .third-container-one span p{
     text-align: start;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 500;
+    font-family: MSDSFont !important;
+    line-height: -4px;
 }
 
 .view a{
@@ -116,6 +128,7 @@ body{
     text-decoration: none;
     color: #fff;
     font-weight: 400;
+    font-family: MSDSFont !important;
 }
 
 .img-div-main{ 
@@ -144,7 +157,6 @@ body{
 }
 
 .forth-container{
-    display: flex;
     height: 100vh;
 }
 
@@ -152,9 +164,12 @@ body{
     margin-top: 11%;
     justify-content: center;
     text-align: center;
-    font-size: 50px;
-    width: 55%;
-    font-weight: 400;
+    font-size: 55px;
+    line-height: 1;
+    width: 65%;
+    font-weight: 500;
+    align-items: center;
+    font-family: MSDSFont !important;
 }
 .inside-four{
     display: flex;
@@ -173,16 +188,17 @@ body{
 
 .six-container {
     justify-content: center;
-    text-align: center;
     align-items: center;
     display: flex;
     height: 85vh;
 }
 
-.six-container > p{
+.six-container p{
     font-size: 50px;
-    width: 50%;
-    font-weight: 400;
+    width: 60%;
+    text-align: center;
+    align-items: center;
+    font-family: MSDSFont !important;
 }
 
 .seven-container{
