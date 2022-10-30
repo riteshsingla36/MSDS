@@ -10,13 +10,13 @@ const JobDetails = () => {
     <div>
       <Navbar/>
       <AnimationDiv/>
-      <div class="job_details_margin">
+      <div className="job_details_margin">
         <Link className='job_details_text' to="/">Numbered</Link>
         <div>
-          <header class="job_details_header"></header>
-          <section class="job_details_careers">
+          <header className="job_details_header"></header>
+          <section className="job_details_careers">
             <div className="job_details_careers_header">
-              <header class="job_tittle">
+              <header className="job_tittle">
                 <p><strong>Front-end developer</strong></p>
                 <Link to="/">
                   <p>Join us</p>
@@ -24,13 +24,13 @@ const JobDetails = () => {
               </header>
             </div>
             <div className="job_desc">
-              <header class="header_line">
+              <header className="header_line">
                 <p><strong>JOB DESCRIPTION</strong></p>
                 <Link to="/">
                   <span>JOIN US</span>
                 </Link>
               </header>
-              <div class="job_details_desc">
+              <div className="job_details_desc">
                   <h3>We are</h3>
                   <p>A creative studio working with exclusive Fashion, Tech &amp; Lifestyle brands. Multifaceted sharp minds collaborating hand in hand on top notch digital projects. Driven by building beautiful experiences &amp; products for our devoted clients. We stand for passion, aspiration and excitement (enthusiasm) in our daily work. On track for opening our horizon to new acute &amp; atypical profiles to complete our team.</p><h3>Together</h3><p>Numbered is looking for a developer to join its brand new team of coders and participate in the creation of visually sharp brand / e-commerce websites.</p>
                   <h3>You</h3>
@@ -58,8 +58,8 @@ const JobDetails = () => {
         </div>
       </div>
       <div>
-        <picture><img class="job_details_pic1" src="https://images.prismic.io/autumn-amsterdam/8dfe74df-bc37-4c03-99fc-4b582f0b2441_typology-beauty-product-2.jpg?auto=compress,format" alt="lazy" /></picture>
-        <figcaption class="figure_caption_job_details">
+        <picture><img className="job_details_pic1" src="https://images.prismic.io/autumn-amsterdam/8dfe74df-bc37-4c03-99fc-4b582f0b2441_typology-beauty-product-2.jpg?auto=compress,format" alt="lazy" /></picture>
+        <figcaption className="figure_caption_job_details">
           <h3>OUR WORK</h3>
           <span>Watch our cases studies</span>
         </figcaption>

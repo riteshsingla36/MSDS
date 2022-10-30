@@ -3,11 +3,6 @@
     src: url('../../fonts/aktivgrotesk-regular-web.woff');
 }
 
-body{
-    font-family: MSDSFont !important;
-    background-color: black;
-    color: #fff;
-}
 
 .home-img-container{
     position: absolute;
@@ -52,12 +47,13 @@ body{
 
 .main-img-container .bottom-txt{
     position: absolute;
-    left: 42%;
     bottom: 8%;
     align-items: center;
     text-decoration: none;
     color: white;
-    font-size: 23px;
+    font-size: calc((6vh)/2);
+    text-align: center;
+    width: 100%;
 }
 
 .main-img-container .bottom-txt{
@@ -71,142 +67,6 @@ body{
     user-select: none;
 }
 
-.second-container{
-    font-family: MSDSFont !important;
-    height: 100vh;
-}
-
-.second-container p{
-    font-size: 75px;
-    font-weight: 500;
-    width: 77%;
-    letter-spacing: .3px;
-    line-height: 102%;
-    padding-top: 95px;
-    padding-left: 121px;
-    word-spacing: -.5px;
-    font-family: MSDSFont !important;
-}
-
-.second-container a{
-    display: block;
-    padding-left: 121px;
-    margin-top: 60px;
-    text-decoration: none;
-    color: white;
-}
-
-.third-container{
-    height: fit-content;
-    width: 100%;
-    justify-content: center;
-
-}
-
-.third-container-one{
-    padding-left: 121px;
-    padding-right: 200px;
-    margin-top: 100px;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    text-align: end;
-}
-
-.third-container-one span p{
-    text-align: start;
-    font-size: 55px;
-    font-weight: 500;
-    font-family: MSDSFont !important;
-    line-height: -4px;
-}
-
-.view a{
-    position: absolute;
-    bottom: 0;
-    padding-bottom: 20px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 400;
-    font-family: MSDSFont !important;
-}
-
-.img-div-main{ 
-    margin-top: 100px;
-    display: flex;
-    overflow: hidden;
-}
-
-.img-div-one{
-    background-color: #fff;
-}
-
-.img-div-one > img{
-    object-fit: cover;
-}
-
-.img-div-two{
-    display:flex;
-    flex-direction: column;
-    height: fit-content;
-}
-
-.img-div-two > img:first-child{
-    z-index: 2;
-    object-fit: cover;
-}
-
-.forth-container{
-    height: 100vh;
-}
-
-.forth-container p{
-    margin-top: 11%;
-    justify-content: center;
-    text-align: center;
-    font-size: 55px;
-    line-height: 1;
-    width: 65%;
-    font-weight: 500;
-    align-items: center;
-    font-family: MSDSFont !important;
-}
-.inside-four{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-}
-
-.five-container{
-    display: flex;
-    height: 130vh;
-}
-
-.five-container > img{
-    object-fit: cover;
-}
-
-.six-container {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 85vh;
-}
-
-.six-container p{
-    font-size: 50px;
-    width: 65%;
-    text-align: center;
-    align-items: center;
-    font-family: MSDSFont !important;
-}
-
-.seven-container{
-    width: 100%;
-}
-.seven-container > img{
-    object-fit: cover;
-}
 
 @keyframes main-text {
     0%{
@@ -214,78 +74,5 @@ body{
     }
     100%{
         transform: translateX(0);
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .second-container p{
-        font-size: calc((15vw)/2);
-        width: 95%;
-        padding-top: 63px;
-        padding-left: 3rem;
-    }
-    .second-container{
-        height:53vh
-    }
-    .forth-container p{
-        width:78%;
-    }
-    .forth-container{
-        height: 60vh;
-    }
-    .seven-container{
-        height: 43vh;
-    }
-}
-@media screen and (max-width: 415px) {
-    .main-img-container .bottom-txt {
-        left: calc((50vw)/2);
-    }
-    .second-container p {
-        font-size: calc((15vw)/2);
-        width: 89%;
-        padding-top: 30px;
-        padding-left: 2rem;
-        }
-    .second-container{
-        height:calc((150vw)/2);
-    }
-    .second-container a{
-        font-size: 3rem;
-        padding-left: 60px;
-    }
-    .third-container-one{
-        padding-left: 60px;
-        flex-direction: column;
-    }
-    .view{
-        margin-top: 3rem;
-    }
-    .img-div-main{
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .img-div-two{
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .inside-four p{
-        font-size: 2rem;
-        width: 100%;
-    }
-    .five-container{
-        margin-top: 3rem;
-        flex-direction: column;
-        width: 100%;
-        gap: 1rem;
-        height: 30rem;
-    }
-    .five-container img{
-        width: 100%;
-        
-    }
-    .six-container p{
-        width: 100%;
-        font-size: 2rem;
     }
 }

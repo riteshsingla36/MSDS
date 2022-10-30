@@ -26,43 +26,43 @@
     margin-right: auto;
 }
 
-.nav li:first-child{
+.Header_list__1jN0i li:first-child{
     animation: nav-animation 300ms linear;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
 }
 
-.nav li:nth-child(2){
+.Header_list__1jN0i li:nth-child(2){
     animation: nav-animation 400ms linear;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
 }
 
-.nav li:nth-child(3){
+.Header_list__1jN0i li:nth-child(3){
     animation: nav-animation 500ms linear;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
 }
 
-.nav li:nth-child(4){
+.Header_list__1jN0i li:nth-child(4){
     animation: nav-animation 600ms linear;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
 }
 
-.nav li:nth-child(5){
+.Header_list__1jN0i li:nth-child(5){
     animation: nav-animation 700ms linear;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
 }
 
-.nav li:last-child{
+.Header_list__1jN0i li:last-child{
     animation: nav-animation 800ms linear;
     animation-delay: 1000ms;
     animation-fill-mode: forwards;
 }
 
-.nav a{
+.Header_list__1jN0i a{
     text-align: center;
     color: inherit;
     text-decoration: none;
@@ -70,7 +70,7 @@
     display: block;
 }
 
-.nav ul li a:after{
+.Header_list__1jN0i ul li a:after{
     content: '';
     width: 90%;
     position: absolute;
@@ -83,7 +83,7 @@
     transition: transform 0.25s ease-out;
 }
 
-.nav ul li a:hover:after{
+.Header_list__1jN0i ul li a:hover:after{
     transform: scaleX(1);
     transform-origin: bottom left;
 }
