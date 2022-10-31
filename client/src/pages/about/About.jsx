@@ -1,5 +1,4 @@
 import React from "react";
-import "./about.css";
 import "./css/0d2542c292c41cff19d7.css";
 import "./css/3e520a9ee9ba77d53b1b.css";
 import "./css/4df0a70341fe577ec304.css";
@@ -314,14 +313,14 @@ const About = () => {
                 /></a>
             </li>
             <li>
-              <a
+              <Link
                 href="https://www.ubisoft.com/en-us/"
                 target="_blank"
                 rel="noopener noreferrer"
               ><img
                   src="https://images.prismic.io/autumn-amsterdam/d84b8c63-6c05-43b9-838d-bf219f889778_ubisoft.svg?auto=compress,format"
                   alt="Ubisoft"
-                /></a>
+                /></Link>
             </li>
             <li>
               <a target="_blank" rel="noopener noreferrer"
