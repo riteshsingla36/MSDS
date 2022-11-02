@@ -70,7 +70,7 @@ const Navbar = () => {
               className="Header_link__2wQjN"
               
             >
-              <a className="underlined" href="/careers">
+              <a className="underlined" href="/projectdetails">
                 Jobs
               </a>
             </li>

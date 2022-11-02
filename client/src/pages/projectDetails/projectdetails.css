@@ -1,0 +1,10 @@
+.details_logo_main{
+    width: 70% !important;
+    height: 70%;
+}
+.details_logo_main_parent{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 70px;
+}

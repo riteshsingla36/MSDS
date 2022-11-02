@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Home from './pages//home/Home';
 import Projects from './pages/projects/Projects';
 import About from './pages/about/About';
-import Jobs from './pages/jobs/Jobs';
 import Contact from './pages/contact/Contact';
 import AddProjectType from "./adminPages/addProjectType/AddProjectType.jsx";
 import AddProject from './adminPages/addProject/AddProject';
@@ -16,9 +15,9 @@ import PrivateComponent from './components/adminComponents/privateComponent/Priv
 import AdminHome from './adminPages/home/AdminHome';
 import Login from './adminPages/adminLogin/login';
 import Register from './adminPages/adminRegister/Register';
-import JobDetails from './pages/job_detail/JobDetails';
 import VerifyAccount from './adminPages/verify_account/VerifyAccount';
 import ResetPassword from './adminPages/reset_password/ResetPassword';
+import ProjectDetails from './pages/projectDetails/ProjectDetails';
 
 function App() {
   return (
@@ -27,8 +26,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
-        <Route path="/jobs" element={<Jobs />} />
-        <Route path="/job/:id" element={<JobDetails />} />
+        <Route path="/projectdetails" element={<ProjectDetails />} />
         <Route path="/contact" element={<Contact />} />
 
         <Route element={<PrivateComponent />}>
