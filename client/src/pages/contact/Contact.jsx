@@ -111,7 +111,7 @@ const Contact = () => {
       <section>
         <section className="SectionPushSlice_main__8CNrO">
           <article className="SectionPushSlice_article__1Sltj">
-            <a aria-label="Ourworks" href="projects.html">
+            <a aria-label="Ourworks" href="/projects">
               <figure>
                 <div style={{ position: 'relative', overflow: 'hidden' }}><div aria-hidden="true" style={{ width: "100%", paddingBottom: '60.8889%' }}>
                 </div>

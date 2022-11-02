@@ -42,6 +42,14 @@ const Navbar = () => {
             </svg>
           </button>
           <ul className="Header_list__1jN0i">
+          <li
+              className="Header_link__2wQjN"
+              
+            >
+              <a className="underlined" href="/">
+                Home
+              </a>
+            </li>
             <li
               className="Header_link__2wQjN"
               
@@ -66,14 +74,14 @@ const Navbar = () => {
                 Contact
               </a>
             </li>
-            <li
+            {/* <li
               className="Header_link__2wQjN"
               
             >
               <a className="underlined" href="/projectdetails">
                 Jobs
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
