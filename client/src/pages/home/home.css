@@ -32,7 +32,6 @@
 .main-txt{
     text-decoration: none;
     color: white;
-    font-size: calc((35vw)/2);
     position: absolute;
     margin-left: auto;
     left: 0;
@@ -40,6 +39,7 @@
     margin-top: 55px;
     text-align: center;
     margin-right: auto;
+    padding: 50px;
     font-family:Georgia, 'Times New Roman', Times, serif;
     animation: main-text 900ms ease-out; 
     animation-fill-mode: forwards;
@@ -75,4 +75,9 @@
     100%{
         transform: translateX(0);
     }
+}
+
+.main_logo_msds{
+    width: 70%;
+    height: 70%;
 }
