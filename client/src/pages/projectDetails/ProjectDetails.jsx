@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import "./projectdetails.css";
 
 const ProjectDetails = () => {
+    const {projectId} = useParams()
+    console.log(projectId)
+
   return (
     <div>
       <AnimationDiv />
