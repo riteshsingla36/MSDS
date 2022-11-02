@@ -1,0 +1,20 @@
+.about_main_logo{
+    width: 70%;
+    height: 70%;
+    position: relative !important;
+    padding-top: 70px;
+}
+.about_hero__2OoYY{
+    padding: 0;
+}
+
+.about_main_logo_parent{
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: block;
+    align-self: center;
+}
+.spacer{
+    padding-bottom: 6%;
+}

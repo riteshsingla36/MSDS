@@ -611,3 +611,15 @@ a:visited {
         background-size: 0 1px
     }
 }
+
+.footer_main_logo{
+    width: 60%;
+    padding-top: 70px;
+}
+.footer_main_logo_parent{
+    text-align: center;
+    display: block;
+    align-self: center;
+    justify-content: center;
+}
+
