@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar/Navbar";
 import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 import "./projects.css";
+import Picture from "../../components/pictureset/Picture";
 const Projects = () => {
   return (
     <div>
@@ -82,6 +83,7 @@ const Projects = () => {
           </ul>
         </nav>
       </header>
+      <Picture/>
       <Footer />
     </div>
   );
