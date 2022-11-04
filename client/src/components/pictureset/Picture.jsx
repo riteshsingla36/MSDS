@@ -13,33 +13,17 @@ const Picture = () => {
             >
               <article className="workFeatureItem">
                 <a
-                  href="https://www.pentagram.com/work/rise-for-animals"
+                  href="/projectdetails/pallate"
                   className="workFeatureItem__link"
                 >
                   <picture
                     className="workFeatureItem__picture js--lazyloaded"
     
                   >
-                    <source
-                      media="screen and (max-width: 599px)"
-                      srcSet={require('../../images/266223173_628024295016281_6464876987599167266_n_17873896613560252.jpg')}
-                    />
-                    <source
-                      media="screen and (max-width: 799px)"
-                      srcSet={require('../../images/266223173_628024295016281_6464876987599167266_n_17873896613560252.jpg')}
-                    />
-                    <source
-                      media="screen and (min-width: 800px) and (max-width:1039px)"
-                      srcSet={require('../../images/266223173_628024295016281_6464876987599167266_n_17873896613560252.jpg')}
-                    />
-                    <source
-                      media="screen and (min-width: 1040px)"
-                      srcSet={require('../../images/266223173_628024295016281_6464876987599167266_n_17873896613560252.jpg')}
-                    />
                     <img
                       alt="Nj Riseforanimals 2"
                       className="workFeatureItem__img"
-                      src="https://pentagram-production.imgix.net/1192f23c-dde8-49c7-9575-365ead3aad3e/NJ_RiseForAnimals_2.jpg?rect=203%2C0%2C1414%2C1080&w=500&fit=crop&fm=jpg&q=70&auto=format&h=382"
+                      src={require('../../images/266223173_628024295016281_6464876987599167266_n_17873896613560252.jpg')}
                     />
                   </picture>
                   <div className="workFeatureItem__title">
@@ -54,28 +38,12 @@ const Picture = () => {
               <div className="workFeature__list">
                 <article className="workFeatureSmallItem">
                   <a
-                    href="https://www.pentagram.com/work/i-voted"
+                    href="/projectdetails/pallate"
                     className="workFeatureSmallItem__link"
                   >
                     <picture
                       className="workFeatureSmallItem__picture js--lazyloaded"
                     >
-                      <source
-                        media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/web2.webp')}
-                      />
-                      <source
-                        media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/web2.webp')}
-                      />
-                      <source
-                        media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/web2.webp')}
-                      />
-                      <source
-                        media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/web2.webp')}
-                      />
                       <img
                         alt="Thumbnail"
                         className="workFeatureSmallItem__img"
@@ -93,29 +61,13 @@ const Picture = () => {
                 </article>
                 <article className="workFeatureSmallItem">
                   <a
-                    href="https://www.pentagram.com/work/the-great-green-wall-frontline"
+                    href="/projectdetails/pallate"
                     className="workFeatureSmallItem__link"
                   >
                     <picture
                       className="workFeatureSmallItem__picture js--lazyloaded"
                       
                     >
-                      <source
-                        media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/web1.webp')}
-                      />
-                      <source
-                        media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/web1.webp')}
-                      />
-                      <source
-                        media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/web1.webp')}
-                      />
-                      <source
-                        media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/web1.webp')}
-                      />
                       <img
                         alt="Mw Ggw 01"
                         className="workFeatureSmallItem__img"
@@ -135,29 +87,13 @@ const Picture = () => {
                 </article>
                 <article className="workFeatureSmallItem">
                   <a
-                    href="https://www.pentagram.com/work/ofi-cocoa-compass-impact-report"
+                    href="/projectdetails/pallate"
                     className="workFeatureSmallItem__link"
                   >
                     <picture
                       className="workFeatureSmallItem__picture js--lazyloaded"
                     
                     >
-                      <source
-                        media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/web3.jpg')}
-                      />
-                      <source
-                        media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/web3.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/web3.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/web3.jpg')}
-                      />
                       <img
                         alt="Ah Oficocoacompass 01 Cover"
                         className="workFeatureSmallItem__img"
@@ -177,28 +113,12 @@ const Picture = () => {
                 </article>
                 <article className="workFeatureSmallItem">
                   <a
-                    href="https://www.pentagram.com/work/goalkeepers"
+                    href="/projectdetails/pallate"
                     className="workFeatureSmallItem__link"
                   >
                     <picture
                       className="workFeatureSmallItem__picture js--lazyloaded"
                     >
-                      <source
-                        media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/web4.jpg')}
-                      />
-                      <source
-                        media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/web4.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/web4.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/web4.jpg')}
-                      />
                       <img
                         alt="Goalkeepers Hero Placeholder"
                         className="workFeatureSmallItem__img"
@@ -219,28 +139,12 @@ const Picture = () => {
               <div className="workFeature__list">
                 <article className="workFeatureSmallItem">
                   <a
-                    href="https://www.pentagram.com/work/cam"
+                    href="/projectdetails/pallate"
                     className="workFeatureSmallItem__link"
                   >
                     <picture
                       className="workFeatureSmallItem__picture js--lazyloaded"
                     >
-                      <source
-                        media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/web5.jpg')}
-                      />
-                      <source
-                        media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/web5.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/web5.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/web5.jpg')}
-                      />
                       <img
                         alt="Ah 01 Cam Logo Animation Thumbnail"
                         className="workFeatureSmallItem__img"
@@ -258,28 +162,12 @@ const Picture = () => {
                 </article>
                 <article className="workFeatureSmallItem">
                   <a
-                    href="https://www.pentagram.com/work/late-fragments"
+                    href="/projectdetails/pallate"
                     className="workFeatureSmallItem__link"
                   >
                     <picture
                       className="workFeatureSmallItem__picture js--lazyloaded"
                     >
-                      <source
-                        media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/web6.jpg')}
-                      />
-                      <source
-                        media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/web6.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/web6.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/web6.jpg')}
-                      />
                       <img
                         alt="Hp Animation 01 Cover"
                         className="workFeatureSmallItem__img"
@@ -297,28 +185,12 @@ const Picture = () => {
                 </article>
                 <article className="workFeatureSmallItem">
                   <a
-                    href="https://www.pentagram.com/work/the-king-s-jester"
+                    href="/projectdetails/pallate"
                     className="workFeatureSmallItem__link"
                   >
                     <picture
                       className="workFeatureSmallItem__picture"
                     >
-                      <source
-                        media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/web7.jpg')}
-                      />
-                      <source
-                        media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/web7.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/web7.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/web7.jpg')}
-                      />
                       <img
                         src={require('../../images/web7.jpg')}
                         alt="Tkj Thumbnail"
@@ -336,28 +208,12 @@ const Picture = () => {
                 </article>
                 <article className="workFeatureSmallItem">
                   <a
-                    href="https://www.pentagram.com/work/nubank"
+                    href="/projectdetails/pallate"
                     className="workFeatureSmallItem__link"
                   >
                     <picture
                       className="workFeatureSmallItem__picture"
                     >
-                      <source
-                        media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/web8.jpg')}
-                      />
-                      <source
-                        media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/web8.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/web8.jpg')}
-                      />
-                      <source
-                        media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/web8.jpg')}
-                      />
                       <img
                         src={require('../../images/web8.jpg')}
                         alt="Nu Case 01"
@@ -375,13 +231,13 @@ const Picture = () => {
               </div>
               <article className="workFeatureItem">
                 <a
-                  href="https://www.pentagram.com/work/shakespeare-theatre-company"
+                  href="/projectdetails/pallate"
                   className="workFeatureItem__link"
                 >
                   <picture
                     className="workFeatureItem__picture js--lazyloaded"
                   >
-                    <source
+                    {/* <source
                       media="screen and (max-width: 599px)"
                       srcSet={require('../../images/web9.webp')}
                     />
@@ -396,7 +252,7 @@ const Picture = () => {
                     <source
                       media="screen and (min-width: 1040px)"
                       srcSet={require('../../images/web9.webp')}
-                    />
+                    /> */}
                     <img
                       alt="Mw Stc 1 Cover"
                       className="workFeatureItem__img"
