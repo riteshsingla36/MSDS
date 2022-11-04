@@ -8459,9 +8459,9 @@ a:hover .typo--asLink .typo--hovered {
   transform: none;
 }
 @media screen and (min-width: 1040px) {
-  .content--portfolio .workFeatureItem__img {
+  .workFeatureItem__img {
     width: 100%;
-    height: calc(100% - 75px);
+    /* height: calc(100% - 75px); */
     -o-object-fit: cover;
     object-fit: cover;
   }

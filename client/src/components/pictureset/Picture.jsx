@@ -59,28 +59,27 @@ const Picture = () => {
                   >
                     <picture
                       className="workFeatureSmallItem__picture js--lazyloaded"
-                      
                     >
                       <source
                         media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web2.webp')}
                       />
                       <source
                         media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web2.webp')}
                       />
                       <source
                         media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web2.webp')}
                       />
                       <source
                         media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web2.webp')}
                       />
                       <img
                         alt="Thumbnail"
                         className="workFeatureSmallItem__img"
-                        src={require('../../images/1a.jpg')}
+                        src={require('../../images/web2.webp')}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
@@ -103,24 +102,24 @@ const Picture = () => {
                     >
                       <source
                         media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web1.webp')}
                       />
                       <source
                         media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web1.webp')}
                       />
                       <source
                         media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web1.webp')}
                       />
                       <source
                         media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web1.webp')}
                       />
                       <img
                         alt="Mw Ggw 01"
                         className="workFeatureSmallItem__img"
-                        src={require('../../images/1a.jpg')}
+                        src={require('../../images/web1.webp')}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
@@ -145,24 +144,24 @@ const Picture = () => {
                     >
                       <source
                         media="screen and (max-width: 599px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web3.jpg')}
                       />
                       <source
                         media="screen and (max-width: 799px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web3.jpg')}
                       />
                       <source
                         media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web3.jpg')}
                       />
                       <source
                         media="screen and (min-width: 1040px)"
-                        srcSet={require('../../images/1a.jpg')}
+                        srcSet={require('../../images/web3.jpg')}
                       />
                       <img
                         alt="Ah Oficocoacompass 01 Cover"
                         className="workFeatureSmallItem__img"
-                        src={require('../../images/1a.jpg')}
+                        src={require('../../images/web3.jpg')}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
@@ -186,24 +185,24 @@ const Picture = () => {
                     >
                       <source
                         media="screen and (max-width: 599px)"
-                        srcSet="https://pentagram-production.imgix.net/78cf663a-03b4-4327-bfcf-2f6bee5eaf74/1a.jpg?rect=0%2C125%2C6000%2C3750&w=500&fit=crop&fm=jpg&q=70&auto=format&h=315, https://pentagram-production.imgix.net/78cf663a-03b4-4327-bfcf-2f6bee5eaf74/1a.jpg?rect=0%2C125%2C6000%2C3750&w=500&fit=crop&q=70&fm=jpg&auto=format&h=315&dpr=2 2x"
+                        srcSet={require('../../images/web4.jpg')}
                       />
                       <source
                         media="screen and (max-width: 799px)"
-                        srcSet="https://pentagram-production.imgix.net/78cf663a-03b4-4327-bfcf-2f6bee5eaf74/1a.jpg?rect=0%2C125%2C6000%2C3750&w=350&fit=crop&fm=jpg&q=70&auto=format&h=220, https://pentagram-production.imgix.net/78cf663a-03b4-4327-bfcf-2f6bee5eaf74/1a.jpg?rect=0%2C125%2C6000%2C3750&w=350&fit=crop&q=70&fm=jpg&auto=format&h=220&dpr=2 2x"
+                        srcSet={require('../../images/web4.jpg')}
                       />
                       <source
                         media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet="https://pentagram-production.imgix.net/78cf663a-03b4-4327-bfcf-2f6bee5eaf74/1a.jpg?rect=0%2C125%2C6000%2C3750&w=470&fit=crop&fm=jpg&q=70&auto=format&h=296, https://pentagram-production.imgix.net/78cf663a-03b4-4327-bfcf-2f6bee5eaf74/1a.jpg?rect=0%2C125%2C6000%2C3750&w=470&fit=crop&q=70&fm=jpg&auto=format&h=296&dpr=2 2x"
+                        srcSet={require('../../images/web4.jpg')}
                       />
                       <source
                         media="screen and (min-width: 1040px)"
-                        srcSet="https://pentagram-production.imgix.net/78cf663a-03b4-4327-bfcf-2f6bee5eaf74/1a.jpg?rect=0%2C125%2C6000%2C3750&w=360&fit=crop&fm=jpg&q=70&auto=format&h=226, https://pentagram-production.imgix.net/78cf663a-03b4-4327-bfcf-2f6bee5eaf74/1a.jpg?rect=0%2C125%2C6000%2C3750&w=360&fit=crop&q=70&fm=jpg&auto=format&h=226&dpr=2 2x"
+                        srcSet={require('../../images/web4.jpg')}
                       />
                       <img
                         alt="Goalkeepers Hero Placeholder"
                         className="workFeatureSmallItem__img"
-                        src="https://pentagram-production.imgix.net/78cf663a-03b4-4327-bfcf-2f6bee5eaf74/1a.jpg?rect=0%2C125%2C6000%2C3750&w=310&fit=crop&fm=jpg&q=70&auto=format&h=195"
+                        src={require('../../images/web4.jpg')}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
@@ -225,31 +224,27 @@ const Picture = () => {
                   >
                     <picture
                       className="workFeatureSmallItem__picture js--lazyloaded"
-                      style={{
-                        backgroundImage:
-                          'url("https://pentagram-production.imgix.net/b804eb07-e8b5-4a98-b12b-6c89eb4d8345/AH_01_Cam_Logo_Animation_Thumbnail.jpg?rect=101%2C0%2C1730%2C1080&w=32&fit=crop&blur=200&q=20&fm=jpg&auto=false&h=20")'
-                      }}
                     >
                       <source
                         media="screen and (max-width: 599px)"
-                        srcSet="https://pentagram-production.imgix.net/b804eb07-e8b5-4a98-b12b-6c89eb4d8345/AH_01_Cam_Logo_Animation_Thumbnail.jpg?rect=101%2C0%2C1730%2C1080&w=500&fit=crop&fm=jpg&q=70&auto=format&h=315, https://pentagram-production.imgix.net/b804eb07-e8b5-4a98-b12b-6c89eb4d8345/AH_01_Cam_Logo_Animation_Thumbnail.jpg?rect=101%2C0%2C1730%2C1080&w=500&fit=crop&q=70&fm=jpg&auto=format&h=315&dpr=2 2x"
+                        srcSet={require('../../images/web5.jpg')}
                       />
                       <source
                         media="screen and (max-width: 799px)"
-                        srcSet="https://pentagram-production.imgix.net/b804eb07-e8b5-4a98-b12b-6c89eb4d8345/AH_01_Cam_Logo_Animation_Thumbnail.jpg?rect=101%2C0%2C1730%2C1080&w=350&fit=crop&fm=jpg&q=70&auto=format&h=220, https://pentagram-production.imgix.net/b804eb07-e8b5-4a98-b12b-6c89eb4d8345/AH_01_Cam_Logo_Animation_Thumbnail.jpg?rect=101%2C0%2C1730%2C1080&w=350&fit=crop&q=70&fm=jpg&auto=format&h=220&dpr=2 2x"
+                        srcSet={require('../../images/web5.jpg')}
                       />
                       <source
                         media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet="https://pentagram-production.imgix.net/b804eb07-e8b5-4a98-b12b-6c89eb4d8345/AH_01_Cam_Logo_Animation_Thumbnail.jpg?rect=101%2C0%2C1730%2C1080&w=470&fit=crop&fm=jpg&q=70&auto=format&h=296, https://pentagram-production.imgix.net/b804eb07-e8b5-4a98-b12b-6c89eb4d8345/AH_01_Cam_Logo_Animation_Thumbnail.jpg?rect=101%2C0%2C1730%2C1080&w=470&fit=crop&q=70&fm=jpg&auto=format&h=296&dpr=2 2x"
+                        srcSet={require('../../images/web5.jpg')}
                       />
                       <source
                         media="screen and (min-width: 1040px)"
-                        srcSet="https://pentagram-production.imgix.net/b804eb07-e8b5-4a98-b12b-6c89eb4d8345/AH_01_Cam_Logo_Animation_Thumbnail.jpg?rect=101%2C0%2C1730%2C1080&w=360&fit=crop&fm=jpg&q=70&auto=format&h=226, https://pentagram-production.imgix.net/b804eb07-e8b5-4a98-b12b-6c89eb4d8345/AH_01_Cam_Logo_Animation_Thumbnail.jpg?rect=101%2C0%2C1730%2C1080&w=360&fit=crop&q=70&fm=jpg&auto=format&h=226&dpr=2 2x"
+                        srcSet={require('../../images/web5.jpg')}
                       />
                       <img
                         alt="Ah 01 Cam Logo Animation Thumbnail"
                         className="workFeatureSmallItem__img"
-                        src="https://pentagram-production.imgix.net/b804eb07-e8b5-4a98-b12b-6c89eb4d8345/AH_01_Cam_Logo_Animation_Thumbnail.jpg?rect=101%2C0%2C1730%2C1080&w=310&fit=crop&fm=jpg&q=70&auto=format&h=195"
+                        src={require('../../images/web5.jpg')}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
@@ -268,31 +263,27 @@ const Picture = () => {
                   >
                     <picture
                       className="workFeatureSmallItem__picture js--lazyloaded"
-                      style={{
-                        backgroundImage:
-                          'url("https://pentagram-production.imgix.net/e1ac078b-f89e-4ede-8c44-3570bc383027/HP_Animation_01_Cover.jpg?rect=167%2C0%2C3108%2C1939&w=32&fit=crop&blur=200&q=20&fm=jpg&auto=false&h=20")'
-                      }}
                     >
                       <source
                         media="screen and (max-width: 599px)"
-                        srcSet="https://pentagram-production.imgix.net/e1ac078b-f89e-4ede-8c44-3570bc383027/HP_Animation_01_Cover.jpg?rect=167%2C0%2C3108%2C1939&w=500&fit=crop&fm=jpg&q=70&auto=format&h=315, https://pentagram-production.imgix.net/e1ac078b-f89e-4ede-8c44-3570bc383027/HP_Animation_01_Cover.jpg?rect=167%2C0%2C3108%2C1939&w=500&fit=crop&q=70&fm=jpg&auto=format&h=315&dpr=2 2x"
+                        srcSet={require('../../images/web6.jpg')}
                       />
                       <source
                         media="screen and (max-width: 799px)"
-                        srcSet="https://pentagram-production.imgix.net/e1ac078b-f89e-4ede-8c44-3570bc383027/HP_Animation_01_Cover.jpg?rect=167%2C0%2C3108%2C1939&w=350&fit=crop&fm=jpg&q=70&auto=format&h=220, https://pentagram-production.imgix.net/e1ac078b-f89e-4ede-8c44-3570bc383027/HP_Animation_01_Cover.jpg?rect=167%2C0%2C3108%2C1939&w=350&fit=crop&q=70&fm=jpg&auto=format&h=220&dpr=2 2x"
+                        srcSet={require('../../images/web6.jpg')}
                       />
                       <source
                         media="screen and (min-width: 800px) and (max-width:1039px)"
-                        srcSet="https://pentagram-production.imgix.net/e1ac078b-f89e-4ede-8c44-3570bc383027/HP_Animation_01_Cover.jpg?rect=167%2C0%2C3108%2C1939&w=470&fit=crop&fm=jpg&q=70&auto=format&h=296, https://pentagram-production.imgix.net/e1ac078b-f89e-4ede-8c44-3570bc383027/HP_Animation_01_Cover.jpg?rect=167%2C0%2C3108%2C1939&w=470&fit=crop&q=70&fm=jpg&auto=format&h=296&dpr=2 2x"
+                        srcSet={require('../../images/web6.jpg')}
                       />
                       <source
                         media="screen and (min-width: 1040px)"
-                        srcSet="https://pentagram-production.imgix.net/e1ac078b-f89e-4ede-8c44-3570bc383027/HP_Animation_01_Cover.jpg?rect=167%2C0%2C3108%2C1939&w=360&fit=crop&fm=jpg&q=70&auto=format&h=226, https://pentagram-production.imgix.net/e1ac078b-f89e-4ede-8c44-3570bc383027/HP_Animation_01_Cover.jpg?rect=167%2C0%2C3108%2C1939&w=360&fit=crop&q=70&fm=jpg&auto=format&h=226&dpr=2 2x"
+                        srcSet={require('../../images/web6.jpg')}
                       />
                       <img
                         alt="Hp Animation 01 Cover"
                         className="workFeatureSmallItem__img"
-                        src="https://pentagram-production.imgix.net/e1ac078b-f89e-4ede-8c44-3570bc383027/HP_Animation_01_Cover.jpg?rect=167%2C0%2C3108%2C1939&w=310&fit=crop&fm=jpg&q=70&auto=format&h=195"
+                        src={require('../../images/web6.jpg')}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
@@ -311,29 +302,25 @@ const Picture = () => {
                   >
                     <picture
                       className="workFeatureSmallItem__picture"
-                      style={{
-                        backgroundImage:
-                          'url("https://pentagram-production.imgix.net/36453f3b-20da-43db-b5ad-008cf41e1a07/TKJ_Thumbnail.jpg?rect=192%2C0%2C3456%2C2160&w=32&fit=crop&blur=200&q=20&fm=jpg&auto=false&h=20")'
-                      }}
                     >
                       <source
                         media="screen and (max-width: 599px)"
-                        data-srcset="https://pentagram-production.imgix.net/36453f3b-20da-43db-b5ad-008cf41e1a07/TKJ_Thumbnail.jpg?rect=192%2C0%2C3456%2C2160&w=500&fit=crop&fm=jpg&q=70&auto=format&h=315, https://pentagram-production.imgix.net/36453f3b-20da-43db-b5ad-008cf41e1a07/TKJ_Thumbnail.jpg?rect=192%2C0%2C3456%2C2160&w=500&fit=crop&q=70&fm=jpg&auto=format&h=315&dpr=2 2x"
+                        srcSet={require('../../images/web7.jpg')}
                       />
                       <source
                         media="screen and (max-width: 799px)"
-                        data-srcset="https://pentagram-production.imgix.net/36453f3b-20da-43db-b5ad-008cf41e1a07/TKJ_Thumbnail.jpg?rect=192%2C0%2C3456%2C2160&w=350&fit=crop&fm=jpg&q=70&auto=format&h=220, https://pentagram-production.imgix.net/36453f3b-20da-43db-b5ad-008cf41e1a07/TKJ_Thumbnail.jpg?rect=192%2C0%2C3456%2C2160&w=350&fit=crop&q=70&fm=jpg&auto=format&h=220&dpr=2 2x"
+                        srcSet={require('../../images/web7.jpg')}
                       />
                       <source
                         media="screen and (min-width: 800px) and (max-width:1039px)"
-                        data-srcset="https://pentagram-production.imgix.net/36453f3b-20da-43db-b5ad-008cf41e1a07/TKJ_Thumbnail.jpg?rect=192%2C0%2C3456%2C2160&w=470&fit=crop&fm=jpg&q=70&auto=format&h=296, https://pentagram-production.imgix.net/36453f3b-20da-43db-b5ad-008cf41e1a07/TKJ_Thumbnail.jpg?rect=192%2C0%2C3456%2C2160&w=470&fit=crop&q=70&fm=jpg&auto=format&h=296&dpr=2 2x"
+                        srcSet={require('../../images/web7.jpg')}
                       />
                       <source
                         media="screen and (min-width: 1040px)"
-                        data-srcset="https://pentagram-production.imgix.net/36453f3b-20da-43db-b5ad-008cf41e1a07/TKJ_Thumbnail.jpg?rect=192%2C0%2C3456%2C2160&w=360&fit=crop&fm=jpg&q=70&auto=format&h=226, https://pentagram-production.imgix.net/36453f3b-20da-43db-b5ad-008cf41e1a07/TKJ_Thumbnail.jpg?rect=192%2C0%2C3456%2C2160&w=360&fit=crop&q=70&fm=jpg&auto=format&h=226&dpr=2 2x"
+                        srcSet={require('../../images/web7.jpg')}
                       />
                       <img
-                        data-src="https://pentagram-production.imgix.net/36453f3b-20da-43db-b5ad-008cf41e1a07/TKJ_Thumbnail.jpg?rect=192%2C0%2C3456%2C2160&w=310&fit=crop&fm=jpg&q=70&auto=format&h=195"
+                        src={require('../../images/web7.jpg')}
                         alt="Tkj Thumbnail"
                         className="workFeatureSmallItem__img"
                       />
@@ -354,29 +341,25 @@ const Picture = () => {
                   >
                     <picture
                       className="workFeatureSmallItem__picture"
-                      style={{
-                        backgroundImage:
-                          'url("https://pentagram-production.imgix.net/83b4c6c2-a786-4076-a9fc-626e1e8724c1/nu_case-01.jpg?rect=400%2C0%2C7201%2C4501&w=32&fit=crop&blur=200&q=20&fm=jpg&auto=false&h=20")'
-                      }}
                     >
                       <source
                         media="screen and (max-width: 599px)"
-                        data-srcset="https://pentagram-production.imgix.net/83b4c6c2-a786-4076-a9fc-626e1e8724c1/nu_case-01.jpg?rect=400%2C0%2C7201%2C4501&w=500&fit=crop&fm=jpg&q=70&auto=format&h=315, https://pentagram-production.imgix.net/83b4c6c2-a786-4076-a9fc-626e1e8724c1/nu_case-01.jpg?rect=400%2C0%2C7201%2C4501&w=500&fit=crop&q=70&fm=jpg&auto=format&h=315&dpr=2 2x"
+                        srcSet={require('../../images/web8.jpg')}
                       />
                       <source
                         media="screen and (max-width: 799px)"
-                        data-srcset="https://pentagram-production.imgix.net/83b4c6c2-a786-4076-a9fc-626e1e8724c1/nu_case-01.jpg?rect=400%2C0%2C7201%2C4501&w=350&fit=crop&fm=jpg&q=70&auto=format&h=220, https://pentagram-production.imgix.net/83b4c6c2-a786-4076-a9fc-626e1e8724c1/nu_case-01.jpg?rect=400%2C0%2C7201%2C4501&w=350&fit=crop&q=70&fm=jpg&auto=format&h=220&dpr=2 2x"
+                        srcSet={require('../../images/web8.jpg')}
                       />
                       <source
                         media="screen and (min-width: 800px) and (max-width:1039px)"
-                        data-srcset="https://pentagram-production.imgix.net/83b4c6c2-a786-4076-a9fc-626e1e8724c1/nu_case-01.jpg?rect=400%2C0%2C7201%2C4501&w=470&fit=crop&fm=jpg&q=70&auto=format&h=296, https://pentagram-production.imgix.net/83b4c6c2-a786-4076-a9fc-626e1e8724c1/nu_case-01.jpg?rect=400%2C0%2C7201%2C4501&w=470&fit=crop&q=70&fm=jpg&auto=format&h=296&dpr=2 2x"
+                        srcSet={require('../../images/web8.jpg')}
                       />
                       <source
                         media="screen and (min-width: 1040px)"
-                        data-srcset="https://pentagram-production.imgix.net/83b4c6c2-a786-4076-a9fc-626e1e8724c1/nu_case-01.jpg?rect=400%2C0%2C7201%2C4501&w=360&fit=crop&fm=jpg&q=70&auto=format&h=226, https://pentagram-production.imgix.net/83b4c6c2-a786-4076-a9fc-626e1e8724c1/nu_case-01.jpg?rect=400%2C0%2C7201%2C4501&w=360&fit=crop&q=70&fm=jpg&auto=format&h=226&dpr=2 2x"
+                        srcSet={require('../../images/web8.jpg')}
                       />
                       <img
-                        data-src="https://pentagram-production.imgix.net/83b4c6c2-a786-4076-a9fc-626e1e8724c1/nu_case-01.jpg?rect=400%2C0%2C7201%2C4501&w=310&fit=crop&fm=jpg&q=70&auto=format&h=195"
+                        src={require('../../images/web8.jpg')}
                         alt="Nu Case 01"
                         className="workFeatureSmallItem__img"
                       />
@@ -397,31 +380,27 @@ const Picture = () => {
                 >
                   <picture
                     className="workFeatureItem__picture js--lazyloaded"
-                    style={{
-                      backgroundImage:
-                        'url("https://pentagram-production.imgix.net/97385094-fbcf-47df-8f5f-51148998ce9e/MW_STC_1_cover.jpg?rect=169%2C0%2C1730%2C1080&w=32&fit=crop&blur=200&q=20&fm=jpg&auto=false&h=20")'
-                    }}
                   >
                     <source
                       media="screen and (max-width: 599px)"
-                      srcSet="https://pentagram-production.imgix.net/97385094-fbcf-47df-8f5f-51148998ce9e/MW_STC_1_cover.jpg?rect=169%2C0%2C1730%2C1080&w=500&fit=crop&fm=jpg&q=70&auto=format&h=315, https://pentagram-production.imgix.net/97385094-fbcf-47df-8f5f-51148998ce9e/MW_STC_1_cover.jpg?rect=169%2C0%2C1730%2C1080&w=500&fit=crop&q=70&fm=jpg&auto=format&h=315&dpr=2 2x"
+                      srcSet={require('../../images/web9.webp')}
                     />
                     <source
                       media="screen and (max-width: 799px)"
-                      srcSet="https://pentagram-production.imgix.net/97385094-fbcf-47df-8f5f-51148998ce9e/MW_STC_1_cover.jpg?rect=169%2C0%2C1730%2C1080&w=350&fit=crop&fm=jpg&q=70&auto=format&h=220, https://pentagram-production.imgix.net/97385094-fbcf-47df-8f5f-51148998ce9e/MW_STC_1_cover.jpg?rect=169%2C0%2C1730%2C1080&w=350&fit=crop&q=70&fm=jpg&auto=format&h=220&dpr=2 2x"
+                      srcSet={require('../../images/web9.webp')}
                     />
                     <source
                       media="screen and (min-width: 800px) and (max-width:1039px)"
-                      srcSet="https://pentagram-production.imgix.net/97385094-fbcf-47df-8f5f-51148998ce9e/MW_STC_1_cover.jpg?rect=169%2C0%2C1730%2C1080&w=500&fit=crop&fm=jpg&q=70&auto=format&h=315, https://pentagram-production.imgix.net/97385094-fbcf-47df-8f5f-51148998ce9e/MW_STC_1_cover.jpg?rect=169%2C0%2C1730%2C1080&w=500&fit=crop&q=70&fm=jpg&auto=format&h=315&dpr=2 2x"
+                      srcSet={require('../../images/web9.webp')}
                     />
                     <source
                       media="screen and (min-width: 1040px)"
-                      srcSet="https://pentagram-production.imgix.net/d509dc50-6e2c-44b7-975b-8e78a283947e/MW_STC_2_cover.jpg?rect=270%2C0%2C1414%2C1080&w=740&fit=crop&fm=jpg&q=70&auto=format&h=565, https://pentagram-production.imgix.net/d509dc50-6e2c-44b7-975b-8e78a283947e/MW_STC_2_cover.jpg?rect=270%2C0%2C1414%2C1080&w=740&fit=crop&q=70&fm=jpg&auto=format&h=565&dpr=2 2x"
+                      srcSet={require('../../images/web9.webp')}
                     />
                     <img
                       alt="Mw Stc 1 Cover"
                       className="workFeatureItem__img"
-                      src="https://pentagram-production.imgix.net/d509dc50-6e2c-44b7-975b-8e78a283947e/MW_STC_2_cover.jpg?rect=270%2C0%2C1414%2C1080&w=500&fit=crop&fm=jpg&q=70&auto=format&h=382"
+                      src={require('../../images/web9.webp')}
                     />
                   </picture>
                   <div className="workFeatureItem__title">
