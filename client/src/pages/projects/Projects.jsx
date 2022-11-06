@@ -7,7 +7,7 @@ import "./projects.css";
 import Picture from "../../components/pictureset/Picture";
 const Projects = () => {
   return (
-    <div>
+    <div style={{overflow: "hidden"}}>
       <Navbar />
       <AnimationDiv />
       <header className="Hero_header__1cZhA">
