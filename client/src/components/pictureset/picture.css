@@ -1958,6 +1958,9 @@ a:hover .typo--asLink .typo--hovered {
   display: block;
   object-fit: cover;
   width: 100%;
+  object-fit: cover;
+  position: relative;
+  height: 178px;
 }
 .workFeatureSmallItem__img {
   opacity: 1;
@@ -1978,6 +1981,11 @@ a:hover .typo--asLink .typo--hovered {
     height: 75px;
     overflow: hidden;
     padding-right: 5%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .workFeatureSmallItem__img {
+    height: 210.85px;
   }
 }
 .workFeatureSmallItem__title > * {

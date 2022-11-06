@@ -24,7 +24,7 @@ const Home = () => {
     setA(Number(id.split(" ")[1].split("-")[1]));
   };
   return (
-    <div>
+    <div style={{overflow: "hidden"}}>
       <AnimationDiv />
       <Navbar />
       <div className="main-img-container">
@@ -73,6 +73,7 @@ const Home = () => {
           width={"100%"}
           height={"100%"}
           className="banner-img"
+          style={{objectFit: "cover"}}
         />
 
         <Link className="main-txt prevent-select" to="/">
@@ -111,7 +112,7 @@ const Home = () => {
           </svg>
         </Link>
         <div className="bottom-txt prevent-select">
-          <Link to="/client/src/pages/about">Amsterdam &amp; New-york</Link>
+          <Link to="/client/src/pages/about">New Delhi NCR</Link>
         </div>
       </div>
 
