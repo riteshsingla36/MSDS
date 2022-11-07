@@ -1986,9 +1986,30 @@ a:hover .typo--asLink .typo--hovered {
     padding-right: 5%;
   }
 }
+
+@media screen and (min-width: 1025px) {
+  .workFeatureSmallItem__img {
+    height: 217px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .workFeatureSmallItem__img {
+    height: 291px;
+  }
+}
 @media screen and (max-width: 600px) {
   .workFeatureSmallItem__img {
-    height: 210.85px;
+    height: 246.85px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .workFeatureSmallItem__img {
+    height: 151.85px;
+  }
+}
+@media screen and (min-width: 540px) and (max-width: 600px) {
+  .workFeatureSmallItem__img {
+    height: 314.51px;
   }
 }
 .workFeatureSmallItem__title > * {
