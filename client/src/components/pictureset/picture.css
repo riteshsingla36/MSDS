@@ -1936,10 +1936,6 @@ a:hover .typo--asLink .typo--hovered {
   background-size: cover;
   background-position: center;
 }
-.workFeatureSmallItem__picture.js--lazyloaded {
-  background-color: transparent !important;
-  background-image: none !important;
-}
 .workFeatureSmallItem__tagline {
   display: none;
   overflow: hidden;
@@ -1960,6 +1956,7 @@ a:hover .typo--asLink .typo--hovered {
 }
 .workFeatureSmallItem__img {
   display: block;
+  object-fit: cover;
   width: 100%;
   object-fit: cover;
   position: relative;
