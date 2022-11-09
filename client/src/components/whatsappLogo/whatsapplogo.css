@@ -1,0 +1,16 @@
+.whatsapp{
+    right: 100rem;
+    bottom: 20rem; 
+    width: 50px; 
+    height: 50px; 
+    position: fixed;
+    z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999;
+}
+
+@media (max-width:500px) {
+    .whatsapp{
+        right: 10rem;
+        width: 30px;
+        height: 30px;
+    }
+}

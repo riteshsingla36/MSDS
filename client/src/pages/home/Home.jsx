@@ -15,8 +15,7 @@ import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import "./home.css";
 import '../../images/1.jpg'
-
-import { ReactComponent as LOGO } from "../../images/logo.svg";
+import Slider from "../../components/bottomInfiniteSlider/Slider";
 
 const Home = () => {
   let [a, setA] = useState(1);
@@ -68,7 +67,7 @@ const Home = () => {
         </div>
 
         <img
-          src={require(`../../images/${a}.jpg`)}
+          src={require(`../../images/banner/banner(${a}).jpg`)}
           alt="#"
           width={"100%"}
           height={"100%"}
@@ -112,7 +111,7 @@ const Home = () => {
           </svg>
         </Link>
         <div className="bottom-txt prevent-select">
-          <Link to="/client/src/pages/about">New Delhi NCR</Link>
+          <Link to="/client/src/pages/about" style={{letterSpacing: '6px'}}>Manav Sachdeva Design Studio</Link>
         </div>
       </div>
 
@@ -120,8 +119,8 @@ const Home = () => {
         <div>
           <div className="DescriptionSlice_about__3fKWM">
             <p>
-              We’re a full service creative agency, working globally with brands
-              and businesses at all stages of their journey.
+            MSDS is creative design agency, crafting visual stories 
+            for brands and businesses globally at all stages of their journey.
             </p>
             <a className="a--underlined" href="about.html">
               About us
@@ -214,7 +213,7 @@ const Home = () => {
                 ></div>
                 <picture>
                   <img
-                    src={require('../../images/6.jpg')}
+                    src={require('../../images/fabessential.jpg')}
                     alt=""
                     loading="lazy"
                     decoding="async"
@@ -320,9 +319,7 @@ const Home = () => {
       <section className="QuoteSlice_quote__1H6VJ">
         <blockquote>
           <p>
-            Collaborating with international brands, founders, start-ups,
-            venture capitals, and more – producing, results-driven, unique
-            products and experiences from conception to delivery.
+          We Collaborate with national and international brands, founders, start-ups offering experiences from conception to delivery.
           </p>
         </blockquote>
       </section>
@@ -454,15 +451,57 @@ const Home = () => {
         </article>
       </section>
 
-      <section className="QuoteSlice_quote__1H6VJ">
+      <section className="QuoteSlice_quote__1H6VJ ourServices">
         <blockquote>
-          <p>
-            With more than 10 years of experience in working with fashion and
-            beauty brands, start-ups, and technology companies, we help brands
-            succeed.
+          <p >
+          With more than 10 years of experience in working with beauty brands, fashion, FMCG, technology companies, we help brands succeed.
           </p>
         </blockquote>
       </section>
+
+      <section className="ListSlice_main__mKXcM" >
+          <h2 className="ListSlice_title__3zHBd">Our services</h2>
+          <dl className="ListSlice_list__3B0uk">
+            <dt>Ideas &amp; Strategy</dt>
+            <p></p>
+            <dd>Consulting</dd>
+            <dd>Positioning</dd>
+            <dd>E-commerce strategy</dd>
+            <dd>Brand strategy</dd>
+            <dd>Brand content</dd>
+            <dd>Copywriting</dd>
+            <dd>Tone of voice</dd>
+          </dl>
+          <dl className="ListSlice_list__3B0uk">
+            <dt>Creation &amp; Design</dt>
+            <p></p>
+            <dd>Art Direction</dd>
+            <dd>Brand identity</dd>
+            <dd>User Experience (UX)</dd>
+            <dd>User Interface (UI)</dd>
+            <dd>Wireframe &amp; Prototyping</dd>
+            <dd>Packaging Design</dd>
+            <dd>Print </dd>
+            <dd>Social Media assets</dd>
+            <dd>Website &amp; E-commerce</dd>
+            <dd>Videos</dd>
+            <dd>Mobile App</dd>
+            <dd>Photography</dd>
+          </dl>
+          <dl className="ListSlice_list__3B0uk">
+            <dt>Technology</dt>
+            <p></p>
+            <dd>Creative Development</dd>
+            <dd>Front-end development</dd>
+            <dd>Back-end development</dd>
+            <dd>Shopify development</dd>
+            <dd>Shopify Plus</dd>
+            <dd>Headless Shopify</dd>
+            <dd>Mobile &amp; IOS web app</dd>
+          </dl>
+        </section>
+
+        <Slider/>
 
       <section className="ProjectsSlice_projects1__2nqI4">
         <article className="ProjectsSlice_article__uEv9O">
@@ -532,7 +571,6 @@ const Home = () => {
           </a>
         </article>
       </section>
-
       <Footer />
     </div>
   );

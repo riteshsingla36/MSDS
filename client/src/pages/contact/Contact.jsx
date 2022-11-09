@@ -110,7 +110,7 @@ const Contact = () => {
               width='100%'
               height={500}
               id="gmap_canvas"
-              src="https://maps.google.com/maps?q=cowork%20insta&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=Manav%20Sachdev%20Design%20Studio%20%7C%20MSDS,%20Coworkinsta%207th,%20Floor,%20Tower%20Block%20C,%20Supermart-1,%20DLF%20Phase%20IV,%20Gurugram,%20Haryana%20122009&t=&z=13&ie=UTF8&iwloc=&output=embed"
             />
             <a href="https://fmovies-online.net" />
             <br />
