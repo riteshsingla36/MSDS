@@ -10,14 +10,17 @@ import "./css/ce610c75de66e0109297.css";
 import "./css/d20aac4ad3356fdb832c.css";
 import "./css/f98c79ad35ad3581a056.css";
 import "./about.css"
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 
 const About = () => {
+
+  const navigate = useNavigate();
+
   return (
-    <div>
+    <div style={{overflow: 'hidden'}}>
       <Navbar />
       <AnimationDiv />
 
@@ -58,10 +61,7 @@ const About = () => {
           </svg>
       </a>
         <p>
-          Numbered is a full-service creative agency based in Amsterdam &amp;
-          New-york. We collaborate closely with our clients to tell their
-          stories, engaging audiences by building unique experiences &amp;
-          products.
+        MSDS is a multi-disciplinary brand design studio based in New Delhi NCR, India with extensive experience in creating successful and acclaimed visual communications across the globe.
         </p>
         <div className="about_images__1646e">
           <div
@@ -74,11 +74,11 @@ const About = () => {
             ></div>
             <picture>
               <source
-                srcset="https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=320&amp;rect=267,0,998,1313&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=620&amp;rect=267,0,998,1313&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=960&amp;rect=267,0,998,1313&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1280&amp;rect=267,0,998,1313&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1600&amp;rect=267,0,998,1313&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1920&amp;rect=267,0,998,1313&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2240&amp;rect=267,0,998,1313&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2560&amp;rect=267,0,998,1313&amp;auto=format,compress 2560w"
+                srcSet="https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=320&amp;rect=267,0,998,1313&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=620&amp;rect=267,0,998,1313&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=960&amp;rect=267,0,998,1313&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1280&amp;rect=267,0,998,1313&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1600&amp;rect=267,0,998,1313&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1920&amp;rect=267,0,998,1313&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2240&amp;rect=267,0,998,1313&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2560&amp;rect=267,0,998,1313&amp;auto=format,compress 2560w"
                 sizes="33.333333333333336vw"
               />
               <img
-                src="https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?auto=compress,format&amp;rect=267,0,998,1313&amp;w=456&amp;h=600"
+                src={require(`../../images/1.jpg`)}
                 alt=""
                 loading="lazy"
                 decoding="async"
@@ -99,13 +99,13 @@ const About = () => {
             <noscript>
               <picture>
                 <source
-                  srcset="https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=320&rect=267,0,998,1313&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=620&rect=267,0,998,1313&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=960&rect=267,0,998,1313&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1280&rect=267,0,998,1313&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1600&rect=267,0,998,1313&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1920&rect=267,0,998,1313&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2240&rect=267,0,998,1313&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2560&rect=267,0,998,1313&auto=format,compress 2560w"
+                  srcSet="https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=320&rect=267,0,998,1313&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=620&rect=267,0,998,1313&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=960&rect=267,0,998,1313&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1280&rect=267,0,998,1313&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1600&rect=267,0,998,1313&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1920&rect=267,0,998,1313&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2240&rect=267,0,998,1313&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2560&rect=267,0,998,1313&auto=format,compress 2560w"
                   sizes="33.333333333333336vw"
                 />
                 <img
                   loading="lazy"
                   sizes="33.333333333333336vw"
-                  srcset="https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=320&rect=267,0,998,1313&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=620&rect=267,0,998,1313&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=960&rect=267,0,998,1313&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1280&rect=267,0,998,1313&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1600&rect=267,0,998,1313&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1920&rect=267,0,998,1313&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2240&rect=267,0,998,1313&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2560&rect=267,0,998,1313&auto=format,compress 2560w"
+                  srcSet="https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=320&rect=267,0,998,1313&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=620&rect=267,0,998,1313&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=960&rect=267,0,998,1313&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1280&rect=267,0,998,1313&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1600&rect=267,0,998,1313&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=1920&rect=267,0,998,1313&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2240&rect=267,0,998,1313&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?w=2560&rect=267,0,998,1313&auto=format,compress 2560w"
                   src="https://images.prismic.io/autumn-amsterdam/154f2bf3-9cda-4c33-85b9-c157d2c3e8dc_DSCF6395.jpg?auto=compress,format&rect=267,0,998,1313&w=456&h=600"
                   alt=""
                   style={{
@@ -132,7 +132,7 @@ const About = () => {
             ></div>
             <picture>
               <source
-                srcset="https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=320&amp;rect=0,18,2090,2750&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=620&amp;rect=0,18,2090,2750&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=960&amp;rect=0,18,2090,2750&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1280&amp;rect=0,18,2090,2750&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1600&amp;rect=0,18,2090,2750&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1920&amp;rect=0,18,2090,2750&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2240&amp;rect=0,18,2090,2750&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2560&amp;rect=0,18,2090,2750&amp;auto=format,compress 2560w"
+                srcSet="https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=320&amp;rect=0,18,2090,2750&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=620&amp;rect=0,18,2090,2750&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=960&amp;rect=0,18,2090,2750&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1280&amp;rect=0,18,2090,2750&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1600&amp;rect=0,18,2090,2750&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1920&amp;rect=0,18,2090,2750&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2240&amp;rect=0,18,2090,2750&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2560&amp;rect=0,18,2090,2750&amp;auto=format,compress 2560w"
                 sizes="33.333333333333336vw"
               />
               <img
@@ -157,13 +157,13 @@ const About = () => {
             <noscript>
               <picture>
                 <source
-                  srcset="https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=320&rect=0,18,2090,2750&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=620&rect=0,18,2090,2750&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=960&rect=0,18,2090,2750&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1280&rect=0,18,2090,2750&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1600&rect=0,18,2090,2750&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1920&rect=0,18,2090,2750&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2240&rect=0,18,2090,2750&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2560&rect=0,18,2090,2750&auto=format,compress 2560w"
+                  srcSet="https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=320&rect=0,18,2090,2750&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=620&rect=0,18,2090,2750&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=960&rect=0,18,2090,2750&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1280&rect=0,18,2090,2750&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1600&rect=0,18,2090,2750&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1920&rect=0,18,2090,2750&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2240&rect=0,18,2090,2750&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2560&rect=0,18,2090,2750&auto=format,compress 2560w"
                   sizes="33.333333333333336vw"
                 />
                 <img
                   loading="lazy"
                   sizes="33.333333333333336vw"
-                  srcset="https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=320&rect=0,18,2090,2750&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=620&rect=0,18,2090,2750&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=960&rect=0,18,2090,2750&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1280&rect=0,18,2090,2750&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1600&rect=0,18,2090,2750&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1920&rect=0,18,2090,2750&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2240&rect=0,18,2090,2750&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2560&rect=0,18,2090,2750&auto=format,compress 2560w"
+                  srcSet="https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=320&rect=0,18,2090,2750&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=620&rect=0,18,2090,2750&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=960&rect=0,18,2090,2750&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1280&rect=0,18,2090,2750&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1600&rect=0,18,2090,2750&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=1920&rect=0,18,2090,2750&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2240&rect=0,18,2090,2750&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?w=2560&rect=0,18,2090,2750&auto=format,compress 2560w"
                   src="https://images.prismic.io/autumn-amsterdam/9ed13e11-10cb-4243-8b6c-757690e801dc_NR+S20+Look+12.jpg?auto=compress,format&rect=0,18,2090,2750&w=456&h=600"
                   alt=""
                   style={{
@@ -182,11 +182,7 @@ const About = () => {
           </div>
         </div>
         <p>
-          We like to support our clients at all stages of their projects from
-          strategy, design and technical development. Insight driven and user
-          centric. We strongly believe every brand and project is unique and
-          should be tailor-made from industry leaders to early stage companies.
-          We don’t do one size fits all.
+          MSDS offers services with an end to end journey to a brand adding a niche & visual value to it, building a strong visual foundation to enter a competitive market. We collaborate closely with our clients to tell their stories, engaging audiences by building unique experiences & products.
         </p>
       </header>
 
@@ -212,8 +208,8 @@ const About = () => {
             <dd>User Experience (UX)</dd>
             <dd>User Interface (UI)</dd>
             <dd>Wireframe &amp; Prototyping</dd>
-            <dd>Print &amp; Packaging</dd>
-            <dd>CGI </dd>
+            <dd>Packaging Design</dd>
+            <dd>Print </dd>
             <dd>Social Media assets</dd>
             <dd>Website &amp; E-commerce</dd>
             <dd>Videos</dd>
@@ -235,60 +231,60 @@ const About = () => {
         <section className="ClientsSlice_main__1EeZO">
           <ul>
             <li>
-              <a href="https://www.chanel.com" target="_blank" rel="noopener noreferrer"
+              <a href="/" target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/45cf01dc-5eb1-4098-8303-7853ab7f577c_chanel.svg?auto=compress,format"
-                  alt="Chanel"
+                  src={require('../../logos/logo-01.png')}
+                  alt="ambriona"
                 /></a>
             </li>
             <li>
               <a
-                href="https://www.louisvuitton.com"
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/f6392363-d9b1-4ff6-9b06-2f570d4950b2_louis-vuitton.svg?auto=compress,format"
+                  src={require('../../logos/logo-02.png')}
                   alt="Louis Vuitton"
                 /></a>
             </li>
             <li>
-              <a href="https://www.dyson.com" target="_blank" rel="noopener noreferrer"
+              <a href="/" target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/6dfc7af7-757f-49d5-896a-57826af9a856_dyson.svg?auto=compress,format"
+                  src={require('../../logos/logo-03.png')}
                   alt="Dyson"
                 /></a>
             </li>
             <li>
               <a
-                href="https://www.jeanpaulgaultier.com/"
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/1304a980-07dc-4a98-b6a5-7c408de0e7f7_jean-paul-gaultier.svg?auto=compress,format"
+                  src={require('../../logos/logo-04.png')}
                   alt="Jean Paul Gautlier"
                 /></a>
             </li>
             <li>
-              <a href="http://made.com/" target="_blank" rel="noopener noreferrer"
+              <a href="/" target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/19a5a790-d2b6-490a-b0d6-f6e90c49b0b4_made.svg?auto=compress,format"
+                  src={require('../../logos/logo-05.png')}
                   alt="Made.com"
                 /></a>
             </li>
             <li>
-              <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"
+              <a href="/" target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/ea7721a7-05e4-4f67-92c0-16e86ca60a6e_google.svg?auto=compress,format"
+                  src={require('../../logos/logo-06.png')}
                   alt="google"
                 /></a>
             </li>
             <li>
               <a
-                href="https://www.printemps.com/fr/fr"
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/cecc2502-16e1-4ed1-af69-dd6350b8243d_printemps.svg?auto=compress,format"
+                  src={require('../../logos/logo-07.png')}
                   alt="Printemps"
                 /></a>
             </li>
@@ -297,70 +293,77 @@ const About = () => {
             </li>
             <li>
               <a
-                href="https://edition.cnn.com/"
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/bcc808fb-451f-4558-aec9-5b442ed6dc92_cnn.svg?auto=compress,format"
+                  src={require('../../logos/logo-08.png')}
                   alt="CNN"
                 /></a>
             </li>
             <li>
               <a target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/3913867d-b7ca-43f4-9169-a549c22a11d2_typology.svg?auto=compress,format"
+                  src={require('../../logos/logo-09.png')}
                   alt="Typology"
                 /></a>
             </li>
             <li>
-              <a href="https://www.sezane.com" target="_blank" rel="noopener noreferrer"
+              <a href="/" target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/0f78556f-13fb-4d39-912a-1e644270c601_sezane.svg?auto=compress,format"
+                  src={require('../../logos/logo-10.png')}
                   alt="Sezane"
                 /></a>
             </li>
             <li>
-              <a href="https://www.mollie.com" target="_blank" rel="noopener noreferrer"
+              <a href="/" target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/53c29541-0962-450b-94f8-93c35a02f8a7_mollie.svg?auto=compress,format"
+                  src={require('../../logos/logo-11.png')}
                   alt="Mollie"
                 /></a>
             </li>
             <li>
               <a target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/02e90e59-9e1d-44dc-8ef4-5a4325a0b7af_superfluid.svg?auto=compress,format"
+                  src={require('../../logos/logo-12.png')}
                   alt="Superfluid"
                 /></a>
             </li>
             <li>
               <Link
-                href="https://www.ubisoft.com/en-us/"
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/d84b8c63-6c05-43b9-838d-bf219f889778_ubisoft.svg?auto=compress,format"
+                  src={require('../../logos/logo-13.png')}
                   alt="Ubisoft"
                 /></Link>
             </li>
             <li>
               <a target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/0a602e76-15ab-44f1-924c-69776d42dffd_miista.svg?auto=compress,format"
+                  src={require('../../logos/logo-14.png')}
                   alt="Miista"
                 /></a>
             </li>
             <li>
               <a target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://images.prismic.io/autumn-amsterdam/4243cfd6-5f19-4bac-a310-0bd2b8a6701d_cann.svg?auto=compress,format"
+                  src={require('../../logos/logo-15.png')}
                   alt="Drink Cann"
                 /></a>
             </li>
             <li>
               <a target="_blank" rel="noopener noreferrer"
               ><img
-                  src="https://autumn-amsterdam.cdn.prismic.io/autumn-amsterdam/43f5e75a-36ba-4f99-8880-c5c4896caf14_veloretti.svg"
+                  src={require('../../logos/logo-16.png')}
+                  alt="Veloretti"
+                /></a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
+                  src={require('../../logos/logo-17.png')}
                   alt="Veloretti"
                 /></a>
             </li>
@@ -393,7 +396,7 @@ const About = () => {
               ></div>
               <picture>
                 <source
-                  srcset="https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=320&amp;rect=551,0,820,1080&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=620&amp;rect=551,0,820,1080&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=960&amp;rect=551,0,820,1080&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1280&amp;rect=551,0,820,1080&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1600&amp;rect=551,0,820,1080&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1920&amp;rect=551,0,820,1080&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2240&amp;rect=551,0,820,1080&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2560&amp;rect=551,0,820,1080&amp;auto=format,compress 2560w"
+                  srcSet="https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=320&amp;rect=551,0,820,1080&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=620&amp;rect=551,0,820,1080&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=960&amp;rect=551,0,820,1080&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1280&amp;rect=551,0,820,1080&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1600&amp;rect=551,0,820,1080&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1920&amp;rect=551,0,820,1080&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2240&amp;rect=551,0,820,1080&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2560&amp;rect=551,0,820,1080&amp;auto=format,compress 2560w"
                   sizes="33.333333333333336vw"
                 />
                 <img
@@ -407,13 +410,13 @@ const About = () => {
               <noscript>
                 <picture>
                   <source
-                    srcset="https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=320&rect=551,0,820,1080&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=620&rect=551,0,820,1080&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=960&rect=551,0,820,1080&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1280&rect=551,0,820,1080&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1600&rect=551,0,820,1080&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1920&rect=551,0,820,1080&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2240&rect=551,0,820,1080&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2560&rect=551,0,820,1080&auto=format,compress 2560w"
+                    srcSet="https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=320&rect=551,0,820,1080&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=620&rect=551,0,820,1080&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=960&rect=551,0,820,1080&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1280&rect=551,0,820,1080&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1600&rect=551,0,820,1080&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1920&rect=551,0,820,1080&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2240&rect=551,0,820,1080&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2560&rect=551,0,820,1080&auto=format,compress 2560w"
                     sizes="33.333333333333336vw"
                   />
                   <img
                     loading="lazy"
                     sizes="33.333333333333336vw"
-                    srcset="https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=320&rect=551,0,820,1080&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=620&rect=551,0,820,1080&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=960&rect=551,0,820,1080&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1280&rect=551,0,820,1080&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1600&rect=551,0,820,1080&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1920&rect=551,0,820,1080&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2240&rect=551,0,820,1080&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2560&rect=551,0,820,1080&auto=format,compress 2560w"
+                    srcSet="https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=320&rect=551,0,820,1080&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=620&rect=551,0,820,1080&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=960&rect=551,0,820,1080&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1280&rect=551,0,820,1080&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1600&rect=551,0,820,1080&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=1920&rect=551,0,820,1080&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2240&rect=551,0,820,1080&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?w=2560&rect=551,0,820,1080&auto=format,compress 2560w"
                     src="https://images.prismic.io/autumn-amsterdam/225ed48d-c8f0-4528-b6bc-27afc5bf1acb_awwwards.jpg?auto=compress,format&rect=551,0,820,1080&w=460&h=606"
                     alt=""
                     style={{ position: 'absolute', top: 0, left: 0, opacity: 1, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
@@ -431,7 +434,7 @@ const About = () => {
               ></div>
               <picture>
                 <source
-                  srcset="https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=320&amp;rect=0,37,400,527&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=620&amp;rect=0,37,400,527&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=960&amp;rect=0,37,400,527&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1280&amp;rect=0,37,400,527&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1600&amp;rect=0,37,400,527&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1920&amp;rect=0,37,400,527&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2240&amp;rect=0,37,400,527&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2560&amp;rect=0,37,400,527&amp;auto=format,compress 2560w"
+                  srcSet="https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=320&amp;rect=0,37,400,527&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=620&amp;rect=0,37,400,527&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=960&amp;rect=0,37,400,527&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1280&amp;rect=0,37,400,527&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1600&amp;rect=0,37,400,527&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1920&amp;rect=0,37,400,527&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2240&amp;rect=0,37,400,527&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2560&amp;rect=0,37,400,527&amp;auto=format,compress 2560w"
                   sizes="33.333333333333336vw"
                 />
                 <img
@@ -445,13 +448,13 @@ const About = () => {
               <noscript>
                 <picture>
                   <source
-                    srcset="https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=320&rect=0,37,400,527&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=620&rect=0,37,400,527&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=960&rect=0,37,400,527&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1280&rect=0,37,400,527&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1600&rect=0,37,400,527&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1920&rect=0,37,400,527&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2240&rect=0,37,400,527&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2560&rect=0,37,400,527&auto=format,compress 2560w"
+                    srcSet="https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=320&rect=0,37,400,527&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=620&rect=0,37,400,527&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=960&rect=0,37,400,527&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1280&rect=0,37,400,527&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1600&rect=0,37,400,527&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1920&rect=0,37,400,527&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2240&rect=0,37,400,527&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2560&rect=0,37,400,527&auto=format,compress 2560w"
                     sizes="33.333333333333336vw"
                   />
                   <img
                     loading="lazy"
                     sizes="33.333333333333336vw"
-                    srcset="https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=320&rect=0,37,400,527&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=620&rect=0,37,400,527&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=960&rect=0,37,400,527&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1280&rect=0,37,400,527&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1600&rect=0,37,400,527&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1920&rect=0,37,400,527&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2240&rect=0,37,400,527&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2560&rect=0,37,400,527&auto=format,compress 2560w"
+                    srcSet="https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=320&rect=0,37,400,527&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=620&rect=0,37,400,527&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=960&rect=0,37,400,527&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1280&rect=0,37,400,527&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1600&rect=0,37,400,527&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=1920&rect=0,37,400,527&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2240&rect=0,37,400,527&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?w=2560&rect=0,37,400,527&auto=format,compress 2560w"
                     src="https://images.prismic.io/autumn-amsterdam/b7bb8f1d-f95e-4c67-9e68-8a081b45aa0d_image.png?auto=compress,format&rect=0,37,400,527&w=460&h=606"
                     alt=""
                     style={{ position: 'absolute', top: 0, left: 0, opacity: 1, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
@@ -469,7 +472,7 @@ const About = () => {
               ></div>
               <picture>
                 <source
-                  srcset="https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=320&amp;rect=413,0,1093,1440&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=620&amp;rect=413,0,1093,1440&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=960&amp;rect=413,0,1093,1440&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1280&amp;rect=413,0,1093,1440&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1600&amp;rect=413,0,1093,1440&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1920&amp;rect=413,0,1093,1440&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2240&amp;rect=413,0,1093,1440&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2560&amp;rect=413,0,1093,1440&amp;auto=format,compress 2560w"
+                  srcSet="https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=320&amp;rect=413,0,1093,1440&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=620&amp;rect=413,0,1093,1440&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=960&amp;rect=413,0,1093,1440&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1280&amp;rect=413,0,1093,1440&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1600&amp;rect=413,0,1093,1440&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1920&amp;rect=413,0,1093,1440&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2240&amp;rect=413,0,1093,1440&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2560&amp;rect=413,0,1093,1440&amp;auto=format,compress 2560w"
                   sizes="33.333333333333336vw"
                 />
                 <img
@@ -483,13 +486,13 @@ const About = () => {
               <noscript>
                 <picture>
                   <source
-                    srcset="https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=320&rect=413,0,1093,1440&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=620&rect=413,0,1093,1440&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=960&rect=413,0,1093,1440&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1280&rect=413,0,1093,1440&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1600&rect=413,0,1093,1440&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1920&rect=413,0,1093,1440&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2240&rect=413,0,1093,1440&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2560&rect=413,0,1093,1440&auto=format,compress 2560w"
+                    srcSet="https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=320&rect=413,0,1093,1440&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=620&rect=413,0,1093,1440&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=960&rect=413,0,1093,1440&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1280&rect=413,0,1093,1440&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1600&rect=413,0,1093,1440&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1920&rect=413,0,1093,1440&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2240&rect=413,0,1093,1440&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2560&rect=413,0,1093,1440&auto=format,compress 2560w"
                     sizes="33.333333333333336vw"
                   />
                   <img
                     loading="lazy"
                     sizes="33.333333333333336vw"
-                    srcset="https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=320&rect=413,0,1093,1440&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=620&rect=413,0,1093,1440&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=960&rect=413,0,1093,1440&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1280&rect=413,0,1093,1440&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1600&rect=413,0,1093,1440&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1920&rect=413,0,1093,1440&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2240&rect=413,0,1093,1440&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2560&rect=413,0,1093,1440&auto=format,compress 2560w"
+                    srcSet="https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=320&rect=413,0,1093,1440&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=620&rect=413,0,1093,1440&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=960&rect=413,0,1093,1440&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1280&rect=413,0,1093,1440&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1600&rect=413,0,1093,1440&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=1920&rect=413,0,1093,1440&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2240&rect=413,0,1093,1440&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?w=2560&rect=413,0,1093,1440&auto=format,compress 2560w"
                     src="https://images.prismic.io/autumn-amsterdam/8e40a9a7-01fe-419a-be0f-1e51801e4983_IMG_0741.JPG?auto=compress,format&rect=413,0,1093,1440&w=460&h=606"
                     alt=""
                     style={{
@@ -508,15 +511,41 @@ const About = () => {
             </div>
           </div>
           <ul className="AwardsSlice_list__1KXRd">
-            <li>35 AWWWARDS</li>
-            <li>2 Cannes Lions</li>
-            <li>21 FWA</li>
-            <li>53 SITESINSPIRE</li>
-            <li>20 BEHANCE FEATURED</li>
-            <li>6 Nominations “E-commerce of the year”</li>
-            <li>Awwwards “independant of the year” 2018</li>
-            <li>Nominee “studio of the year” 2019</li>
-            <li>Nominee “studio of the year” 2020</li>
+            <li>
+              <a href="https://consultants.siliconindia.com/vendor/manav-sachdev-design-wizards-crafting-timeless-brand-imageries--cid-12466.html" target='_blank'>
+                Featured in Silicon India magazine
+              </a>
+            </li>
+            <li>
+              <a href="https://www.animationxpress.com/animation/manav-sachdev-talks-fundamentals-of-character-designs-at-the-4th-anime-convention/" target='_blank'>
+              Featured in Animation press
+              </a>
+            </li>
+            <li>
+              <a href="https://theceostory.in/company-of-the-year-2020/manav-sachdev-design-studio/" target='_blank'>
+              Featured in The Ceo Story 
+              </a>
+            </li>
+            <li>
+              <a href="https://www.indiatoday.in/lifestyle/culture/story/the-communication-councilandy-warhol-indias-first-graphic-design-exhibition-lifest-1089087-2017-11-18" target='_blank'>
+              Featured in India Today
+              </a>
+            </li>
+            <li>
+              <a href='https://www.livemint.com/Leisure/0rXD7R1QcRV8f7FCrQ9ZBI/Why-graphic-design-can-be-art.html' target='_blank'>
+              Artwork Featured in Live Mint
+              </a>
+            </li>
+            <li>
+              <a href="https://www.creativegaga.com/manav-sachdev/" target='_blank'>
+              Featured in Creative Gaga
+              </a>
+            </li>
+            {/* <li onClick={()=> window.location.assign('https://www.google.com')}>Featured in The Ceo Story </li>
+            <li onClick={()=> window.location.assign('https://www.google.com')}>Featured in Animation press</li>
+            <li onClick={()=> window.location.assign('https://www.google.com')}>Featured in Creative Gaga </li>
+            <li onClick={()=> window.location.assign('https://www.google.com')}>Artwork Featured in Live Mint  </li>
+            <li onClick={()=> window.location.assign('https://www.google.com')}>Featured in India Today</li> */}
           </ul>
         </section>
         <section className="SectionPushSlice_main__8CNrO">
@@ -534,7 +563,7 @@ const About = () => {
                   <picture
                   ><source
                       media="(max-width: 1024px) and (orientation: portrait)"
-                      srcset="
+                      srcSet="
                 https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=320&amp;rect=515,0,911,1458&amp;auto=format,compress   320w,
                 https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=620&amp;rect=515,0,911,1458&amp;auto=format,compress   620w,
                 https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=960&amp;rect=515,0,911,1458&amp;auto=format,compress   960w,
@@ -543,7 +572,7 @@ const About = () => {
               "
                       sizes="100vw" />
                     <source
-                      srcset="
+                      srcSet="
                 https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=1280&amp;auto=format,compress 1280w,
                 https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=1600&amp;auto=format,compress 1600w,
                 https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=1920&amp;auto=format,compress 1920w,
@@ -571,7 +600,7 @@ const About = () => {
                   ><picture
                   ><source
                         media="(max-width: 1024px) and (orientation: portrait)"
-                        srcset="
+                        srcSet="
                   https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=320&rect=515,0,911,1458&auto=format,compress   320w,
                   https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=620&rect=515,0,911,1458&auto=format,compress   620w,
                   https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=960&rect=515,0,911,1458&auto=format,compress   960w,
@@ -580,7 +609,7 @@ const About = () => {
                 "
                         sizes="100vw" />
                       <source
-                        srcset="
+                        srcSet="
                   https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=1280&auto=format,compress 1280w,
                   https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=1600&auto=format,compress 1600w,
                   https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=1920&auto=format,compress 1920w,
@@ -591,7 +620,7 @@ const About = () => {
                       <img
                         loading="lazy"
                         sizes="100vw"
-                        srcset="
+                        srcSet="
                   https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=1280&auto=format,compress 1280w,
                   https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=1600&auto=format,compress 1600w,
                   https://images.prismic.io/autumn-amsterdam/e4d77013-c1f5-4e50-af1b-b0da0a8f767b_numbered-jorik-lilklein-ecommerce.jpg?w=1920&auto=format,compress 1920w,
