@@ -10,14 +10,13 @@ import "./css/ce610c75de66e0109297.css";
 import "./css/d20aac4ad3356fdb832c.css";
 import "./css/f98c79ad35ad3581a056.css";
 import "./about.css"
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 
 const About = () => {
 
-  const navigate = useNavigate();
 
   return (
     <div style={{overflow: 'hidden'}}>
