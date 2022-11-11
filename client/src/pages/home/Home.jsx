@@ -111,7 +111,7 @@ const Home = () => {
           </svg>
         </Link>
         <div className="bottom-txt prevent-select">
-          <Link to="/client/src/pages/about" style={{letterSpacing: '6px'}}>Manav Sachdeva Design Studio</Link>
+          <Link to="/client/src/pages/about" style={{letterSpacing: '6px'}}>Manav Sachdev Design Studio</Link>
         </div>
       </div>
 
@@ -119,10 +119,10 @@ const Home = () => {
         <div>
           <div className="DescriptionSlice_about__3fKWM">
             <p>
-            MSDS is creative design agency, crafting visual stories 
+            MSDS is a creative design agency, crafting visual stories 
             for brands and businesses globally at all stages of their journey.
             </p>
-            <a className="a--underlined" href="about.html">
+            <a className="a--underlined" href="/about">
               About us
             </a>
           </div>
@@ -197,8 +197,8 @@ const Home = () => {
                 </noscript>
               </div>
               <figcaption className="ProjectsSlice_caption__1PlsW">
-                <h3>Palette</h3>
-                <div>Eco-Friendly Paint for a colorfull interior</div>
+                <h3>BABY FOREST</h3>
+                <div>Brand development + Concept + Illustrations + Packaging</div>
               </figcaption>
             </figure>
           </a>
@@ -252,8 +252,8 @@ const Home = () => {
                 </noscript>
               </div>
               <figcaption className="ProjectsSlice_caption__1PlsW">
-                <h3>Routinely</h3>
-                <div>Branding &amp; Digital Platforms</div>
+                <h3>FABESSENTIAL BY FABINDIA</h3>
+                <div>Concept + Packaging design identity</div>
               </figcaption>
             </figure>
           </a>
@@ -308,8 +308,8 @@ const Home = () => {
                 </noscript>
               </div>
               <figcaption className="ProjectsSlice_caption__1PlsW">
-                <h3>Veloretti</h3>
-                <div>Online Flagship store</div>
+                <h3>SUPER SMELLY</h3>
+                <div>Brand development + Concept + Illustrations + Packaging</div>
               </figcaption>
             </figure>
           </a>
@@ -319,7 +319,7 @@ const Home = () => {
       <section className="QuoteSlice_quote__1H6VJ">
         <blockquote>
           <p>
-          We Collaborate with national and international brands, founders, start-ups offering experiences from conception to delivery.
+          We Collaborate with national and international brands, founders, start-ups offering experiences from concept to delivery.
           </p>
         </blockquote>
       </section>
@@ -378,8 +378,8 @@ const Home = () => {
                 </noscript>
               </div>
               <figcaption className="ProjectsSlice_caption__1PlsW">
-                <h3>Jean Paul Gaultier &amp; Sacai</h3>
-                <div>Live Fashion Show &amp; Pop-up E-commerce</div>
+                <h3>THE EARTH COLLECTIVE</h3>
+                <div>Brand identity + Concept + Packaging design identity + illustrations + website design</div>
               </figcaption>
             </figure>
           </a>
@@ -443,15 +443,15 @@ const Home = () => {
                 </noscript>
               </div>
               <figcaption className="ProjectsSlice_caption__1PlsW">
-                <h3>Typology</h3>
-                <div>Skincare Shopify e-commerce</div>
+                <h3>ENTISI</h3>
+                <div>Concept + Packaging design identity + illustrations </div>
               </figcaption>
             </figure>
           </a>
         </article>
       </section>
 
-      <section className="QuoteSlice_quote__1H6VJ ourServices">
+      <section className="QuoteSlice_quote__1H6VJ ourServices" style={{marginBottom: '120rem'}}>
         <blockquote>
           <p >
           With more than 10 years of experience in working with beauty brands, fashion, FMCG, technology companies, we help brands succeed.
@@ -459,46 +459,55 @@ const Home = () => {
         </blockquote>
       </section>
 
-      <section className="ListSlice_main__mKXcM" >
-          <h2 className="ListSlice_title__3zHBd">Our services</h2>
-          <dl className="ListSlice_list__3B0uk">
+      <div style={{fontSize: '74px', fontWeight: 'bold', textAlign: 'center', width: '100%', margin: 'auto', marginBottom: '120rem'}}>
+        <h2>Our Services</h2>
+      </div>
+
+      <section className="ListSlice_main__mKXcM" style={{justifyContent: 'center'}}>
+          
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
+            <dt>Marketing</dt>
+            <p></p>
+            <dd>Lead generation</dd>
+            <dd>Social Media Marketing</dd>
+            <dd>Email Marketing</dd>
+            <dd>SEO</dd>
+            <dd>Funnel Marketing </dd>
+          </dl>
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
             <dt>Ideas &amp; Strategy</dt>
             <p></p>
             <dd>Consulting</dd>
             <dd>Positioning</dd>
-            <dd>E-commerce strategy</dd>
             <dd>Brand strategy</dd>
+            <dd>Brand story</dd>
             <dd>Brand content</dd>
+            <dd>Brand Concept</dd>
             <dd>Copywriting</dd>
-            <dd>Tone of voice</dd>
           </dl>
-          <dl className="ListSlice_list__3B0uk">
-            <dt>Creation &amp; Design</dt>
-            <p></p>
-            <dd>Art Direction</dd>
-            <dd>Brand identity</dd>
-            <dd>User Experience (UX)</dd>
-            <dd>User Interface (UI)</dd>
-            <dd>Wireframe &amp; Prototyping</dd>
-            <dd>Packaging Design</dd>
-            <dd>Print </dd>
-            <dd>Social Media assets</dd>
-            <dd>Website &amp; E-commerce</dd>
-            <dd>Videos</dd>
-            <dd>Mobile App</dd>
-            <dd>Photography</dd>
-          </dl>
-          <dl className="ListSlice_list__3B0uk">
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
             <dt>Technology</dt>
             <p></p>
             <dd>Creative Development</dd>
             <dd>Front-end development</dd>
             <dd>Back-end development</dd>
             <dd>Shopify development</dd>
-            <dd>Shopify Plus</dd>
-            <dd>Headless Shopify</dd>
             <dd>Mobile &amp; IOS web app</dd>
           </dl>
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
+            <dt>Creation &amp; Design</dt>
+            <p></p>
+            <dd>Art Direction</dd>
+            <dd>Brand identity</dd>
+            <dd>UI/UX/ Website design</dd>
+            <dd>Packaging Design</dd>
+            <dd>Print Design </dd>
+            <dd>Social Media assets</dd>
+            <dd>Photography &amp; Videos </dd>
+            <dd>Mobile App</dd>
+            <dd>3d assests</dd>
+          </dl>
+          
         </section>
 
         <Slider/>

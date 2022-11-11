@@ -81,10 +81,10 @@ const Footer = () => {
           </p>
         </div>
         <div className="Footer_column__3d3oT">
-          <p>Numbered Studio </p>
-          <p>Herengracht 342</p>
-          <p>1016 CG, Amsterdam</p>
-          <p>The sunny Netherlands</p>
+          <p>Manav Sachdev Design Studio | MSDS</p>
+          <p>CoworkInsta 8th Floor</p>
+          <p>Supermart-I DLF Phase IV</p>
+          <p>Gurugram, Haryana</p>
         </div>
       </nav>
       <a aria-label="Back to home page" className="footer_main_logo_parent" href="/">

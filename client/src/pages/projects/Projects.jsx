@@ -62,24 +62,29 @@ const Projects = () => {
             </li>
             <li>
               <Link className="underlined" to="/projects/filter/branding">
-                Branding &amp; Packaging <span>(11)</span>
+                Branding &amp; Development <span>(11)</span>
               </Link>
             </li>
             <li>
               <Link className="underlined" to="/projects/filter/e-commerce">
-                E-commerce <span>(25)</span>
+                Packaging design <span>(25)</span>
               </Link>
             </li>
             <li>
               <Link className="underlined" to="/projects/filter/website">
-                Digital experience <span>(13)</span>
+                Digital Design <span>(13)</span>
               </Link>
             </li>
             <li>
               <Link className="underlined" to="/projects/filter/coming-soon">
-                Coming soon <span>(14)</span>
+                Interactive Design <span>(14)</span>
               </Link>
             </li>
+            {/* <li>
+              <Link className="underlined" to="/projects/filter/coming-soon">
+                Print design <span>(14)</span>
+              </Link>
+            </li> */}
           </ul>
         </nav>
       </header>

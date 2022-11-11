@@ -187,34 +187,31 @@ const About = () => {
       </header>
 
       <section>
-        <section className="ListSlice_main__mKXcM">
+        {/* <section className="ListSlice_main__mKXcM">
           <h2 className="ListSlice_title__3zHBd">Our services</h2>
           <dl className="ListSlice_list__3B0uk">
             <dt>Ideas &amp; Strategy</dt>
             <p></p>
             <dd>Consulting</dd>
             <dd>Positioning</dd>
-            <dd>E-commerce strategy</dd>
             <dd>Brand strategy</dd>
+            <dd>Brand story</dd>
             <dd>Brand content</dd>
+            <dd>Brand Concept</dd>
             <dd>Copywriting</dd>
-            <dd>Tone of voice</dd>
           </dl>
           <dl className="ListSlice_list__3B0uk">
             <dt>Creation &amp; Design</dt>
             <p></p>
             <dd>Art Direction</dd>
             <dd>Brand identity</dd>
-            <dd>User Experience (UX)</dd>
-            <dd>User Interface (UI)</dd>
-            <dd>Wireframe &amp; Prototyping</dd>
+            <dd>UI/UX/ Website design</dd>
             <dd>Packaging Design</dd>
-            <dd>Print </dd>
+            <dd>Print Design </dd>
             <dd>Social Media assets</dd>
-            <dd>Website &amp; E-commerce</dd>
-            <dd>Videos</dd>
+            <dd>Photography &amp; Videos </dd>
             <dd>Mobile App</dd>
-            <dd>Photography</dd>
+            <dd>3d assests</dd>
           </dl>
           <dl className="ListSlice_list__3B0uk">
             <dt>Technology</dt>
@@ -223,10 +220,59 @@ const About = () => {
             <dd>Front-end development</dd>
             <dd>Back-end development</dd>
             <dd>Shopify development</dd>
-            <dd>Shopify Plus</dd>
-            <dd>Headless Shopify</dd>
             <dd>Mobile &amp; IOS web app</dd>
           </dl>
+        </section> */}
+
+<div style={{fontSize: '74px', fontWeight: 'bold', textAlign: 'center', width: '100%', margin: 'auto', marginBottom: '120rem'}}>
+        <h2>Our Services</h2>
+      </div>
+
+      <section className="ListSlice_main__mKXcM" style={{justifyContent: 'center'}}>
+          
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
+            <dt>Marketing</dt>
+            <p></p>
+            <dd>Lead generation</dd>
+            <dd>Social Media Marketing</dd>
+            <dd>Email Marketing</dd>
+            <dd>SEO</dd>
+            <dd>Funnel Marketing </dd>
+          </dl>
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
+            <dt>Ideas &amp; Strategy</dt>
+            <p></p>
+            <dd>Consulting</dd>
+            <dd>Positioning</dd>
+            <dd>Brand strategy</dd>
+            <dd>Brand story</dd>
+            <dd>Brand content</dd>
+            <dd>Brand Concept</dd>
+            <dd>Copywriting</dd>
+          </dl>
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
+            <dt>Technology</dt>
+            <p></p>
+            <dd>Creative Development</dd>
+            <dd>Front-end development</dd>
+            <dd>Back-end development</dd>
+            <dd>Shopify development</dd>
+            <dd>Mobile &amp; IOS web app</dd>
+          </dl>
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
+            <dt>Creation &amp; Design</dt>
+            <p></p>
+            <dd>Art Direction</dd>
+            <dd>Brand identity</dd>
+            <dd>UI/UX/ Website design</dd>
+            <dd>Packaging Design</dd>
+            <dd>Print Design </dd>
+            <dd>Social Media assets</dd>
+            <dd>Photography &amp; Videos </dd>
+            <dd>Mobile App</dd>
+            <dd>3d assests</dd>
+          </dl>
+          
         </section>
         <section className="ClientsSlice_main__1EeZO">
           <ul>
