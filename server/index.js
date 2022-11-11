@@ -15,10 +15,8 @@ const onBoarding = require('./routes/onBoarding.route');
 const oneWeek = 1000 * 60 * 60 * 24 * 7;
 const MongoDBStore = require("connect-mongodb-session")(session);
 const cookieParser = require('cookie-parser');
+const multer = require('multer')
 
-
-// app.use(bodyParser.json({limit: "50mb"}));
-// app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb' }));
 app.use(cookieParser());
@@ -39,6 +37,7 @@ const store = new MongoDBStore({
   uri: process.env.DB_URI,
   collection: "mySessions",
 });
+
 app.use(
   cors({
     origin: 'http://localhost:3000',

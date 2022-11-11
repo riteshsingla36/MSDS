@@ -1,7 +1,7 @@
 .sliderparent {
 	align-items: center;
 	// background: #E3E3E3;
-	background-color: #0e0e0e;
+	background-color: rgb(80, 48, 19) !important;
 	display: flex;
 	justify-content: center;
     // margin-bottom: 50px;
@@ -23,9 +23,11 @@ $animationSpeed: 20s;
 // Styling
 .slider {
 	// background: white;
-    box-shadow: 0 10px 20px -5px rgb(0 0 0 / 13%);
+    // box-shadow: 0 10px 20px -5px rgb(0 0 0 / 13%);
+	box-shadow: 0px -10px 3px rgb(0 0 0 / 10%);
     height: 170px;
     overflow: hidden;
+	padding-top: 10px;
     align-items: center;
 	
 	&::before,

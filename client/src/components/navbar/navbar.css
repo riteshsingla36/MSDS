@@ -1,5 +1,6 @@
 .nav{
-    color: white;
+    /* color: white; */
+    color: rgb(80, 48, 19) !important;
     width: 100%;
     position: fixed;
     z-index: 1000;
@@ -74,7 +75,7 @@
     content: '';
     width: 90%;
     position: absolute;
-    background-color: #fff;
+    color: rgb(80, 48, 19) !important;
     height: 2px;
     bottom: 3px;
     transform: scaleX(0);
@@ -84,6 +85,7 @@
 }
 
 .Header_list__1jN0i ul li a:hover:after{
+    color: rgb(80, 48, 19) !important;
     transform: scaleX(1);
     transform-origin: bottom left;
 }
