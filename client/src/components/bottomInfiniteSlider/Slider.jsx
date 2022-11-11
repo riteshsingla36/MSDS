@@ -8,7 +8,7 @@ const Slider = () => {
         <div className="slide-track">
           <div className="slide">
             <img
-              src={require('../../logos/logo-01.png')}
+              src={require('../../logos-white/logo-white-01.png')}
               height={100}
               width={250}
               alt=""
@@ -16,7 +16,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-02.png')}
+              src={require('../../logos-white/logo-white-02.png')}
               height={100}
               width={250}
               alt=""
@@ -24,7 +24,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-03.png')}
+              src={require('../../logos-white/logo-white-03.png')}
               height={100}
               width={250}
               alt=""
@@ -32,7 +32,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-04.png')}
+              src={require('../../logos-white/logo-white-04.png')}
               height={100}
               width={250}
               alt=""
@@ -40,7 +40,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-05.png')}
+              src={require('../../logos-white/logo-white-05.png')}
               height={100}
               width={250}
               alt=""
@@ -48,7 +48,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-06.png')}
+              src={require('../../logos-white/logo-white-06.png')}
               height={100}
               width={250}
               alt=""
@@ -56,7 +56,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-07.png')}
+              src={require('../../logos-white/logo-white-07.png')}
               height={100}
               width={250}
               alt=""
@@ -64,7 +64,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-08.png')}
+              src={require('../../logos-white/logo-white-08.png')}
               height={100}
               width={250}
               alt=""
@@ -72,7 +72,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-09.png')}
+              src={require('../../logos-white/logo-white-09.png')}
               height={100}
               width={250}
               alt=""
@@ -80,7 +80,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-10.png')}
+              src={require('../../logos-white/logo-white-10.png')}
               height={100}
               width={250}
               alt=""
@@ -88,7 +88,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-11.png')}
+              src={require('../../logos-white/logo-white-11.png')}
               height={100}
               width={250}
               alt=""
@@ -96,7 +96,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-12.png')}
+              src={require('../../logos-white/logo-white-12.png')}
               height={100}
               width={250}
               alt=""
@@ -104,7 +104,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-13.png')}
+              src={require('../../logos-white/logo-white-13.png')}
               height={100}
               width={250}
               alt=""
@@ -112,7 +112,7 @@ const Slider = () => {
           </div>
           <div className="slide">
             <img
-              src={require('../../logos/logo-14.png')}
+              src={require('../../logos-white/logo-white-14.png')}
               height={100}
               width={250}
               alt=""

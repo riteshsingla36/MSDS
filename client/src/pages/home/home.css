@@ -85,7 +85,7 @@
 .ourServices::after{
     content: "";
     display: block;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgb(80, 48, 19) !important;
     margin: 80rem auto 0;
     width: 1200rem;
 }

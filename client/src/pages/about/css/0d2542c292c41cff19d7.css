@@ -620,6 +620,7 @@
     .ListSlice_main__mKXcM {
         display: -ms-flexbox;
         display: flex;
+        justify-content: center;
         padding-bottom: 90rem
     }
 
@@ -636,7 +637,8 @@
 
     .ListSlice_list__3B0uk {
         width: 240rem;
-        margin-right: 60rem
+        margin-right: 30rem;
+        margin-left: 30rem;
     }
 }
 

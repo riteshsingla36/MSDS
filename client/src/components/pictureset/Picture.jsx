@@ -36,7 +36,7 @@ const Picture = () => {
                 </a>
               </article>
               <div className="workFeature__list">
-                <article className="workFeatureSmallItem">
+                <article className="workFeatureSmallItem" style={{overflow: 'hidden'}}>
                   <a
                     href="/projectdetails/pallate"
                     className="workFeatureSmallItem__link"

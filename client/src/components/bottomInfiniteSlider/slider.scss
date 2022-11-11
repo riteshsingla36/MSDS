@@ -1,13 +1,14 @@
 .sliderparent {
 	align-items: center;
-	background: #E3E3E3;
+	// background: #E3E3E3;
+	background-color: rgb(80, 48, 19) !important;
 	display: flex;
 	justify-content: center;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
 }
 
 @mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+	// background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
 }
 
 $animationSpeed: 20s;
@@ -21,12 +22,12 @@ $animationSpeed: 20s;
 
 // Styling
 .slider {
-	background: white;
-    box-shadow: 0 10px 20px -5px rgb(0 0 0 / 13%);
-    height: 179px;
+	// background: white;
+    // box-shadow: 0 10px 20px -5px rgb(0 0 0 / 13%);
+	box-shadow: 0px -10px 3px rgb(0 0 0 / 10%);
+    height: 170px;
     overflow: hidden;
-    position: relative;
-    display: flex;
+	padding-top: 10px;
     align-items: center;
 	
 	&::before,
@@ -51,13 +52,20 @@ $animationSpeed: 20s;
 	}
 	
 	.slide-track {
-		animation: scroll $animationSpeed linear infinite;
+		animation: scroll 20s linear infinite;
 		display: flex;
-		width: calc(250px * 14);
+		gap: 20px;
+		width: 3500px;
 	}
 	
 	.slide {
 		height: 100px;
 		width: 250px;
 	}
+}
+
+.slide img{
+	object-fit: contain;
+	height: 150px;
+	width: 200px;
 }

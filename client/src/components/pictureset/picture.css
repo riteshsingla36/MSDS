@@ -199,6 +199,7 @@
 
 
 .workFeatureSmallItem {
+  overflow: hidden !important;
   float: left;
 }
 @media screen and (max-width: 599px) {
@@ -1896,7 +1897,7 @@ a:hover .typo--asLink .typo--hovered {
 }
 .workFeatureItem__title {
   width: 100%;
-  /* background: #fff; */
+  background-color: black;
   padding-top: 10px;
   min-height: 75px;
 }
@@ -1926,7 +1927,7 @@ a:hover .typo--asLink .typo--hovered {
   position: relative;
 }
 .workFeatureSmallItem__picture {
-  display: block;
+  /* display: block; */
   height: 0;
   padding-bottom: 62.9032258065%;
   background-color: #e3e4e5;
@@ -9735,3 +9736,19 @@ a:hover .typo--asLink .typo--hovered {
 }
 
 
+
+
+.workFeatureItem picture {
+  transition: transform 400ms !important;
+}
+
+
+
+.workFeatureItem:hover picture{
+  transform: scale(1.2);
+}
+
+.workFeatureSmallItem picture:hover img{
+  transform: scale(1.2);
+  overflow: hidden !important;
+}
