@@ -11,5 +11,4 @@ const storage = new Storage({
   projectId: process.env.GCLOUDPROJECTID,
 })
 
-
 module.exports = storage
