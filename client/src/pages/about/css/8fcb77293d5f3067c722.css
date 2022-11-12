@@ -249,7 +249,8 @@
         -o-transition-timing-function: cubic-bezier(.16, 1.08, .38, .98);
         transition-timing-function: cubic-bezier(.16, 1.08, .38, .98);
         -webkit-transform: translateY(0) translateZ(0);
-        transform: translateY(0) translateZ(0)
+        transform: translateY(0) translateZ(0);
+        color: rgb(255, 253,244);
     }
 
     .Header_list__1jN0i {

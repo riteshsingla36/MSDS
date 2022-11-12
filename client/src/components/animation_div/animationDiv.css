@@ -2,7 +2,7 @@
     z-index: 5000000000;
     position: absolute;
     padding: 100%;
-    background-color: black;
+    background-color: rgb(80, 48, 19);
     animation: main-animation 1000ms ease-out; 
     animation-fill-mode: forwards;
 }

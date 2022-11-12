@@ -19,7 +19,7 @@ const Navbar = () => {
           >
             <path
               d="M0 0h18v1H0V0zM0 4h18v1H0V4zM0 8h18v1H0V8z"
-              fill="#fff"
+              fill="rgb(80, 48,19)"
             ></path>
           </svg>
         </button>

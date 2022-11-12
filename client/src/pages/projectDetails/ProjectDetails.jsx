@@ -1,5 +1,7 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import baseUrl from "../../baseUrl";
 import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
@@ -7,6 +9,21 @@ import "./projectdetails.css";
 
 const ProjectDetails = () => {
     const {projectId} = useParams();
+    const [project, setProject] = useState({name:'', images:[], description:"", role_service:"", awards_recognition: ""})
+    console.log(projectId);
+    useEffect(() => {
+      axios.get(`${baseUrl}/projects/${projectId}`).then(res => {
+        if(res.data.status) {
+          setProject(res.data.data)
+          console.log(res.data.data)
+        }
+        else {
+          alert("Error while fetching project details");
+        }
+      }).catch(err => {
+        alert("Error while fetching project details", err.message);
+      })
+    }, []);
 
   return (
     <div>
@@ -23,14 +40,8 @@ const ProjectDetails = () => {
             style={{ width: "100%", paddingBottom: "60.9028%" }}
           />
           <picture>
-            <source
-              media="(max-width: 1024px) and (orientation: portrait)"
-              srcSet={require("../../images/3c.jpg")}
-              sizes="100vw"
-            />
-            <source srcSet={require("../../images/3c.jpg")} sizes="100vw" />
             <img
-              src={require("../../images/3c.jpg")}
+              src={project.images[0]}
               alt=""
               loading="eager"
               decoding="async"
@@ -91,7 +102,7 @@ const ProjectDetails = () => {
         </a>
 
         <header className="Header_header__1SOLy">
-          <h1 className="Header_title__3Luwf">Palette</h1>
+          <h1 className="Header_title__3Luwf">{project.name}</h1>
           <a
             href="https://paintspalette.com/"
             target="_blank"
@@ -101,9 +112,7 @@ const ProjectDetails = () => {
             View project
           </a>
           <p className="Header_description__19cR8">
-            Numbered works closely with Palette’s teams on total strategy,
-            branding, photography production and Shopify headless e-commerce
-            website. The full case study would be soon here.
+            {project.description}
           </p>
           <div className="Header_tags__2WOJe">
             <dl className="Header_taglist__1PGmb">
@@ -111,522 +120,346 @@ const ProjectDetails = () => {
                 Role &amp; <br />
                 services <br />{" "}
               </dt>
-              <dd>Branding &amp; Packaging</dd>
-              <dd>Art Direction</dd>
-              <dd>UX/UI</dd>
-              <dd>E-commerce</dd>
-              <dd>Development</dd>
-              <dd>Strategy</dd>
+              {project.role_service.split(",").map(ele=><dd>{ele}</dd>)}
             </dl>
             <dl className="Header_taglist__1PGmb">
               <dt>
                 Awards &amp; <br />
                 recognition{" "}
               </dt>
-              <dd>Featured on Behance</dd>
-              <dd>Siteinspire</dd>
+              {project.awards_recognition.split(",").map(ele=><dd>{ele}</dd>)}
+              
             </dl>
           </div>
         </header>
         <section>
-  <div
-    className="ImagesSlice_media--centered__1PaLN"
-    style={{ position: "relative", overflow: "hidden" }}
-  >
-    <div
-      aria-hidden="true"
-      style={{ width: "100%", paddingBottom: "54.776%" }}
-    />
-    <picture>
-      <source
-        srcSet="https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=320&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=620&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=960&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=2560&auto=format,compress 2560w"
-        sizes="66.66666666666667vw"
-      />
-      <img
-        src="https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?auto=compress,format"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center center",
-          opacity: 1,
-          transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
-        }}
-      />
-    </picture>
-    <noscript>
-      &lt;picture&gt;&lt;source
-      srcSet="https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=2560&amp;auto=format,compress
-      2560w" sizes="66.66666666666667vw" /&gt;&lt;img loading="lazy"
-      sizes="66.66666666666667vw"
-      srcSet="https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?w=2560&amp;auto=format,compress
-      2560w"
-      src="https://images.prismic.io/autumn-amsterdam/24f7ff54-01b4-43c1-9f81-ffb31a9ed770_Palette-paint-shopify.jpg?auto=compress,format"
-      alt=""
-      style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-    </noscript>
-  </div>
-  <div
-    className="ImagesSlice_media--centered__1PaLN"
-    style={{ position: "relative", overflow: "hidden" }}
-  >
-    <div
-      aria-hidden="true"
-      style={{ width: "100%", paddingBottom: "54.776%" }}
-    />
-    <picture>
-      <source
-        srcSet="https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=320&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=620&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=960&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=2560&auto=format,compress 2560w"
-        sizes="66.66666666666667vw"
-      />
-      <img
-        src="https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?auto=compress,format"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center center",
-          opacity: 1,
-          transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
-        }}
-      />
-    </picture>
-    <noscript>
-      &lt;picture&gt;&lt;source
-      srcSet="https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=2560&amp;auto=format,compress
-      2560w" sizes="66.66666666666667vw" /&gt;&lt;img loading="lazy"
-      sizes="66.66666666666667vw"
-      srcSet="https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=2560&amp;auto=format,compress
-      2560w"
-      src="https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?auto=compress,format"
-      alt=""
-      style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-    </noscript>
-  </div>
-  <div style={{ position: "relative", overflow: "hidden" }}>
-    <div
-      aria-hidden="true"
-      style={{ width: "100%", paddingBottom: "56.25%" }}
-    />
-    <picture>
-      <source
-        srcSet="https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=320&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=620&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=960&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=2560&auto=format,compress 2560w"
-        sizes="100vw"
-      />
-      <img
-        src="https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?auto=compress,format"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center center",
-          opacity: 1,
-          transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
-        }}
-      />
-    </picture>
-    <noscript>
-      &lt;picture&gt;&lt;source
-      srcSet="https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=2560&amp;auto=format,compress
-      2560w" sizes="100vw" /&gt;&lt;img loading="lazy" sizes="100vw"
-      srcSet="https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?w=2560&amp;auto=format,compress
-      2560w"
-      src="https://images.prismic.io/autumn-amsterdam/d920c780-0c1e-4d64-ac67-1e51a3dc62df_palette-colors-modern-03.jpg?auto=compress,format"
-      alt=""
-      style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-    </noscript>
-  </div>
-  <div
-    className="ImagesSlice_media--centered__1PaLN"
-    style={{ position: "relative", overflow: "hidden" }}
-  >
-    <div
-      aria-hidden="true"
-      style={{ width: "100%", paddingBottom: "54.776%" }}
-    />
-    <picture>
-      <source
-        srcSet="https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=320&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=620&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=960&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=2560&auto=format,compress 2560w"
-        sizes="66.66666666666667vw"
-      />
-      <img
-        src="https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?auto=compress,format"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center center",
-          opacity: 1,
-          transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
-        }}
-      />
-    </picture>
-    <noscript>
-      &lt;picture&gt;&lt;source
-      srcSet="https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=2560&amp;auto=format,compress
-      2560w" sizes="66.66666666666667vw" /&gt;&lt;img loading="lazy"
-      sizes="66.66666666666667vw"
-      srcSet="https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=2560&amp;auto=format,compress
-      2560w"
-      src="https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?auto=compress,format"
-      alt=""
-      style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-    </noscript>
-  </div>
-  <div style={{ position: "relative", overflow: "hidden" }}>
-    <div
-      aria-hidden="true"
-      style={{ width: "100%", paddingBottom: "56.25%" }}
-    />
-    <picture>
-      <source
-        srcSet="https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=320&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=620&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=960&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=2560&auto=format,compress 2560w"
-        sizes="100vw"
-      />
-      <img
-        src="https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?auto=compress,format"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center center",
-          opacity: 1,
-          transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
-        }}
-      />
-    </picture>
-    <noscript>
-      &lt;picture&gt;&lt;source
-      srcSet="https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=2560&amp;auto=format,compress
-      2560w" sizes="100vw" /&gt;&lt;img loading="lazy" sizes="100vw"
-      srcSet="https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?w=2560&amp;auto=format,compress
-      2560w"
-      src="https://images.prismic.io/autumn-amsterdam/d10034fe-eb7a-4cf9-ab24-7dfce2279d1a_palette-colors-modern.jpg?auto=compress,format"
-      alt=""
-      style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-    </noscript>
-  </div>
-  <div
-    className="ImagesSlice_media--centered__1PaLN"
-    style={{ position: "relative", overflow: "hidden" }}
-  >
-    <div
-      aria-hidden="true"
-      style={{ width: "100%", paddingBottom: "75.6757%" }}
-    />
-    <picture>
-      <source
-        srcSet="https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=320&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=620&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=960&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=2560&auto=format,compress 2560w"
-        sizes="66.66666666666667vw"
-      />
-      <img
-        src="https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?auto=compress,format"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center center",
-          opacity: 1,
-          transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
-        }}
-      />
-    </picture>
-    <noscript>
-      &lt;picture&gt;&lt;source
-      srcSet="https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=2560&amp;auto=format,compress
-      2560w" sizes="66.66666666666667vw" /&gt;&lt;img loading="lazy"
-      sizes="66.66666666666667vw"
-      srcSet="https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?w=2560&amp;auto=format,compress
-      2560w"
-      src="https://images.prismic.io/autumn-amsterdam/47ef40d1-b4ba-4688-858a-ef61a22be693_Palette-paint-branding.jpg?auto=compress,format"
-      alt=""
-      style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-    </noscript>
-  </div>
-  <div style={{ position: "relative", overflow: "hidden" }}>
-    <div
-      aria-hidden="true"
-      style={{ width: "100%", paddingBottom: "56.25%" }}
-    />
-    <picture>
-      <source
-        srcSet="https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=320&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=620&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=960&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=2560&auto=format,compress 2560w"
-        sizes="100vw"
-      />
-      <img
-        src="https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?auto=compress,format"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center center",
-          opacity: 1,
-          transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
-        }}
-      />
-    </picture>
-    <noscript>
-      &lt;picture&gt;&lt;source
-      srcSet="https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=2560&amp;auto=format,compress
-      2560w" sizes="100vw" /&gt;&lt;img loading="lazy" sizes="100vw"
-      srcSet="https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?w=2560&amp;auto=format,compress
-      2560w"
-      src="https://images.prismic.io/autumn-amsterdam/b6419052-4563-4014-a796-a98cd10fde7d_palette-colors-modern-04.jpg?auto=compress,format"
-      alt=""
-      style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-    </noscript>
-  </div>
-  <div
-    className="ImagesSlice_media--centered__1PaLN"
-    style={{ position: "relative", overflow: "hidden" }}
-  >
-    <div
-      aria-hidden="true"
-      style={{ width: "100%", paddingBottom: "152.604%" }}
-    />
-    <picture>
-      <source
-        srcSet="https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=320&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=620&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=960&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=2560&auto=format,compress 2560w"
-        sizes="66.66666666666667vw"
-      />
-      <img
-        src="https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?auto=compress,format"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center center",
-          opacity: 1,
-          transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
-        }}
-      />
-    </picture>
-    <noscript>
-      &lt;picture&gt;&lt;source
-      srcSet="https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=2560&amp;auto=format,compress
-      2560w" sizes="66.66666666666667vw" /&gt;&lt;img loading="lazy"
-      sizes="66.66666666666667vw"
-      srcSet="https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?w=2560&amp;auto=format,compress
-      2560w"
-      src="https://images.prismic.io/autumn-amsterdam/a3c028c0-9983-4954-9ca8-b3f19a1acb13_palette-colors-modern-05.jpg?auto=compress,format"
-      alt=""
-      style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-    </noscript>
-  </div>
-  <div style={{ position: "relative", overflow: "hidden" }}>
-    <div
-      aria-hidden="true"
-      style={{ width: "100%", paddingBottom: "56.25%" }}
-    />
-    <picture>
-      <source
-        srcSet="https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=320&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=620&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=960&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=2560&auto=format,compress 2560w"
-        sizes="100vw"
-      />
-      <img
-        src="https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?auto=compress,format"
-        alt=""
-        loading="lazy"
-        decoding="async"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          objectPosition: "center center",
-          opacity: 1,
-          transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
-        }}
-      />
-    </picture>
-    <noscript>
-      &lt;picture&gt;&lt;source
-      srcSet="https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=2560&amp;auto=format,compress
-      2560w" sizes="100vw" /&gt;&lt;img loading="lazy" sizes="100vw"
-      srcSet="https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=320&amp;auto=format,compress
-      320w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=620&amp;auto=format,compress
-      620w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=960&amp;auto=format,compress
-      960w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=1280&amp;auto=format,compress
-      1280w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=1600&amp;auto=format,compress
-      1600w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=1920&amp;auto=format,compress
-      1920w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=2240&amp;auto=format,compress
-      2240w,https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?w=2560&amp;auto=format,compress
-      2560w"
-      src="https://images.prismic.io/autumn-amsterdam/2af91a3b-eb5d-47c8-9ee6-1dd1b3de4fe3_palette-paint-interior-wall-paint.jpg?auto=compress,format"
-      alt=""
-      style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-    </noscript>
-  </div>
-</section>
+          {project.images[0]? <>
+        <div
+          className="ImagesSlice_media--centered__1PaLN"
+          style={{ position: "relative", overflow: "hidden" }}
+        >
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "54.776%" }}
+          />
+          <picture>
+            <img
+              src={project.images[0]? project.images[0]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+
+        </div>
+          
+          </>:<></>}
+          {project.images[1]? <>
+          
+        <div
+          className="ImagesSlice_media--centered__1PaLN"
+          style={{ position: "relative", overflow: "hidden" }}
+        >
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "54.776%" }}
+          />
+          <picture>
+            <img
+              src={project.images[1]? project.images[1]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+          <noscript>
+            &lt;picture&gt;&lt;source
+            srcSet="https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=320&amp;auto=format,compress
+            320w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=620&amp;auto=format,compress
+            620w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=960&amp;auto=format,compress
+            960w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1280&amp;auto=format,compress
+            1280w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1600&amp;auto=format,compress
+            1600w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1920&amp;auto=format,compress
+            1920w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=2240&amp;auto=format,compress
+            2240w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=2560&amp;auto=format,compress
+            2560w" sizes="66.66666666666667vw" /&gt;&lt;img loading="lazy"
+            sizes="66.66666666666667vw"
+            srcSet="https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=320&amp;auto=format,compress
+            320w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=620&amp;auto=format,compress
+            620w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=960&amp;auto=format,compress
+            960w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1280&amp;auto=format,compress
+            1280w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1600&amp;auto=format,compress
+            1600w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=1920&amp;auto=format,compress
+            1920w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=2240&amp;auto=format,compress
+            2240w,https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?w=2560&amp;auto=format,compress
+            2560w"
+            src="https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?auto=compress,format"
+            alt=""
+            style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+          </noscript>
+        </div>
+          </>:<></>}
+          {project.images[2]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[2]? project.images[2]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+          
+        </div>
+          
+          </>:<></>}
+          {project.images[3]? <>
+          
+        <div
+          className="ImagesSlice_media--centered__1PaLN"
+          style={{ position: "relative", overflow: "hidden" }}
+        >
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "54.776%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[3]? project.images[3]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+          <noscript>
+            &lt;picture&gt;&lt;source
+            srcSet="https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=320&amp;auto=format,compress
+            320w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=620&amp;auto=format,compress
+            620w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=960&amp;auto=format,compress
+            960w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1280&amp;auto=format,compress
+            1280w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1600&amp;auto=format,compress
+            1600w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1920&amp;auto=format,compress
+            1920w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=2240&amp;auto=format,compress
+            2240w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=2560&amp;auto=format,compress
+            2560w" sizes="66.66666666666667vw" /&gt;&lt;img loading="lazy"
+            sizes="66.66666666666667vw"
+            srcSet="https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=320&amp;auto=format,compress
+            320w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=620&amp;auto=format,compress
+            620w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=960&amp;auto=format,compress
+            960w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1280&amp;auto=format,compress
+            1280w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1600&amp;auto=format,compress
+            1600w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=1920&amp;auto=format,compress
+            1920w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=2240&amp;auto=format,compress
+            2240w,https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?w=2560&amp;auto=format,compress
+            2560w"
+            src="https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?auto=compress,format"
+            alt=""
+            style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+          </noscript>
+        </div>
+          </>:<></>}
+          {project.images[4]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+
+            <img
+              src={project.images[4]? project.images[4]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+          {project.images[5]? <>
+          
+        <div
+          className="ImagesSlice_media--centered__1PaLN"
+          style={{ position: "relative", overflow: "hidden" }}
+        >
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "75.6757%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[5]? project.images[5]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          </>:<></>}
+          {project.images[6]? <>
+          
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            <img
+              src={project.images[6]? project.images[6]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          </>:<></>}
+          {project.images[7]? <>
+        <div
+          className="ImagesSlice_media--centered__1PaLN"
+          style={{ position: "relative", overflow: "hidden" }}
+        >
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "152.604%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[7]? project.images[7]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+          
+        </div>
+          
+          </>:<></>}
+          {project.images[8]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[8]? project.images[8]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+      </section>
 
         <section />
       </main>
