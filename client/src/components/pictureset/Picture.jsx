@@ -15,7 +15,7 @@ const Picture = ({projects}) => {
               {(projects && projects.length> 0)? <>
               <article className="workFeatureItem">
                 <a
-                  href="/projectdetails/pallate"
+                  href={`/projectdetails/${projects[0]._id}`}
                   className="workFeatureItem__link"
                 >
                   <picture
@@ -25,7 +25,7 @@ const Picture = ({projects}) => {
                     <img
                       alt="Nj Riseforanimals 2"
                       className="workFeatureItem__img"
-                      src={require('../../images/266223173_628024295016281_6464876987599167266_n_17873896613560252.jpg')}
+                      src={projects[0].images[0]}
                     />
                   </picture>
                   <div className="workFeatureItem__title">
@@ -40,7 +40,7 @@ const Picture = ({projects}) => {
                 
                 <article className="workFeatureSmallItem" style={{overflow: 'hidden'}}>
                   <a
-                    href="/projectdetails/pallate"
+                    href={`/projectdetails/${projects[1]._id}`}
                     className="workFeatureSmallItem__link"
                   >
                     <picture
@@ -62,7 +62,7 @@ const Picture = ({projects}) => {
                 </article>
                 <article className="workFeatureSmallItem">
                   <a
-                    href="/projectdetails/pallate"
+                    href={`/projectdetails/${projects[2]._id}`}
                     className="workFeatureSmallItem__link"
                   >
                     <picture
@@ -87,7 +87,7 @@ const Picture = ({projects}) => {
                 </article>
                 <article className="workFeatureSmallItem">
                   <a
-                    href="/projectdetails/pallate"
+                    href={`/projectdetails/${projects[3]._id}`}
                     className="workFeatureSmallItem__link"
                   >
                     <picture
@@ -112,7 +112,7 @@ const Picture = ({projects}) => {
                 </article>
                 <article className="workFeatureSmallItem">
                   <a
-                    href="/projectdetails/pallate"
+                    href={`/projectdetails/${projects[4]._id}`}
                     className="workFeatureSmallItem__link"
                   >
                     <picture
@@ -139,7 +139,7 @@ const Picture = ({projects}) => {
                   {projects[5].name? <>
                     <article className="workFeatureSmallItem">
                   <a
-                    href="/projectdetails/pallate"
+                    href={`/projectdetails/${projects[5]._id}`}
                     className="workFeatureSmallItem__link"
                   >
                     <picture
@@ -164,7 +164,7 @@ const Picture = ({projects}) => {
                   {( projects[6] && projects[6].name)? <>
                   <article className="workFeatureSmallItem">
                     <a
-                      href="/projectdetails/pallate"
+                      href={`/projectdetails/${projects[6]._id}`}
                       className="workFeatureSmallItem__link"
                     >
                       <picture
@@ -188,7 +188,7 @@ const Picture = ({projects}) => {
                   {projects[7]? <>
                     <article className="workFeatureSmallItem">
                     <a
-                      href="/projectdetails/pallate"
+                      href={`/projectdetails/${projects[7]._id}`}
                       className="workFeatureSmallItem__link"
                     >
                       <picture
@@ -213,7 +213,7 @@ const Picture = ({projects}) => {
                   {projects[8]? <>
                     <article className="workFeatureSmallItem">
                     <a
-                      href="/projectdetails/pallate"
+                      href={`/projectdetails/${projects[8]._id}`}
                       className="workFeatureSmallItem__link"
                     >
                       <picture
@@ -239,7 +239,7 @@ const Picture = ({projects}) => {
               {projects[9]? <>
                 <article className="workFeatureItem">
                 <a
-                  href="/projectdetails/pallate"
+                  href={`/projectdetails/${projects[9]._id}`}
                   className="workFeatureItem__link"
                 >
                   <picture
