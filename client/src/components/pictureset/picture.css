@@ -1897,7 +1897,7 @@ a:hover .typo--asLink .typo--hovered {
 }
 .workFeatureItem__title {
   width: 100%;
-  /* background-color: black; */
+  background-color: rgb(255, 253, 244) !important;
   padding-top: 10px;
   min-height: 75px;
 }
@@ -1927,7 +1927,7 @@ a:hover .typo--asLink .typo--hovered {
   position: relative;
 }
 .workFeatureSmallItem__picture {
-  /* display: block; */
+  display: block;
   height: 0;
   padding-bottom: 62.9032258065%;
   background-color: #e3e4e5;
