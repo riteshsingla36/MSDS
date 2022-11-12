@@ -1,6 +1,7 @@
 import React from 'react'
 import "./picture.css"
 const Picture = ({projects}) => {
+  console.log("p", projects)
   return (
     <>
       <div className="homeWork">
@@ -11,7 +12,7 @@ const Picture = ({projects}) => {
               data-behavior="wrapSmallFeatures"
               data-feature-wrapper="workFeature__list"
             >
-              {projects.length> 0? <>
+              {(projects && projects.length> 0)? <>
               <article className="workFeatureItem">
                 <a
                   href="/projectdetails/pallate"
@@ -247,7 +248,7 @@ const Picture = ({projects}) => {
                     <img
                       alt="Mw Stc 1 Cover"
                       className="workFeatureItem__img"
-                      src={projects[9].images[0]? projects[9].imagaes[0] :''}
+                      src={projects[9].images[0]? projects[9].images[0] :''}
                     />
                   </picture>
                   <div className="workFeatureItem__title">
