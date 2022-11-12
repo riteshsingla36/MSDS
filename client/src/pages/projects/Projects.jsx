@@ -1,12 +1,32 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useState, useEffect} from "react";
+import { Link, useParams } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 import "./projects.css";
 import Picture from "../../components/pictureset/Picture";
 import {Helmet} from "react-helmet";
+import axios from "axios";
+import baseUrl from "../../baseUrl";
 const Projects = () => {
+  const {type} = useParams();
+  const [allProjects, setAllProjects] = useState([])
+  const [processing, setProcessing] = useState(false)
+  useEffect(() => {
+    setProcessing(true);
+    axios.get(`${baseUrl}/projects`).then(res => {
+      if(res.data.status) {
+        setAllProjects(res.data.data);
+      }
+      else {
+        alert("Error while fetching projects");
+      }
+      setProcessing(false);
+    }).catch((err) => {
+      alert("Error while fetching projects")
+    })
+  },[])
+
   return (
     <div style={{ overflow: "hidden" }}>
       <Helmet>
@@ -81,7 +101,7 @@ const Projects = () => {
             </li>
             <li>
               <Link className="underlined" to="/projects">
-                Digital Design <span>(13)</span>
+                Digital & Print Design <span>(13)</span>
               </Link>
             </li>
             <li>
@@ -89,15 +109,11 @@ const Projects = () => {
                 Interactive Design <span>(14)</span>
               </Link>
             </li>
-            {/* <li>
-              <Link className="underlined" to="/projects/filter/coming-soon">
-                Print design <span>(14)</span>
-              </Link>
-            </li> */}
+            
           </ul>
         </nav>
       </header>
-      <Picture />
+      <Picture projects={allProjects} />
       <Footer />
     </div>
   );

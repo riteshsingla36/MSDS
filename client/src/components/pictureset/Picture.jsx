@@ -1,6 +1,6 @@
 import React from 'react'
 import "./picture.css"
-const Picture = () => {
+const Picture = ({projects}) => {
   return (
     <>
       <div className="homeWork">
@@ -11,6 +11,7 @@ const Picture = () => {
               data-behavior="wrapSmallFeatures"
               data-feature-wrapper="workFeature__list"
             >
+              {projects.length> 0? <>
               <article className="workFeatureItem">
                 <a
                   href="/projectdetails/pallate"
@@ -27,15 +28,15 @@ const Picture = () => {
                     />
                   </picture>
                   <div className="workFeatureItem__title">
-                    <h4 className="typo--listingTitle">Rise for Animals</h4>
+                    <h4 className="typo--listingTitle">{projects[0].name}</h4>
                     <p className="workFeatureItem__tagline">
-                      Brand identity, brand strategy and naming for the national
-                      animal rights organization
+                      {projects[0].tag_line}
                     </p>
                   </div>
                 </a>
               </article>
               <div className="workFeature__list">
+                
                 <article className="workFeatureSmallItem" style={{overflow: 'hidden'}}>
                   <a
                     href="/projectdetails/pallate"
@@ -47,14 +48,13 @@ const Picture = () => {
                       <img
                         alt="Thumbnail"
                         className="workFeatureSmallItem__img"
-                        src={require('../../images/web2.webp')}
+                        src={projects[1].images[0]}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
-                      <h4 className="typo--listingTitle">‘I Voted’</h4>
+                      <h4 className="typo--listingTitle">{projects[1].name}</h4>
                       <p className="workFeatureSmallItem__tagline">
-                        A data-focused redesign of the iconic ‘I Voted’ sticker for
-                        Fast Company’s new campaign
+                        {projects[1].tag_line}
                       </p>
                     </div>
                   </a>
@@ -71,16 +71,15 @@ const Picture = () => {
                       <img
                         alt="Mw Ggw 01"
                         className="workFeatureSmallItem__img"
-                        src={require('../../images/web1.webp')}
+                        src={projects[2].images[0]}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
                       <h4 className="typo--listingTitle">
-                        The Great Green Wall Frontline
+                      {projects[2].name}
                       </h4>
                       <p className="workFeatureSmallItem__tagline">
-                        Identity for a climate initiative in Africa which sets out to
-                        be the largest living structure on the planet.
+                      {projects[2].tag_line}
                       </p>
                     </div>
                   </a>
@@ -97,16 +96,15 @@ const Picture = () => {
                       <img
                         alt="Ah Oficocoacompass 01 Cover"
                         className="workFeatureSmallItem__img"
-                        src={require('../../images/web3.jpg')}
+                        src={projects[3].images[0]}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
                       <h4 className="typo--listingTitle">
-                        ofi Cocoa Compass Impact Report
+                      {projects[3].name}
                       </h4>
                       <p className="workFeatureSmallItem__tagline">
-                        Annual impact report for a company looking to make the future
-                        of cocoa more sustainable.
+                      {projects[3].tag_line}
                       </p>
                     </div>
                   </a>
@@ -122,22 +120,23 @@ const Picture = () => {
                       <img
                         alt="Goalkeepers Hero Placeholder"
                         className="workFeatureSmallItem__img"
-                        src={require('../../images/web4.jpg')}
+                        src={projects[4].images[0]}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
-                      <h4 className="typo--listingTitle">Goalkeepers</h4>
+                      <h4 className="typo--listingTitle">{projects[4].name}</h4>
                       <p className="workFeatureSmallItem__tagline">
-                        An evolved identity, website, data visualization and
-                        comprehensive guidelines for the global initiative tracking
-                        the world’s progress.
+                        {projects[4].tag_line}
                       </p>
                     </div>
                   </a>
                 </article>
               </div>
-              <div className="workFeature__list">
-                <article className="workFeatureSmallItem">
+              </>:<></>}
+              {projects.length>5? <>
+                <div className="workFeature__list">
+                  {projects[5].name? <>
+                    <article className="workFeatureSmallItem">
                   <a
                     href="/projectdetails/pallate"
                     className="workFeatureSmallItem__link"
@@ -148,88 +147,96 @@ const Picture = () => {
                       <img
                         alt="Ah 01 Cam Logo Animation Thumbnail"
                         className="workFeatureSmallItem__img"
-                        src={require('../../images/web5.jpg')}
+                        src={projects[5].images[0]}
                       />
                     </picture>
                     <div className="workFeatureSmallItem__title">
-                      <h4 className="typo--listingTitle">Câm</h4>
+                      <h4 className="typo--listingTitle">{projects[5].name}</h4>
                       <p className="workFeatureSmallItem__tagline">
-                        Brand identity for a company set up to produce, distribute and
-                        sell fresh, pasteurised milk throughout Nigeria.
+                      {projects[5].tag_line}
                       </p>
                     </div>
                   </a>
                 </article>
-                <article className="workFeatureSmallItem">
-                  <a
-                    href="/projectdetails/pallate"
-                    className="workFeatureSmallItem__link"
-                  >
-                    <picture
-                      className="workFeatureSmallItem__picture js--lazyloaded"
+                  </>: <></>}
+                
+                  {( projects[6] && projects[6].name)? <>
+                  <article className="workFeatureSmallItem">
+                    <a
+                      href="/projectdetails/pallate"
+                      className="workFeatureSmallItem__link"
                     >
-                      <img
-                        alt="Hp Animation 01 Cover"
-                        className="workFeatureSmallItem__img"
-                        src={require('../../images/web6.jpg')}
-                      />
-                    </picture>
-                    <div className="workFeatureSmallItem__title">
-                      <h4 className="typo--listingTitle">Late Fragments</h4>
-                      <p className="workFeatureSmallItem__tagline">
-                        A poetry-inspired piece which forms part of the ‘26
-                        Inspirations’ exhibition at the Bloomsbury Festival.
-                      </p>
-                    </div>
-                  </a>
-                </article>
-                <article className="workFeatureSmallItem">
-                  <a
-                    href="/projectdetails/pallate"
-                    className="workFeatureSmallItem__link"
-                  >
-                    <picture
-                      className="workFeatureSmallItem__picture"
+                      <picture
+                        className="workFeatureSmallItem__picture js--lazyloaded"
+                      >
+                        <img
+                          alt="Hp Animation 01 Cover"
+                          className="workFeatureSmallItem__img"
+                          src={projects[6].images[0]}
+                        />
+                      </picture>
+                      <div className="workFeatureSmallItem__title">
+                        <h4 className="typo--listingTitle">{projects[6].name}</h4>
+                        <p className="workFeatureSmallItem__tagline">
+                          {projects[6].tag_line}
+                        </p>
+                      </div>
+                    </a>
+                  </article>
+                  </>: <></>}
+                  {projects[7]? <>
+                    <article className="workFeatureSmallItem">
+                    <a
+                      href="/projectdetails/pallate"
+                      className="workFeatureSmallItem__link"
                     >
-                      <img
-                        src={require('../../images/web7.jpg')}
-                        alt="Tkj Thumbnail"
-                        className="workFeatureSmallItem__img"
-                      />
-                    </picture>
-                    <div className="workFeatureSmallItem__title">
-                      <h4 className="typo--listingTitle">‘The King’s Jester’</h4>
-                      <p className="workFeatureSmallItem__tagline">
-                        Title sequence for the Netflix comedy special starring Hasan
-                        Minhaj
-                      </p>
-                    </div>
-                  </a>
-                </article>
-                <article className="workFeatureSmallItem">
-                  <a
-                    href="/projectdetails/pallate"
-                    className="workFeatureSmallItem__link"
-                  >
-                    <picture
-                      className="workFeatureSmallItem__picture"
+                      <picture
+                        className="workFeatureSmallItem__picture"
+                      >
+                        <img
+                          src={projects[7].images[0]? projects[7].images[0]: ''}
+                          alt="Tkj Thumbnail"
+                          className="workFeatureSmallItem__img"
+                        />
+                      </picture>
+                      <div className="workFeatureSmallItem__title">
+                        <h4 className="typo--listingTitle">{projects[7].name? projects[7].name:''}</h4>
+                        <p className="workFeatureSmallItem__tagline">
+                          {projects[7].tag_line? projects[7].tag_line:""}
+                        </p>
+                      </div>
+                    </a>
+                  </article>
+                  </>: <></>}
+                
+                  {projects[8]? <>
+                    <article className="workFeatureSmallItem">
+                    <a
+                      href="/projectdetails/pallate"
+                      className="workFeatureSmallItem__link"
                     >
-                      <img
-                        src={require('../../images/web8.jpg')}
-                        alt="Nu Case 01"
-                        className="workFeatureSmallItem__img"
-                      />
-                    </picture>
-                    <div className="workFeatureSmallItem__title">
-                      <h4 className="typo--listingTitle">Nubank</h4>
-                      <p className="workFeatureSmallItem__tagline">
-                        Brand identity for the Brazilian digital bank.
-                      </p>
-                    </div>
-                  </a>
-                </article>
+                      <picture
+                        className="workFeatureSmallItem__picture"
+                      >
+                        <img
+                          src={projects[8].images[0]?projects[8].images[0]:""}
+                          alt="Nu Case 01"
+                          className="workFeatureSmallItem__img"
+                        />
+                      </picture>
+                      <div className="workFeatureSmallItem__title">
+                        <h4 className="typo--listingTitle">{projects[8].name? projects[8].name : ""}</h4>
+                        <p className="workFeatureSmallItem__tagline">
+                        {projects[8].tag_line? projects[8].tag_line: ""}
+                        </p>
+                      </div>
+                    </a>
+                  </article>
+                  </>:<></>}
+                
               </div>
-              <article className="workFeatureItem">
+              {projects[9]? <>
+                <article className="workFeatureItem">
                 <a
                   href="/projectdetails/pallate"
                   className="workFeatureItem__link"
@@ -237,38 +244,26 @@ const Picture = () => {
                   <picture
                     className="workFeatureItem__picture js--lazyloaded"
                   >
-                    {/* <source
-                      media="screen and (max-width: 599px)"
-                      srcSet={require('../../images/web9.webp')}
-                    />
-                    <source
-                      media="screen and (max-width: 799px)"
-                      srcSet={require('../../images/web9.webp')}
-                    />
-                    <source
-                      media="screen and (min-width: 800px) and (max-width:1039px)"
-                      srcSet={require('../../images/web9.webp')}
-                    />
-                    <source
-                      media="screen and (min-width: 1040px)"
-                      srcSet={require('../../images/web9.webp')}
-                    /> */}
                     <img
                       alt="Mw Stc 1 Cover"
                       className="workFeatureItem__img"
-                      src={require('../../images/web9.webp')}
+                      src={projects[9].images[0]? projects[9].imagaes[0] :''}
                     />
                   </picture>
                   <div className="workFeatureItem__title">
                     <h4 className="typo--listingTitle">
-                      Shakespeare Theatre Company
+                    {projects[9].name? projects[9].name : ''}
                     </h4>
                     <p className="workFeatureItem__tagline">
-                      Brand identity for Washington DC’s pioneering theatre company.
+                    {projects[9].tag_line? projects[9].tag_line: ''}
                     </p>
                   </div>
                 </a>
               </article>
+              </>: <></>}
+              
+              </>: <></>}
+              
               
             </div>
 

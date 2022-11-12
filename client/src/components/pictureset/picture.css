@@ -1897,7 +1897,7 @@ a:hover .typo--asLink .typo--hovered {
 }
 .workFeatureItem__title {
   width: 100%;
-  background-color: black;
+  /* background-color: black; */
   padding-top: 10px;
   min-height: 75px;
 }

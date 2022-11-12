@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route element={<WhatsAppLogo />}>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:type" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route
             path="/projectdetails/:projectId"
