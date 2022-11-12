@@ -49,7 +49,6 @@ const Home = () => {
             onMouseOver={(e) => changeImage(e.target.id)}
           ></div>
         </div>
-
         <img
           src={require(`../../images/banner/banner(${a}).jpg`)}
           alt="#"
@@ -95,7 +94,7 @@ const Home = () => {
           </svg>
         </Link>
         <div className="bottom-txt prevent-select">
-          <Link to="/client/src/pages/about" style={{letterSpacing: '6px'}}>Manav Sachdev Design Studio</Link>
+          <Link to="/about" style={{letterSpacing: '6px'}} className='home_bottom_text'>Manav Sachdev Design Studio</Link>
         </div>
       </div>
 
@@ -116,7 +115,7 @@ const Home = () => {
               <br />
               studies
             </h2>
-            <a aria-label="View all projects" href="projects.html">
+            <a aria-label="View all projects" href="/projects/all">
               View all
             </a>
           </div>

@@ -33,6 +33,7 @@ const AddProject = () => {
     const description = e.target.description.value;
     const role_service = e.target.role_service.value;
     const awards_recognition = e.target.awards_recognition.value;
+    const tag_line = e.target.tag_line.value;
     const images = e.target.images.files;
 
     const formData = new FormData();
@@ -41,6 +42,7 @@ const AddProject = () => {
     formData.append("description", description);
     formData.append("role_service", role_service);
     formData.append("awards_recognition", awards_recognition);
+    formData.append("tag_line", tag_line);
 
     for (var i = 0; i < images.length; i++) {
       formData.append("images", images[i], images[i].name);
@@ -64,6 +66,7 @@ const AddProject = () => {
           e.target.role_service.value = "";
           e.target.awards_recognition.value = "";
           e.target.images.value = "";
+          e.target.tag_line.value = "";
         } else {
           alert(res.data.message);
         }
@@ -126,6 +129,16 @@ const AddProject = () => {
         </label>
 
         <label>
+          <input
+            type="text"
+            placeholder="Tag Line"
+            id="tag_line"
+            name="tag_line"
+            required
+          />
+        </label>
+
+        <label>
           <select name="type" id="type" defaultValue="" required>
             <option value="" disabled hidden>
               Type
@@ -149,7 +162,6 @@ const AddProject = () => {
             required
           />
         </label>
-
         <label>
           <input
             id="images"

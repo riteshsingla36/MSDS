@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
         <div className="Footer_column__3d3oT">
           <p>
-            <a className="underlined inverted" href="/projects">
+            <a className="underlined inverted" href="/projects/all">
               Work
             </a>
           </p>
@@ -129,14 +129,6 @@ const Footer = () => {
             Legals
           </a>
         </span>
-        {/* <a
-          href="../external.html?link=https://amsterdam.us4.list-manage.com/subscribe?u=b8deeebc7d74d2d11b78e1608&amp;id=0dc3cc780f"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="underlined inverted"
-        >
-          Subscribe to our newsletter
-        </a> */}
       </div>
     </footer>
   );

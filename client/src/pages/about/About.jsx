@@ -598,7 +598,7 @@ const About = () => {
             <a
               aria-label="Our
     work"
-              href="/projects"
+              href="/projects/all"
             ><figure>
                 <div style={{ position: "relative", overflow: "hidden" }}>
                   <div
