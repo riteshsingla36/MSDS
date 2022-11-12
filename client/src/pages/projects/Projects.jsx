@@ -5,9 +5,16 @@ import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 import "./projects.css";
 import Picture from "../../components/pictureset/Picture";
+import {Helmet} from "react-helmet";
 const Projects = () => {
   return (
-    <div style={{overflow: "hidden"}}>
+    <div style={{ overflow: "hidden" }}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>MSDS Projects</title>
+        <link rel="canonical" href="https://www.msds.com" />
+      </Helmet>
+
       <Navbar />
       <AnimationDiv />
       <header className="Hero_header__1cZhA">
@@ -26,7 +33,9 @@ const Projects = () => {
             >
               <defs>
                 <style
-                  dangerouslySetInnerHTML={{ __html: ".cls-4{fill:rgb(80, 48, 19);}" }}
+                  dangerouslySetInnerHTML={{
+                    __html: ".cls-4{fill:rgb(80, 48, 19);}",
+                  }}
                 />
               </defs>
               <path
@@ -88,7 +97,7 @@ const Projects = () => {
           </ul>
         </nav>
       </header>
-      <Picture/>
+      <Picture />
       <Footer />
     </div>
   );

@@ -22,6 +22,7 @@ app.use(express.urlencoded({ limit: '50mb' }));
 app.use(cookieParser());
 dotenv.config({ path: "./.env" });
 
+
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
   api_key: process.env.CLOUD_API_KEY,
@@ -59,6 +60,13 @@ app.use(
     }
   })
 );
+// app.disable('x-powered-by');
+// app.use(multer({
+//   store: multer.memoryStorage(),
+//   limits: {
+//     fileSize: 5 * 1024 * 1024
+//   }
+// }).single('images'));
 
 app.use("/careers", jobsRouter);
 app.use("/projects", projectsRouter);
