@@ -5,6 +5,7 @@ const projectTypeSchema = mongoose.Schema(
         name: {
             type: String,
             trim: true,
+            lowercase: true,
             required: true
         }
     },

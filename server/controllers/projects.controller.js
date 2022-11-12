@@ -1,11 +1,13 @@
 const Project = require("../models/projects.model");
-const cloudinary = require('cloudinary').v2;
-const uploadImage = require('../middleware/helper')
+const cloudinary = require("cloudinary").v2;
 const processFileMiddleware = require("../middleware/helper");
 const { format } = require("util");
 const { Storage } = require("@google-cloud/storage");
-const storage = new Storage({ keyFilename: "msds-368315-58b8d3f58b95.json",projectId: "msds-368315" });
-const bucket = storage.bucket('msds_projects');
+const storage = new Storage({
+    keyFilename: "msds-368315-7729cdd051a3.json",
+    projectId: "msds-368315",
+});
+const bucket = storage.bucket("msds_projects");
 
 const getAllProjects = async (req, res) => {
     try {
@@ -14,7 +16,7 @@ const getAllProjects = async (req, res) => {
     } catch (err) {
         res.json({ status: false, message: err.message });
     }
-}
+};
 
 const getProjectById = async (req, res) => {
     const id = req.params.id;
@@ -28,50 +30,69 @@ const getProjectById = async (req, res) => {
     } catch (err) {
         res.json({ status: false, message: err.message });
     }
-}
+};
 
 const createProject = async (req, res) => {
-    const name = req.body.name;
-    const description = req.body.description;
-    const role_service = req.body.role_service;
-    const awards_recognition = req.body.awards_recognition;
-    const type = req.body.type;
 
     try {
         let publicUrl;
+
         await processFileMiddleware(req, res);
-        if (!req.file) {
-            return res.status(400).send({ message: "Please upload a file!" });
+
+        const name = req.body.name;
+        const description = req.body.description;
+        const role_service = req.body.role_service;
+        const awards_recognition = req.body.awards_recognition;
+        const type = req.body.type;
+
+        let publicUrls = [];
+        // Create a new blob in the bucket and upload the file data
+        for (let i = 0; i < req.files.length; i++) {
+            if (!req.files[i]) {
+                return res.status(400).send({ message: "Please upload a file!" });
+            }
+            publicUrl = await test(req.files[i])
+            publicUrls.push(publicUrl)
         }
-          // Create a new blob in the bucket and upload the file data.
-          const blob = bucket.file(req.file.originalname);
-          const blobStream = blob.createWriteStream({
-            resumable: false,
-          });
-      
-          blobStream.on("error", (err) => {
-            res.status(500).send({ message: err.message });
-          });
-      
-          console.log("-"+bucket.name+"-")
-          blobStream.on("finish", async (data) => {
-            // Create URL for directly file access via HTTP.
-            publicUrl = format(
-              `https://storage.googleapis.com/${bucket.name}/${blob.name}`
-            );
-      
-            res.status(200).send({
-              message: "Uploaded the file successfully: " + req.file.originalname,
-              url: publicUrl,
-            });
-          });
-      
-          blobStream.end(req.file.buffer);
-        const project = await Project.create({ name: name, description: description, type: type, role_service: role_service, awards_recognition: awards_recognition, images: publicUrl });
+
+        const project = await Project.create({
+            name: name,
+            description: description,
+            type: type,
+            role_service: role_service,
+            awards_recognition: awards_recognition,
+            images: publicUrls,
+        });
+
         res.json({ status: true, data: project });
     } catch (err) {
         res.json({ status: false, message: err.message });
     }
+};
+
+const test = async (f) => {
+    return new Promise((resolve, reject) => {
+        const blob = bucket.file("projects/" +f.originalname);
+        const blobStream = blob.createWriteStream({
+            resumable: false,
+        });
+
+        blobStream.on("error", (err) => {
+            res.status(500).send({ message: err.message });
+            reject(err);
+        });
+
+
+        blobStream.on("finish", async (data) => {
+            // Create URL for directly file access via HTTP.
+            publicUrl = format(
+                `https://storage.googleapis.com/${bucket.name}/${blob.name}`
+            );
+            resolve(publicUrl)
+        });
+
+        blobStream.end(f.buffer);
+    })
 }
 
 const deleteProjectById = async (req, res) => {
@@ -86,7 +107,7 @@ const deleteProjectById = async (req, res) => {
     } catch (err) {
         res.json({ status: false, message: err.message });
     }
-}
+};
 
 const updateProject = async (req, res) => {
     const id = req.params.id;
@@ -95,11 +116,20 @@ const updateProject = async (req, res) => {
         res.json({ status: false, message: "Please provide id" });
     }
     try {
-        const project = await Project.findByIdAndUpdate(id, req.body, { runValidators: true, new: true });
+        const project = await Project.findByIdAndUpdate(id, req.body, {
+            runValidators: true,
+            new: true,
+        });
         res.json({ status: true, data: project });
     } catch (err) {
         res.json({ status: false, message: err.message });
     }
-}
+};
 
-module.exports = { getAllProjects, getProjectById, createProject, updateProject, deleteProjectById };
+module.exports = {
+    getAllProjects,
+    getProjectById,
+    createProject,
+    updateProject,
+    deleteProjectById,
+};

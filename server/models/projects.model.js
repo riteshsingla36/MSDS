@@ -5,12 +5,12 @@ const projectSchema = mongoose.Schema(
         name: {
             type: String,
             trim: true,
-            required: true
+            required: true,
         },
         description: {
             type: String,
             trim: true,
-            required: true
+            required: true,
         },
         type: {
             type: mongoose.Schema.Types.ObjectId,
