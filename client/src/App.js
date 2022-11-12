@@ -19,6 +19,8 @@ import VerifyAccount from "./adminPages/verify_account/VerifyAccount";
 import ResetPassword from "./adminPages/reset_password/ResetPassword";
 import ProjectDetails from "./pages/projectDetails/ProjectDetails";
 import WhatsAppLogo from "./components/whatsappLogo/WhatsAppLogo";
+import AllProjects from "./adminPages/allProjects/AllProjects";
+import EditProject from "./adminPages/editProject/EditProject";
 
 function App() {
   return (
@@ -39,6 +41,7 @@ function App() {
             <Route path="/admin/addprojecttype" element={<AddProjectType />} />
             <Route path="/admin/addproject" element={<AddProject />} />
             <Route path="/admin/addjob" element={<AddJob />} />
+            <Route path="/admin/allprojects" element={<AllProjects />} />
             <Route path="/admin/alljobs" element={<AllJobs />} />
             <Route path="/admin/editjob/:jobId" element={<EditJob />} />
             <Route
@@ -48,6 +51,10 @@ function App() {
             <Route
               path="/admin/editprojecttype/:projectTypeId"
               element={<EditProjectType />}
+            />
+            <Route
+              path="/admin/editproject/:projectId"
+              element={<EditProject />}
             />
           </Route>
           <Route path="/admin/login" element={<Login />} />

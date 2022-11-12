@@ -54,7 +54,7 @@ const Navbar = () => {
               className="Header_link__2wQjN"
               
             >
-              <a className="underlined" href="/projects">
+              <a className="underlined" href="/projects/all">
                 Work
               </a>
             </li>

@@ -10,7 +10,7 @@ const bucket = storage.bucket("msds_projects");
 
 const getAllProjects = async (req, res) => {
     try {
-        const projects = await Project.find({});
+        const projects = await Project.find({}).populate('type');
         res.json({ status: true, data: projects });
     } catch (err) {
         res.json({ status: false, message: err.message });
@@ -24,7 +24,7 @@ const getProjectById = async (req, res) => {
         res.json({ status: false, message: "Please provide id" });
     }
     try {
-        const project = await Project.findById(id);
+        const project = await Project.findById(id).populate('type');
         res.json({ status: true, data: project });
     } catch (err) {
         res.json({ status: false, message: err.message });
@@ -42,6 +42,7 @@ const createProject = async (req, res) => {
         const role_service = req.body.role_service;
         const awards_recognition = req.body.awards_recognition;
         const type = req.body.type;
+        const tag_line = req.body.tag_line;
 
         let publicUrls = [];
         for (let i = 0; i < req.files.length; i++) {
@@ -59,6 +60,7 @@ const createProject = async (req, res) => {
             role_service: role_service,
             awards_recognition: awards_recognition,
             images: publicUrls,
+            tag_line: tag_line
         });
 
         res.json({ status: true, data: project });
@@ -75,7 +77,7 @@ const test = async (f) => {
         });
 
         blobStream.on("error", (err) => {
-            res.status(500).send({ message: err.message });
+            // res.status(500).send({ message: err.message });
             reject(err);
         });
 
@@ -112,10 +114,39 @@ const updateProject = async (req, res) => {
         res.json({ status: false, message: "Please provide id" });
     }
     try {
-        const project = await Project.findByIdAndUpdate(id, req.body, {
-            runValidators: true,
-            new: true,
-        });
+        let publicUrl;
+        await processFileMiddleware(req, res);
+        
+        const name = req.body.name;
+        const description = req.body.description;
+        const role_service = req.body.role_service;
+        const awards_recognition = req.body.awards_recognition;
+        const type = req.body.type;
+        const tag_line = req.body.tag_line;
+        const images = req.files;
+        let project;
+
+        let publicUrls = [];
+
+        if(!images){
+            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line},{
+                runValidators: true,
+                new: true,
+            });
+        }else{
+            for (let i = 0; i < req.files.length; i++) {
+                if (!req.files[i]) {
+                    return res.status(400).send({ message: "Please upload a file!" });
+                }
+                publicUrl = await test(req.files[i])
+                publicUrls.push(publicUrl)
+            }
+            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, publicUrl},{
+                runValidators: true,
+                new: true,
+            });
+        }    
+        
         res.json({ status: true, data: project });
     } catch (err) {
         res.json({ status: false, message: err.message });

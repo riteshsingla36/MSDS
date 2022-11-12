@@ -60,13 +60,6 @@ app.use(
     }
   })
 );
-// app.disable('x-powered-by');
-// app.use(multer({
-//   store: multer.memoryStorage(),
-//   limits: {
-//     fileSize: 5 * 1024 * 1024
-//   }
-// }).single('images'));
 
 app.use("/careers", jobsRouter);
 app.use("/projects", projectsRouter);

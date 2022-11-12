@@ -11,7 +11,9 @@ const getAllProjectTypes = async (req, res) => {
 }
 
 const getProjectTypeById = async (req, res) => {
+    
     const id = req.params.id;
+    console.log("id", id)
     if (!id) {
         res.json({ status: false, message: 'please provide id' });
     }
