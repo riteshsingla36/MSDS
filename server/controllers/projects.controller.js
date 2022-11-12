@@ -1,5 +1,4 @@
 const Project = require("../models/projects.model");
-const cloudinary = require("cloudinary").v2;
 const processFileMiddleware = require("../middleware/helper");
 const { format } = require("util");
 const { Storage } = require("@google-cloud/storage");
@@ -36,7 +35,6 @@ const createProject = async (req, res) => {
 
     try {
         let publicUrl;
-
         await processFileMiddleware(req, res);
 
         const name = req.body.name;
@@ -46,7 +44,6 @@ const createProject = async (req, res) => {
         const type = req.body.type;
 
         let publicUrls = [];
-        // Create a new blob in the bucket and upload the file data
         for (let i = 0; i < req.files.length; i++) {
             if (!req.files[i]) {
                 return res.status(400).send({ message: "Please upload a file!" });
@@ -84,7 +81,6 @@ const test = async (f) => {
 
 
         blobStream.on("finish", async (data) => {
-            // Create URL for directly file access via HTTP.
             publicUrl = format(
                 `https://storage.googleapis.com/${bucket.name}/${blob.name}`
             );
