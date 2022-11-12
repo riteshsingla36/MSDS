@@ -227,6 +227,7 @@
 @media (max-width:1023px) {
     .Header_panel__2XDEn {
         display: -ms-flexbox;
+        color: rgb(255, 253, 244) !important;
         display: flex;
         -ms-flex-align: center;
         align-items: center;

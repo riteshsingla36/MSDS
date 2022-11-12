@@ -62,10 +62,7 @@ const AllProjects = () => {
                             Name
                         </div>
                         <div className="cell">
-                            Role & Services
-                        </div>
-                        <div className="cell">
-                            Awards & Recognition
+                            Client Website URL
                         </div>
                         <div className="cell">
                             Type
@@ -88,10 +85,7 @@ const AllProjects = () => {
                                     {job.name}
                                 </div>
                                 <div className="cell" data-title="Location">
-                                    {job.role_service}
-                                </div>
-                                <div className="cell" data-title="Start Date">
-                                    {job.awards_recognition}
+                                    {job.client_link}
                                 </div>
                                 <div className="cell" data-title="Salary">
                                     {job.type.name}

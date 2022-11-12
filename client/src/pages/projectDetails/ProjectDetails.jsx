@@ -10,12 +10,10 @@ import "./projectdetails.css";
 const ProjectDetails = () => {
     const {projectId} = useParams();
     const [project, setProject] = useState({name:'', images:[], description:"", role_service:"", awards_recognition: ""})
-    console.log(projectId);
     useEffect(() => {
       axios.get(`${baseUrl}/projects/${projectId}`).then(res => {
         if(res.data.status) {
           setProject(res.data.data)
-          console.log(res.data.data)
         }
         else {
           alert("Error while fetching project details");
@@ -104,10 +102,11 @@ const ProjectDetails = () => {
         <header className="Header_header__1SOLy">
           <h1 className="Header_title__3Luwf">{project.name}</h1>
           <a
-            href="https://paintspalette.com/"
+            href={project.client_link}
             target="_blank"
             rel="noopener noreferrer"
             className="underlined inverted Header_link__2-UsR"
+            style={{color: 'rgb(80, 48, 19)'}}
           >
             View project
           </a>

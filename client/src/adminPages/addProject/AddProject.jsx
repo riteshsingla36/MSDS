@@ -35,6 +35,7 @@ const AddProject = () => {
     const awards_recognition = e.target.awards_recognition.value;
     const tag_line = e.target.tag_line.value;
     const images = e.target.images.files;
+    const client_link = e.target.client_link.value;
 
     const formData = new FormData();
     formData.append("name", name);
@@ -43,6 +44,7 @@ const AddProject = () => {
     formData.append("role_service", role_service);
     formData.append("awards_recognition", awards_recognition);
     formData.append("tag_line", tag_line);
+    formData.append("client_link", client_link);
 
     for (var i = 0; i < images.length; i++) {
       formData.append("images", images[i], images[i].name);
@@ -67,6 +69,7 @@ const AddProject = () => {
           e.target.awards_recognition.value = "";
           e.target.images.value = "";
           e.target.tag_line.value = "";
+          e.target.client_link.value = "";
         } else {
           alert(res.data.message);
         }
@@ -134,6 +137,16 @@ const AddProject = () => {
             placeholder="Tag Line"
             id="tag_line"
             name="tag_line"
+            required
+          />
+        </label>
+
+        <label>
+          <input
+            type="text"
+            placeholder="Client Website Link"
+            id="client_link"
+            name="client_link"
             required
           />
         </label>
