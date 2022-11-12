@@ -12,30 +12,30 @@ const EditJob = () => {
     const navigate = useNavigate();
     const [processing, setProcessing] = useState(false);
 
-    useEffect(() => {
-        getProject(projectId);
+    useEffect(()  => {
         setProcessing(true);
-        axios
-          .get(`${baseUrl}/projecttype`)
-          .then((res) => {
-            if (res.data.status) {
-              setTypes(res.data.data);
-            } else {
-              alert(res.data.message);
-            }
-            setProcessing(false);
-          })
-          .catch((err) => {
-            alert(err.message);
-            setProcessing(false);
-          });
-    }, [projectId]);
+        getProject(projectId);
+    }, []);
 
     const getProject = (projectId) => {
         setProcessing(true);
         axios.get(`${baseUrl}/projects/${projectId}`).then(res => {
             if (res.data.status) {
                 setJob(res.data.data);
+                axios
+                .get(`${baseUrl}/projecttype`)
+                .then((res) => {
+                    if (res.data.status) {
+                    setTypes(res.data.data);
+                    } else {
+                    alert(res.data.message);
+                    }
+                    setProcessing(false);
+                })
+                .catch((err) => {
+                    alert(err.message);
+                    setProcessing(false);
+                });
             }
             else {
                 alert("Error while fetching job information");
@@ -57,6 +57,7 @@ const EditJob = () => {
         const awards_recognition = e.target.awards_recognition.value;
         const tag_line = e.target.tag_line.value;
         const images = e.target.images.files;
+        const client_link = e.target.client_link.value;
 
         const formData = new FormData();
         formData.append("name", name);
@@ -65,6 +66,7 @@ const EditJob = () => {
         formData.append("role_service", role_service);
         formData.append("awards_recognition", awards_recognition);
         formData.append("tag_line", tag_line);
+        formData.append("client_link", client_link);
 
         if (type === "") {
             alert("please provide type");
@@ -176,13 +178,24 @@ const EditJob = () => {
         </label>
 
         <label>
-          <select name="type" id="type" defaultValue='' required>
+          <input
+            type="text"
+            placeholder="Client Website Link"
+            id="client_link"
+            name="client_link"
+            required
+            defaultValue={job.client_link}
+          />
+        </label>
+
+        <label>
+          <select name="type" id="type" required>
             <option value="" disabled hidden>
               Type
             </option>
             {types.map((type) => {
               return (
-                <option key={type._id} value={type._id} defaultValue={job.type}>
+                <option key={type._id} value={type._id} selected={type.name === job.type.name ? `selected` : ``} >
                   {type.name}
                 </option>
               );

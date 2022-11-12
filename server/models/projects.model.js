@@ -35,6 +35,10 @@ const projectSchema = mongoose.Schema(
         tag_line: {
             type: String,
             time: true
+        },
+        client_link: {
+            type: String,
+            trim: true
         }
     },
     {

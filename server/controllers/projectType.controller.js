@@ -19,7 +19,7 @@ const getProjectTypeById = async (req, res) => {
     }
 
     try {
-        const projectType = await ProjectType.findById(id);
+        const projectType = await ProjectType.findById(id).populate('type');
         res.json({ status: true, data: projectType });
     } catch (err) {
         res.json({ status: false, message: err.message });

@@ -42,6 +42,7 @@ const createProject = async (req, res) => {
         const role_service = req.body.role_service;
         const awards_recognition = req.body.awards_recognition;
         const type = req.body.type;
+        const client_link = req.body.client_link;
         const tag_line = req.body.tag_line;
 
         let publicUrls = [];
@@ -60,7 +61,8 @@ const createProject = async (req, res) => {
             role_service: role_service,
             awards_recognition: awards_recognition,
             images: publicUrls,
-            tag_line: tag_line
+            tag_line: tag_line,
+            client_link: client_link
         });
 
         res.json({ status: true, data: project });
@@ -124,12 +126,13 @@ const updateProject = async (req, res) => {
         const type = req.body.type;
         const tag_line = req.body.tag_line;
         const images = req.files;
+        const client_link = req.body.client_link;
         let project;
 
         let publicUrls = [];
 
         if(!images){
-            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line},{
+            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, client_link},{
                 runValidators: true,
                 new: true,
             });
@@ -141,7 +144,7 @@ const updateProject = async (req, res) => {
                 publicUrl = await test(req.files[i])
                 publicUrls.push(publicUrl)
             }
-            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, publicUrl},{
+            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, publicUrl, client_link},{
                 runValidators: true,
                 new: true,
             });
