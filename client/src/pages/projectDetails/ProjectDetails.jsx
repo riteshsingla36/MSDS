@@ -119,14 +119,14 @@ const ProjectDetails = () => {
                 Role &amp; <br />
                 services <br />{" "}
               </dt>
-              {project.role_service.split(",").map(ele=><dd>{ele}</dd>)}
+              {project.role_service.split(",").map((ele, i)=><dd key={i}>{ele}</dd>)}
             </dl>
             <dl className="Header_taglist__1PGmb">
               <dt>
                 Awards &amp; <br />
                 recognition{" "}
               </dt>
-              {project.awards_recognition.split(",").map(ele=><dd>{ele}</dd>)}
+              {project.awards_recognition.split(",").map((ele, i)=><dd key={i}>{ele}</dd>)}
               
             </dl>
           </div>

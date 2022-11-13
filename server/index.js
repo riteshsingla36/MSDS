@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const session = require('express-session');
-// const bodyParser = require('body-parser');
 
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
@@ -11,11 +10,10 @@ const cloudinary = require('cloudinary').v2;
 const jobsRouter = require('./routes/jobs.route');
 const projectsRouter = require('./routes/projects.route');
 const projectTypeRouter = require('./routes/projectType.route');
-const onBoarding = require('./routes/onBoarding.route');
+const onBoarding = require('./routes/onboarding.route');
 const oneWeek = 1000 * 60 * 60 * 24 * 7;
 const MongoDBStore = require("connect-mongodb-session")(session);
 const cookieParser = require('cookie-parser');
-const multer = require('multer')
 
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb' }));
@@ -41,7 +39,7 @@ const store = new MongoDBStore({
 
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://msds-1.netlify.app',
     credentials: true
   })
 );

@@ -29,11 +29,6 @@ const Projects = () => {
 
   return (
     <div style={{ overflow: "hidden" }}>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>MSDS Projects</title>
-        <link rel="canonical" href="https://www.msds.com" />
-      </Helmet>
 
       <Navbar />
       <AnimationDiv />
