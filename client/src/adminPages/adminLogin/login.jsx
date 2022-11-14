@@ -12,10 +12,10 @@ const Login = () => {
     const [processing, setProcessing] = useState(false);
 
     useEffect(() => {
-        const auth = document.cookie?.split('; ')?.find((row) => row.startsWith('email'))?.split('=')[1];
-        if (auth) {
-            navigate('/admin');
-        }
+        // const auth = document.cookie?.split('; ')?.find((row) => row.startsWith('email'))?.split('=')[1];
+        // if (auth) {
+        //     navigate('/admin');
+        // }
     }, []);
 
     const forgotPassword = () => {
@@ -49,7 +49,7 @@ const Login = () => {
             }
             else {
                 alert("successfully logged in");
-                navigate("/admin");
+                navigate("/admin/msds");
             }
             setProcessing(false);
         }).catch(err => {

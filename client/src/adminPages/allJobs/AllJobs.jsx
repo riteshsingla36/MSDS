@@ -96,7 +96,7 @@ const AllJobs = () => {
                                     {job.salary}
                                 </div>
                                 <div className="cell" data-title="Edit">
-                                    <span onClick={() => navigate(`/admin/editjob/${job._id}`)}>Edit</span>
+                                    <span onClick={() => navigate(`/admin/msds/editjob/${job._id}`)}>Edit</span>
                                 </div>
                                 <div className="cell" data-title="Delete">
                                     <span onClick={() => deleteJob(job._id)}>Delete</span>

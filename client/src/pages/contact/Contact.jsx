@@ -22,7 +22,11 @@ const Contact = () => {
           className="about_main_logo"
         >
           <defs>
-            <style dangerouslySetInnerHTML={{ __html: ".cls-3{fill:rgb(80, 48, 19);}" }} />
+            <style
+              dangerouslySetInnerHTML={{
+                __html: ".cls-3{fill:rgb(80, 48, 19);}",
+              }}
+            />
           </defs>
           <path
             className="cls-3"
@@ -96,16 +100,11 @@ const Contact = () => {
           </p>
         </div>
       </section>
-      <div style={{
-        display: 'flex',
-        gap: '10px',
-        alignItems: 'center',
-        backgroundColor: '#FFFFFF',
-      }} className="contact-container">
-        <div className="mapouter" style={{flex: 0.65}}>
+      <div className="contact-container" style={{positon: "relative"}}>
+        <div className="mapouter" style={{ flex: 0.65 }}>
           <div className="gmap_canvas">
             <iframe
-              width='100%'
+              width="100%"
               height={500}
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=Manav%20Sachdev%20Design%20Studio%20%7C%20MSDS,%20Coworkinsta%207th,%20Floor,%20Tower%20Block%20C,%20Supermart-1,%20DLF%20Phase%20IV,%20Gurugram,%20Haryana%20122009&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -129,27 +128,34 @@ const Contact = () => {
             />
           </div>
         </div>
-        <form className="contactus-form" style={{flex: 0.35}}>
-          <input
-            name="name"
-            type="text"
-            className="feedback-input"
-            placeholder="Name"
-          />
-          <input
-            name="email"
-            type="text"
-            className="feedback-input"
-            placeholder="Email"
-          />
-          <textarea
-            name="text"
-            className="feedback-input"
-            placeholder="Comment"
-            defaultValue={""}
-          />
-          <input type="submit" defaultValue="SUBMIT" className="submit-btn-contact"/>
-        </form>
+        <div style={{position: "relative",flex: 0.35}}>
+
+          <div className="login-box" style={{}}>
+            <form>
+              <div className="user-box">
+                <input type="email" name="" required="" />
+                <label>Email</label>
+              </div>
+              <div className="user-box">
+                <input type="text" name="" required="" />
+                <label>Subject</label>
+              </div>
+              <div className="user-box">
+                <textarea name="" required="" rows={"10"}/>
+                <label>Query</label>
+              </div>
+              {/* <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+              </a> */}
+
+              <button type="submit" style={{backgroundColor: "white", color: "black", padding: "10px 30px", border: 0, borderRadius: `10px`}}>Submit</button>
+            </form>
+          </div>
+        </div>
       </div>
       <section>
         <section className="SectionPushSlice_main__8CNrO">

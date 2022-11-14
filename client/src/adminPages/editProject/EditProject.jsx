@@ -79,7 +79,7 @@ const EditJob = () => {
               }).then(res => {
                 if (res.data.status) {
                     alert("Project updated successfully");
-                    navigate("/admin/allprojects")
+                    navigate("/admin/msds/allprojects")
                 }
                 else {
                     alert("Error while fetching job information");
@@ -99,7 +99,7 @@ const EditJob = () => {
               }).then(res => {
                 if (res.data.status) {
                     alert("Project updated successfully");
-                    navigate("/admin/allprojects")
+                    navigate("/admin/msds/allprojects")
                 }
                 else {
                     alert("Error while fetching job information");

@@ -6,12 +6,12 @@ const AdminHome = () => {
     const navigate = useNavigate();
     return (
         <div className='admin-home-container'>
-            <div onClick={() => navigate("/admin/alljobs")}>All Jobs</div>
-            <div onClick={() => navigate("/admin/allprojects")}>All Projects</div>
-            <div onClick={() => navigate("/admin/allprojecttypes")}>All Project Types</div>
-            <div onClick={() => navigate("/admin/addjob")}>Add Job</div>
-            <div onClick={() => navigate("/admin/addproject")}>Add Project</div>
-            <div onClick={() => navigate("/admin/addprojecttype")}>Add Project Type</div>
+            <div onClick={() => navigate("/admin/msds/alljobs")}>All Jobs</div>
+            <div onClick={() => navigate("/admin/msds/allprojects")}>All Projects</div>
+            <div onClick={() => navigate("/admin/msds/allprojecttypes")}>All Project Types</div>
+            <div onClick={() => navigate("/admin/msds/addjob")}>Add Job</div>
+            <div onClick={() => navigate("/admin/msds/addproject")}>Add Project</div>
+            <div onClick={() => navigate("/admin/msds/addprojecttype")}>Add Project Type</div>
         </div>
     )
 }

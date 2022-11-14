@@ -37,28 +37,28 @@ function App() {
           <Route path="/contact" element={<Contact />} />
 
           <Route element={<PrivateComponent />}>
-            <Route path="/admin" element={<AdminHome />} />
-            <Route path="/admin/addprojecttype" element={<AddProjectType />} />
-            <Route path="/admin/addproject" element={<AddProject />} />
-            <Route path="/admin/addjob" element={<AddJob />} />
-            <Route path="/admin/allprojects" element={<AllProjects />} />
-            <Route path="/admin/alljobs" element={<AllJobs />} />
-            <Route path="/admin/editjob/:jobId" element={<EditJob />} />
+            <Route path="/admin/msds" element={<AdminHome />} />
+            <Route path="/admin/msds/addprojecttype" element={<AddProjectType />} />
+            <Route path="/admin/msds/addproject" element={<AddProject />} />
+            <Route path="/admin/msds/addjob" element={<AddJob />} />
+            <Route path="/admin/msds/allprojects" element={<AllProjects />} />
+            <Route path="/admin/msds/alljobs" element={<AllJobs />} />
+            <Route path="/admin/msds/editjob/:jobId" element={<EditJob />} />
             <Route
-              path="/admin/allprojecttypes"
+              path="/admin/msds/allprojecttypes"
               element={<AllProjectTypes />}
             />
             <Route
-              path="/admin/editprojecttype/:projectTypeId"
+              path="/admin/msds/editprojecttype/:projectTypeId"
               element={<EditProjectType />}
             />
             <Route
-              path="/admin/editproject/:projectId"
+              path="/admin/msds/editproject/:projectId"
               element={<EditProject />}
             />
           </Route>
-          <Route path="/admin/login" element={<Login />} />
-          <Route path="/admin/register" element={<Register />} />
+          <Route path="/admin/msds/login" element={<Login />} />
+          <Route path="/admin/msds/register" element={<Register />} />
           <Route path="/verify/:verifytoken" element={<VerifyAccount />} />
           <Route
             path="/reset-password/:resetpasswordtoken"

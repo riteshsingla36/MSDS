@@ -43,7 +43,7 @@ const EditJob = () => {
         axios.patch(`${baseUrl}/careers/update/${jobId}`, { postName, location, description, salary, startDate }).then(res => {
             if (res.data.status) {
                 alert("job updated successfully");
-                navigate("/admin/alljobs")
+                navigate("/admin/msds/alljobs")
             }
             else {
                 alert("Error while fetching job information");

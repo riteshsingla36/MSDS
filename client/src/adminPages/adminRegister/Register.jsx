@@ -6,12 +6,12 @@ import { TailSpin } from 'react-loader-spinner'
 
 const Register = () => {
 
-    useEffect(() => {
-        const auth = document.cookie?.split('; ')?.find((row) => row.startsWith('email'))?.split('=')[1];
-        if(auth){
-            navigate('/admin');
-        }
-    }, []);
+    // useEffect(() => {
+    //     const auth = document.cookie?.split('; ')?.find((row) => row.startsWith('email'))?.split('=')[1];
+    //     if(auth){
+    //         navigate('/admin');
+    //     }
+    // }, []);
 
     const navigate = useNavigate();
     const [processing, setProcessing] = useState(false);

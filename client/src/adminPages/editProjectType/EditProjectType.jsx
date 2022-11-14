@@ -33,7 +33,7 @@ const EditProjectType = () => {
         axios.patch(`${baseUrl}/projecttype/update/${projectTypeId}`, { name: e.target.name.value }).then((res) => {
             if (res.data.status) {
                 alert("updated successfully");
-                navigate("/admin/allprojecttypes");
+                navigate("/admin/msds/allprojecttypes");
             }
             else {
                 alert(res.data.message);

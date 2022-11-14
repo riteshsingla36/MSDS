@@ -83,7 +83,7 @@ const AllProjectTypes = () => {
                                     {projectType.createdAt}
                                 </div>
                                 <div className="cell" data-title="Edit">
-                                    <span onClick={() => navigate(`/admin/editprojecttype/${projectType._id}`)}>Edit</span>
+                                    <span onClick={() => navigate(`/admin/msds/editprojecttype/${projectType._id}`)}>Edit</span>
                                 </div>
                                 <div className="cell" data-title="Delete">
                                     <span onClick={() => deleteProjectType(projectType._id)}>Delete</span>

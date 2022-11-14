@@ -9,14 +9,8 @@ const PrivateComponent = () => {
 
     return (
         <>
-            {auth ? (
-                <>
                 <AdminNavbar />
                 <Outlet />
-                </>
-            ) : (
-                <Navigate to="/admin/login" />
-            )}
         </>
 
     )
