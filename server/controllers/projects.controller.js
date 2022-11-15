@@ -3,10 +3,10 @@ const processFileMiddleware = require("../middleware/helper");
 const { format } = require("util");
 const { Storage } = require("@google-cloud/storage");
 const storage = new Storage({
-    keyFilename: "msds-368315-7729cdd051a3.json",
-    projectId: "msds-368315",
+    keyFilename: "msds-368610-f89b7abbfd36.json",
+    projectId: "msds-368610",
 });
-const bucket = storage.bucket("msds_projects");
+const bucket = storage.bucket("msds_bucket");
 
 const getAllProjects = async (req, res) => {
     try {
