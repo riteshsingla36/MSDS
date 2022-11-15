@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./footer.css";
 const Footer = () => {
   return (
-    <footer>
+    <footer style={{backgroundColor: 'rgb(226, 82,57)', color: '#fff'}}>
       <nav className="Footer_nav__33YjX">
         <div className="Footer_column__3d3oT">
           <h2>Let&#x27;s work together</h2>
@@ -97,7 +97,7 @@ const Footer = () => {
           >
             <defs>
               <style
-                dangerouslySetInnerHTML={{ __html: ".cls-2{fill:rgb(80, 48, 19);}" }}
+                dangerouslySetInnerHTML={{ __html: ".cls-2{fill:#fff;}" }}
               />
             </defs>
             <path

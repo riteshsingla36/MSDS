@@ -141,7 +141,7 @@ const Contact = () => {
                 <label>Subject</label>
               </div>
               <div className="user-box">
-                <textarea name="" required="" rows={"10"}/>
+                <textarea name="" required="" rows={"5"}/>
                 <label>Query</label>
               </div>
               {/* <a href="#">
@@ -152,7 +152,7 @@ const Contact = () => {
                 Submit
               </a> */}
 
-              <button type="submit" style={{backgroundColor: "white", color: "black", padding: "10px 30px", border: 0, borderRadius: `10px`}}>Submit</button>
+              <button type="submit" style={{backgroundColor: "white", color: "black", padding: "10px 30px", border: 0, borderRadius: `10px`, marginTop: "30px"}}>Submit</button>
             </form>
           </div>
         </div>

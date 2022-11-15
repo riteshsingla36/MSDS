@@ -90,6 +90,10 @@
     transform-origin: bottom left;
 }
 
+.navback {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 @keyframes nav-animation{
     0%{
         transform: translateY(-100%);

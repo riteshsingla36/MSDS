@@ -118,6 +118,86 @@ const Slider = () => {
               alt=""
             />
           </div>
+          <div className="slide">
+            <img
+              src={require('../../logos-white/logo-white-15.png')}
+              height={100}
+              width={250}
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src={require('../../logos-white/logo-white-16.png')}
+              height={100}
+              width={250}
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src={require('../../logos-white/logo-white-17.png')}
+              height={100}
+              width={250}
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src={require('../../logos-white/logo-white-18.png')}
+              height={100}
+              width={250}
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src={require('../../logos-white/logo-white-19.png')}
+              height={100}
+              width={250}
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src={require('../../logos-white/logo-white-20.png')}
+              height={100}
+              width={250}
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src={require('../../logos-white/logo-white-21.png')}
+              height={100}
+              width={250}
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src={require('../../logos-white/logo-white-22.png')}
+              height={100}
+              width={250}
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src={require('../../logos-white/logo-white-23.png')}
+              height={100}
+              width={250}
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src={require('../../logos-white/logo-white-24.png')}
+              height={100}
+              width={250}
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>

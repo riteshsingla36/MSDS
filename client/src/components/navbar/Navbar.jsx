@@ -4,6 +4,18 @@ import "./navbar.css";
 
 const Navbar = () => {
   const [cls, setCls] = useState(false);
+
+  const [newCls, setNewCls] = useState(false);
+
+  const changeClass = () => {
+    if(window.scrollY >= 650) {
+      setNewCls(true);
+    }
+    else {
+      setNewCls(false);
+    }
+  }
+  window.addEventListener("scroll", changeClass)
   return (
     <>
       <nav className="Header_nav__2YzZy">
@@ -24,7 +36,7 @@ const Navbar = () => {
             ></path>
           </svg>
         </button>
-        <div className={`Header_panel__2XDEn ${cls? "Header_isOpened__1PsSm": ""}`}>
+        <div className={`Header_panel__2XDEn ${cls? "Header_isOpened__1PsSm": ""} ${newCls? "navback": ""}`}>
           <button
             className="Button_button__2RxXb btn mobile-only Header_closeBtn__wzNvb"
             aria-label="Close menu"

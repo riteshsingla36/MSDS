@@ -223,7 +223,7 @@ const About = () => {
           </dl>
         </section> */}
 
-<div style={{fontSize: '74px', fontWeight: 'bold', textAlign: 'center', width: '100%', margin: 'auto', marginBottom: '120rem'}}>
+      <div style={{fontSize: '74px', fontWeight: 'bold', textAlign: 'center', width: '100%', margin: 'auto', marginBottom: '120rem'}}>
         <h2>Our Services</h2>
       </div>
 
@@ -278,7 +278,7 @@ const About = () => {
             <li>
               <a href="/" target="_blank" rel="noopener noreferrer"
               ><img
-                  src={require('../../logos/logo-01.png')}
+                  src={require('../../logos/logo-1.png')}
                   alt="ambriona"
                 /></a>
             </li>
@@ -288,14 +288,14 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               ><img
-                  src={require('../../logos/logo-02.png')}
+                  src={require('../../logos/logo-2.png')}
                   alt="Louis Vuitton"
                 /></a>
             </li>
             <li>
               <a href="/" target="_blank" rel="noopener noreferrer"
               ><img
-                  src={require('../../logos/logo-03.png')}
+                  src={require('../../logos/logo-3.png')}
                   alt="Dyson"
                 /></a>
             </li>
@@ -305,21 +305,21 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               ><img
-                  src={require('../../logos/logo-04.png')}
+                  src={require('../../logos/logo-4.png')}
                   alt="Jean Paul Gautlier"
                 /></a>
             </li>
             <li>
               <a href="/" target="_blank" rel="noopener noreferrer"
               ><img
-                  src={require('../../logos/logo-05.png')}
+                  src={require('../../logos/logo-5.png')}
                   alt="Made.com"
                 /></a>
             </li>
             <li>
               <a href="/" target="_blank" rel="noopener noreferrer"
               ><img
-                  src={require('../../logos/logo-06.png')}
+                  src={require('../../logos/logo-6.png')}
                   alt="google"
                 /></a>
             </li>
@@ -329,7 +329,7 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               ><img
-                  src={require('../../logos/logo-07.png')}
+                  src={require('../../logos/logo-7.png')}
                   alt="Printemps"
                 /></a>
             </li>
@@ -342,14 +342,14 @@ const About = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               ><img
-                  src={require('../../logos/logo-08.png')}
+                  src={require('../../logos/logo-8.png')}
                   alt="CNN"
                 /></a>
             </li>
             <li>
               <a target="_blank" rel="noopener noreferrer"
               ><img
-                  src={require('../../logos/logo-09.png')}
+                  src={require('../../logos/logo-9.png')}
                   alt="Typology"
                 /></a>
             </li>
@@ -412,6 +412,55 @@ const About = () => {
                   alt="Veloretti"
                 /></a>
             </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
+                  src={require('../../logos/logo-18.png')}
+                  alt="Veloretti"
+                /></a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
+                  src={require('../../logos/logo-19.png')}
+                  alt="Veloretti"
+                /></a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
+                  src={require('../../logos/logo-20.png')}
+                  alt="Veloretti"
+                /></a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
+                  src={require('../../logos/logo-21.png')}
+                  alt="Veloretti"
+                /></a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
+                  src={require('../../logos/logo-22.png')}
+                  alt="Veloretti"
+                /></a>
+            </li>
+            {/* <li>
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
+                  src={require('../../logos/logo-23.png')}
+                  alt="Veloretti"
+                /></a>
+            </li> */}
+            {/* <li>
+              <a target="_blank" rel="noopener noreferrer"
+              ><img
+                  src={require('../../logos/logo-24.png')}
+                  alt="Veloretti"
+                /></a>
+            </li> */}
           </ul>
         </section>
 
