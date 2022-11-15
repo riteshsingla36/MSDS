@@ -179,7 +179,10 @@
     top: 0;
     left: 0;
     z-index: 1;
-    width: 100%
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    /* opacity: 0.5; */
+    padding: 10px 0;
 }
 
 .Header_burgerBtn__2V9_x {
@@ -213,7 +216,7 @@
     }
 
     .Header_panel__2XDEn {
-        margin-top: 20rem
+        margin-top: 0rem !important;
     }
 
     .Header_link__2wQjN {
@@ -252,6 +255,7 @@
         -webkit-transform: translateY(0) translateZ(0);
         transform: translateY(0) translateZ(0);
         color: rgb(255, 253,244);
+        opacity: 1;
     }
 
     .Header_list__1jN0i {
