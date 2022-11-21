@@ -1,3 +1,3 @@
-const baseUrl = "https://msds-m5x2t6fp4a-el.a.run.app";
+const baseUrl = "https://msds-1-bgskglqn7q-el.a.run.app";
 
 export default baseUrl;

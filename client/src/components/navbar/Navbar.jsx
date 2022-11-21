@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {Link} from "react-router-dom"
 import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = ({home}) => {
   const [cls, setCls] = useState(false);
 
   const [newCls, setNewCls] = useState(false);
@@ -54,7 +54,7 @@ const Navbar = () => {
               ></path>
             </svg>
           </button>
-          <ul className="Header_list__1jN0i">
+          <ul className="Header_list__1jN0i" style={{color: `${home? (newCls? "rgb(226, 82, 57)":"white"):"rgb(226, 82, 57)"}`}}>
           <li
               className="Header_link__2wQjN"
               

@@ -24,7 +24,7 @@ const Contact = () => {
           <defs>
             <style
               dangerouslySetInnerHTML={{
-                __html: ".cls-3{fill:rgb(80, 48, 19);}",
+                __html: ".cls-3{fill:rgb(226, 82, 57);}",
               }}
             />
           </defs>
@@ -53,17 +53,16 @@ const Contact = () => {
       <section className="contact_main__3QAHV">
         <div className="contact_description__dMHfw">
           <p>
-            We are an Amsterdam and New-york based studio with a strong french
-            accent working all over the world. <br />
-            We like to support our clients at all stages of their projects,
-            don&#x27;t hesitate to contact us!
+          We are committed to create a brand that connects emotionally. We seek to create new experiences and opening doors to opportunities for brands to thrive. <br />
+          We like to support our clients at all stages of their projects,
+          don&#x27;t hesitate to contact us!
           </p>
         </div>
         <div className="contact_information__1lX9-">
           <p>
             For projects inquiries
             <br />
-            <a href="mailto:contact@numbered.com">contact@numbered.com</a>
+            <a href="mailto:contact@numbered.com">INFO@MANAVSACHDEVDESIGN.COM</a>
           </p>
           <p></p>
           <p>
@@ -71,20 +70,20 @@ const Contact = () => {
             <br />
             For Jobs and internships
             <br />
-            <a href="mailto:jobs@numbered.com">jobs@numbered.com</a>
+            <a href="mailto:jobs@numbered.com">INFO@MANAVSACHDEVDESIGN.COM</a>
           </p>
           <p></p>
           <p>
-            Numbered Ams
+            MANAV SACHDEV DESIGN STUDIO 
             <br />
-            Herengracht 342-1
+            COWORKINSTA 8TH FLOOR
             <br />
-            1016CG Amsterdam
+            SUPERMART-I DLF PHASE IV
             <br />
-            The (sunny) Netherlands
+            GURUGRAM, HARYANA
           </p>
           <p></p>
-          <p>
+          {/* <p>
             Numbered Nyc
             <br />
             29-35 9th Ave,
@@ -97,7 +96,7 @@ const Contact = () => {
           <p>
             Chamber of commerce (kvk) 81354789
             <br />
-          </p>
+          </p> */}
         </div>
       </section>
       <div className="contact-container" style={{positon: "relative"}}>

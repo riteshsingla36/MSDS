@@ -63,7 +63,7 @@ const ProjectDetails = () => {
             className="Hero_logo__1aZ0K details_logo_main_parent"
             style={{ transform: "translate3d(0px, 0px, 0px)" }}
           >
-            <svg
+            {/* <svg
               id="Layer_1"
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
@@ -95,22 +95,22 @@ const ProjectDetails = () => {
                 d="M1726.85,154.67c-17.67-29.44-66.24-57.42-122.17-57.42-72.12,0-106.72,30.18-106.72,68.46,0,44.89,53,57.4,114.83,64.77,107.43,13.23,207.54,41.2,207.54,164.11,0,114.8-101.57,164.12-216.39,164.12-105.23,0-186.19-32.39-224.46-126.59,39.1-20.26,86-16,121.7,9.77,28.37,20.49,65.75,30,104.24,30,61.07,0,118.49-21.33,118.49-77.26,0-48.57-50.79-68.44-119.23-75.8-105.24-12.52-202.4-40.48-202.4-156,0-106,104.52-149.4,199.46-150.15,80.23,0,163.38,22.82,202.4,102.3Z"
                 transform="translate(-17.67 -12.62)"
               />
-            </svg>
+            </svg> */}
           </span>
         </a>
 
         <header className="Header_header__1SOLy">
-          <h1 className="Header_title__3Luwf">{project.name}</h1>
+          <h1 className="Header_title__3Luwf" style={{color: 'rgb(226,82,57)'}}>{project.name}</h1>
           <a
             href={project.client_link}
             target="_blank"
             rel="noopener noreferrer"
             className="underlined inverted Header_link__2-UsR"
-            style={{color: 'rgb(80, 48, 19)'}}
+            style={{color: 'rgb(226,82,57)'}}
           >
             View project
           </a>
-          <p className="Header_description__19cR8">
+          <p className="Header_description__19cR8" style={{color: 'rgb(226,82,57)'}}>
             {project.description}
           </p>
           <div className="Header_tags__2WOJe">

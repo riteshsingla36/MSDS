@@ -34,7 +34,7 @@ const About = () => {
           >
             <defs>
               <style
-                dangerouslySetInnerHTML={{ __html: ".cls-0{fill:rgb(80, 48, 19);}" }}
+                dangerouslySetInnerHTML={{ __html: ".cls-0{fill:rgb(226,82,57);}" }}
               />
             </defs>
             <path
@@ -223,7 +223,7 @@ const About = () => {
           </dl>
         </section> */}
 
-      <div style={{fontSize: '74px', fontWeight: 'bold', textAlign: 'center', width: '100%', margin: 'auto', marginBottom: '120rem'}}>
+      <div style={{fontSize: '74px', fontWeight: 'bold', textAlign: 'center', width: '100%', margin: 'auto', marginBottom: '120rem', color: 'rgb(226,82,57)'}}>
         <h2>Our Services</h2>
       </div>
 
@@ -273,7 +273,7 @@ const About = () => {
           </dl>
           
         </section>
-        <section className="ClientsSlice_main__1EeZO">
+        <section className="ClientsSlice_main__1EeZO ourServices">
           <ul>
             <li>
               <a href="/" target="_blank" rel="noopener noreferrer"
@@ -447,13 +447,13 @@ const About = () => {
                   alt="Veloretti"
                 /></a>
             </li>
-            {/* <li>
+            <li>
               <a target="_blank" rel="noopener noreferrer"
               ><img
                   src={require('../../logos/logo-23.png')}
                   alt="Veloretti"
                 /></a>
-            </li> */}
+            </li>
             {/* <li>
               <a target="_blank" rel="noopener noreferrer"
               ><img

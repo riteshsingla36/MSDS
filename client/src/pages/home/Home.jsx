@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <div style={{overflow: "hidden"}}>
       <AnimationDiv />
-      <Navbar />
+      <Navbar home={"home"} />
       <div className="main-img-container">
         <div className="home-img-container">
           <div
@@ -94,7 +94,7 @@ const Home = () => {
           </svg>
         </Link>
         <div className="bottom-txt prevent-select">
-          <Link to="/about" style={{letterSpacing: '6px'}} className='home_bottom_text'>Manav Sachdev Design Studio</Link>
+          <Link to="/about" style={{letterSpacing: '4px', fontWeight:"bold", textTransform:"capitalize"}} className='home_bottom_text'>MANAV SACHDEV DESIGN STUDIO</Link>
         </div>
       </div>
 
@@ -110,12 +110,12 @@ const Home = () => {
             </a>
           </div>
           <div className="DescriptionSlice_projects__se9aV">
-            <h2>
+            <h2 style={{color: 'rgb(226,82,57)'}}>
               Cases
               <br />
               studies
             </h2>
-            <a aria-label="View all projects" href="/projects/all">
+            <a aria-label="View all projects" href="/projects/all" style={{color: 'rgb(226,82,57)'}}>
               View all
             </a>
           </div>
@@ -443,7 +443,7 @@ const Home = () => {
       </section>
 
       <div style={{fontSize: '74px', fontWeight: 'bold', textAlign: 'center', width: '100%', margin: 'auto', marginBottom: '120rem'}}>
-        <h2>Our Services</h2>
+        <h2 style={{color: 'rgb(226,82,57)'}}>Our Services</h2>
       </div>
 
       <section className="ListSlice_main__mKXcM" style={{justifyContent: 'center'}}>

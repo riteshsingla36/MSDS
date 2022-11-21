@@ -1,11 +1,11 @@
 runtime: nodejs16
 
 env_variables: 
-  DB_URI:mongodb+srv://ritesh:ritesh_123@cluster0.951ara3.mongodb.net/msds?retryWrites=true&w=majority
+  DB_URI:mongodb+srv://msds:manav123@cluster0.i9g6iqa.mongodb.net/msds?retryWrites=true&w=majority
   CLOUD_NAME:dtxil2rjg
   CLOUD_API_KEY:489872418749179
   CLOUD_API_SECRET_KEY:np_MYCSn51fttpIt1FW83wnPljc
   SENDGRID_API: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
   HOST_EMAIL:ratsikumar66@gmail.com
   DOMAIN:http://localhost:3000
-  GCLOUDPROJECTID:msds-368315
+  GCLOUDPROJECTID:msds-1
