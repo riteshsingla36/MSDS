@@ -9,8 +9,15 @@ const storage = new Storage({
 const bucket = storage.bucket("projects_msds");
 
 const getAllProjects = async (req, res) => {
+    const {type} = req.query
+    let projects;
     try {
-        const projects = await Project.find({}).populate('type');
+        if(type === 'all') {
+            projects = await Project.find({}).populate('type');
+        }
+        else {
+            projects = await Project.find({type: type}).populate('type')
+        }
         res.json({ status: true, data: projects });
     } catch (err) {
         res.json({ status: false, message: err.message });
