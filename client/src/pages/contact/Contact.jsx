@@ -134,20 +134,20 @@ const Contact = () => {
         <div style={{position: "relative",flex: 0.35}}>
 
           <div className="login-box" style={{}}>
-            <form>
+            <form action="https://formsubmit.co/studio.msds09@gmail.com" method="POST">
               <div className="user-box">
-                <input type="email" name="" required="" />
+                <input type="email" name="email" required />
                 <label>Email</label>
               </div>
               <div className="user-box">
-                <input type="text" name="" required="" />
+                <input type="text" name="_subject" required />
                 <label>Subject</label>
               </div>
               <div className="user-box">
-                <textarea name="" required="" rows={"5"}/>
+                <textarea name="query" required="" rows={"5"}/>
                 <label>Query</label>
               </div>
-              
+              <input type="hidden" name="_next" value="https://msds-1.netlify.app"></input>
 
               <button type="submit" style={{backgroundColor: "white", color: "black", padding: "10px 30px", border: 0, borderRadius: `10px`, marginTop: "30px"}}>Submit</button>
             </form>
