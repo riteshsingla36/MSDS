@@ -73,7 +73,7 @@ const createProject = async (req, res) => {
 
 const test = async (f) => {
     return new Promise((resolve, reject) => {
-        const blob = bucket.file("projects/" +f.originalname);
+        const blob = bucket.file("projects/" + Date.now() + "-" +f.originalname);
         const blobStream = blob.createWriteStream({
             resumable: false,
         });
@@ -131,7 +131,7 @@ const updateProject = async (req, res) => {
 
         let publicUrls = [];
 
-        if(!images){
+        if(req.files.length===0){
             project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, client_link},{
                 runValidators: true,
                 new: true,
@@ -144,7 +144,7 @@ const updateProject = async (req, res) => {
                 publicUrl = await test(req.files[i])
                 publicUrls.push(publicUrl)
             }
-            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, publicUrl, client_link},{
+            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, publicUrl, client_link, images: publicUrls},{
                 runValidators: true,
                 new: true,
             });

@@ -110,7 +110,7 @@ const ProjectDetails = () => {
           >
             View project
           </a>
-          <p className="Header_description__19cR8" style={{color: 'rgb(226,82,57)'}}>
+          <p className="Header_description__19cR8" style={{color: 'rgb(91,91,92)'}}>
             {project.description}
           </p>
           <div className="Header_tags__2WOJe">
@@ -132,7 +132,7 @@ const ProjectDetails = () => {
           </div>
         </header>
         <section>
-          {project.images[0]? <>
+          {project.images[1]? <>
         <div
           className="ImagesSlice_media--centered__1PaLN"
           style={{ position: "relative", overflow: "hidden" }}
@@ -143,7 +143,7 @@ const ProjectDetails = () => {
           />
           <picture>
             <img
-              src={project.images[0]? project.images[0]: ""}
+              src={project.images[1]? project.images[1]: ""}
               alt=""
               loading="lazy"
               decoding="async"
@@ -162,9 +162,8 @@ const ProjectDetails = () => {
           </picture>
 
         </div>
-          
           </>:<></>}
-          {project.images[1]? <>
+          {project.images[2]? <>
           
         <div
           className="ImagesSlice_media--centered__1PaLN"
@@ -176,7 +175,7 @@ const ProjectDetails = () => {
           />
           <picture>
             <img
-              src={project.images[1]? project.images[1]: ""}
+              src={project.images[2]? project.images[2]: ""}
               alt=""
               loading="lazy"
               decoding="async"
@@ -220,7 +219,7 @@ const ProjectDetails = () => {
           </noscript>
         </div>
           </>:<></>}
-          {project.images[2]? <>
+          {project.images[3]? <>
         <div style={{ position: "relative", overflow: "hidden" }}>
           <div
             aria-hidden="true"
@@ -229,7 +228,7 @@ const ProjectDetails = () => {
           <picture>
             
             <img
-              src={project.images[2]? project.images[2]: ""}
+              src={project.images[3]? project.images[3]: ""}
               alt=""
               loading="lazy"
               decoding="async"
@@ -250,7 +249,7 @@ const ProjectDetails = () => {
         </div>
           
           </>:<></>}
-          {project.images[3]? <>
+          {project.images[4]? <>
           
         <div
           className="ImagesSlice_media--centered__1PaLN"
@@ -263,7 +262,7 @@ const ProjectDetails = () => {
           <picture>
             
             <img
-              src={project.images[3]? project.images[3]: ""}
+              src={project.images[4]? project.images[4]: ""}
               alt=""
               loading="lazy"
               decoding="async"
@@ -307,7 +306,7 @@ const ProjectDetails = () => {
           </noscript>
         </div>
           </>:<></>}
-          {project.images[4]? <>
+          {project.images[5]? <>
         <div style={{ position: "relative", overflow: "hidden" }}>
           <div
             aria-hidden="true"
@@ -315,39 +314,6 @@ const ProjectDetails = () => {
           />
           <picture>
 
-            <img
-              src={project.images[4]? project.images[4]: ""}
-              alt=""
-              loading="lazy"
-              decoding="async"
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                objectPosition: "center center",
-                opacity: 1,
-                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
-              }}
-            />
-          </picture>
-        </div>
-          
-          </>:<></>}
-          {project.images[5]? <>
-          
-        <div
-          className="ImagesSlice_media--centered__1PaLN"
-          style={{ position: "relative", overflow: "hidden" }}
-        >
-          <div
-            aria-hidden="true"
-            style={{ width: "100%", paddingBottom: "75.6757%" }}
-          />
-          <picture>
-            
             <img
               src={project.images[5]? project.images[5]: ""}
               alt=""
@@ -367,15 +333,20 @@ const ProjectDetails = () => {
             />
           </picture>
         </div>
+          
           </>:<></>}
           {project.images[6]? <>
           
-        <div style={{ position: "relative", overflow: "hidden" }}>
+        <div
+          className="ImagesSlice_media--centered__1PaLN"
+          style={{ position: "relative", overflow: "hidden" }}
+        >
           <div
             aria-hidden="true"
-            style={{ width: "100%", paddingBottom: "56.25%" }}
+            style={{ width: "100%", paddingBottom: "75.6757%" }}
           />
           <picture>
+            
             <img
               src={project.images[6]? project.images[6]: ""}
               alt=""
@@ -397,6 +368,34 @@ const ProjectDetails = () => {
         </div>
           </>:<></>}
           {project.images[7]? <>
+          
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            <img
+              src={project.images[7]? project.images[7]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          </>:<></>}
+          {project.images[8]? <>
         <div
           className="ImagesSlice_media--centered__1PaLN"
           style={{ position: "relative", overflow: "hidden" }}
@@ -408,7 +407,7 @@ const ProjectDetails = () => {
           <picture>
             
             <img
-              src={project.images[7]? project.images[7]: ""}
+              src={project.images[8]? project.images[8]: ""}
               alt=""
               loading="lazy"
               decoding="async"
@@ -429,7 +428,7 @@ const ProjectDetails = () => {
         </div>
           
           </>:<></>}
-          {project.images[8]? <>
+          {project.images[9]? <>
         <div style={{ position: "relative", overflow: "hidden" }}>
           <div
             aria-hidden="true"
@@ -438,7 +437,7 @@ const ProjectDetails = () => {
           <picture>
             
             <img
-              src={project.images[8]? project.images[8]: ""}
+              src={project.images[9]? project.images[9]: ""}
               alt=""
               loading="lazy"
               decoding="async"
