@@ -442,7 +442,7 @@ const Home = () => {
         </blockquote>
       </section>
 
-      <div style={{fontSize: '74px', fontWeight: 'bold', textAlign: 'center', width: '100%', margin: 'auto', marginBottom: '120rem'}}>
+      <div className="our_services_heading">
         <h2 style={{color: 'rgb(226,82,57)'}}>Our Services</h2>
       </div>
 
@@ -552,8 +552,8 @@ const Home = () => {
                 </noscript>
               </div>
               <figcaption className="ProjectsSlice_caption__1PlsW">
-                <h3>Plink</h3>
-                <div>For Mollie payment</div>
+                <h3></h3>
+                <div></div>
               </figcaption>
             </figure>
           </a>

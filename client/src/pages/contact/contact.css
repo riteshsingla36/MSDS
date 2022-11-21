@@ -606,7 +606,7 @@
 }
 @media (min-width: 1024px) {
     .AwardsSlice_main__1aMoU {
-        padding-top: 95rem;
+        /* padding-top: 95rem; */
         padding-bottom: 120rem;
     }
     .AwardsSlice_image__1L8sw {
@@ -731,7 +731,7 @@
         justify-content: space-between;
     }
     .ClientsSlice_main__1EeZO ul img {
-        width: 150rem;
+        width: 237rem;
     }
     .ClientsSlice_main__1EeZO ul li {
         margin-top: 80rem;
@@ -754,7 +754,7 @@
 }
 .contact_information__1lX9- {
     text-transform: uppercase;
-    line-height: 1.33;
+    line-height: 1.73;
     font-size: 15rem;
 }
 .contact_information__1lX9- p {

@@ -63,9 +63,11 @@ const Contact = () => {
             For projects inquiries
             <br />
             <a href="mailto:contact@numbered.com">INFO@MANAVSACHDEVDESIGN.COM</a>
+            
           </p>
           <p></p>
           <p>
+            <br/>
             We are always looking for new talent, feel free to contact us!
             <br />
             For Jobs and internships
@@ -74,6 +76,8 @@ const Contact = () => {
           </p>
           <p></p>
           <p>
+          <br/>
+
             MANAV SACHDEV DESIGN STUDIO 
             <br />
             COWORKINSTA 8TH FLOOR
@@ -143,13 +147,7 @@ const Contact = () => {
                 <textarea name="" required="" rows={"5"}/>
                 <label>Query</label>
               </div>
-              {/* <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-              </a> */}
+              
 
               <button type="submit" style={{backgroundColor: "white", color: "black", padding: "10px 30px", border: 0, borderRadius: `10px`, marginTop: "30px"}}>Submit</button>
             </form>
@@ -167,17 +165,9 @@ const Contact = () => {
                     style={{ width: "100%", paddingBottom: "60.8889%" }}
                   ></div>
                   <picture>
-                    <source
-                      media="(max-width: 1024px) and (orientation: portrait)"
-                      srcSet="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=320&amp;rect=279,0,343,548&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=620&amp;rect=279,0,343,548&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=960&amp;rect=279,0,343,548&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1280&amp;rect=279,0,343,548&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1600&amp;rect=279,0,343,548&amp;auto=format,compress 1600w"
-                      sizes="100vw"
-                    />
-                    <source
-                      srcSet="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1280&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1600&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1920&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2240&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2560&amp;auto=format,compress 2560w"
-                      sizes="100vw"
-                    />
+                    
                     <img
-                      src="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?auto=compress,format"
+                      src={require('../../images/contactbottom.jpg')}
                       alt=""
                       loading="lazy"
                       decoding="async"
@@ -195,36 +185,7 @@ const Contact = () => {
                       }}
                     />
                   </picture>
-                  <noscript>
-                    <picture>
-                      <source
-                        media="(max-width: 1024px) and (orientation: portrait)"
-                        srcSet="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=320&rect=279,0,343,548&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=620&rect=279,0,343,548&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=960&rect=279,0,343,548&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1280&rect=279,0,343,548&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1600&rect=279,0,343,548&auto=format,compress 1600w"
-                        sizes="100vw"
-                      />
-                      <source
-                        srcSet="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2560&auto=format,compress 2560w"
-                        sizes="100vw"
-                      />
-                      <img
-                        loading="lazy"
-                        sizes="100vw"
-                        srcSet="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2560&auto=format,compress 2560w"
-                        src="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?auto=compress,format"
-                        alt=""
-                        style={{
-                          position: "absolute",
-                          top: 0,
-                          left: 0,
-                          opacity: 1,
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          objectPosition: "center",
-                        }}
-                      />
-                    </picture>
-                  </noscript>
+                  
                 </div>
                 <figcaption className="SectionPushSlice_caption__19ik9">
                   <h3>Our works</h3>

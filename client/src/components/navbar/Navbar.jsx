@@ -24,17 +24,7 @@ const Navbar = ({home}) => {
           aria-label="Open menu"
           onClick={() => setCls(prev => !prev)}
         >
-          <svg
-            width="18"
-            height="9"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 0h18v1H0V0zM0 4h18v1H0V4zM0 8h18v1H0V8z"
-              fill="rgb(80, 48,19)"
-            ></path>
-          </svg>
+          <svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="36px" height="36px"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"/></svg>
         </button>
         <div className={`Header_panel__2XDEn ${cls? "Header_isOpened__1PsSm": ""} ${newCls? "navback": ""}`}>
           <button
@@ -42,17 +32,7 @@ const Navbar = ({home}) => {
             aria-label="Close menu"
             onClick={() => setCls(prev => !prev)}
           >
-            <svg
-              width="18"
-              height="9"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0h18v1H0V0zM0 4h18v1H0V4zM0 8h18v1H0V8z"
-                fill="#fff"
-              ></path>
-            </svg>
+            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="36px" height="36px"><path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"/></svg>
           </button>
           <ul className="Header_list__1jN0i" style={{color: `${home? (newCls? "rgb(226, 82, 57)":"white"):"rgb(226, 82, 57)"}`}}>
           <li

@@ -61,6 +61,8 @@
 .main-img-container .bottom-txt{
     animation: main-text 900ms ease-out; 
     animation-fill-mode: forwards;
+    padding: 0 20px;
+    line-height: 1.40;
 }
 
 .prevent-select {
@@ -95,4 +97,21 @@
 
 .home_bottom_text{
     font-family: 'Montserrat', sans-serif !important;
+}
+
+.our_services_heading {
+    font-size: 74px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 120rem;
+    color: rgb(226,82,57);
+}
+
+@media (max-width:500px) {
+    .our_services_heading {
+        text-align: left;
+        padding: 31.267px;
+    }
 }

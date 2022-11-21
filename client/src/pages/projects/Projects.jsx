@@ -49,7 +49,7 @@ const Projects = () => {
               <defs>
                 <style
                   dangerouslySetInnerHTML={{
-                    __html: ".cls-4{fill:rgb(80, 48, 19);}",
+                    __html: ".cls-4{fill:rgb(226, 82, 57);}",
                   }}
                 />
               </defs>
@@ -96,7 +96,7 @@ const Projects = () => {
             </li>
             <li>
               <Link className="underlined" to="/projects">
-                Digital & Print Design <span>(13)</span>
+                Web & Print Design <span>(13)</span>
               </Link>
             </li>
             <li>
