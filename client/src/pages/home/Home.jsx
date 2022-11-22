@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/0d2542c292c41cff19d7.css";
 import "./css/3e520a9ee9ba77d53b1b.css";
@@ -18,6 +18,9 @@ import '../../images/1.jpg'
 import Slider from "../../components/bottomInfiniteSlider/Slider";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   let [a, setA] = useState(1);
   const changeImage = (id) => {
     setA(Number(id.split(" ")[1].split("-")[1]));

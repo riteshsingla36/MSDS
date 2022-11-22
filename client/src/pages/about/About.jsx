@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./css/0d2542c292c41cff19d7.css";
 import "./css/3e520a9ee9ba77d53b1b.css";
 import "./css/4df0a70341fe577ec304.css";
@@ -16,7 +16,9 @@ import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 
 const About = () => {
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div style={{overflow: 'hidden'}}>

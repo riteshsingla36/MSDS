@@ -34,6 +34,7 @@ const Projects = () => {
   },[type])
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     setProcessing(true);
     axios.get(`${baseUrl}/projects?type=all`).then(res => {
       if(res.data.status) {
