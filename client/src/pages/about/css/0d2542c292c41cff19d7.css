@@ -829,11 +829,11 @@
     flex-wrap: wrap
 }
 
-.ClientsSlice_main__1EeZO ul:after {
+/* .ClientsSlice_main__1EeZO ul:after {
     content: "";
     -ms-flex: auto;
     flex: auto
-}
+} */
 
 .ClientsSlice_main__1EeZO ul img {
     width: 90rem

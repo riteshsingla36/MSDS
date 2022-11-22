@@ -100,7 +100,7 @@
 }
 
 .our_services_heading {
-    font-size: 74px;
+    font-size: 63rem;
     font-weight: bold;
     text-align: center;
     width: 100%;
@@ -112,6 +112,6 @@
 @media (max-width:500px) {
     .our_services_heading {
         text-align: left;
-        padding: 31.267px;
+        padding-left: 61.267px;
     }
 }

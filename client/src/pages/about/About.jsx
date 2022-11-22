@@ -543,6 +543,20 @@ const About = () => {
                   alt="google"
                 /></a>
             </li>
+            <li>
+              <a href="/" target="_blank" rel="noopener noreferrer"
+              ><img
+                  src={require('../../images/awards/awards6.png')}
+                  alt="google"
+                /></a>
+            </li>
+            <li>
+              <a href="/" target="_blank" rel="noopener noreferrer"
+              ><img
+                  src={require('../../images/awards/awards7.jpg')}
+                  alt="google"
+                /></a>
+            </li>
 
           </ul>
         </section>
@@ -576,6 +590,16 @@ const About = () => {
             <li>
               <a href="https://www.creativegaga.com/manav-sachdev/" target='_blank'>
               Featured in Creative Gaga
+              </a>
+            </li>
+            <li>
+              <a href="/" target='_blank'>
+              Featured in Packaging Of The World
+              </a>
+            </li>
+            <li>
+              <a href="/" target='_blank'>
+              Featured in Kyoorius Award 2013
               </a>
             </li>
             
