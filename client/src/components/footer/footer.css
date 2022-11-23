@@ -572,9 +572,23 @@ a:visited {
 }
 
 .underlined {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgb(80, 48, 19)), to(rgb(80, 48, 19))) !important;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgb(226,82,57)), to(rgb(226,82,57))) !important;
     background-image: -o-linear-gradient(left, #fff 0, #fff 100%);
-    background-image: linear-gradient(90deg, #fff 0, #fff);
+    background-image: linear-gradient(90deg, rgb(226,82,57) 0, rgb(226,82,57));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0 1px;
+    display: inline;
+    -webkit-transition: background .6s cubic-bezier(.77, 0, .175, 1);
+    -o-transition: background .6s cubic-bezier(.77, 0, .175, 1);
+    transition: background .6s cubic-bezier(.77, 0, .175, 1);
+    padding-bottom: 3rem
+}
+
+.underlined1 {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgb(226,82,57)), to(rgb(226,82,57))) !important;
+    background-image: -o-linear-gradient(left, #fff 0, #fff 100%);
+    background-image: linear-gradient(90deg, rgb(91, 91, 92) 0, rgb(91, 91, 92)) !important;
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 0 1px;

@@ -182,11 +182,11 @@
     width: 100%;
     /* background-color: rgba(255, 255, 255, 0.5); */
     /* opacity: 0.5; */
-    padding: 10px 0;
+    padding: 16px 0;
 }
 
 .Header_burgerBtn__2V9_x {
-    margin-top: 25rem
+    margin-top: 40rem !important;
 }
 
 .Header_closeBtn__wzNvb {
@@ -578,9 +578,9 @@ a:visited {
 }
 
 .underlined {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgb(80, 48, 19)), to(rgb(80, 48, 19))) !important;
+    background-image: -webkit-gradient(linear, left top, right top, from(white), to(white)) !important;
     background-image: -o-linear-gradient(left, rgb(80, 48, 19) 0, rgb(80, 48, 19) 100%) !important;
-    background-image: linear-gradient(90deg, rgb(80, 48, 19) 0, rgb(80, 48, 19)) !important;
+    background-image: linear-gradient(90deg, white 0,white) !important;
     background-repeat: no-repeat;
     background-position: 0 100%;
     background-size: 0 1px;

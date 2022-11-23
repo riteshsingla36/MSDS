@@ -11,12 +11,38 @@ import baseUrl from "../../baseUrl";
 const Projects = () => {
   const {type} = useParams();
   const [allProjects, setAllProjects] = useState([])
-  const [processing, setProcessing] = useState(false)
+  const [processing, setProcessing] = useState(false);
+  const [allLength, setAllLength] = useState(0);
+  const [brandDevelopmentLength, setBrandDevelopmentLength] = useState(0);
+  const [packagingLength, setPackagingLength] = useState(0);
+  const [printLength, setPrintLength] = useState(0);
+  const [interactiveLength, setInteractiveLength] = useState(0);
+
   useEffect(() => {
     setProcessing(true);
-    axios.get(`${baseUrl}/projects`).then(res => {
+    axios.get(`${baseUrl}/projects?type=${type}`).then(res => {
       if(res.data.status) {
         setAllProjects(res.data.data);
+      }
+      else {
+        alert("Error while fetching projects");
+      }
+      setProcessing(false);
+    }).catch((err) => {
+      alert("Error while fetching projects")
+    })
+  },[type])
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setProcessing(true);
+    axios.get(`${baseUrl}/projects?type=all`).then(res => {
+      if(res.data.status) {
+        setAllLength(res.data.data.length)
+        setBrandDevelopmentLength((res.data.data.filter(proj => proj.type._id === "6373e690b0e5c29a9cffedc1")).length)
+        setPackagingLength((res.data.data.filter(proj => proj.type._id === "6373e670b0e5c29a9cffedbd")).length)
+        setPrintLength((res.data.data.filter(proj => proj.type._id === "6373e6a9b0e5c29a9cffedc3")).length)
+        setInteractiveLength((res.data.data.filter(proj => proj.type._id === "6373e6b9b0e5c29a9cffedc5")).length)
       }
       else {
         alert("Error while fetching projects");
@@ -49,7 +75,7 @@ const Projects = () => {
               <defs>
                 <style
                   dangerouslySetInnerHTML={{
-                    __html: ".cls-4{fill:rgb(80, 48, 19);}",
+                    __html: ".cls-4{fill:rgb(226, 82, 57);}",
                   }}
                 />
               </defs>
@@ -80,28 +106,28 @@ const Projects = () => {
         <nav className="Filters_filters__18hoF">
           <ul>
             <li>
-              <Link className="underlined" to="/projects">
-                All <span>(46)</span>
+              <Link className="underlined" to="/projects/all">
+                All <span>({allLength})</span>
               </Link>
             </li>
             <li>
-              <Link className="underlined" to="/projects">
-                Brand Development <span>(11)</span>
+              <Link className="underlined" to={`/projects/6373e690b0e5c29a9cffedc1`}>
+                Brand Development <span>({brandDevelopmentLength})</span>
               </Link>
             </li>
             <li>
-              <Link className="underlined" to="/projects">
-                Packaging design <span>(25)</span>
+              <Link className="underlined" to={`/projects/6373e670b0e5c29a9cffedbd`}>
+                Packaging design <span>({packagingLength})</span>
               </Link>
             </li>
             <li>
-              <Link className="underlined" to="/projects">
-                Digital & Print Design <span>(13)</span>
+              <Link className="underlined" to={`/projects/6373e6a9b0e5c29a9cffedc3`}>
+                Web & Print Design <span>({printLength})</span>
               </Link>
             </li>
             <li>
-              <Link className="underlined" to="/projects">
-                Interactive Design <span>(14)</span>
+              <Link className="underlined" to={`/projects/6373e6b9b0e5c29a9cffedc5`}>
+                Interactive Design <span>({interactiveLength})</span>
               </Link>
             </li>
             

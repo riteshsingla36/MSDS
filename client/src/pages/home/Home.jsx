@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/0d2542c292c41cff19d7.css";
 import "./css/3e520a9ee9ba77d53b1b.css";
@@ -18,6 +18,9 @@ import '../../images/1.jpg'
 import Slider from "../../components/bottomInfiniteSlider/Slider";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   let [a, setA] = useState(1);
   const changeImage = (id) => {
     setA(Number(id.split(" ")[1].split("-")[1]));
@@ -25,7 +28,7 @@ const Home = () => {
   return (
     <div style={{overflow: "hidden"}}>
       <AnimationDiv />
-      <Navbar />
+      <Navbar home={"home"} />
       <div className="main-img-container">
         <div className="home-img-container">
           <div
@@ -94,7 +97,7 @@ const Home = () => {
           </svg>
         </Link>
         <div className="bottom-txt prevent-select">
-          <Link to="/about" style={{letterSpacing: '6px'}} className='home_bottom_text'>Manav Sachdev Design Studio</Link>
+          <Link to="/about" style={{letterSpacing: '4px', fontWeight:"bold", textTransform:"capitalize"}} className='home_bottom_text'>MANAV SACHDEV DESIGN STUDIO</Link>
         </div>
       </div>
 
@@ -110,12 +113,12 @@ const Home = () => {
             </a>
           </div>
           <div className="DescriptionSlice_projects__se9aV">
-            <h2>
+            <h2 style={{color: 'rgb(226,82,57)'}}>
               Cases
               <br />
               studies
             </h2>
-            <a aria-label="View all projects" href="/projects/all">
+            <a aria-label="View all projects" href="/projects/all" style={{color: 'rgb(226,82,57)'}}>
               View all
             </a>
           </div>
@@ -442,8 +445,8 @@ const Home = () => {
         </blockquote>
       </section>
 
-      <div style={{fontSize: '74px', fontWeight: 'bold', textAlign: 'center', width: '100%', margin: 'auto', marginBottom: '120rem'}}>
-        <h2>Our Services</h2>
+      <div className="our_services_heading">
+        <h2 style={{color: 'rgb(226,82,57)'}}>Our Services</h2>
       </div>
 
       <section className="ListSlice_main__mKXcM" style={{justifyContent: 'center'}}>
@@ -552,8 +555,8 @@ const Home = () => {
                 </noscript>
               </div>
               <figcaption className="ProjectsSlice_caption__1PlsW">
-                <h3>Plink</h3>
-                <div>For Mollie payment</div>
+                <h3></h3>
+                <div></div>
               </figcaption>
             </figure>
           </a>

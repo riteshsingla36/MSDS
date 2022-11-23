@@ -3,14 +3,21 @@ const processFileMiddleware = require("../middleware/helper");
 const { format } = require("util");
 const { Storage } = require("@google-cloud/storage");
 const storage = new Storage({
-    keyFilename: "msds-368610-f89b7abbfd36.json",
-    projectId: "msds-368610",
+    keyFilename: "msds-1-a7099cd2c51b.json",
+    projectId: "msds-1",
 });
-const bucket = storage.bucket("msds_bucket");
+const bucket = storage.bucket("projects_msds");
 
 const getAllProjects = async (req, res) => {
+    const {type} = req.query
+    let projects;
     try {
-        const projects = await Project.find({}).populate('type');
+        if(type === 'all') {
+            projects = await Project.find({}).populate('type');
+        }
+        else {
+            projects = await Project.find({type: type}).populate('type')
+        }
         res.json({ status: true, data: projects });
     } catch (err) {
         res.json({ status: false, message: err.message });
@@ -73,7 +80,7 @@ const createProject = async (req, res) => {
 
 const test = async (f) => {
     return new Promise((resolve, reject) => {
-        const blob = bucket.file("projects/" +f.originalname);
+        const blob = bucket.file("projects/" + Date.now() + "-" +f.originalname);
         const blobStream = blob.createWriteStream({
             resumable: false,
         });
@@ -131,7 +138,7 @@ const updateProject = async (req, res) => {
 
         let publicUrls = [];
 
-        if(!images){
+        if(req.files.length===0){
             project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, client_link},{
                 runValidators: true,
                 new: true,
@@ -144,7 +151,7 @@ const updateProject = async (req, res) => {
                 publicUrl = await test(req.files[i])
                 publicUrls.push(publicUrl)
             }
-            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, publicUrl, client_link},{
+            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, publicUrl, client_link, images: publicUrls},{
                 runValidators: true,
                 new: true,
             });

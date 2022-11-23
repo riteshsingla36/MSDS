@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./footer.css";
 const Footer = () => {
   return (
-    <footer style={{backgroundColor: 'rgb(226, 82,57)', color: '#fff'}}>
+    <footer style={{backgroundColor: 'rgb(251, 250, 242)', color: 'rgb(91, 91, 92)'}}>
       <nav className="Footer_nav__33YjX">
         <div className="Footer_column__3d3oT">
           <h2>Let&#x27;s work together</h2>
@@ -12,7 +12,7 @@ const Footer = () => {
               href="mailto:info@manavsachdevdesign.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="underlined inverted"
+              className="underlined1 inverted"
             >
               info@manavsachdevdesign.com
             </a>
@@ -20,22 +20,22 @@ const Footer = () => {
         </div>
         <div className="Footer_column__3d3oT">
           <p>
-            <a className="underlined inverted" href="/projects/all">
+            <a className="underlined1 inverted" href="/projects/all">
               Work
             </a>
           </p>
           <p>
-            <a className="underlined inverted" href="/about">
+            <a className="underlined1 inverted" href="/about">
               About
             </a>
           </p>
           <p>
-            <a className="underlined inverted" href="/contact">
+            <a className="underlined1 inverted" href="/contact">
               Contact
             </a>
           </p>
           {/* <p>
-            <a className="underlined inverted" href="careers.html">
+            <a className="underlined1 inverted" href="careers.html">
               Jobs
             </a>
           </p> */}
@@ -46,7 +46,7 @@ const Footer = () => {
               href="https://www.facebook.com/manavsachdevdesignstudio/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underlined inverted"
+              className="underlined1 inverted"
             >
               FaceBook
             </a>
@@ -55,7 +55,7 @@ const Footer = () => {
               href="https://www.instagram.com/manavsachdevdesignstudio/"
               target="_blank"
               rel="noopener noreferrer"
-              className="underlined inverted"
+              className="underlined1 inverted"
             >
               Instagram
             </a>
@@ -64,7 +64,7 @@ const Footer = () => {
               href="https://www.behance.net/manavs"
               target="_blank"
               rel="noopener noreferrer"
-              className="underlined inverted"
+              className="underlined1 inverted"
             >
               Behance
             </a>
@@ -74,7 +74,7 @@ const Footer = () => {
               href="../external.html?link=https://www.linkedin.com/company/numbered"
               target="_blank"
               rel="noopener noreferrer"
-              className="underlined inverted"
+              className="underlined1 inverted"
             >
               Linkedin
             </a>
@@ -97,7 +97,7 @@ const Footer = () => {
           >
             <defs>
               <style
-                dangerouslySetInnerHTML={{ __html: ".cls-2{fill:#fff;}" }}
+                dangerouslySetInnerHTML={{ __html: ".cls-2{fill:rgb(226, 82, 57);}" }}
               />
             </defs>
             <path

@@ -231,7 +231,8 @@
         -ms-flex-align: center;
         align-items: center;
         height: 100%;
-        background: #0e0e0e;
+        background: rgb(226, 82, 57) !important;
+        color: white !important;
         -ms-flex-direction: column;
         flex-direction: column;
         -webkit-transform: translateY(-100%);

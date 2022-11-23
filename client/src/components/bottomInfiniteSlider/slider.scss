@@ -1,10 +1,11 @@
 .sliderparent {
 	align-items: center;
 	// background: #E3E3E3;
-	background-color: rgb(109, 110, 113) !important;
+	background-color: rgb(251, 250, 242) !important;
 	display: flex;
 	justify-content: center;
-    // margin-bottom: 50px;
+	// border-top: 2px solid black;
+	margin-bottom: 40px;
 }
 
 @mixin white-gradient {
@@ -54,7 +55,7 @@ $animationSpeed: 20s;
 	.slide-track {
 		animation: scroll 20s linear infinite;
 		display: flex;
-		gap: 20px;
+		gap: 75px;
 		width: 5500px;
 	}
 	

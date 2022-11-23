@@ -102,7 +102,7 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    border: 1px solid rgba(14, 14, 14, 0.1);
+    border: 0px solid rgba(14, 14, 14, 0.1) !important;
     border-radius: 50%;
     width: 150%;
 }
@@ -606,7 +606,7 @@
 }
 @media (min-width: 1024px) {
     .AwardsSlice_main__1aMoU {
-        padding-top: 95rem;
+        /* padding-top: 95rem; */
         padding-bottom: 120rem;
     }
     .AwardsSlice_image__1L8sw {
@@ -698,11 +698,11 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-.ClientsSlice_main__1EeZO ul:after {
+/* .ClientsSlice_main__1EeZO ul:after {
     content: "";
     -ms-flex: auto;
     flex: auto;
-}
+} */
 .ClientsSlice_main__1EeZO ul img {
     width: 90rem;
 }
@@ -731,7 +731,7 @@
         justify-content: space-between;
     }
     .ClientsSlice_main__1EeZO ul img {
-        width: 150rem;
+        width: 237rem;
     }
     .ClientsSlice_main__1EeZO ul li {
         margin-top: 80rem;
@@ -754,7 +754,7 @@
 }
 .contact_information__1lX9- {
     text-transform: uppercase;
-    line-height: 1.33;
+    line-height: 1.73;
     font-size: 15rem;
 }
 .contact_information__1lX9- p {
@@ -826,7 +826,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    background-color: black;
+    background-color: rgb(226, 82, 57);
 }
 
 @media (max-width: 820px) {
@@ -840,12 +840,12 @@
 
 
 .login-box {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    left: 50%;
-    width: 400px;
+    left: 50%; */
+    /* width: 400px; */
     padding: 40px;
-    transform: translate(-50%, -50%);
+    /* transform: translate(-50%, -50%); */
     /* background: rgba(0,0,0,.5); */
     box-sizing: border-box;
     /* box-shadow: 0 15px 25px rgba(0,0,0,.6); */
@@ -891,7 +891,7 @@
     font-size: 16px;
     color: #fff;
     margin-bottom: 30px;
-    margin-top: 15px;
+    margin-top: 34px;
     border: none;
     border: 1px solid #fff;
     outline: none;
@@ -911,14 +911,14 @@
   .login-box .user-box input:focus ~ label {
     top: -20px;
     left: 0;
-    color: #03e9f4;
+    color: #ffffff;
     font-size: 12px;
   }
 
   .login-box .user-box input:valid ~ label {
     top: -20px;
     left: 0;
-    color: #03e9f4;
+    color: #ffffff;
     font-size: 12px;
   }
 
@@ -926,7 +926,7 @@
   .login-box .user-box textarea:valid ~ label {
     top: -20px;
     left: 0;
-    color: #03e9f4;
+    color: #ffffff;
     font-size: 12px;
   }
   
@@ -934,7 +934,7 @@
     position: relative;
     display: inline-block;
     padding: 10px 20px;
-    color: #03e9f4;
+    color: #ffffff;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -945,13 +945,13 @@
   }
   
   .login-box a:hover {
-    background: #03e9f4;
+    background: #ffffff;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+    box-shadow: 0 0 5px #ffffff,
+                0 0 25px #ffffff,
+                0 0 50px #ffffff,
+                0 0 100px #ffffff;
   }
   
   .login-box a span {
@@ -964,7 +964,7 @@
     left: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
+    background: linear-gradient(90deg, transparent, #ffffff);
     animation: btn-anim1 1s linear infinite;
   }
   
@@ -982,7 +982,7 @@
     right: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
+    background: linear-gradient(180deg, transparent, #ffffff);
     animation: btn-anim2 1s linear infinite;
     animation-delay: .25s
   }
@@ -1001,7 +1001,7 @@
     right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
+    background: linear-gradient(270deg, transparent, #ffffff);
     animation: btn-anim3 1s linear infinite;
     animation-delay: .5s
   }
@@ -1020,7 +1020,7 @@
     left: 0;
     width: 2px;
     height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
+    background: linear-gradient(360deg, transparent, #ffffff);
     animation: btn-anim4 1s linear infinite;
     animation-delay: .75s
   }

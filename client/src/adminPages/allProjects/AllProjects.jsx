@@ -15,7 +15,7 @@ const AllProjects = () => {
 
     const getAllJobs = () => {
         setProcessing(true);
-        axios.get(`${baseUrl}/projects`).then(result => {
+        axios.get(`${baseUrl}/projects?type=all`).then(result => {
             if (result.data.status) {
                 setAllProjects(result.data.data);
             }

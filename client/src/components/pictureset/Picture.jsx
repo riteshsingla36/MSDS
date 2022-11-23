@@ -645,6 +645,640 @@ const Picture = ({ projects }) => {
               ) : (
                 <></>
               )}
+              {projects.length > 20 ? (
+                <>
+                  {projects[20] ? (
+                    <>
+                      <article className="workFeatureItem">
+                        <a
+                          href={`/projectdetails/${projects[20]._id}`}
+                          className="workFeatureItem__link"
+                        >
+                          <picture className="workFeatureItem__picture js--lazyloaded">
+                            <img
+                              alt="Nj Riseforanimals 2"
+                              className="workFeatureItem__img"
+                              src={projects[20].images[0]}
+                            />
+                          </picture>
+                          <div className="workFeatureItem__title">
+                            <h4 className="typo--listingTitle">
+                              {projects[20].name}
+                            </h4>
+                            <p className="workFeatureItem__tagline">
+                              {projects[20].tag_line}
+                            </p>
+                          </div>
+                        </a>
+                      </article>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                  <div className="workFeature__list">
+                    {projects[21] ? (
+                      <>
+                        <article
+                          className="workFeatureSmallItem"
+                          style={{ overflow: "hidden" }}
+                        >
+                          <a
+                            href={`/projectdetails/${projects[21]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Thumbnail"
+                                className="workFeatureSmallItem__img"
+                                src={projects[21].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[21].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[21].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    {projects[22] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[22]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Mw Ggw 01"
+                                className="workFeatureSmallItem__img"
+                                src={projects[22].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[22].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[22].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    {projects[23] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[23]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Ah Oficocoacompass 01 Cover"
+                                className="workFeatureSmallItem__img"
+                                src={projects[23].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[23].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[23].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    {projects[24] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[24]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Goalkeepers Hero Placeholder"
+                                className="workFeatureSmallItem__img"
+                                src={projects[24].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[24].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[24].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                </>
+              ) : (
+                <></>
+              )}
+              {projects.length > 25 ? (
+                <>
+                  <div className="workFeature__list">
+                    {projects[25].name ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[25]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Ah 01 Cam Logo Animation Thumbnail"
+                                className="workFeatureSmallItem__img"
+                                src={projects[25].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[25].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[25].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+
+                    {projects[26] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[26]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Hp Animation 01 Cover"
+                                className="workFeatureSmallItem__img"
+                                src={projects[26].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[26].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[26].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    {projects[27] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[27]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture">
+                              <img
+                                src={
+                                  projects[27].images[0]
+                                    ? projects[27].images[0]
+                                    : ""
+                                }
+                                alt="Tkj Thumbnail"
+                                className="workFeatureSmallItem__img"
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[27].name ? projects[27].name : ""}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[27].tag_line
+                                  ? projects[27].tag_line
+                                  : ""}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+
+                    {projects[28] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[28]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture">
+                              <img
+                                src={
+                                  projects[28].images[0]
+                                    ? projects[28].images[0]
+                                    : ""
+                                }
+                                alt="Nu Case 01"
+                                className="workFeatureSmallItem__img"
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[28].name ? projects[28].name : ""}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[28].tag_line
+                                  ? projects[28].tag_line
+                                  : ""}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                  {projects[29] ? (
+                    <>
+                      <article className="workFeatureItem">
+                        <a
+                          href={`/projectdetails/${projects[29]._id}`}
+                          className="workFeatureItem__link"
+                        >
+                          <picture className="workFeatureItem__picture js--lazyloaded">
+                            <img
+                              alt="Mw Stc 1 Cover"
+                              className="workFeatureItem__img"
+                              src={
+                                projects[29].images[0]
+                                  ? projects[29].images[0]
+                                  : ""
+                              }
+                            />
+                          </picture>
+                          <div className="workFeatureItem__title">
+                            <h4 className="typo--listingTitle">
+                              {projects[29].name ? projects[29].name : ""}
+                            </h4>
+                            <p className="workFeatureItem__tagline">
+                              {projects[29].tag_line ? projects[29].tag_line : ""}
+                            </p>
+                          </div>
+                        </a>
+                      </article>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </>
+              ) : (
+                <></>
+              )}
+              {projects.length > 30 ? (
+                <>
+                  {projects[30] ? (
+                    <>
+                      <article className="workFeatureItem">
+                        <a
+                          href={`/projectdetails/${projects[30]._id}`}
+                          className="workFeatureItem__link"
+                        >
+                          <picture className="workFeatureItem__picture js--lazyloaded">
+                            <img
+                              alt="Nj Riseforanimals 2"
+                              className="workFeatureItem__img"
+                              src={projects[30].images[0]}
+                            />
+                          </picture>
+                          <div className="workFeatureItem__title">
+                            <h4 className="typo--listingTitle">
+                              {projects[30].name}
+                            </h4>
+                            <p className="workFeatureItem__tagline">
+                              {projects[30].tag_line}
+                            </p>
+                          </div>
+                        </a>
+                      </article>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                  <div className="workFeature__list">
+                    {projects[31] ? (
+                      <>
+                        <article
+                          className="workFeatureSmallItem"
+                          style={{ overflow: "hidden" }}
+                        >
+                          <a
+                            href={`/projectdetails/${projects[31]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Thumbnail"
+                                className="workFeatureSmallItem__img"
+                                src={projects[31].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[31].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[31].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    {projects[32] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[32]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Mw Ggw 01"
+                                className="workFeatureSmallItem__img"
+                                src={projects[32].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[32].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[32].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    {projects[33] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[33]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Ah Oficocoacompass 01 Cover"
+                                className="workFeatureSmallItem__img"
+                                src={projects[33].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[33].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[33].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    {projects[34] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[34]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Goalkeepers Hero Placeholder"
+                                className="workFeatureSmallItem__img"
+                                src={projects[34].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[34].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[34].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                </>
+              ) : (
+                <></>
+              )}
+              {projects.length > 35 ? (
+                <>
+                  <div className="workFeature__list">
+                    {projects[35].name ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[35]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Ah 01 Cam Logo Animation Thumbnail"
+                                className="workFeatureSmallItem__img"
+                                src={projects[35].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[35].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[35].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+
+                    {projects[36] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[36]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture js--lazyloaded">
+                              <img
+                                alt="Hp Animation 01 Cover"
+                                className="workFeatureSmallItem__img"
+                                src={projects[36].images[0]}
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[36].name}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[36].tag_line}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    {projects[37] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[37]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture">
+                              <img
+                                src={
+                                  projects[37].images[0]
+                                    ? projects[37].images[0]
+                                    : ""
+                                }
+                                alt="Tkj Thumbnail"
+                                className="workFeatureSmallItem__img"
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[37].name ? projects[37].name : ""}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[37].tag_line
+                                  ? projects[37].tag_line
+                                  : ""}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+
+                    {projects[38] ? (
+                      <>
+                        <article className="workFeatureSmallItem">
+                          <a
+                            href={`/projectdetails/${projects[38]._id}`}
+                            className="workFeatureSmallItem__link"
+                          >
+                            <picture className="workFeatureSmallItem__picture">
+                              <img
+                                src={
+                                  projects[38].images[0]
+                                    ? projects[38].images[0]
+                                    : ""
+                                }
+                                alt="Nu Case 01"
+                                className="workFeatureSmallItem__img"
+                              />
+                            </picture>
+                            <div className="workFeatureSmallItem__title">
+                              <h4 className="typo--listingTitle">
+                                {projects[38].name ? projects[38].name : ""}
+                              </h4>
+                              <p className="workFeatureSmallItem__tagline">
+                                {projects[38].tag_line
+                                  ? projects[38].tag_line
+                                  : ""}
+                              </p>
+                            </div>
+                          </a>
+                        </article>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
+                  {projects[39] ? (
+                    <>
+                      <article className="workFeatureItem">
+                        <a
+                          href={`/projectdetails/${projects[39]._id}`}
+                          className="workFeatureItem__link"
+                        >
+                          <picture className="workFeatureItem__picture js--lazyloaded">
+                            <img
+                              alt="Mw Stc 1 Cover"
+                              className="workFeatureItem__img"
+                              src={
+                                projects[39].images[0]
+                                  ? projects[39].images[0]
+                                  : ""
+                              }
+                            />
+                          </picture>
+                          <div className="workFeatureItem__title">
+                            <h4 className="typo--listingTitle">
+                              {projects[39].name ? projects[39].name : ""}
+                            </h4>
+                            <p className="workFeatureItem__tagline">
+                              {projects[39].tag_line ? projects[39].tag_line : ""}
+                            </p>
+                          </div>
+                        </a>
+                      </article>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                </>
+              ) : (
+                <></>
+              )}
             </div>
           </section>
         </div>

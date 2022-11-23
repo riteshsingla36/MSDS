@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import "./contact.css";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Navbar />
@@ -24,7 +27,7 @@ const Contact = () => {
           <defs>
             <style
               dangerouslySetInnerHTML={{
-                __html: ".cls-3{fill:rgb(80, 48, 19);}",
+                __html: ".cls-3{fill:rgb(226, 82, 57);}",
               }}
             />
           </defs>
@@ -53,38 +56,41 @@ const Contact = () => {
       <section className="contact_main__3QAHV">
         <div className="contact_description__dMHfw">
           <p>
-            We are an Amsterdam and New-york based studio with a strong french
-            accent working all over the world. <br />
-            We like to support our clients at all stages of their projects,
-            don&#x27;t hesitate to contact us!
+          We are committed to create a brand that connects emotionally. We seek to create new experiences and opening doors to opportunities for brands to thrive. <br />
+          We like to support our clients at all stages of their projects,
+          don&#x27;t hesitate to contact us!
           </p>
         </div>
         <div className="contact_information__1lX9-">
           <p>
             For projects inquiries
             <br />
-            <a href="mailto:contact@numbered.com">contact@numbered.com</a>
+            <a href="mailto:contact@numbered.com">INFO@MANAVSACHDEVDESIGN.COM</a>
+            
           </p>
           <p></p>
           <p>
+            <br/>
             We are always looking for new talent, feel free to contact us!
             <br />
             For Jobs and internships
             <br />
-            <a href="mailto:jobs@numbered.com">jobs@numbered.com</a>
+            <a href="mailto:jobs@numbered.com">INFO@MANAVSACHDEVDESIGN.COM</a>
           </p>
           <p></p>
           <p>
-            Numbered Ams
+          <br/>
+
+            MANAV SACHDEV DESIGN STUDIO 
             <br />
-            Herengracht 342-1
+            COWORKINSTA 8TH FLOOR
             <br />
-            1016CG Amsterdam
+            SUPERMART-I DLF PHASE IV
             <br />
-            The (sunny) Netherlands
+            GURUGRAM, HARYANA
           </p>
           <p></p>
-          <p>
+          {/* <p>
             Numbered Nyc
             <br />
             29-35 9th Ave,
@@ -97,7 +103,7 @@ const Contact = () => {
           <p>
             Chamber of commerce (kvk) 81354789
             <br />
-          </p>
+          </p> */}
         </div>
       </section>
       <div className="contact-container" style={{positon: "relative"}}>
@@ -131,26 +137,20 @@ const Contact = () => {
         <div style={{position: "relative",flex: 0.35}}>
 
           <div className="login-box" style={{}}>
-            <form>
+            <form action="https://formsubmit.co/studio.msds09@gmail.com" method="POST">
               <div className="user-box">
-                <input type="email" name="" required="" />
+                <input type="email" name="email" required />
                 <label>Email</label>
               </div>
               <div className="user-box">
-                <input type="text" name="" required="" />
+                <input type="text" name="_subject" required />
                 <label>Subject</label>
               </div>
               <div className="user-box">
-                <textarea name="" required="" rows={"5"}/>
+                <textarea name="query" required="" rows={"5"}/>
                 <label>Query</label>
               </div>
-              {/* <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-              </a> */}
+              <input type="hidden" name="_next" value="https://msds-1.netlify.app"></input>
 
               <button type="submit" style={{backgroundColor: "white", color: "black", padding: "10px 30px", border: 0, borderRadius: `10px`, marginTop: "30px"}}>Submit</button>
             </form>
@@ -168,17 +168,9 @@ const Contact = () => {
                     style={{ width: "100%", paddingBottom: "60.8889%" }}
                   ></div>
                   <picture>
-                    <source
-                      media="(max-width: 1024px) and (orientation: portrait)"
-                      srcSet="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=320&amp;rect=279,0,343,548&amp;auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=620&amp;rect=279,0,343,548&amp;auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=960&amp;rect=279,0,343,548&amp;auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1280&amp;rect=279,0,343,548&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1600&amp;rect=279,0,343,548&amp;auto=format,compress 1600w"
-                      sizes="100vw"
-                    />
-                    <source
-                      srcSet="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1280&amp;auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1600&amp;auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1920&amp;auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2240&amp;auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2560&amp;auto=format,compress 2560w"
-                      sizes="100vw"
-                    />
+                    
                     <img
-                      src="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?auto=compress,format"
+                      src={require('../../images/contactbottom.jpg')}
                       alt=""
                       loading="lazy"
                       decoding="async"
@@ -196,36 +188,7 @@ const Contact = () => {
                       }}
                     />
                   </picture>
-                  <noscript>
-                    <picture>
-                      <source
-                        media="(max-width: 1024px) and (orientation: portrait)"
-                        srcSet="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=320&rect=279,0,343,548&auto=format,compress 320w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=620&rect=279,0,343,548&auto=format,compress 620w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=960&rect=279,0,343,548&auto=format,compress 960w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1280&rect=279,0,343,548&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1600&rect=279,0,343,548&auto=format,compress 1600w"
-                        sizes="100vw"
-                      />
-                      <source
-                        srcSet="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2560&auto=format,compress 2560w"
-                        sizes="100vw"
-                      />
-                      <img
-                        loading="lazy"
-                        sizes="100vw"
-                        srcSet="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1280&auto=format,compress 1280w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1600&auto=format,compress 1600w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=1920&auto=format,compress 1920w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2240&auto=format,compress 2240w,https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?w=2560&auto=format,compress 2560w"
-                        src="https://images.prismic.io/autumn-amsterdam/fdfeb700-28bb-45ac-822a-2c4d1bf79caa_numbered-jorik-ecommerce.jpg?auto=compress,format"
-                        alt=""
-                        style={{
-                          position: "absolute",
-                          top: 0,
-                          left: 0,
-                          opacity: 1,
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          objectPosition: "center",
-                        }}
-                      />
-                    </picture>
-                  </noscript>
+                  
                 </div>
                 <figcaption className="SectionPushSlice_caption__19ik9">
                   <h3>Our works</h3>
