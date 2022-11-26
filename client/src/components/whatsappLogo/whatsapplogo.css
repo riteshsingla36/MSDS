@@ -4,7 +4,7 @@
     width: 70px; 
     height: 70px; 
     position: fixed;
-    z-index: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+    z-index: 2000 !important;
 }
 
 @media (max-width:500px) {
