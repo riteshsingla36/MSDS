@@ -39,7 +39,7 @@ const store = new MongoDBStore({
 
 app.use(
   cors({
-    origin: ['https://msds-1.netlify.app', 'http://localhost:3000', 'https://msds-1.el.r.appspot.com'],
+    origin: ['https://msds-1.netlify.app', 'http://localhost:3000'],
     credentials: true
   })
 );
@@ -58,6 +58,10 @@ app.use(
     }
   })
 );
+
+app.get('/', (req, res)=> {
+  res.send("Server is Running");
+})
 
 app.use("/careers", jobsRouter);
 app.use("/projects", projectsRouter);
