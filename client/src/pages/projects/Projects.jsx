@@ -5,7 +5,6 @@ import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 import "./projects.css";
 import Picture from "../../components/pictureset/Picture";
-import {Helmet} from "react-helmet";
 import axios from "axios";
 import baseUrl from "../../baseUrl";
 const Projects = () => {
