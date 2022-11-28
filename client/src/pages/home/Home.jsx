@@ -127,7 +127,7 @@ const Home = () => {
 
       <section className="ProjectsSlice_projects3__3BeN3">
         <article className="ProjectsSlice_article__uEv9O">
-          <a aria-label="Palette" href="/projectdetails/palette">
+          <a aria-label="Palette" href="/projectdetails/637a6a4d0533820eba654e8a">
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <div
@@ -190,7 +190,7 @@ const Home = () => {
           </a>
         </article>
         <article className="ProjectsSlice_article__uEv9O">
-          <a aria-label="Routinely" href="/projectdetails/palette">
+          <a aria-label="Routinely" href="/projectdetails/637a6ca10533820eba654e8c">
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <div
@@ -314,7 +314,7 @@ const Home = () => {
         <article className="ProjectsSlice_article__uEv9O">
           <a
             aria-label="Jean Paul Gaultier &amp; Sacai"
-            href="/projectdetails/pallate"
+            href="/projectdetails/6373e8e4171291eb9280bdbc"
           >
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
@@ -371,7 +371,7 @@ const Home = () => {
           </a>
         </article>
         <article className="ProjectsSlice_article__uEv9O">
-          <a aria-label="Typology" href="/projectdetails/palette">
+          <a aria-label="Typology" href="/projectdetails/637a7f62b44f53a050328bec">
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <div
@@ -496,7 +496,7 @@ const Home = () => {
         <Slider/>
       <section className="ProjectsSlice_projects1__2nqI4">
         <article className="ProjectsSlice_article__uEv9O">
-          <a aria-label="Plink" href="/projectdetails/palette">
+          <a aria-label="Plink" href="/projectdetails/637a6a4d0533820eba654e8a">
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <div
