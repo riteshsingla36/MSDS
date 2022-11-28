@@ -39,7 +39,7 @@ const store = new MongoDBStore({
 
 app.use(
   cors({
-    origin: ['http://www.manavsachdevdesign.com', 'https://msds-1.netlify.app', 'http://localhost:3000'],
+    origin: ['https://www.manavsachdevdesign.com', 'http://localhost:3000'],
     credentials: true
   })
 );
