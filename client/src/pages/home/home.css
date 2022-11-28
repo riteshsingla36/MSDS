@@ -84,7 +84,8 @@
 
 .main_logo_msds{
     width: 70%;
-    height: 70%;
+    /* padding-top: 70px; */
+    /* height: 70%; */
 }
 
 .ourServices::after{
@@ -113,5 +114,8 @@
     .our_services_heading {
         text-align: left;
         padding-left: 61.267px;
+    }
+    .main_logo_msds{
+        width: 100%;
     }
 }

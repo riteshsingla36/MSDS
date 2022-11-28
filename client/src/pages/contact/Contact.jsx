@@ -165,9 +165,10 @@ const Contact = () => {
                 <div style={{ position: "relative", overflow: "hidden" }}>
                   <div
                     aria-hidden="true"
-                    style={{ width: "100%", paddingBottom: "60.8889%" }}
+                    style={{ width: "100%", paddingBottom: "60.8889%", backgroundColor: "black" }}
+                    
                   ></div>
-                  <picture>
+                  <picture className="pink_panther">
                     
                     <img
                       src={require('../../images/contactbottom.jpg')}

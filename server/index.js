@@ -59,6 +59,10 @@ app.use(
   })
 );
 
+app.get('/', (req, res)=> {
+  res.send("Server is Running");
+})
+
 app.use("/careers", jobsRouter);
 app.use("/projects", projectsRouter);
 app.use("/projecttype", projectTypeRouter);
