@@ -121,12 +121,12 @@ const Projects = () => {
             </li>
             <li>
               <Link className="underlined" to={`/projects/6373e6a9b0e5c29a9cffedc3`}>
-                Web & Print Design <span>({printLength})</span>
+                Print Design <span>({printLength})</span>
               </Link>
             </li>
             <li>
               <Link className="underlined" to={`/projects/6373e6b9b0e5c29a9cffedc5`}>
-                Interactive Design <span>({interactiveLength})</span>
+                web & social media <span>({interactiveLength})</span>
               </Link>
             </li>
             

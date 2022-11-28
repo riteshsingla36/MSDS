@@ -614,12 +614,12 @@ const About = () => {
     work"
               href="/projects/all"
             ><figure>
-                <div style={{ position: "relative", overflow: "hidden" }}>
+                <div style={{ position: "relative", overflow: "hidden", backgroundColor: 'black' }}>
                   <div
                     aria-hidden="true"
                     style={{ width: "100%", paddingBottom: "75%" }}
                   ></div>
-                  <picture>
+                  <picture className="pink_panther">
                     
                     <img
                       src={require('../../images/pinkpanther/3.jpg')}

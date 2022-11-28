@@ -75,10 +75,10 @@ const Navbar = ({ home }) => {
               <Link className="underlined" to="/projects/all">
                 Work
               </Link>
-              <div
+              { !check ? <div
               className="hover_div"
               >
-                <ul style={{ display: "grid", gap: "40rem" }}>
+                <ul style={{ display: "grid", gap: "20rem" }}>
                   <li>
                     <Link to="/projects/all">ALL</Link>
                   </li>
@@ -95,7 +95,7 @@ const Navbar = ({ home }) => {
                     <Link to={`/projects/6373e6b9b0e5c29a9cffedc5`}>INTERACTIVE DESIGN</Link>
                   </li>
                 </ul>
-              </div>
+              </div> : <></>}
             </li>
             <li className="Header_link__2wQjN">
               <Link className="underlined" to="/about">
