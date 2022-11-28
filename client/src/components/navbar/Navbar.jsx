@@ -4,6 +4,7 @@ import "./navbar.css";
 
 const Navbar = ({ home }) => {
   const [check, setCheck] = useState(home);
+  const [navDiv, setNavDiv] = useState(true);
   const [cls, setCls] = useState(false);
 
   const [newCls, setNewCls] = useState(false);
@@ -11,10 +12,12 @@ const Navbar = ({ home }) => {
   const changeClass = () => {
     if (window.innerWidth < 500) {
       console.log("test");
+      setNavDiv(false);
       setCheck(true);
       setNewCls(false);
     } else {
       home ? setCheck(true) : setCheck(false);
+      setNavDiv(true)
     }
     if (window.scrollY >= 650 && window.innerWidth > 500) {
       setNewCls(true);
@@ -75,7 +78,7 @@ const Navbar = ({ home }) => {
               <Link className="underlined" to="/projects/all">
                 Work
               </Link>
-              { !check ? <div
+              { navDiv ? <div
               className="hover_div"
               >
                 <ul style={{ display: "grid", gap: "20rem" }}>
