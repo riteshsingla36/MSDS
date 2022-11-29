@@ -137,7 +137,7 @@ const Contact = () => {
         <div style={{position: "relative",flex: 0.35}}>
 
           <div className="login-box" style={{}}>
-            <form action="https://formsubmit.co/studio.msds09@gmail.com" method="POST">
+            <form action="https://formsubmit.co/info@manavsachdevdesign.com" method="POST">
               <div className="user-box">
                 <input type="email" name="email" required />
                 <label>Email</label>
