@@ -595,12 +595,12 @@ const About = () => {
               </a>
             </li>
             <li>
-              <a href="/" target='_blank'>
+              <a href="https://packagingoftheworld.com/2020/04/the-earth-collective-hair-specialist.html" target='_blank'>
               Featured in Packaging Of The World
               </a>
             </li>
             <li>
-              <a href="/" target='_blank'>
+              <a href="https://awards.kyoorius.com/2013/2013-nominees/an-ayurvedi-beauty-brand/index.html" target='_blank'>
               Featured in Kyoorius Award 2013
               </a>
             </li>

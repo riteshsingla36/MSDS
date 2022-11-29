@@ -437,7 +437,7 @@ const Home = () => {
         </article>
       </section>
 
-      <section className="QuoteSlice_quote__1H6VJ ourServices" style={{marginBottom: '120rem'}}>
+      <section className="QuoteSlice_quote__1H6VJ ourServices" style={{marginBottom: '80rem'}}>
         <blockquote>
           <p >
           With more than 10 years of experience in working with beauty brands, fashion, FMCG, technology companies, we help brands succeed.

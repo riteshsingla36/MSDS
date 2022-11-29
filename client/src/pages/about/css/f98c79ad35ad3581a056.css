@@ -749,7 +749,7 @@
   content: "";
   display: block;
     border-bottom: 1px solid rgb(80, 48, 19) !important;
-  margin: 80rem auto 0;
+  margin: 80rem auto 80rem !important;
   width: 312.5rem;
 }
 .about_hero__2OoYY p {
