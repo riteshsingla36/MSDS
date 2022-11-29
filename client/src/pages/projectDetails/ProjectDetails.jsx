@@ -153,7 +153,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -185,7 +185,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -215,7 +215,7 @@ const ProjectDetails = () => {
             2560w"
             src="https://images.prismic.io/autumn-amsterdam/8fceb4a4-29e7-4c9b-b299-49085fad6abc_palette-colors-modern-02.jpg?auto=compress,format"
             alt=""
-            style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:contain;object-position:center"/&gt;&lt;/picture&gt;
           </noscript>
         </div>
           </>:<></>}
@@ -238,7 +238,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -272,7 +272,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -302,7 +302,7 @@ const ProjectDetails = () => {
             2560w"
             src="https://images.prismic.io/autumn-amsterdam/c033a11a-f8a7-48c3-bb8f-5b9ce8d6af6c_palette-colors-modern-01.jpg?auto=compress,format"
             alt=""
-            style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:contain;object-position:center"/&gt;&lt;/picture&gt;
           </noscript>
         </div>
           </>:<></>}
@@ -325,7 +325,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -358,7 +358,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -386,7 +386,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -417,7 +417,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
