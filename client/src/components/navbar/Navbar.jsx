@@ -33,17 +33,20 @@ const Navbar = ({ home }) => {
           className="Button_button__2RxXb btn mobile-only Header_burgerBtn__2V9_x"
           aria-label="Open menu"
           onClick={() => setCls((prev) => !prev)}
+          style={{border: "2px solid rgb(226, 82, 57)", paddingBottom: "36px", borderRadius: '5px'}}
         >
-          <svg
-            fill="rgb(226, 82, 57)"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="36px"
-            height="36px"
-            style={{border: "2px solid rgb(226, 82, 57)", borderRadius: "5px", padding: '5px'}}
-          >
-            <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z" />
-          </svg>
+          <div>
+            <svg
+              fill="rgb(226, 82, 57)"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="36px"
+              height="36px"  
+            >
+              <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z" />
+            </svg>
+          
+          </div>
         </button>
         <div
           className={`Header_panel__2XDEn ${

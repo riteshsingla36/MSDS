@@ -189,8 +189,8 @@
     margin-top: 30rem !important;
     height: 32px;
     margin: 0;
-    width: 100%;
-    position: absolute;
+    position: fixed;
+    right: 20rem !important;
     margin-left: -35px;
 }
 

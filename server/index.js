@@ -39,7 +39,7 @@ const store = new MongoDBStore({
 
 app.use(
   cors({
-    origin: ['https://www.manavsachdevdesign.com', 'http://localhost:3000'],
+    origin: ['https://www.manavsachdevdesign.com', 'www.manavsachdevdesign.com'],
     credentials: true
   })
 );
