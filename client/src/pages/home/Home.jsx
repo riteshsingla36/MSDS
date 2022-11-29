@@ -245,7 +245,7 @@ const Home = () => {
           </a>
         </article>
         <article className="ProjectsSlice_article__uEv9O">
-          <a aria-label="Veloretti" href="/projectdetails/palette">
+          <a aria-label="Veloretti" href="/projectdetails/637b120cf1512eb16ca46aec">
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <div
