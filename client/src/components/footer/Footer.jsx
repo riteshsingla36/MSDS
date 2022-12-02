@@ -71,7 +71,7 @@ const Footer = () => {
           </p>
           <p>
             <a
-              href="../external.html?link=https://www.linkedin.com/company/numbered"
+              href="https://www.linkedin.com/in/manavsachdevdesign/"
               target="_blank"
               rel="noopener noreferrer"
               className="underlined1 inverted"

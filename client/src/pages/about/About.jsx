@@ -183,15 +183,6 @@ const About = () => {
       <section className="ListSlice_main__mKXcM" style={{justifyContent: 'center'}}>
           
           <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
-            <dt>Marketing</dt>
-            <p></p>
-            <dd>Lead generation</dd>
-            <dd>Social Media Marketing</dd>
-            <dd>Email Marketing</dd>
-            <dd>SEO</dd>
-            <dd>Funnel Marketing </dd>
-          </dl>
-          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
             <dt>Ideas &amp; Strategy</dt>
             <p></p>
             <dd>Consulting</dd>
@@ -201,15 +192,6 @@ const About = () => {
             <dd>Brand content</dd>
             <dd>Brand Concept</dd>
             <dd>Copywriting</dd>
-          </dl>
-          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
-            <dt>Technology</dt>
-            <p></p>
-            <dd>Creative Development</dd>
-            <dd>Front-end development</dd>
-            <dd>Back-end development</dd>
-            <dd>Shopify development</dd>
-            <dd>Mobile &amp; IOS web app</dd>
           </dl>
           <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
             <dt>Creation &amp; Design</dt>
@@ -224,7 +206,25 @@ const About = () => {
             <dd>Mobile App</dd>
             <dd>3d assests</dd>
           </dl>
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
+            <dt>Technology</dt>
+            <p></p>
+            <dd>Creative Development</dd>
+            <dd>Front-end development</dd>
+            <dd>Back-end development</dd>
+            <dd>Shopify development</dd>
+            <dd>Mobile &amp; IOS web app</dd>
+          </dl>
           
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
+            <dt>Marketing</dt>
+            <p></p>
+            <dd>Lead generation</dd>
+            <dd>Social Media Marketing</dd>
+            <dd>Email Marketing</dd>
+            <dd>SEO</dd>
+            <dd>Funnel Marketing </dd>
+          </dl>
         </section>
         <section className="ClientsSlice_main__1EeZO ourServices">
           <ul>

@@ -1,4 +1,6 @@
+import axios from "axios";
 import React, { useEffect } from "react";
+import baseUrl from "../../baseUrl";
 import AnimationDiv from "../../components/animation_div/AnimationDiv";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
@@ -8,6 +10,28 @@ const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const submitForm = async (e) => {
+    e.preventDefault();
+    const email = (e.target.email.value).trim();
+    const subject = (e.target.subject.value).trim();
+    const query = (e.target.query.value).trim();
+
+    axios.post(`${baseUrl}/send/sendemail`, {email, subject, query}).then(
+      res => {
+        if(res.data.status){
+          e.target.email.value = '';
+          e.target.subject.value = '';
+          e.target.query.value = '';
+          alert('Mail sent successfully');
+        }else {
+          alert(res.data.message);
+        }
+      }
+    ).catch(e => {
+      alert(e.message);
+    })
+  }
   return (
     <div>
       <Navbar />
@@ -137,21 +161,19 @@ const Contact = () => {
         <div style={{position: "relative",flex: 0.35}}>
 
           <div className="login-box" style={{}}>
-            <form action="https://formsubmit.co/info@manavsachdevdesign.com" method="POST">
+            <form onSubmit={submitForm}>
               <div className="user-box">
                 <input type="email" name="email" required />
                 <label>Email</label>
               </div>
               <div className="user-box">
-                <input type="text" name="_subject" required />
+                <input type="text" name="subject" required />
                 <label>Subject</label>
               </div>
               <div className="user-box">
                 <textarea name="query" required rows={"5"}/>
                 <label>Query</label>
               </div>
-              <input type="hidden" name="_next" value="https://www.manavsachdevdesign.com"></input>
-
               <button type="submit" style={{backgroundColor: "white", color: "black", padding: "10px 30px", border: 0, borderRadius: `10px`, marginTop: "30px"}}>Submit</button>
             </form>
           </div>

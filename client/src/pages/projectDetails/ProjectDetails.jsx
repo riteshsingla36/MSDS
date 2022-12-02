@@ -9,7 +9,8 @@ import "./projectdetails.css";
 
 const ProjectDetails = () => {
     const {projectId} = useParams();
-    const [project, setProject] = useState({name:'', images:[], description:"", role_service:"", awards_recognition: ""})
+    const [project, setProject] = useState({name:'', images:[], description:"", role_service:"", awards_recognition: ""});
+    const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
       axios.get(`${baseUrl}/projects/${projectId}`).then(res => {
         if(res.data.status) {
@@ -21,7 +22,17 @@ const ProjectDetails = () => {
       }).catch(err => {
         alert("Error while fetching project details", err.message);
       })
+      changeClass();
     }, []);
+
+    const changeClass = () => {
+      console.log(window.innerWidth < 500);
+      if (window.innerWidth < 500) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
 
   return (
     <div>
@@ -153,7 +164,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "contain",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -185,7 +196,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "contain",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -238,7 +249,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "contain",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -272,7 +283,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "contain",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -325,7 +336,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "contain",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -358,7 +369,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "contain",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -386,7 +397,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "contain",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -417,7 +428,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "contain",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
@@ -447,7 +458,7 @@ const ProjectDetails = () => {
                 left: 0,
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
                 objectPosition: "center center",
                 opacity: 1,
                 transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"

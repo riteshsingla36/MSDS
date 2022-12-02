@@ -10,7 +10,7 @@ const Navbar = ({ home }) => {
   const [newCls, setNewCls] = useState(false);
 
   const changeClass = () => {
-    if (window.innerWidth < 500) {
+    if (window.innerWidth < 600) {
       console.log("test");
       setNavDiv(false);
       setCheck(true);
