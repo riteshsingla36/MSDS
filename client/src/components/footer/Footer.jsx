@@ -83,10 +83,11 @@ const Footer = () => {
         <div className="Footer_column__3d3oT" style={{
           width: "fit-content"
         }}>
+          <p>MSDS, 1502, 15th</p>
           <p>MANAV SACHDEV DESIGN STUDIO</p>
-          <p>MSDS, 1502, 15th,Gallaria Towers</p>
-          <p>Galleria Market, DLF Phase IV</p>
-          <p>Sector 28, Gurugram, Haryana 122009</p>
+          <p>Gallaria Towers, Galleria Market</p>
+          <p>DLF Phase IV, Sector 28</p>
+          <p>Gurugram, Haryana 122009</p>
         </div>
       </nav>
       <a aria-label="Back to home page" className="footer_main_logo_parent" href="/">

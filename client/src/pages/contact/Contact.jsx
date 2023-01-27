@@ -104,14 +104,15 @@ const Contact = () => {
           <p></p>
           <p>
           <br/>
-
+            MSDS, 1502, 15th
+            <br />
             MANAV SACHDEV DESIGN STUDIO 
             <br />
-            COWORKINSTA 8TH FLOOR
+            Gallaria Towers, Galleria Market
             <br />
-            SUPERMART-I DLF PHASE IV
-            <br />
-            GURUGRAM, HARYANA
+             DLF Phase IV, Sector 28
+             <br />
+             Gurugram, Haryana 122009
           </p>
           <p></p>
           {/* <p>
@@ -130,6 +131,7 @@ const Contact = () => {
           </p> */}
         </div>
       </section>
+
       <div className="contact-container" style={{positon: "relative"}}>
         <div className="mapouter" style={{ flex: 0.65 }}>
           <div className="gmap_canvas">
@@ -137,7 +139,7 @@ const Contact = () => {
               width="100%"
               height={500}
               id="gmap_canvas"
-              src="https://maps.google.com/maps?q=Manav%20Sachdev%20Design%20Studio%20%7C%20MSDS,%20Coworkinsta%207th,%20Floor,%20Tower%20Block%20C,%20Supermart-1,%20DLF%20Phase%20IV,%20Gurugram,%20Haryana%20122009&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=MSDS,%201502,%2015TH%20MANAV%20SACHDEV%20DESIGN%20STUDIO%20GALLARIA%20TOWERS,%20GALLERIA%20MARKET%20DLF%20PHASE%20IV,%20SECTOR%2028%20GURUGRAM,%20HARYANA%20122009&t=&z=13&ie=UTF8&iwloc=&output=embed"
             />
             <a href="https://fmovies-online.net" />
             <br />
