@@ -468,6 +468,358 @@ const ProjectDetails = () => {
         </div>
           
           </>:<></>}
+
+          {project.images[10]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[10]? project.images[10]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+
+          {project.images[11]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[11]? project.images[11]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+
+          {project.images[12]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[12]? project.images[12]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+
+          {project.images[13]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[13]? project.images[13]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+          {project.images[14]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[14]? project.images[14]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+          {project.images[15]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[15]? project.images[15]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+          {project.images[16]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[16]? project.images[16]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+          {project.images[17]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[17]? project.images[17]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+          {project.images[18]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[18]? project.images[18]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+          {project.images[19]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[19]? project.images[19]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+          {project.images[20]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[20]? project.images[20]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
+          {project.images[21]? <>
+        <div style={{ position: "relative", overflow: "hidden" }}>
+          <div
+            aria-hidden="true"
+            style={{ width: "100%", paddingBottom: "56.25%" }}
+          />
+          <picture>
+            
+            <img
+              src={project.images[21]? project.images[21]: ""}
+              alt=""
+              loading="lazy"
+              decoding="async"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: `${isMobile ? "cover" : "contain"}`,
+                objectPosition: "center center",
+                opacity: 1,
+                transition: "opacity 700ms cubic-bezier(0.26, 1.04, 0.54, 1) 0s"
+              }}
+            />
+          </picture>
+        </div>
+          
+          </>:<></>}
       </section>
 
         <section />
