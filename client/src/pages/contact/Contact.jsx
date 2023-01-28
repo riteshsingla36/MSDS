@@ -104,9 +104,9 @@ const Contact = () => {
           <p></p>
           <p>
           <br/>
-            MSDS, 1502, 15th
-            <br />
             MANAV SACHDEV DESIGN STUDIO 
+            <br />
+            1502, 15th, floor
             <br />
             Gallaria Towers, Galleria Market
             <br />

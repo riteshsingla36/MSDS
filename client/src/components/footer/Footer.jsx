@@ -83,8 +83,8 @@ const Footer = () => {
         <div className="Footer_column__3d3oT" style={{
           width: "fit-content"
         }}>
-          <p>MSDS, 1502, 15th</p>
           <p>MANAV SACHDEV DESIGN STUDIO</p>
+          <p>1502, 15TH floor</p>
           <p>Gallaria Towers, Galleria Market</p>
           <p>DLF Phase IV, Sector 28</p>
           <p>Gurugram, Haryana 122009</p>
