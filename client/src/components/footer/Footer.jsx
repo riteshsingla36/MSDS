@@ -71,7 +71,7 @@ const Footer = () => {
           </p>
           <p>
             <a
-              href="../external.html?link=https://www.linkedin.com/company/numbered"
+              href="https://www.linkedin.com/in/manavsachdevdesign/"
               target="_blank"
               rel="noopener noreferrer"
               className="underlined1 inverted"
@@ -80,11 +80,13 @@ const Footer = () => {
             </a>
           </p>
         </div>
-        <div className="Footer_column__3d3oT">
-          <p>Manav Sachdev Design Studio | MSDS</p>
-          <p>CoworkInsta 8th Floor</p>
-          <p>Supermart-I DLF Phase IV</p>
-          <p>Gurugram, Haryana</p>
+        <div className="Footer_column__3d3oT" style={{
+          width: "fit-content"
+        }}>
+          <p>MANAV SACHDEV DESIGN STUDIO</p>
+          <p>MSDS, 1502, 15th,Gallaria Towers</p>
+          <p>Galleria Market, DLF Phase IV</p>
+          <p>Sector 28, Gurugram, Haryana 122009</p>
         </div>
       </nav>
       <a aria-label="Back to home page" className="footer_main_logo_parent" href="/">

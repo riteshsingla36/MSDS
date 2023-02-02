@@ -183,15 +183,6 @@ const About = () => {
       <section className="ListSlice_main__mKXcM" style={{justifyContent: 'center'}}>
           
           <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
-            <dt>Marketing</dt>
-            <p></p>
-            <dd>Lead generation</dd>
-            <dd>Social Media Marketing</dd>
-            <dd>Email Marketing</dd>
-            <dd>SEO</dd>
-            <dd>Funnel Marketing </dd>
-          </dl>
-          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
             <dt>Ideas &amp; Strategy</dt>
             <p></p>
             <dd>Consulting</dd>
@@ -201,15 +192,6 @@ const About = () => {
             <dd>Brand content</dd>
             <dd>Brand Concept</dd>
             <dd>Copywriting</dd>
-          </dl>
-          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
-            <dt>Technology</dt>
-            <p></p>
-            <dd>Creative Development</dd>
-            <dd>Front-end development</dd>
-            <dd>Back-end development</dd>
-            <dd>Shopify development</dd>
-            <dd>Mobile &amp; IOS web app</dd>
           </dl>
           <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
             <dt>Creation &amp; Design</dt>
@@ -224,7 +206,25 @@ const About = () => {
             <dd>Mobile App</dd>
             <dd>3d assests</dd>
           </dl>
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
+            <dt>Technology</dt>
+            <p></p>
+            <dd>Creative Development</dd>
+            <dd>Front-end development</dd>
+            <dd>Back-end development</dd>
+            <dd>Shopify development</dd>
+            <dd>Mobile &amp; IOS web app</dd>
+          </dl>
           
+          <dl className="ListSlice_list__3B0uk" style={{marginLeft: '30rem', marginRight: '30rem'}}>
+            <dt>Marketing</dt>
+            <p></p>
+            <dd>Lead generation</dd>
+            <dd>Social Media Marketing</dd>
+            <dd>Email Marketing</dd>
+            <dd>SEO</dd>
+            <dd>Funnel Marketing </dd>
+          </dl>
         </section>
         <section className="ClientsSlice_main__1EeZO ourServices">
           <ul>
@@ -595,12 +595,12 @@ const About = () => {
               </a>
             </li>
             <li>
-              <a href="/" target='_blank'>
+              <a href="https://packagingoftheworld.com/2020/04/the-earth-collective-hair-specialist.html" target='_blank'>
               Featured in Packaging Of The World
               </a>
             </li>
             <li>
-              <a href="/" target='_blank'>
+              <a href="https://awards.kyoorius.com/2013/2013-nominees/an-ayurvedi-beauty-brand/index.html" target='_blank'>
               Featured in Kyoorius Award 2013
               </a>
             </li>
@@ -614,12 +614,12 @@ const About = () => {
     work"
               href="/projects/all"
             ><figure>
-                <div style={{ position: "relative", overflow: "hidden" }}>
+                <div style={{ position: "relative", overflow: "hidden", backgroundColor: 'black' }}>
                   <div
                     aria-hidden="true"
                     style={{ width: "100%", paddingBottom: "75%" }}
                   ></div>
-                  <picture>
+                  <picture className="pink_panther">
                     
                     <img
                       src={require('../../images/pinkpanther/3.jpg')}

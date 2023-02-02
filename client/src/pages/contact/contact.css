@@ -108,6 +108,7 @@
 }
 .QuoteSlice_quote__1H6VJ.QuoteSlice_isWhite__2CGiu blockquote {
     font-size: 30rem;
+    color: rgb(91, 91, 92);
 }
 .QuoteSlice_quote__1H6VJ > span {
     font-size: 13rem;
@@ -115,6 +116,7 @@
     line-height: 1.5;
     margin-top: 30rem;
     width: 218.75rem;
+    color: rgb(91, 91, 92) !important;
 }
 @media (min-width: 1024px) {
     .QuoteSlice_quote__1H6VJ {
@@ -897,7 +899,8 @@
     outline: none;
     background: transparent;
   }
-  .login-box .user-box label {
+
+  /* .login-box .user-box label {
     position: absolute;
     top:0;
     left: 0;
@@ -906,7 +909,7 @@
     color: #fff;
     pointer-events: none;
     transition: .5s;
-  }
+  } */
   
   .login-box .user-box input:focus ~ label {
     top: -20px;
@@ -922,13 +925,19 @@
     font-size: 12px;
   }
 
-  .login-box .user-box textarea:focus ~ label,
-  .login-box .user-box textarea:valid ~ label {
+  .login-box .user-box textarea:focus ~ label{
     top: -20px;
     left: 0;
     color: #ffffff;
     font-size: 12px;
   }
+
+  /* .login-box .user-box textarea:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #ffffff;
+    font-size: 12px;
+  } */
   
   .login-box form a {
     position: relative;

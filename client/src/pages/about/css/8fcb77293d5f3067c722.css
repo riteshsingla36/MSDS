@@ -186,11 +186,17 @@
 }
 
 .Header_burgerBtn__2V9_x {
-    margin-top: 40rem !important;
+    margin-top: 30rem !important;
+    height: 32px;
+    margin: 0;
+    position: fixed;
+    right: 20rem !important;
+    margin-left: -35px;
 }
 
 .Header_closeBtn__wzNvb {
-    margin: 25rem 0 auto
+    margin: 10rem 0 auto;
+    margin-left: 300px;
 }
 
 .Header_list__1jN0i {
@@ -238,9 +244,9 @@
         background: #0e0e0e;
         -ms-flex-direction: column;
         flex-direction: column;
-        -webkit-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        transform: translateY(-100%);
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
         -webkit-transition: -webkit-transform 1s cubic-bezier(.77, 0, .175, 1);
         transition: -webkit-transform 1s cubic-bezier(.77, 0, .175, 1);
         -o-transition: transform 1s cubic-bezier(.77, 0, .175, 1);

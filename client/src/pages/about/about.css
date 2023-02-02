@@ -26,3 +26,14 @@
     margin: 80rem auto 0;
     width: 1200rem;
 }
+.pink_panther:hover{
+    opacity: 0.5;
+}
+.pink_panther{
+    transition: 0.3s;
+}
+/* @media (max-width: 500px) {
+    .our_services_heading{
+        padding-top: 70rem !important;
+    }
+} */

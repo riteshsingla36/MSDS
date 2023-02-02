@@ -11,6 +11,7 @@ const jobsRouter = require('./routes/jobs.route');
 const projectsRouter = require('./routes/projects.route');
 const projectTypeRouter = require('./routes/projectType.route');
 const onBoarding = require('./routes/onboarding.route');
+const emailRouter = require('./routes/sendemail.route');
 const oneWeek = 1000 * 60 * 60 * 24 * 7;
 const MongoDBStore = require("connect-mongodb-session")(session);
 const cookieParser = require('cookie-parser');
@@ -39,7 +40,7 @@ const store = new MongoDBStore({
 
 app.use(
   cors({
-    origin: ['https://msds-1.netlify.app', 'http://localhost:3000'],
+    origin: ['https://www.manavsachdevdesign.com', 'https://manavsachdevdesign.com', 'http://localhost:3000'],
     credentials: true
   })
 );
@@ -59,9 +60,14 @@ app.use(
   })
 );
 
+app.get('/', (req, res)=> {
+  res.send("Server is Running");
+})
+
 app.use("/careers", jobsRouter);
 app.use("/projects", projectsRouter);
 app.use("/projecttype", projectTypeRouter);
 app.use("/onboarding", onBoarding);
+app.use("/send", emailRouter);
 
 app.listen(process.env.PORT, console.log(`Your app is running at http://localhost:${process.env.PORT}`))

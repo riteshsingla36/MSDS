@@ -61,6 +61,15 @@ const createProject = async (req, res) => {
             publicUrls.push(publicUrl)
         }
 
+        publicUrls = publicUrls.sort((a,b) => {
+            if((a.split('-'))[(a.split('-')).length-1].split(".")[0]> (b.split('-'))[(b.split('-')).length-1].split(".")[0]) {
+                return 1;
+            }
+            else {
+                return -1;
+            }
+        })
+
         const project = await Project.create({
             name: name,
             description: description,
