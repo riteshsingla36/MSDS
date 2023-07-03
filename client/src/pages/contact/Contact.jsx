@@ -89,7 +89,7 @@ const Contact = () => {
           <p>
             For projects inquiries
             <br />
-            <a href="mailto:contact@numbered.com">INFO@MANAVSACHDEVDESIGN.COM</a>
+            <a href="mailto:info@manavsachdevdesign.com">INFO@MANAVSACHDEVDESIGN.COM</a>
             
           </p>
           <p></p>
@@ -99,7 +99,7 @@ const Contact = () => {
             <br />
             For Jobs and internships
             <br />
-            <a href="mailto:jobs@numbered.com">INFO@MANAVSACHDEVDESIGN.COM</a>
+            <a href="mailto:info@manavsachdevdesign.com">INFO@MANAVSACHDEVDESIGN.COM</a>
           </p>
           <p></p>
           <p>
@@ -133,7 +133,7 @@ const Contact = () => {
       </section>
 
       <div className="contact-container" style={{positon: "relative"}}>
-        <div className="mapouter" style={{ flex: 0.65 }}>
+        <div className="mapouter">
           <div className="gmap_canvas">
             <iframe
               width="100%"
@@ -160,9 +160,9 @@ const Contact = () => {
             />
           </div>
         </div>
-        <div style={{position: "relative",flex: 0.35}}>
+        {/* <div style={{position: "relative",flex: 0.35}}> */}
 
-          <div className="login-box" style={{}}>
+          {/* <div className="login-box" style={{}}>
             <form onSubmit={submitForm}>
               <div className="user-box">
                 <input type="email" name="email" required />
@@ -178,8 +178,8 @@ const Contact = () => {
               </div>
               <button type="submit" style={{backgroundColor: "white", color: "black", padding: "10px 30px", border: 0, borderRadius: `10px`, marginTop: "30px"}}>Submit</button>
             </form>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
       <section>
         <section className="SectionPushSlice_main__8CNrO">
