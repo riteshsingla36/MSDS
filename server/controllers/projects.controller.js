@@ -3,7 +3,7 @@ const processFileMiddleware = require("../middleware/helper");
 const { format } = require("util");
 const { Storage } = require("@google-cloud/storage");
 const storage = new Storage({
-    keyFilename: "msds-1-a7099cd2c51b.json",
+    keyFilename: "msds-1-63945b29afc6.json",
     projectId: "msds-1",
 });
 const bucket = storage.bucket("projects_msds");
@@ -61,14 +61,14 @@ const createProject = async (req, res) => {
             publicUrls.push(publicUrl)
         }
 
-        publicUrls = publicUrls.sort((a,b) => {
-            if((a.split('-'))[(a.split('-')).length-1].split(".")[0]> (b.split('-'))[(b.split('-')).length-1].split(".")[0]) {
-                return 1;
-            }
-            else {
-                return -1;
-            }
-        })
+        // publicUrls = publicUrls.sort((a,b) => {
+        //     if((a.split('-'))[(a.split('-')).length-1].split(".")[0]> (b.split('-'))[(b.split('-')).length-1].split(".")[0]) {
+        //         return 1;
+        //     }
+        //     else {
+        //         return -1;
+        //     }
+        // })
 
         const project = await Project.create({
             name: name,
@@ -147,6 +147,9 @@ const updateProject = async (req, res) => {
 
         let publicUrls = [];
 
+        let prj = await Project.findById(id);
+
+
         if(req.files.length===0){
             project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, client_link},{
                 runValidators: true,
@@ -160,11 +163,11 @@ const updateProject = async (req, res) => {
                 publicUrl = await test(req.files[i])
                 publicUrls.push(publicUrl)
             }
-            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, publicUrl, client_link, images: publicUrls},{
+            project = await Project.findByIdAndUpdate(id, {name, description, role_service, awards_recognition, type, tag_line, client_link, images: [...(prj.images), ...publicUrls]},{
                 runValidators: true,
                 new: true,
             });
-        }    
+        } 
         
         res.json({ status: true, data: project });
     } catch (err) {
@@ -172,10 +175,40 @@ const updateProject = async (req, res) => {
     }
 };
 
+
+const updateProjectImages = async (req, res) => {
+        const id = req.params.id;
+    
+        if (!id) {
+            res.json({ status: false, message: "Please provide id" });
+        }
+        try {
+            const images = req.body.images;
+            console.log(images);
+            
+            let project;
+    
+            if(images.length!==0){
+                project = await Project.findByIdAndUpdate(id, {images},{
+                    runValidators: true,
+                    new: true,
+                });
+            }else {
+                throw new Error("Please Add Images");
+            }
+            
+            res.json({ status: true, data: project });
+        } catch (err) {
+            res.json({ status: false, message: err.message });
+        }
+}
+
+
 module.exports = {
     getAllProjects,
     getProjectById,
     createProject,
     updateProject,
     deleteProjectById,
+    updateProjectImages
 };

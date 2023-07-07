@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import baseUrl from '../../baseUrl';
 import axios from 'axios';
 import { TailSpin } from 'react-loader-spinner';
+import { Draggable } from "react-drag-reorder";
 
 const EditJob = () => {
     const { projectId } = useParams();
@@ -11,6 +12,7 @@ const EditJob = () => {
     const [types, setTypes] = useState([]);
     const navigate = useNavigate();
     const [processing, setProcessing] = useState(false);
+    const [newImgs, setNewImgs] = useState(null);
 
     useEffect(()  => {
         setProcessing(true);
@@ -22,6 +24,7 @@ const EditJob = () => {
         axios.get(`${baseUrl}/projects/${projectId}`).then(res => {
             if (res.data.status) {
                 setJob(res.data.data);
+                setNewImgs(res.data.data.images);
                 axios
                 .get(`${baseUrl}/projecttype`)
                 .then((res) => {
@@ -110,9 +113,38 @@ const EditJob = () => {
                 setProcessing(false);
             })
         }
-
-        
     }
+
+    const getChangedPos = (currentPos, newPos) =>{
+      let newImages = newImgs;
+      const oldImage = newImages.splice(currentPos, 1)[0];
+      newImages.splice(newPos, 0, oldImage);
+      setNewImgs(newImages);
+    }
+
+    const onUpdateImagesLink = async (images) => {
+      try {
+        const res = await axios.patch(`${baseUrl}/projects/updateimages/${job._id}`, {
+          images
+        })
+        if(!res.data.status){
+          alert('Something Went wrong!');
+          return;
+        }
+        alert('Update Images SuccessFully');
+        window.location.reload();
+      } catch (error) {
+        alert(error);
+      }
+    }
+
+    const removeImage = async (image) => {
+      let newImages = newImgs;
+      let updatedImageArray = newImages.filter((img) => img !== image);
+      setNewImgs(updatedImageArray);
+      await onUpdateImagesLink(updatedImageArray);
+    }
+    
     return (
         <div className="test">
             {processing ? <TailSpin
@@ -123,111 +155,143 @@ const EditJob = () => {
                 radius="1"
                 wrapperStyle={{}}
                 wrapperClass="loader"
-            />: <></>}
-            <form onSubmit={editJob}>
+            />: <form onSubmit={editJob}>
 
-                <div className="segment">
-                    <h1>Edit Job</h1>
-                </div>
+            <div className="segment">
+                <h1>Edit Job</h1>
+            </div>
 
-                <label>
-          <input
-            type="text"
-            placeholder="Name"
-            id="name"
-            name="name"
-            required
-            defaultValue={job.name}
-          />
-        </label>
+            <label>
+      <input
+        type="text"
+        placeholder="Name"
+        id="name"
+        name="name"
+        required
+        defaultValue={job.name}
+      />
+    </label>
 
-        <label>
-          <input
-            type="text"
-            placeholder="Roles & Services"
-            id="role_service"
-            name="role_service"
-            required
-            defaultValue={job.role_service}
+    <label>
+      <input
+        type="text"
+        placeholder="Roles & Services"
+        id="role_service"
+        name="role_service"
+        required
+        defaultValue={job.role_service}
 
-          />
-        </label>
+      />
+    </label>
 
-        <label>
-          <input
-            type="text"
-            placeholder="Awards & Recognition"
-            id="awards_recognition"
-            name="awards_recognition"
-            required
-            defaultValue={job.awards_recognition}
+    <label>
+      <input
+        type="text"
+        placeholder="Awards & Recognition"
+        id="awards_recognition"
+        name="awards_recognition"
+        required
+        defaultValue={job.awards_recognition}
 
-          />
-        </label>
+      />
+    </label>
 
-        <label>
-          <input
-            type="text"
-            placeholder="Tag Line"
-            id="tag_line"
-            name="tag_line"
-            required
-            defaultValue={job.tag_line}
+    <label>
+      <input
+        type="text"
+        placeholder="Tag Line"
+        id="tag_line"
+        name="tag_line"
+        required
+        defaultValue={job.tag_line}
 
-          />
-        </label>
+      />
+    </label>
 
-        <label>
-          <input
-            type="text"
-            placeholder="Client Website Link"
-            id="client_link"
-            name="client_link"
-            required
-            defaultValue={job.client_link}
-          />
-        </label>
+    <label>
+      <input
+        type="text"
+        placeholder="Client Website Link"
+        id="client_link"
+        name="client_link"
+        required
+        defaultValue={job.client_link}
+      />
+    </label>
 
-        <label>
-          <select name="type" id="type" required>
-            <option value="" disabled hidden>
-              Type
+    <label>
+      <select name="type" id="type" required>
+        <option value="" disabled hidden>
+          Type
+        </option>
+        {types.map((type) => {
+          return (
+            <option key={type._id} value={type._id} selected={type.name === job.type.name ? `selected` : ``} >
+              {type.name}
             </option>
-            {types.map((type) => {
-              return (
-                <option key={type._id} value={type._id} selected={type.name === job.type.name ? `selected` : ``} >
-                  {type.name}
-                </option>
-              );
-            })}
-          </select>
-        </label>
+          );
+        })}
+      </select>
+    </label>
 
-        <label>
-          <textarea
-            name="description"
-            id="description"
-            cols="10"
-            rows="10"
-            required
-            defaultValue={job.description}
-          />
-        </label>
-        <label>
-          <input
-            id="images"
-            name="images"
-            type="file"
-            accept=".png, .jpg, .jpeg"
-            multiple="multiple"
-          />
-        </label>
+    <label>
+      <textarea
+        name="description"
+        id="description"
+        cols="10"
+        rows="10"
+        required
+        defaultValue={job.description}
+      />
+    </label>
+    <label>
+      <input
+        id="images"
+        name="images"
+        type="file"
+        accept=".png, .jpg, .jpeg"
+        multiple="multiple"
+      />
+    </label>
 
-        <button className="red" type="submit">
-          <i className="icon ion-md-lock"></i> Edit Project
-        </button>
+    <div className="flex-container">
+    <div className="row" style={{
+              display: 'flex',
+              gap: '20px',
+              flexDirection: "row",
+              flexWrap: 'wrap',
+      }}>
+      <Draggable onPosChange={getChangedPos}>
+        {newImgs?.map((word, idx) => (
+            <div key={idx} style={{
+              position: 'relative'
+            }}>
+              <img src={word} width={100} height={100} alt='Image'/>
+              <div onClick={() => {removeImage(word)}} style={{
+                position: 'absolute',
+                top: 0,
+                color: 'red',
+                fontSize: '20px',
+                cursor: 'pointer'
+              }}>X</div>
+            </div>
+          )
+        )}
+      </Draggable>
 
-            </form>
+      <button className="red" onClick={() => {onUpdateImagesLink(newImgs)}} type='button'>
+        <i className="icon icon-md-lock"></i> Update Images
+      </button>
+
+    </div>
+  </div>
+
+    <button className="red" type="submit">
+      <i className="icon ion-md-lock"></i> Edit Project
+    </button>
+
+        </form>}
+            
         </div>
     )
 }

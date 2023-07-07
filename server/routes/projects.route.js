@@ -9,6 +9,8 @@ router.post("/create", ProjectController.createProject);
 
 router.patch("/update/:id", ProjectController.updateProject);
 
+router.patch("/updateimages/:id", ProjectController.updateProjectImages);
+
 router.delete("/delete/:id", ProjectController.deleteProjectById);
 
 module.exports = router;
