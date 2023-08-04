@@ -89,7 +89,7 @@ const Contact = () => {
           <p>
             For projects inquiries
             <br />
-            <a href="mailto:contact@numbered.com">INFO@MANAVSACHDEVDESIGN.COM</a>
+            <a href="mailto:info@manavsachdevdesign.com">INFO@MANAVSACHDEVDESIGN.COM</a>
             
           </p>
           <p></p>
@@ -99,19 +99,20 @@ const Contact = () => {
             <br />
             For Jobs and internships
             <br />
-            <a href="mailto:jobs@numbered.com">INFO@MANAVSACHDEVDESIGN.COM</a>
+            <a href="mailto:info@manavsachdevdesign.com">INFO@MANAVSACHDEVDESIGN.COM</a>
           </p>
           <p></p>
           <p>
           <br/>
-
             MANAV SACHDEV DESIGN STUDIO 
             <br />
-            COWORKINSTA 8TH FLOOR
+            1502, 15th, floor
             <br />
-            SUPERMART-I DLF PHASE IV
+            Gallaria Towers, Galleria Market
             <br />
-            GURUGRAM, HARYANA
+             DLF Phase IV, Sector 28
+             <br />
+             Gurugram, Haryana 122009
           </p>
           <p></p>
           {/* <p>
@@ -130,14 +131,15 @@ const Contact = () => {
           </p> */}
         </div>
       </section>
+
       <div className="contact-container" style={{positon: "relative"}}>
-        <div className="mapouter" style={{ flex: 0.65 }}>
+        <div className="mapouter">
           <div className="gmap_canvas">
             <iframe
               width="100%"
               height={500}
               id="gmap_canvas"
-              src="https://maps.google.com/maps?q=Manav%20Sachdev%20Design%20Studio%20%7C%20MSDS,%20Coworkinsta%207th,%20Floor,%20Tower%20Block%20C,%20Supermart-1,%20DLF%20Phase%20IV,%20Gurugram,%20Haryana%20122009&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=MSDS,%201502,%2015TH%20MANAV%20SACHDEV%20DESIGN%20STUDIO%20GALLARIA%20TOWERS,%20GALLERIA%20MARKET%20DLF%20PHASE%20IV,%20SECTOR%2028%20GURUGRAM,%20HARYANA%20122009&t=&z=13&ie=UTF8&iwloc=&output=embed"
             />
             <a href="https://fmovies-online.net" />
             <br />
@@ -158,9 +160,9 @@ const Contact = () => {
             />
           </div>
         </div>
-        <div style={{position: "relative",flex: 0.35}}>
+        {/* <div style={{position: "relative",flex: 0.35}}> */}
 
-          <div className="login-box" style={{}}>
+          {/* <div className="login-box" style={{}}>
             <form onSubmit={submitForm}>
               <div className="user-box">
                 <input type="email" name="email" required />
@@ -176,8 +178,8 @@ const Contact = () => {
               </div>
               <button type="submit" style={{backgroundColor: "white", color: "black", padding: "10px 30px", border: 0, borderRadius: `10px`, marginTop: "30px"}}>Submit</button>
             </form>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
       </div>
       <section>
         <section className="SectionPushSlice_main__8CNrO">

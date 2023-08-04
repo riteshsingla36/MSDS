@@ -84,9 +84,10 @@ const Footer = () => {
           width: "fit-content"
         }}>
           <p>MANAV SACHDEV DESIGN STUDIO</p>
-          <p>MSDS, 1502, 15th,Gallaria Towers</p>
-          <p>Galleria Market, DLF Phase IV</p>
-          <p>Sector 28, Gurugram, Haryana 122009</p>
+          <p>1502, 15TH floor</p>
+          <p>Gallaria Towers, Galleria Market</p>
+          <p>DLF Phase IV, Sector 28</p>
+          <p>Gurugram, Haryana 122009</p>
         </div>
       </nav>
       <a aria-label="Back to home page" className="footer_main_logo_parent" href="/">
