@@ -13,10 +13,10 @@ const getAllProjects = async (req, res) => {
     let projects;
     try {
         if(type === 'all') {
-            projects = await Project.find({}).populate('type');
+            projects = await Project.find({}).populate('type').sort('createdAt DESC');
         }
         else {
-            projects = await Project.find({type: type}).populate('type')
+            projects = await Project.find({type: type}).populate('type').sort('createdAt DESC');
         }
         res.json({ status: true, data: projects });
     } catch (err) {

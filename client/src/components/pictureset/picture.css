@@ -1987,7 +1987,7 @@ a:hover .typo--asLink .typo--hovered {
 
 @media screen and (min-width: 1025px) {
   .workFeatureSmallItem__img {
-    height: 217px;
+    height: 300px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -2008,6 +2008,11 @@ a:hover .typo--asLink .typo--hovered {
 @media screen and (min-width: 540px) and (max-width: 600px) {
   .workFeatureSmallItem__img {
     height: 314.51px;
+  }
+}
+@media screen and (min-width: 1601px) {
+  .workFeatureSmallItem__img {
+    height: 350px;
   }
 }
 .workFeatureSmallItem__title > * {
@@ -9741,7 +9746,7 @@ a:hover .typo--asLink .typo--hovered {
 .workFeatureItem picture {
   transition: transform 400ms !important;
 }
-.workFeatureSmallItem picture img {
+.image-parent picture img {
   transition: transform 400ms !important;
 }
 
@@ -9751,7 +9756,30 @@ a:hover .typo--asLink .typo--hovered {
   transform: scale(1.2);
 }
 
-.workFeatureSmallItem picture:hover img{
+.image-parent picture:hover img{
   transform: scale(1.2);
   overflow: hidden !important;
+}
+
+@media screen and (max-width: 768px){
+  .image-parent {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+}
+
+@media only screen and (min-width: 600px){
+  .image-parent {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .image-parent {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
 }
