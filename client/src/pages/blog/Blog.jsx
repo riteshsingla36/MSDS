@@ -10,6 +10,7 @@ const Blog = () => {
   const { blogId } = useParams();
   const [blog, setBlog] = useState(null);
   useEffect(() => {
+
     if (blogId) {
       axios.get(`${baseUrl}/blogs/${blogId}`).then(res => {
         if (res.data.status) {
@@ -43,9 +44,7 @@ const Blog = () => {
                   return <div key={index}></div>
                 })
               }
-
             </div>
-
             <div id='content' dangerouslySetInnerHTML={{__html: blog.content}} />
           </div>
         </>
