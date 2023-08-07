@@ -1,0 +1,13 @@
+.heading_main {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.para_main {
+    font-size: 16px;
+    line-height: 23px;
+    text-align: justify;
+    color: rgb(91, 91, 92);
+}

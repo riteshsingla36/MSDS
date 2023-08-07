@@ -21,6 +21,10 @@ import ProjectDetails from "./pages/projectDetails/ProjectDetails";
 import WhatsAppLogo from "./components/whatsappLogo/WhatsAppLogo";
 import AllProjects from "./adminPages/allProjects/AllProjects";
 import EditProject from "./adminPages/editProject/EditProject";
+import AllBlogs from "./adminPages/allBlogs/AllBlogs";
+import AddBlog from "./adminPages/addBlog/AddBlog";
+import EditBlog from "./adminPages/editBlog/EditBlog";
+import Blog from "./pages/blog/Blog";
 
 function App() {
   return (
@@ -30,6 +34,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects/:type" element={<Projects />} />
           <Route path="/about" element={<About />} />
+          <Route path="/blog/:blogId" element={<Blog />} />
           <Route
             path="/projectdetails/:projectId"
             element={<ProjectDetails />}
@@ -41,7 +46,9 @@ function App() {
             <Route path="/admin/msds/addprojecttype" element={<AddProjectType />} />
             <Route path="/admin/msds/addproject" element={<AddProject />} />
             <Route path="/admin/msds/addjob" element={<AddJob />} />
+            <Route path="/admin/msds/addblog" element={<AddBlog />} />
             <Route path="/admin/msds/allprojects" element={<AllProjects />} />
+            <Route path="/admin/msds/allblogs" element={<AllBlogs />} />
             <Route path="/admin/msds/alljobs" element={<AllJobs />} />
             <Route path="/admin/msds/editjob/:jobId" element={<EditJob />} />
             <Route
@@ -55,6 +62,10 @@ function App() {
             <Route
               path="/admin/msds/editproject/:projectId"
               element={<EditProject />}
+            />
+            <Route
+              path="/admin/msds/editblog/:blogId"
+              element={<EditBlog />}
             />
           </Route>
           <Route path="/admin/msds/login" element={<Login />} />
