@@ -34,7 +34,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <div style={{ padding: '50px 20px 0px 20px', fontSize: '10rem', color: 'black' }}>
+    <div style={{ padding: '80px 20px 0px 20px', fontSize: '10rem', color: 'black' }}>
       <Navbar />
       {
         blog && <>
@@ -48,7 +48,7 @@ const Blog = () => {
               {
                 blog.images.map((image, index) => {
                   if(index !== 0) {
-                    return <img src={image} style={{flex: 1, height: "200px"}} key={index} alt={blog.title}/>
+                    return <img src={image} style={{flex: 1, height: "200px", width: "50%"}} key={index} alt={blog.title}/>
                   }
                   return <></>
                 })
