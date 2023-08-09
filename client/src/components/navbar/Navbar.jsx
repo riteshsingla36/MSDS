@@ -109,6 +109,11 @@ const Navbar = ({ home }) => {
               </Link>
             </li>
             <li className="Header_link__2wQjN">
+              <Link className="underlined" to="/blogs">
+                Blog
+              </Link>
+            </li>
+            <li className="Header_link__2wQjN">
               <Link className="underlined" to="/contact">
                 Contact
               </Link>

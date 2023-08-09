@@ -25,6 +25,7 @@ import AllBlogs from "./adminPages/allBlogs/AllBlogs";
 import AddBlog from "./adminPages/addBlog/AddBlog";
 import EditBlog from "./adminPages/editBlog/EditBlog";
 import Blog from "./pages/blog/Blog";
+import Blogs from "./pages/blogs/Blogs";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/projects/:type" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog/:blogId" element={<Blog />} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route
             path="/projectdetails/:projectId"
             element={<ProjectDetails />}
