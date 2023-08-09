@@ -56,18 +56,19 @@
 
 .div_img {
     overflow: hidden;
-    height: 300px;
+    height: 250px;
     flex:1;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid red;
 }
 
 .div_img img {
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     transition: all 1s ease-in-out;
-    object-fit: cover;
+    /* object-fit: contain; */
     
 }
 

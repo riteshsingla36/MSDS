@@ -32,7 +32,10 @@ const Blog = () => {
       <div className='upper_div'>
         {
           blog && <>
-            <div className='blog_header_image' style={{backgroundImage: `url(${blog.images[0]})`}} onClick={() => navigate('/projects/all')}></div>
+            {/* <div className='blog_header_image' style={{backgroundImage: `url(${blog.images[0]})`}} onClick={() => navigate('/projects/all')}></div> */}
+            <div class="image-container">
+              <img src={blog.images[0]} alt="Centered Image"/>
+            </div>
             <div className='blog_content'>
               <p className="para_main" id='description' dangerouslySetInnerHTML={{ __html: blog.description }} />
               <div id='headerContent' dangerouslySetInnerHTML={{ __html: blog.headerContent }} />
