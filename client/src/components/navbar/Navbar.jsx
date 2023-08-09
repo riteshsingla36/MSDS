@@ -110,7 +110,7 @@ const Navbar = ({ home }) => {
             </li>
             <li className="Header_link__2wQjN">
               <Link className="underlined" to="/blogs">
-                Blogs
+                Blog
               </Link>
             </li>
             <li className="Header_link__2wQjN">
