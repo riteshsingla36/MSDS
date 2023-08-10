@@ -33,17 +33,22 @@ const Blog = () => {
         {
           blog && <>
             {/* <div className='blog_header_image' style={{backgroundImage: `url(${blog.images[0]})`}} onClick={() => navigate('/projects/all')}></div> */}
-            <div class="image-container">
-              <img src={blog.images[0]} alt="Centered Image"/>
+            <div className="image-container">
+              <img src={blog.images[0]} alt={blog.title} onClick={() => navigate('/projects/all')}/>
             </div>
             <div className='blog_content'>
               <p className="para_main" id='description' dangerouslySetInnerHTML={{ __html: blog.description }} />
               <div id='headerContent' dangerouslySetInnerHTML={{ __html: blog.headerContent }} />
-              <div style={{ display: "flex", gap: "40px", alignItems: 'center', justifyContent: 'flex-start', flexWrap: "wrap", marginTop: "15px" }}>
+              <div className='image-container' style={{marginTop: '30px'}}>
+                <img src={blog.images[1]} alt={blog.title} onClick={() => navigate('/projects/all')} />
+              </div>
+              <div style={{ display: "grid", columnGap: "40px", alignItems: 'center', justifyContent: 'center', gridTemplateColumns: 'repeat(2, 1fr)', marginTop: "15px" }}>
                 {
                   blog.images.map((image, index) => {
-                    if (index !== 0) {
-                      return <img src={image} style={{ flex: 1, height: "200px", width: "50%" }} key={index} alt={blog.title}  onClick={() => navigate('/projects/all')}/>
+                    if (index > 1) {
+                      return <div className='image-container' style={{marginBottom: '0px'}}>
+                        <img src={image} key={index} alt={blog.title} onClick={() => navigate('/projects/all')}/>
+                      </div>
                     }
                     return <div key={index}></div>
                   })

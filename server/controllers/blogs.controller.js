@@ -22,10 +22,11 @@ const getBlogById = async (req, res) => {
     const id = req.params.id;
 
     if (!id) {
-        res.json({ status: false, message: "Please provide id" });
+        res.json({ status: false, message: "Please provide slug" });
     }
     try {
-        const blog = await Blog.findById(id)
+        const blogs = await Blog.find({slug: id});
+        const blog = blogs[0];
         res.json({ status: true, data: blog });
     } catch (err) {
         res.json({ status: false, message: err.message });
@@ -39,6 +40,7 @@ const createBlog = async (req, res) => {
         await processFileMiddleware(req, res);
 
         const title = req.body.title;
+        const slug = req.body.slug;
         const description = req.body.description;
         const content = req.body.content;
         const headerContent = req.body.headerContent;
@@ -53,6 +55,7 @@ const createBlog = async (req, res) => {
         }
 
         const blog = await Blog.create({
+            slug: slug,
             title: title,
             description: description,
             images: publicUrls,
@@ -115,6 +118,7 @@ const updateBlog = async (req, res) => {
         await processFileMiddleware(req, res);
         
         const title = req.body.title;
+        const slug = req.body.slug;
         const description = req.body.description;
         const content = req.body.content;
         const headerContent = req.body.headerContent;
@@ -125,7 +129,7 @@ const updateBlog = async (req, res) => {
         let blg = await Blog.findById(id);
 
         if(req.files.length===0){
-            blog = await Blog.findByIdAndUpdate(id, {title, description, content, headerContent},{
+            blog = await Blog.findByIdAndUpdate(id, {slug, title, description, content, headerContent},{
                 runValidators: true,
                 new: true,
             });
@@ -137,7 +141,7 @@ const updateBlog = async (req, res) => {
                 publicUrl = await test(req.files[i])
                 publicUrls.push(publicUrl)
             }
-            blog = await Blog.findByIdAndUpdate(id, {title, description, content,headerContent, images: [...(blg.images), ...publicUrls]},{
+            blog = await Blog.findByIdAndUpdate(id, {slug, title, description, content,headerContent, images: [...(blg.images), ...publicUrls]},{
                 runValidators: true,
                 new: true,
             });

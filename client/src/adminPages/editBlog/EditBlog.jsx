@@ -39,6 +39,7 @@ const EditBlog = () => {
     setProcessing(true);
     e.preventDefault();
     const title = e.target.title.value;
+    const slug = e.targetv.slug.value;
     const content = e.target.content.value;
     const headerContent = e.target.headerContent.value;
     const description = e.target.description.value;
@@ -46,6 +47,7 @@ const EditBlog = () => {
 
     const formData = new FormData();
     formData.append("title", title);
+    formData.append("slug", slug);
     formData.append("content", content);
     formData.append("headerContent", headerContent);
     formData.append("description", description);
@@ -133,6 +135,17 @@ const EditBlog = () => {
         <div className="segment">
           <h1>Edit Blog</h1>
         </div>
+
+        <label>
+          <input
+            type="text"
+            placeholder="Slug"
+            id="slug"
+            name="slug"
+            required
+            defaultValue={blog.slug || ''}
+          />
+        </label>
 
         <label>
           <input

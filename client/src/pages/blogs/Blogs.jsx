@@ -26,19 +26,20 @@ const Blogs = () => {
     <>
       <Navbar />
       <div className='blogs_div'>
+        {/* //add heading  */}
         {blogs && blogs.length > 0 &&
           blogs.map(blog => (
             <div key={blog._id} className='blogs_all'>
-              <div className='div_img'  onClick={() => navigate(`/blog/${blog._id}`)}>
+              <div className='div_img'  onClick={() => navigate(`/blog/${blog.slug}`)}>
                 <img src={blog.images[0]} alt={blog.title} />
               </div>
               <div style={{flex: 1}}>
-                <h3 className='blogs_head' onClick={() => navigate(`/blog/${blog._id}`)}>{blog.title}</h3>
+                <h3 className='blogs_head' onClick={() => navigate(`/blog/${blog.slug}`)}>{blog.title}</h3>
                 <p className="blogs_para">
                   {blog.description}
                 </p>
 
-                <Link className='blogs_read' to={`/blog/${blog._id}`}>
+                <Link className='blogs_read' to={`/blog/${blog.slug}`}>
                   Read More
                 </Link>
               </div>

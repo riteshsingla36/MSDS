@@ -10,6 +10,7 @@ const AddBlog = () => {
     setProcessing(true);
     e.preventDefault();
     const title = e.target.title.value;
+    const slug = e.target.slug.value;
     const description = e.target.description.value;
     const content = e.target.content.value;
     const headerContent = e.target.headerContent.value;
@@ -17,6 +18,7 @@ const AddBlog = () => {
 
     const formData = new FormData();
     formData.append("title", title);
+    formData.append("slug", slug);
     formData.append("content", content);
     formData.append("headerContent", headerContent);
     formData.append("description", description);
@@ -33,6 +35,7 @@ const AddBlog = () => {
         if (res.data.status) {
           alert("blog created successfully");
           e.target.title.value = "";
+          e.target.slug.value = "";
           e.target.content.value = "";
           e.target.headerContent.value = "";
           e.target.description.value = "";
@@ -69,6 +72,16 @@ const AddBlog = () => {
           <h1>Add Blog</h1>
         </div>
 
+        <label>
+          <input
+            type="text"
+            placeholder="Slug"
+            id="slug"
+            name="slug"
+            required
+          />
+        </label>
+        
         <label>
           <input
             type="text"

@@ -30,6 +30,11 @@ const Footer = () => {
             </a>
           </p>
           <p>
+            <a className="underlined1 inverted" href="/blogs">
+              Blog
+            </a>
+          </p>
+          <p>
             <a className="underlined1 inverted" href="/contact">
               Contact
             </a>

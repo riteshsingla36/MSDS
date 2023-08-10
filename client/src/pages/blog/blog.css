@@ -1,7 +1,7 @@
 .heading_main {
     font-size: 20px;
     font-weight: bold;
-    padding-top: 15px;
+    padding-top: 30px;
     padding-bottom: 10px;
     text-transform: uppercase;
     color: rgb(91, 91, 92);
@@ -17,7 +17,7 @@
 
 .para_main {
     font-size: 16px;
-    line-height: 23px;
+    line-height: 25px;
     text-align: justify;
     color: rgb(91, 91, 92);
     opacity: 0.5;
@@ -55,12 +55,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 30px;
   }
   
   .image-container img {
-    /* max-width: 100%;
-    max-height: 100%; */
     height: auto;
     width: 100%;
   }
