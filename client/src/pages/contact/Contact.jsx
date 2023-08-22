@@ -108,7 +108,7 @@ const Contact = () => {
             <br />
             1502, 15th, floor
             <br />
-            Gallaria Towers, Galleria Market
+            Galleria Towers, Galleria Market
             <br />
              DLF Phase IV, Sector 28
              <br />

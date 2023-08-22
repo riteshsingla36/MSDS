@@ -90,7 +90,7 @@ const Footer = () => {
         }}>
           <p>MANAV SACHDEV DESIGN STUDIO</p>
           <p>1502, 15TH floor</p>
-          <p>Gallaria Towers, Galleria Market</p>
+          <p>Galleria Towers, Galleria Market</p>
           <p>DLF Phase IV, Sector 28</p>
           <p>Gurugram, Haryana 122009</p>
         </div>
