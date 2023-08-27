@@ -23,7 +23,7 @@ const Picture = ({ projects }) => {
                 style={{ overflow: "hidden" }}
               >
                 <a
-                  href={`/projectdetails/${project._id}`}
+                  href={`/projectdetails/${project.slug}`}
                   className="workFeatureSmallItem__link"
                 >
                   <picture className="workFeatureSmallItem__picture js--lazyloaded">

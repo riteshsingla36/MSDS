@@ -89,16 +89,16 @@ const Navbar = ({ home }) => {
                     <Link to="/projects/all">ALL</Link>
                   </li>
                   <li>
-                    <Link to={`/projects/6373e690b0e5c29a9cffedc1`}>BRAND DEVELOPMENT</Link>
+                    <Link to={`/projects/brand-development`}>BRAND DEVELOPMENT</Link>
                   </li>
                   <li>
-                    <Link to={`/projects/6373e670b0e5c29a9cffedbd`}>PACKAGING DESIGN</Link>
+                    <Link to={`/projects/packaging-design`}>PACKAGING DESIGN</Link>
                   </li>
                   <li>
-                    <Link to={`/projects/6373e6a9b0e5c29a9cffedc3`}>PRINT DESIGN</Link>
+                    <Link to={`/projects/print-design`}>PRINT DESIGN</Link>
                   </li>
                   <li>
-                    <Link to={`/projects/6373e6b9b0e5c29a9cffedc5`}>WEB & SOCIAL MEDIA</Link>
+                    <Link to={`/projects/web-and-social-media`}>WEB & SOCIAL MEDIA</Link>
                   </li>
                 </ul>
               </div> : <></>}

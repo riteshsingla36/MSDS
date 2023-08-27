@@ -1,4 +1,5 @@
 const Project = require("../models/projects.model");
+const ProjectType = require("../models/projectType.model");
 const processFileMiddleware = require("../middleware/helper");
 const { format } = require("util");
 const { Storage } = require("@google-cloud/storage");
@@ -16,7 +17,9 @@ const getAllProjects = async (req, res) => {
             projects = await Project.find({}).populate('type').sort('createdAt DESC');
         }
         else {
-            projects = await Project.find({type: type}).populate('type').sort('createdAt DESC');
+            const types = await ProjectType.find({slug: type})
+
+            projects = await Project.find({type: types[0]._id}).populate('type').sort('createdAt DESC');
         }
         res.json({ status: true, data: projects });
     } catch (err) {
@@ -31,8 +34,8 @@ const getProjectById = async (req, res) => {
         res.json({ status: false, message: "Please provide id" });
     }
     try {
-        const project = await Project.findById(id).populate('type');
-        res.json({ status: true, data: project });
+        const project = await Project.find({slug: id}).populate('type');
+        res.json({ status: true, data: project[0] });
     } catch (err) {
         res.json({ status: false, message: err.message });
     }

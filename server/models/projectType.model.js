@@ -8,6 +8,11 @@ const projectTypeSchema = mongoose.Schema(
             lowercase: true,
             required: true,
             unique: true,
+        },
+        slug: {
+            type: String,
+            trim: true,
+            required: true
         }
     },
     {

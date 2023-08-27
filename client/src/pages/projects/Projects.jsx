@@ -110,22 +110,22 @@ const Projects = () => {
               </Link>
             </li>
             <li>
-              <Link className="underlined" to={`/projects/6373e690b0e5c29a9cffedc1`}>
+              <Link className="underlined" to={`/projects/brand-development`}>
                 Brand Development <span>({brandDevelopmentLength})</span>
               </Link>
             </li>
             <li>
-              <Link className="underlined" to={`/projects/6373e670b0e5c29a9cffedbd`}>
+              <Link className="underlined" to={`/projects/packaging-design`}>
                 Packaging design <span>({packagingLength})</span>
               </Link>
             </li>
             <li>
-              <Link className="underlined" to={`/projects/6373e6a9b0e5c29a9cffedc3`}>
+              <Link className="underlined" to={`/projects/print-design`}>
                 Print Design <span>({printLength})</span>
               </Link>
             </li>
             <li>
-              <Link className="underlined" to={`/projects/6373e6b9b0e5c29a9cffedc5`}>
+              <Link className="underlined" to={`/projects/web-and-social-media`}>
                 web & social media <span>({interactiveLength})</span>
               </Link>
             </li>

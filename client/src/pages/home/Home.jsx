@@ -127,7 +127,7 @@ const Home = () => {
 
       <section className="ProjectsSlice_projects3__3BeN3">
         <article className="ProjectsSlice_article__uEv9O">
-          <a aria-label="Palette" href="/projectdetails/637a6a4d0533820eba654e8a">
+          <a aria-label="Palette" href="/projectdetails/Baby-Forest">
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <div
@@ -190,7 +190,7 @@ const Home = () => {
           </a>
         </article>
         <article className="ProjectsSlice_article__uEv9O">
-          <a aria-label="Routinely" href="/projectdetails/637a6ca10533820eba654e8c">
+          <a aria-label="Routinely" href="/projectdetails/Fabessentials-by-Fabindia">
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <div
@@ -245,7 +245,7 @@ const Home = () => {
           </a>
         </article>
         <article className="ProjectsSlice_article__uEv9O">
-          <a aria-label="Veloretti" href="/projectdetails/637b120cf1512eb16ca46aec">
+          <a aria-label="Veloretti" href="/projectdetails/Super-Smelly">
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <div
@@ -314,7 +314,7 @@ const Home = () => {
         <article className="ProjectsSlice_article__uEv9O">
           <a
             aria-label="Jean Paul Gaultier &amp; Sacai"
-            href="/projectdetails/6373e8e4171291eb9280bdbc"
+            href="/projectdetails/The-Earth-Collective|-Haircare"
           >
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
@@ -371,7 +371,7 @@ const Home = () => {
           </a>
         </article>
         <article className="ProjectsSlice_article__uEv9O">
-          <a aria-label="Typology" href="/projectdetails/637a7f62b44f53a050328bec">
+          <a aria-label="Typology" href="/projectdetails/Entisi-chocolatier">
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <div
@@ -496,7 +496,7 @@ const Home = () => {
         <Slider/>
       <section className="ProjectsSlice_projects1__2nqI4">
         <article className="ProjectsSlice_article__uEv9O">
-          <a aria-label="Plink" href="/projectdetails/637a6a4d0533820eba654e8a">
+          <a aria-label="Plink" href="/projectdetails/Baby-Forest">
             <figure>
               <div style={{ position: "relative", overflow: "hidden" }}>
                 <div
