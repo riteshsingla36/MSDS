@@ -28,6 +28,7 @@ const AddProject = () => {
   const createProject = (e) => {
     setProcessing(true);
     e.preventDefault();
+    const slug = e.target.slug.value;
     const name = e.target.name.value;
     const type = e.target.type.value;
     const description = e.target.description.value;
@@ -38,6 +39,7 @@ const AddProject = () => {
     const client_link = e.target.client_link.value;
 
     const formData = new FormData();
+    formData.append("slug", slug);
     formData.append("name", name);
     formData.append("type", type);
     formData.append("description", description);
@@ -62,6 +64,7 @@ const AddProject = () => {
       .then((res) => {
         if (res.data.status) {
           alert("project created successfully");
+          e.target.slug.value = "";
           e.target.name.value = "";
           e.target.type.value = "";
           e.target.description.value = "";
@@ -100,6 +103,16 @@ const AddProject = () => {
         <div className="segment">
           <h1>Add Project</h1>
         </div>
+
+        <label>
+          <input
+            type="text"
+            placeholder="Slug"
+            id="slug"
+            name="slug"
+            required
+          />
+        </label>
 
         <label>
           <input

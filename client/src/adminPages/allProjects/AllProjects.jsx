@@ -98,7 +98,7 @@ const AllProjects = () => {
                                     {job.tag_line}
                                 </div>
                                 <div className="cell" data-title="Edit">
-                                    <span onClick={() => navigate(`/admin/msds/editproject/${job._id}`)}>Edit</span>
+                                    <span onClick={() => navigate(`/admin/msds/editproject/${job.slug}`)}>Edit</span>
                                 </div>
                                 <div className="cell" data-title="Delete">
                                     <span onClick={() => deleteJob(job._id)}>Delete</span>

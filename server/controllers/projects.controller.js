@@ -47,6 +47,7 @@ const createProject = async (req, res) => {
         let publicUrl;
         await processFileMiddleware(req, res);
 
+        const slug = req.body.slug;
         const name = req.body.name;
         const description = req.body.description;
         const role_service = req.body.role_service;
@@ -75,6 +76,7 @@ const createProject = async (req, res) => {
 
         const project = await Project.create({
             name: name,
+            slug: slug,
             description: description,
             type: type,
             role_service: role_service,
@@ -177,7 +179,6 @@ const updateProject = async (req, res) => {
         res.json({ status: false, message: err.message });
     }
 };
-
 
 const updateProjectImages = async (req, res) => {
         const id = req.params.id;
